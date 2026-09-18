@@ -20,12 +20,14 @@ The applications run entirely in the browser. Student work saved through the sit
 7. Distinguish incident response, disaster recovery, business continuity, and crisis management.
 8. Complete the original 12-question knowledge assessment.
 
+The Week 3 and Week 4 assessments deliberately balance correct-answer positions across A, B, C, and D so students must evaluate each option instead of relying on a response pattern.
+
 Suggested 30-minute facilitation: 0–4 minutes for the mission and Week 3 connection; 4–9 for the four strategies; 9–19 for the decision lab; 19–23 for cost and SLA; 23–26 for methodologies and contingency planning; and 26–30 for the assessment and exit discussion.
 
 ## Publish the Week 4 update
 
 1. Upload the revised `index.html`, new `week4.html`, and revised `README.md` to the repository root.
-2. Commit with a descriptive message such as `Add synthetic Week 4 risk treatment lab`.
+2. Commit with a descriptive message such as `Balance BrewByte quiz answers and update Week 4 lab`.
 3. Wait for the GitHub Pages deployment to complete.
 4. Open the public site in a private browser window and select **Continue to Week 4**.
 5. Test the treatment cards, all five decision scenarios, calculator, SLA feedback, methodology recommendation, four plan matches, assessment, local save/load, and downloads.
