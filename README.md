@@ -1,41 +1,39 @@
-# BrewByte Risk Management Learning Portal
+# BrewByte Cybersecurity Learning Portal
 
-An original, synthetic, zero-paper cybersecurity learning experience for Regional Technical College students.
+An original, synthetic, zero-paper learning experience.
 
-- `index.html` — Week 3: identify, analyze, evaluate, and rate risk using simulated Nmap evidence.
-- `week4.html` — Week 4: select risk treatments, design controls, evaluate cost, assign ownership, compare methodologies, and assess residual risk.
+- index.html — Week 3 risk identification, analysis, evaluation, and simulated Nmap evidence.
+- week4.html — Week 4 risk treatment, controls, ownership, methods, and residual risk.
+- week5.html — Week 5 compliance, ethics, backup scope, recovery testing, and assurance evidence.
 
-The fictional BrewByte Coffee organization, systems, scenarios, data, definitions, and assessment questions were created for instruction. The repository contains no real targets, credentials, scan findings, student information, textbook pages, publisher definitions, or publisher test-bank questions.
+All organizations, systems, paths, files, logs, scenarios, definitions, and questions are fictional and instructor-created. The repository contains no real targets, credentials, student information, textbook pages, publisher definitions, publisher lab instructions, or publisher test-bank questions.
 
-The applications run entirely in the browser. Student work saved through the site remains in that browser's local storage unless the student intentionally downloads a synthetic completion record.
+The applications run entirely in the browser. Saved work remains in that browser unless the student intentionally downloads a synthetic record.
 
-## Week 4 learning sequence
+## Week 5 sequence
 
-1. Connect Week 3 identification, analysis, and evaluation to Week 4 treatment.
-2. Compare mitigation, transfer, acceptance, and termination.
-3. Complete a treatment decision using layered controls, a risk owner, a control owner, residual risk, and a review date.
-4. Compare estimated annual loss reduction with safeguard cost.
-5. Build a measurable service-level agreement while retaining organizational accountability.
-6. Compare NIST, ISO/IEC, OCTAVE, FAIR, qualitative, quantitative, hybrid, benchmark, and baseline approaches.
-7. Distinguish incident response, disaster recovery, business continuity, and crisis management.
-8. Complete the original 12-question knowledge assessment.
+1. Connect Week 3 evidence and Week 4 treatment to control verification.
+2. Distinguish law, contract, standard, policy, due care, due diligence, ethics, and liability.
+3. Work through original ethical decision scenarios.
+4. Run a fictional backup that succeeds while omitting a critical folder.
+5. Observe a failed restore, diagnose the scope gap, recover an approved template, correct scope, and prove restoration.
+6. Compare file history, VSS, system restore, and independent backup.
+7. Create a synthetic assurance record with owners, exception, correction, residual risk, and review date.
+8. Complete an original 12-question assessment with balanced answer positions.
 
-The Week 3 and Week 4 assessments deliberately balance correct-answer positions across A, B, C, and D so students must evaluate each option instead of relying on a response pattern.
+Suggested 30-minute facilitation: 0–4 mission and prior-week connection; 4–8 obligations; 8–12 ethics; 12–23 recovery simulation; 23–26 evidence and AI boundary; 26–30 assessment and exit discussion.
 
-Suggested 30-minute facilitation: 0–4 minutes for the mission and Week 3 connection; 4–9 for the four strategies; 9–19 for the decision lab; 19–23 for cost and SLA; 23–26 for methodologies and contingency planning; and 26–30 for the assessment and exit discussion.
+## Publish Week 5
 
-## Publish the Week 4 update
+1. Upload the revised index.html, revised week4.html, new week5.html, and revised README.md to the repository root.
+2. Commit with: Add synthetic BrewByte Week 5 recovery assurance lab
+3. Wait for GitHub Pages deployment.
+4. Open the public site in a private window and select Week 5 · Recovery Assurance.
+5. Test every tab, decision, recovery step, save/load/download, and assessment reset.
 
-1. Upload the revised `index.html`, new `week4.html`, and revised `README.md` to the repository root.
-2. Commit with a descriptive message such as `Balance BrewByte quiz answers and update Week 4 lab`.
-3. Wait for the GitHub Pages deployment to complete.
-4. Open the public site in a private browser window and select **Continue to Week 4**.
-5. Test the treatment cards, all five decision scenarios, calculator, SLA feedback, methodology recommendation, four plan matches, assessment, local save/load, and downloads.
+## Boundaries
 
-## Safety and content boundaries
-
-- Classroom simulations only; no live scanning or exploitation.
-- No production, college, personal, public, or third-party targets.
-- No real findings, credentials, internal names, student identifiers, or confidential records.
-- No textbook pages, publisher definitions, or publisher test-bank questions.
-- AI may help organize evidence and compare options, but people must validate facts, authorize changes, assign ownership, and accept residual risk.
+- Browser simulation only; it does not change disks, run Windows tools, scan systems, or exploit anything.
+- Use the assigned authorized virtual environment for operating-system practice.
+- No real records, credentials, identifiers, or confidential data.
+- AI may organize authorized synthetic evidence. People must validate facts, determine legal applicability, authorize changes, assign ownership, and accept residual risk.
