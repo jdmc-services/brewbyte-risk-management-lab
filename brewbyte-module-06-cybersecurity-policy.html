@@ -1,0 +1,911 @@
+<!doctype html>
+<!--
+  GITHUB SETUP FOR MODULE 6
+  1. Upload this file to the BrewByte repository using its current name:
+     brewbyte-module-06-cybersecurity-policy.html
+  2. Add this link to the module list in index.html:
+     <a href="brewbyte-module-06-cybersecurity-policy.html">Module 6 - Cybersecurity Program Policy</a>
+  3. Commit both files and allow GitHub Pages a few minutes to publish the update.
+  4. The "Return to module menu" links below expect index.html to be in the same folder.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A synthetic cybersecurity policy learning lab for BrewByte Coffee.">
+  <title>BrewByte Coffee | Module 6 Cybersecurity Policy</title>
+  <style>
+    :root {
+      --ink: #241c18;
+      --muted: #6d625d;
+      --cream: #fffaf3;
+      --paper: #ffffff;
+      --coffee: #6f3f28;
+      --coffee-dark: #3f2418;
+      --caramel: #c97832;
+      --sage: #3c6b5a;
+      --sage-soft: #e7f1ec;
+      --amber-soft: #fff0d8;
+      --red: #9f3131;
+      --line: #e7ddd3;
+      --shadow: 0 14px 36px rgba(63, 36, 24, 0.10);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 85% 4%, rgba(201,120,50,.14), transparent 26rem),
+        linear-gradient(180deg, #fffaf3 0%, #f7efe5 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+
+    button, input, select, textarea { font: inherit; }
+    button, select, input[type="radio"], input[type="checkbox"] { cursor: pointer; }
+    a { color: var(--coffee); }
+    :focus-visible { outline: 3px solid #2a7f9e; outline-offset: 3px; }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 8px;
+      z-index: 100;
+      padding: 10px 14px;
+      background: #fff;
+      color: #000;
+    }
+    .skip-link:focus { left: 8px; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,250,243,.93);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(111,63,40,.14);
+    }
+    .topbar-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+    .module-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .nav-link {
+      padding: 7px 10px;
+      border: 1px solid #d9c8b9;
+      border-radius: 9px;
+      color: var(--coffee-dark);
+      background: #fff;
+      font-size: .82rem;
+      font-weight: 750;
+      text-decoration: none;
+    }
+    .nav-link:hover { border-color: var(--coffee); }
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--coffee);
+      box-shadow: inset 0 0 0 4px rgba(255,255,255,.18);
+    }
+    .progress-wrap { min-width: 260px; }
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: .82rem;
+      margin-bottom: 5px;
+    }
+    .progress-track {
+      height: 9px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #eadfd4;
+    }
+    .progress-bar {
+      width: 0;
+      height: 100%;
+      background: linear-gradient(90deg, var(--sage), #66a189);
+      transition: width .35s ease;
+    }
+
+    .hero {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 64px 24px 38px;
+      display: grid;
+      grid-template-columns: 1.4fr .8fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--sage);
+      font-size: .84rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { line-height: 1.14; }
+    h1 {
+      margin: 0;
+      max-width: 850px;
+      color: var(--coffee-dark);
+      font-size: clamp(2.45rem, 5vw, 5rem);
+      letter-spacing: -.055em;
+    }
+    .hero p.lead {
+      max-width: 780px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
+    }
+    .hero-card {
+      padding: 28px;
+      border: 1px solid rgba(111,63,40,.14);
+      border-radius: 28px;
+      background: linear-gradient(150deg, #ffffff, #f4e6d5);
+      box-shadow: var(--shadow);
+    }
+    .hero-card strong { color: var(--coffee-dark); }
+    .hero-card ul { margin-bottom: 0; padding-left: 20px; }
+    .synthetic {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 16px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      color: #245342;
+      background: var(--sage-soft);
+      font-size: .82rem;
+      font-weight: 750;
+    }
+
+    main { padding-bottom: 80px; }
+    .section {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 34px 24px;
+    }
+    .section-heading {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: end;
+      margin-bottom: 22px;
+    }
+    .section h2 {
+      margin: 0;
+      color: var(--coffee-dark);
+      font-size: clamp(1.8rem, 3vw, 2.65rem);
+      letter-spacing: -.035em;
+    }
+    .section-intro { max-width: 760px; color: var(--muted); }
+    .time-chip {
+      white-space: nowrap;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: #5b361f;
+      background: var(--amber-soft);
+      font-size: .86rem;
+      font-weight: 800;
+    }
+
+    .grid { display: grid; gap: 18px; }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .card {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: 0 7px 20px rgba(63,36,24,.06);
+    }
+    .card h3 { margin: 0 0 8px; color: var(--coffee-dark); }
+    .card p:last-child { margin-bottom: 0; }
+
+    .objectives { counter-reset: objective; }
+    .objective {
+      position: relative;
+      min-height: 116px;
+      padding-left: 72px;
+    }
+    .objective::before {
+      counter-increment: objective;
+      content: counter(objective);
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--sage);
+      font-weight: 850;
+    }
+
+    .instruction-list {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: instruction;
+    }
+    .instruction-item {
+      position: relative;
+      min-height: 164px;
+      padding: 54px 17px 17px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 7px 20px rgba(63,36,24,.05);
+    }
+    .instruction-item::before {
+      counter-increment: instruction;
+      content: counter(instruction);
+      position: absolute;
+      top: 14px;
+      left: 16px;
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 9px;
+      color: #fff;
+      background: var(--caramel);
+      font-weight: 900;
+    }
+    .instruction-item strong { display: block; margin-bottom: 5px; color: var(--coffee-dark); }
+    .completion-rule {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-left: 5px solid var(--sage);
+      border-radius: 10px;
+      color: #244c3e;
+      background: var(--sage-soft);
+    }
+
+    .glossary-card {
+      min-height: 150px;
+      transition: transform .16s ease, border-color .16s ease;
+    }
+    .glossary-card:hover { transform: translateY(-3px); border-color: #d5b79d; }
+    .term {
+      display: inline-block;
+      margin-bottom: 9px;
+      color: var(--coffee);
+      font-weight: 850;
+    }
+    .tag {
+      display: inline-block;
+      margin-left: 7px;
+      padding: 2px 7px;
+      border-radius: 999px;
+      color: #315b4c;
+      background: var(--sage-soft);
+      font-size: .72rem;
+      font-weight: 750;
+      vertical-align: middle;
+    }
+
+    .scenario {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      background: linear-gradient(135deg, #3f2418 0%, #70442d 60%, #98613d 100%);
+      border: 0;
+    }
+    .scenario::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      bottom: -100px;
+      width: 320px;
+      height: 320px;
+      border: 44px solid rgba(255,255,255,.08);
+      border-radius: 50%;
+    }
+    .scenario h3 { color: #fff; }
+    .scenario-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 24px;
+    }
+    .scenario ul { padding-left: 20px; }
+    .risk-list { margin: 0; padding: 0; list-style: none; }
+    .risk-list li {
+      margin: 8px 0;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.10);
+    }
+
+    .lab-step {
+      margin: 20px 0;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+    .step-header {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+    .step-number {
+      flex: 0 0 auto;
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      color: #fff;
+      background: var(--coffee);
+      font-weight: 850;
+    }
+    .step-header h3 { margin: 1px 0 4px; }
+    .step-header p { margin: 0; color: var(--muted); }
+
+    .question {
+      margin: 16px 0;
+      padding: 18px;
+      border-left: 5px solid #d59a63;
+      border-radius: 10px;
+      background: #fff8ee;
+    }
+    .question legend, .question .question-title {
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+    fieldset { min-width: 0; border: 0; }
+    .option {
+      display: block;
+      margin: 8px 0;
+      padding: 10px 12px;
+      border: 1px solid #ead8c7;
+      border-radius: 10px;
+      background: #fff;
+    }
+    .option:hover { border-color: #bd875b; }
+    .option input { margin-right: 8px; }
+
+    label.text-label { display: block; margin: 14px 0 6px; font-weight: 800; }
+    textarea, select, input[type="text"] {
+      width: 100%;
+      border: 1px solid #cfc1b5;
+      border-radius: 10px;
+      padding: 11px 12px;
+      background: #fff;
+      color: var(--ink);
+    }
+    textarea { min-height: 96px; resize: vertical; }
+
+    .hint {
+      margin: 14px 0;
+      border: 1px solid #d8cabd;
+      border-radius: 12px;
+      background: #fbf7f2;
+    }
+    .hint summary { padding: 11px 14px; font-weight: 800; cursor: pointer; }
+    .hint div { padding: 0 14px 14px; color: var(--muted); }
+
+    .knowledge {
+      margin-top: 14px;
+      padding: 15px 16px;
+      border-radius: 12px;
+      color: #214d3d;
+      background: var(--sage-soft);
+    }
+    .knowledge strong { color: #163a2e; }
+
+    .sort-list { display: grid; gap: 10px; margin-top: 12px; }
+    .sort-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(180px, .6fr);
+      gap: 12px;
+      align-items: center;
+      padding: 12px;
+      border: 1px solid #eaded3;
+      border-radius: 12px;
+      background: #fffdf9;
+    }
+
+    .lifecycle {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0,1fr));
+      gap: 10px;
+    }
+    .phase {
+      padding: 13px 10px;
+      border-radius: 12px;
+      color: #fff;
+      background: var(--sage);
+      text-align: center;
+      font-weight: 800;
+    }
+    .phase small { display: block; margin-top: 4px; font-weight: 500; opacity: .86; }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .btn {
+      border: 0;
+      border-radius: 11px;
+      padding: 11px 16px;
+      font-weight: 850;
+    }
+    .btn-primary { color: #fff; background: var(--coffee); }
+    .btn-primary:hover { background: #58301e; }
+    .btn-secondary { color: var(--coffee-dark); background: #efe2d5; }
+    .btn-success { color: #fff; background: var(--sage); }
+
+    .feedback {
+      display: none;
+      margin-top: 14px;
+      padding: 13px 15px;
+      border-radius: 11px;
+      font-weight: 700;
+    }
+    .feedback.show { display: block; }
+    .feedback.good { color: #1e553f; background: #e5f4ec; }
+    .feedback.review { color: #7a3b22; background: #fff0df; }
+
+    .results {
+      padding: 30px;
+      border-radius: 24px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--sage), #244c3e);
+      box-shadow: var(--shadow);
+    }
+    .results h2 { color: #fff; }
+    .score {
+      margin: 6px 0;
+      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -.06em;
+    }
+    .summary-output {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 14px;
+      color: var(--ink);
+      background: #fff;
+      white-space: pre-wrap;
+    }
+
+    footer {
+      padding: 32px 24px 50px;
+      color: #7a6e67;
+      text-align: center;
+      font-size: .9rem;
+    }
+
+    @media (max-width: 850px) {
+      .hero, .scenario-grid, .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .section-heading { grid-template-columns: 1fr; }
+      .lifecycle { grid-template-columns: 1fr; }
+      .instruction-list { grid-template-columns: 1fr; }
+      .sort-row { grid-template-columns: 1fr; }
+      .progress-wrap { min-width: 150px; }
+      .topbar-inner { padding: 10px 14px; }
+      .hero { padding-top: 44px; }
+    }
+
+    @media print {
+      .topbar, .actions, .hint, .btn { display: none !important; }
+      body { background: #fff; }
+      .hero, .section { max-width: none; padding: 20px 24px; }
+      .lab-step, .card, .results { box-shadow: none; break-inside: avoid; }
+      .results { color: #000; background: #fff; border: 2px solid #244c3e; }
+      .results h2 { color: #000; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to learning content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="module-links">
+        <div class="brand"><span class="brand-mark" aria-hidden="true">B</span> BrewByte Learning Lab</div>
+        <a class="nav-link" href="./index.html">Return to module menu</a>
+      </div>
+      <div class="progress-wrap" aria-label="Module progress">
+        <div class="progress-label"><span>Module progress</span><span id="progressText">0%</span></div>
+        <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Module 6</p>
+        <h1>Cybersecurity Program Policy</h1>
+        <p class="lead">Build the policy foundation for a growing coffee company. You will connect executive direction to issue-specific rules, system settings, employee behavior, and evidence of compliance.</p>
+        <span class="synthetic">● All organizations, people, systems, and events are fictional</span>
+      </div>
+      <aside class="hero-card" aria-label="Module details">
+        <strong>Recommended learning time: 35 to 45 minutes</strong>
+        <ul>
+          <li>10 key terms</li>
+          <li>5 guided lab steps</li>
+          <li>Immediate explanations</li>
+          <li>Printable completion summary</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="section" id="instructions">
+      <div class="section-heading">
+        <div><h2>How to complete Module 6</h2><p class="section-intro">Follow the steps in order. The module provides immediate feedback and saves your progress on this device.</p></div>
+        <span class="time-chip">Start here</span>
+      </div>
+      <ol class="instruction-list">
+        <li class="instruction-item"><strong>Review the terms</strong>Read all ten definitions before beginning the scenario.</li>
+        <li class="instruction-item"><strong>Study the scenario</strong>Identify the business assets, risks, people, and systems involved.</li>
+        <li class="instruction-item"><strong>Complete five steps</strong>Answer every question and write the requested policy statements.</li>
+        <li class="instruction-item"><strong>Check your work</strong>Select the check button after each step and revise any score below 80%.</li>
+        <li class="instruction-item"><strong>Build your summary</strong>Create, copy, or print the completion summary as directed by your instructor.</li>
+      </ol>
+      <p class="completion-rule"><strong>Completion standard:</strong> Check all five lab steps and earn an overall score of at least 80%. Your instructor will tell you whether to submit the completion summary through the LMS.</p>
+    </section>
+
+    <section class="section" id="objectives">
+      <div class="section-heading">
+        <div><h2>Learning objectives</h2><p class="section-intro">Complete the module with enough understanding to explain the policy hierarchy and apply it to a realistic business scenario.</p></div>
+        <span class="time-chip">5 minutes</span>
+      </div>
+      <div class="grid grid-2 objectives">
+        <article class="card objective"><h3>Explain policy purpose</h3><p>Describe how management direction supports risk decisions, employee expectations, and defensible security practices.</p></article>
+        <article class="card objective"><h3>Distinguish document types</h3><p>Separate policies, standards, procedures, guidelines, and practices by function.</p></article>
+        <article class="card objective"><h3>Select the right policy level</h3><p>Recognize CPP, issue-specific, and system-specific policy requirements.</p></article>
+        <article class="card objective"><h3>Connect policy to controls</h3><p>Map management intent to ACLs, configuration rules, training, approval, and compliance evidence.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="terms">
+      <div class="section-heading">
+        <div><h2>Key terms</h2><p class="section-intro">Read these definitions before starting the lab. The distinctions determine whether a requirement belongs in an executive document, a mandatory standard, or an operating procedure.</p></div>
+        <span class="time-chip">8 minutes</span>
+      </div>
+      <div class="grid grid-3">
+        <article class="card glossary-card"><span class="term">Cybersecurity policy</span><p>Management's formal direction for protecting information and regulating the authorized use of technology.</p></article>
+        <article class="card glossary-card"><span class="term">Cybersecurity program policy</span><span class="tag">CPP</span><p>The executive policy that establishes program scope, authority, responsibilities, and strategic direction.</p></article>
+        <article class="card glossary-card"><span class="term">Issue-specific policy</span><p>Rules governing one resource, technology, or behavior, such as email, personal devices, remote access, or AI use.</p></article>
+        <article class="card glossary-card"><span class="term">System-specific policy</span><p>Managerial or technical direction for configuring, operating, and maintaining a defined system.</p></article>
+        <article class="card glossary-card"><span class="term">Standards</span><p>Mandatory, measurable requirements that translate policy into consistent control expectations.</p></article>
+        <article class="card glossary-card"><span class="term">Procedures</span><p>Repeatable steps showing how authorized personnel perform a task or meet a requirement.</p></article>
+        <article class="card glossary-card"><span class="term">Guidelines</span><p>Recommended approaches that help people make sound decisions when more than one method may work.</p></article>
+        <article class="card glossary-card"><span class="term">Practices</span><p>Accepted examples of behavior or work that demonstrate how people commonly comply.</p></article>
+        <article class="card glossary-card"><span class="term">Access control lists</span><span class="tag">ACLs</span><p>Permission structures that specify which subjects may perform defined actions on systems, files, services, or other objects.</p></article>
+        <article class="card glossary-card"><span class="term">Configuration rules</span><p>Instructions that tell a system how to process traffic, content, data, requests, or security events.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="scenario">
+      <div class="section-heading">
+        <div><h2>BrewByte scenario</h2><p class="section-intro">Assume the role of a junior cybersecurity analyst advising a fictional company.</p></div>
+        <span class="time-chip">3 minutes</span>
+      </div>
+      <article class="card scenario">
+        <div class="scenario-grid">
+          <div>
+            <h3>Business profile</h3>
+            <p>BrewByte Coffee operates six stores, employs 74 people, and uses cloud scheduling, online ordering, a customer loyalty platform, managed Wi-Fi, and point-of-sale terminals. A small managed service provider supports the technology environment.</p>
+            <p>Ownership wants clear policy before opening two new locations. No real company data appears in this exercise.</p>
+          </div>
+          <div>
+            <h3>Current risk observations</h3>
+            <ul class="risk-list">
+              <li>Managers share one administrator account.</li>
+              <li>Guest and business devices use the same network.</li>
+              <li>Staff copy customer details into spreadsheets.</li>
+              <li>A vendor keeps remote access active continuously.</li>
+              <li>Employees use public AI tools without guidance.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="lab">
+      <div class="section-heading">
+        <div><h2>Guided policy lab</h2><p class="section-intro">Complete each step. Use the hints when needed, then check your work. Your selections remain in this browser until you reset the module.</p></div>
+        <span class="time-chip">22 to 30 minutes</span>
+      </div>
+
+      <article class="lab-step" data-step="1">
+        <div class="step-header"><span class="step-number">1</span><div><h3>Classify policy documents</h3><p>Choose the document type that best fits each statement.</p></div></div>
+        <div class="sort-list">
+          <label class="sort-row"><span>BrewByte protects sensitive information according to its business value and risk.</span><select data-answer="Policy"><option value="">Choose</option><option>Policy</option><option>Standard</option><option>Procedure</option><option>Guideline</option><option>Practice</option></select></label>
+          <label class="sort-row"><span>Privileged identities must use multifactor authentication.</span><select data-answer="Standard"><option value="">Choose</option><option>Policy</option><option>Standard</option><option>Procedure</option><option>Guideline</option><option>Practice</option></select></label>
+          <label class="sort-row"><span>Service desk staff verify identity, open the identity console, select the user, and start account recovery.</span><select data-answer="Procedure"><option value="">Choose</option><option>Policy</option><option>Standard</option><option>Procedure</option><option>Guideline</option><option>Practice</option></select></label>
+          <label class="sort-row"><span>Use phishing-resistant authentication when the approved platform supports it.</span><select data-answer="Guideline"><option value="">Choose</option><option>Policy</option><option>Standard</option><option>Procedure</option><option>Guideline</option><option>Practice</option></select></label>
+          <label class="sort-row"><span>Administrators use separate accounts for routine work and privileged tasks.</span><select data-answer="Practice"><option value="">Choose</option><option>Policy</option><option>Standard</option><option>Procedure</option><option>Guideline</option><option>Practice</option></select></label>
+        </div>
+        <details class="hint"><summary>Hint</summary><div>Ask whether the statement provides direction, a mandatory measurement, repeatable steps, a recommendation, or an example of accepted behavior.</div></details>
+        <div class="actions"><button class="btn btn-primary check-step" type="button">Check Step 1</button></div>
+        <div class="feedback" aria-live="polite"></div>
+      </article>
+
+      <article class="lab-step" data-step="2">
+        <div class="step-header"><span class="step-number">2</span><div><h3>Build the CPP foundation</h3><p>Select every element that belongs in BrewByte's high-level cybersecurity program policy.</p></div></div>
+        <fieldset class="question checkboxes" data-min-correct="5">
+          <legend>CPP elements</legend>
+          <label class="option"><input type="checkbox" data-correct="true"> Purpose and connection to the business mission</label>
+          <label class="option"><input type="checkbox" data-correct="true"> Program scope and the information or technology covered</label>
+          <label class="option"><input type="checkbox" data-correct="true"> Shared and role-specific responsibilities</label>
+          <label class="option"><input type="checkbox" data-correct="true"> Governance authority and policy ownership</label>
+          <label class="option"><input type="checkbox" data-correct="true"> References to supporting standards, obligations, and related policies</label>
+          <label class="option"><input type="checkbox" data-correct="false"> Exact firewall commands for every store</label>
+          <label class="option"><input type="checkbox" data-correct="false"> Every employee's daily task list</label>
+        </fieldset>
+        <label class="text-label" for="cppStatement">Write one original CPP statement for BrewByte</label>
+        <textarea id="cppStatement" placeholder="Example structure: BrewByte will protect..." data-required-text="20"></textarea>
+        <details class="hint"><summary>Writing hint</summary><div>State management intent and the required outcome. Keep vendor settings and detailed steps in supporting standards or procedures.</div></details>
+        <div class="knowledge"><strong>Knowledge:</strong> A CPP remains relatively stable because it sets direction. Detailed technology settings change more frequently and belong in supporting documents.</div>
+        <div class="actions"><button class="btn btn-primary check-step" type="button">Check Step 2</button></div>
+        <div class="feedback" aria-live="polite"></div>
+      </article>
+
+      <article class="lab-step" data-step="3">
+        <div class="step-header"><span class="step-number">3</span><div><h3>Select issue-specific policy topics</h3><p>Choose the policies that directly address the observed risks.</p></div></div>
+        <fieldset class="question checkboxes" data-min-correct="5">
+          <legend>Issue-specific modules</legend>
+          <label class="option"><input type="checkbox" data-correct="true"> Identity and privileged access</label>
+          <label class="option"><input type="checkbox" data-correct="true"> Guest and internal network use</label>
+          <label class="option"><input type="checkbox" data-correct="true"> Customer information handling</label>
+          <label class="option"><input type="checkbox" data-correct="true"> Vendor remote access</label>
+          <label class="option"><input type="checkbox" data-correct="true"> Responsible use of generative AI</label>
+          <label class="option"><input type="checkbox" data-correct="false"> Coffee bean roast temperature</label>
+          <label class="option"><input type="checkbox" data-correct="false"> Employee parking preferences</label>
+        </fieldset>
+        <label class="text-label" for="issueRule">Write one authorized or prohibited use statement</label>
+        <textarea id="issueRule" placeholder="State who may do what, with which resource, and under what condition." data-required-text="25"></textarea>
+        <details class="hint"><summary>Hint</summary><div>A useful issue-specific rule identifies the audience, resource, approved purpose, prohibited behavior, approval path, or monitoring expectation.</div></details>
+        <div class="actions"><button class="btn btn-primary check-step" type="button">Check Step 3</button></div>
+        <div class="feedback" aria-live="polite"></div>
+      </article>
+
+      <article class="lab-step" data-step="4">
+        <div class="step-header"><span class="step-number">4</span><div><h3>Map policy to technical controls</h3><p>Identify whether each implementation uses an ACL or a configuration rule.</p></div></div>
+        <div class="sort-list">
+          <label class="sort-row"><span>Only the Payroll group can open the payroll folder.</span><select data-answer="ACL"><option value="">Choose</option><option>ACL</option><option>Configuration rule</option></select></label>
+          <label class="sort-row"><span>Point-of-sale terminals may connect only to approved payment destinations.</span><select data-answer="Configuration rule"><option value="">Choose</option><option>ACL</option><option>Configuration rule</option></select></label>
+          <label class="sort-row"><span>Store managers can view schedules for their assigned store.</span><select data-answer="ACL"><option value="">Choose</option><option>ACL</option><option>Configuration rule</option></select></label>
+          <label class="sort-row"><span>Block and alert when a payment terminal attempts an unapproved outbound connection.</span><select data-answer="Configuration rule"><option value="">Choose</option><option>ACL</option><option>Configuration rule</option></select></label>
+        </div>
+        <fieldset class="question radio-question" data-answer="Named access with approval, MFA, expiration, and logging">
+          <legend>A vendor requests permanent shared remote access. Which response best supports Zero Trust?</legend>
+          <label class="option"><input type="radio" name="vendor" value="Allow permanent shared access"> Allow permanent shared access because the vendor is trusted</label>
+          <label class="option"><input type="radio" name="vendor" value="Named access with approval, MFA, expiration, and logging"> Use named access with approval, MFA, expiration, and logging</label>
+          <label class="option"><input type="radio" name="vendor" value="Disable all logging"> Disable logging to improve performance</label>
+        </fieldset>
+        <div class="knowledge"><strong>Knowledge:</strong> ACLs primarily govern subject-to-object permissions. Configuration rules evaluate conditions and direct system behavior. A complete implementation may use both.</div>
+        <div class="actions"><button class="btn btn-primary check-step" type="button">Check Step 4</button></div>
+        <div class="feedback" aria-live="polite"></div>
+      </article>
+
+      <article class="lab-step" data-step="5">
+        <div class="step-header"><span class="step-number">5</span><div><h3>Plan the policy lifecycle</h3><p>Connect policy development to implementation and evidence.</p></div></div>
+        <div class="lifecycle" aria-label="Policy lifecycle phases">
+          <div class="phase">1. Investigate<small>Sponsor, scope, stakeholders</small></div>
+          <div class="phase">2. Analyze<small>Risk, obligations, current state</small></div>
+          <div class="phase">3. Design<small>Draft, review, approve</small></div>
+          <div class="phase">4. Implement<small>Publish, train, acknowledge</small></div>
+          <div class="phase">5. Maintain<small>Measure, review, revise</small></div>
+        </div>
+        <fieldset class="question radio-question" data-answer="Acknowledgment and comprehension results">
+          <legend>Which evidence best shows that employees received and understood a new policy?</legend>
+          <label class="option"><input type="radio" name="evidence" value="A sent email"> A copy of the sent email</label>
+          <label class="option"><input type="radio" name="evidence" value="Acknowledgment and comprehension results"> Acknowledgment records and comprehension results</label>
+          <label class="option"><input type="radio" name="evidence" value="A draft file"> The author's draft file</label>
+        </fieldset>
+        <fieldset class="question radio-question" data-answer="Review after scheduled intervals and material change">
+          <legend>When should BrewByte review policy?</legend>
+          <label class="option"><input type="radio" name="review" value="Only after a breach"> Only after a breach</label>
+          <label class="option"><input type="radio" name="review" value="Review after scheduled intervals and material change"> At scheduled intervals and after material change</label>
+          <label class="option"><input type="radio" name="review" value="Never after approval"> Never after executive approval</label>
+        </fieldset>
+        <label class="text-label" for="successMeasure">Name one measure that would show whether the policy works</label>
+        <textarea id="successMeasure" placeholder="Examples may involve access reviews, exceptions, training, incidents, or control tests." data-required-text="15"></textarea>
+        <div class="actions"><button class="btn btn-primary check-step" type="button">Check Step 5</button></div>
+        <div class="feedback" aria-live="polite"></div>
+      </article>
+    </section>
+
+    <section class="section" id="results">
+      <div class="results">
+        <p class="eyebrow" style="color:#d9eee6">Module completion</p>
+        <h2>Review your work</h2>
+        <div class="score" id="score">0%</div>
+        <p id="scoreMessage">Complete and check each lab step to calculate your result.</p>
+        <div class="actions">
+          <button class="btn btn-success" type="button" id="buildSummary">Build completion summary</button>
+          <button class="btn btn-secondary" type="button" id="copySummary">Copy summary</button>
+          <button class="btn btn-secondary" type="button" id="printSummary">Print</button>
+          <button class="btn btn-secondary" type="button" id="resetModule">Reset module</button>
+          <a class="btn btn-secondary" href="./index.html" style="text-decoration:none">Return to module menu</a>
+        </div>
+        <div class="summary-output" id="summaryOutput" hidden></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    BrewByte Coffee is a fictional learning environment. This module uses original, synthetic content and does not reproduce a textbook lab or represent legal advice.
+  </footer>
+
+  <script>
+    const storageKey = "brewbyte-module-06-v1";
+    const steps = [...document.querySelectorAll(".lab-step")];
+    const state = { checked: {}, scores: {} };
+
+    function saveState() {
+      const values = {};
+      document.querySelectorAll("select, textarea, input").forEach((el, index) => {
+        if (el.type === "radio" || el.type === "checkbox") values[index] = el.checked;
+        else values[index] = el.value;
+      });
+      localStorage.setItem(storageKey, JSON.stringify({ values, checked: state.checked, scores: state.scores }));
+    }
+
+    function loadState() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(storageKey));
+        if (!saved) return;
+        document.querySelectorAll("select, textarea, input").forEach((el, index) => {
+          if (!(index in saved.values)) return;
+          if (el.type === "radio" || el.type === "checkbox") el.checked = saved.values[index];
+          else el.value = saved.values[index];
+        });
+        Object.assign(state.checked, saved.checked || {});
+        Object.assign(state.scores, saved.scores || {});
+        steps.forEach(step => {
+          const n = step.dataset.step;
+          if (state.checked[n]) showFeedback(step, state.scores[n]);
+        });
+        updateProgress();
+      } catch (_) { localStorage.removeItem(storageKey); }
+    }
+
+    function evaluateStep(step) {
+      let earned = 0;
+      let possible = 0;
+
+      step.querySelectorAll("select[data-answer]").forEach(select => {
+        possible += 1;
+        if (select.value === select.dataset.answer) earned += 1;
+      });
+
+      step.querySelectorAll(".checkboxes").forEach(group => {
+        group.querySelectorAll("input[type='checkbox']").forEach(box => {
+          possible += 1;
+          const shouldCheck = box.dataset.correct === "true";
+          if (box.checked === shouldCheck) earned += 1;
+        });
+      });
+
+      step.querySelectorAll(".radio-question").forEach(group => {
+        possible += 1;
+        const selected = group.querySelector("input:checked");
+        if (selected && selected.value === group.dataset.answer) earned += 1;
+      });
+
+      step.querySelectorAll("textarea[data-required-text]").forEach(area => {
+        possible += 1;
+        if (area.value.trim().length >= Number(area.dataset.requiredText)) earned += 1;
+      });
+
+      return possible ? Math.round((earned / possible) * 100) : 0;
+    }
+
+    function showFeedback(step, percent) {
+      const box = step.querySelector(".feedback");
+      box.className = "feedback show " + (percent >= 80 ? "good" : "review");
+      box.textContent = percent >= 80
+        ? `Step ${step.dataset.step}: ${percent}% complete. Your selections demonstrate the main concept.`
+        : `Step ${step.dataset.step}: ${percent}%. Review the definitions and hints, then try again.`;
+    }
+
+    function updateProgress() {
+      const completed = Object.values(state.checked).filter(Boolean).length;
+      const progress = Math.round((completed / steps.length) * 100);
+      document.getElementById("progressBar").style.width = `${progress}%`;
+      document.getElementById("progressText").textContent = `${progress}%`;
+
+      const scoreValues = Object.values(state.scores);
+      const overall = scoreValues.length ? Math.round(scoreValues.reduce((a,b) => a+b, 0) / steps.length) : 0;
+      document.getElementById("score").textContent = `${overall}%`;
+      document.getElementById("scoreMessage").textContent = completed < steps.length
+        ? `${completed} of ${steps.length} steps checked. Finish the remaining steps for a complete result.`
+        : overall >= 80
+          ? "Module complete. You demonstrated a working understanding of cybersecurity policy structure and implementation."
+          : "Module complete. Review the highlighted steps and retry before submitting your summary.";
+    }
+
+    document.querySelectorAll(".check-step").forEach(button => {
+      button.addEventListener("click", () => {
+        const step = button.closest(".lab-step");
+        const n = step.dataset.step;
+        const percent = evaluateStep(step);
+        state.checked[n] = true;
+        state.scores[n] = percent;
+        showFeedback(step, percent);
+        updateProgress();
+        saveState();
+      });
+    });
+
+    document.querySelectorAll("select, textarea, input").forEach(el => el.addEventListener("change", saveState));
+
+    function buildSummary() {
+      const scores = steps.map(step => `Step ${step.dataset.step}: ${state.scores[step.dataset.step] ?? "not checked"}%`).join("\n");
+      const cpp = document.getElementById("cppStatement").value.trim() || "Not entered";
+      const issue = document.getElementById("issueRule").value.trim() || "Not entered";
+      const measure = document.getElementById("successMeasure").value.trim() || "Not entered";
+      const output = `BrewByte Coffee - Module 6 Completion Summary\n\n${scores}\n\nCPP statement:\n${cpp}\n\nIssue-specific rule:\n${issue}\n\nSuccess measure:\n${measure}\n\nStudent reflection: Explain how one policy statement connects to a standard, procedure, ACL, or configuration rule.`;
+      const box = document.getElementById("summaryOutput");
+      box.textContent = output;
+      box.hidden = false;
+      return output;
+    }
+
+    document.getElementById("buildSummary").addEventListener("click", buildSummary);
+    document.getElementById("copySummary").addEventListener("click", async () => {
+      const output = buildSummary();
+      try {
+        await navigator.clipboard.writeText(output);
+        document.getElementById("copySummary").textContent = "Copied";
+        setTimeout(() => document.getElementById("copySummary").textContent = "Copy summary", 1400);
+      } catch (_) { alert("Copy was blocked. Select the summary text and copy it manually."); }
+    });
+    document.getElementById("printSummary").addEventListener("click", () => { buildSummary(); window.print(); });
+    document.getElementById("resetModule").addEventListener("click", () => {
+      if (!confirm("Reset all Module 6 answers and progress?")) return;
+      localStorage.removeItem(storageKey);
+      location.reload();
+    });
+
+    loadState();
+  </script>
+</body>
+</html>
