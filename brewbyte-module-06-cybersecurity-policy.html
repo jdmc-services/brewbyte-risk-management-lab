@@ -442,6 +442,39 @@
       border-radius: 12px;
       background: #fffdf9;
     }
+    .sort-row.correct, .option.correct {
+      border-color: #5e9a7f;
+      background: #eef8f2;
+    }
+    .sort-row.review, .option.review {
+      border-color: #c86f4b;
+      background: #fff3ec;
+    }
+    select.correct-field, textarea.correct-field { border: 2px solid #5e9a7f; }
+    select.review-field, textarea.review-field { border: 2px solid #c86f4b; }
+    .item-feedback {
+      grid-column: 1 / -1;
+      display: block;
+      margin-top: 7px;
+      padding: 8px 10px;
+      border-radius: 9px;
+      font-size: .9rem;
+      font-weight: 700;
+    }
+    .item-feedback.correct { color: #1e553f; background: #e5f4ec; }
+    .item-feedback.review { color: #7a3b22; background: #fff0df; }
+    .question > .item-feedback { margin-top: 12px; }
+    .learning-bridge {
+      margin-top: 18px;
+      padding: 18px;
+      border: 1px solid #cbded5;
+      border-radius: 14px;
+      color: #214d3d;
+      background: #eef7f2;
+    }
+    .learning-bridge strong { color: #163a2e; }
+    .learning-bridge ol { margin: 10px 0 0; padding-left: 22px; }
+    .feedback ul { margin: 8px 0 0; padding-left: 20px; font-weight: 600; }
 
     .lifecycle {
       display: grid;
@@ -567,7 +600,7 @@
         <ul>
           <li>10 key terms</li>
           <li>5 guided lab steps</li>
-          <li>Immediate explanations</li>
+          <li>Item-by-item explanations and retry guidance</li>
           <li>Printable completion summary</li>
         </ul>
       </aside>
@@ -582,10 +615,10 @@
         <li class="instruction-item"><strong>Review the terms</strong>Read all ten definitions before beginning the scenario.</li>
         <li class="instruction-item"><strong>Study the scenario</strong>Identify the business assets, risks, people, and systems involved.</li>
         <li class="instruction-item"><strong>Complete five steps</strong>Answer every question and write the requested policy statements.</li>
-        <li class="instruction-item"><strong>Check your work</strong>Select the check button after each step and revise any score below 80%.</li>
-        <li class="instruction-item"><strong>Build your summary</strong>Create, copy, or print the completion summary as directed by your instructor.</li>
+        <li class="instruction-item"><strong>Check your work</strong>Select the check button after each step. Green items are correct; orange items include an explanation and revision guidance.</li>
+        <li class="instruction-item"><strong>Build your summary</strong>Create, copy, or print the completion summary as evidence of learning or as directed by an instructor.</li>
       </ol>
-      <p class="completion-rule"><strong>Completion standard:</strong> Check all five lab steps and earn an overall score of at least 80%. Your instructor will tell you whether to submit the completion summary through the LMS.</p>
+      <p class="completion-rule"><strong>Completion standard:</strong> Check all five lab steps and earn an overall score of at least 80%. Independent learners may keep the completion summary as evidence of practice; enrolled learners should follow their instructor's submission directions.</p>
     </section>
 
     <section class="section" id="objectives">
@@ -618,6 +651,7 @@
         <article class="card glossary-card"><span class="term">Access control lists</span><span class="tag">ACLs</span><p>Permission structures that specify which subjects may perform defined actions on systems, files, services, or other objects.</p></article>
         <article class="card glossary-card"><span class="term">Configuration rules</span><p>Instructions that tell a system how to process traffic, content, data, requests, or security events.</p></article>
       </div>
+      <div class="learning-bridge"><strong>Use this policy-to-evidence chain:</strong><ol><li><strong>Policy</strong> states management intent and the required outcome.</li><li><strong>Standards</strong> define mandatory, measurable requirements.</li><li><strong>Procedures</strong> explain the repeatable work.</li><li><strong>ACLs and configuration rules</strong> enforce requirements in technology.</li><li><strong>Logs, acknowledgments, tests, and reviews</strong> provide evidence that the policy operates as intended.</li></ol></div>
     </section>
 
     <section class="section" id="scenario">
@@ -643,6 +677,7 @@
             </ul>
           </div>
         </div>
+        <div class="learning-bridge"><strong>Analysis lens:</strong> For each observation, ask four questions: What business objective or information is at risk? Which policy level should address it? Which people own the decision and implementation? What evidence would demonstrate compliance?</div>
       </article>
     </section>
 
@@ -655,11 +690,11 @@
       <article class="lab-step" data-step="1">
         <div class="step-header"><span class="step-number">1</span><div><h3>Classify policy documents</h3><p>Choose the document type that best fits each statement.</p></div></div>
         <div class="sort-list">
-          <label class="sort-row"><span>BrewByte protects sensitive information according to its business value and risk.</span><select data-answer="Policy"><option value="">Choose</option><option>Policy</option><option>Standard</option><option>Procedure</option><option>Guideline</option><option>Practice</option></select></label>
-          <label class="sort-row"><span>Privileged identities must use multifactor authentication.</span><select data-answer="Standard"><option value="">Choose</option><option>Policy</option><option>Standard</option><option>Procedure</option><option>Guideline</option><option>Practice</option></select></label>
-          <label class="sort-row"><span>Service desk staff verify identity, open the identity console, select the user, and start account recovery.</span><select data-answer="Procedure"><option value="">Choose</option><option>Policy</option><option>Standard</option><option>Procedure</option><option>Guideline</option><option>Practice</option></select></label>
-          <label class="sort-row"><span>Use phishing-resistant authentication when the approved platform supports it.</span><select data-answer="Guideline"><option value="">Choose</option><option>Policy</option><option>Standard</option><option>Procedure</option><option>Guideline</option><option>Practice</option></select></label>
-          <label class="sort-row"><span>Administrators use separate accounts for routine work and privileged tasks.</span><select data-answer="Practice"><option value="">Choose</option><option>Policy</option><option>Standard</option><option>Procedure</option><option>Guideline</option><option>Practice</option></select></label>
+          <label class="sort-row"><span>BrewByte protects sensitive information according to its business value and risk.</span><select data-answer="Policy" data-explanation="This is broad management direction describing the outcome the organization expects."><option value="">Choose</option><option>Policy</option><option>Standard</option><option>Procedure</option><option>Guideline</option><option>Practice</option></select></label>
+          <label class="sort-row"><span>Privileged identities must use multifactor authentication.</span><select data-answer="Standard" data-explanation="The word must creates a mandatory, testable requirement that supports policy."><option value="">Choose</option><option>Policy</option><option>Standard</option><option>Procedure</option><option>Guideline</option><option>Practice</option></select></label>
+          <label class="sort-row"><span>Service desk staff verify identity, open the identity console, select the user, and start account recovery.</span><select data-answer="Procedure" data-explanation="The statement provides ordered, repeatable actions for performing a task."><option value="">Choose</option><option>Policy</option><option>Standard</option><option>Procedure</option><option>Guideline</option><option>Practice</option></select></label>
+          <label class="sort-row"><span>Use phishing-resistant authentication when the approved platform supports it.</span><select data-answer="Guideline" data-explanation="This recommends a preferred approach when conditions allow rather than imposing a universal requirement."><option value="">Choose</option><option>Policy</option><option>Standard</option><option>Procedure</option><option>Guideline</option><option>Practice</option></select></label>
+          <label class="sort-row"><span>Administrators use separate accounts for routine work and privileged tasks.</span><select data-answer="Practice" data-explanation="This describes an accepted behavior that demonstrates how personnel commonly comply."><option value="">Choose</option><option>Policy</option><option>Standard</option><option>Procedure</option><option>Guideline</option><option>Practice</option></select></label>
         </div>
         <details class="hint"><summary>Hint</summary><div>Ask whether the statement provides direction, a mandatory measurement, repeatable steps, a recommendation, or an example of accepted behavior.</div></details>
         <div class="actions"><button class="btn btn-primary check-step" type="button">Check Step 1</button></div>
@@ -670,16 +705,16 @@
         <div class="step-header"><span class="step-number">2</span><div><h3>Build the CPP foundation</h3><p>Select every element that belongs in BrewByte's high-level cybersecurity program policy.</p></div></div>
         <fieldset class="question checkboxes" data-min-correct="5">
           <legend>CPP elements</legend>
-          <label class="option"><input type="checkbox" data-correct="true"> Purpose and connection to the business mission</label>
-          <label class="option"><input type="checkbox" data-correct="true"> Program scope and the information or technology covered</label>
-          <label class="option"><input type="checkbox" data-correct="true"> Shared and role-specific responsibilities</label>
-          <label class="option"><input type="checkbox" data-correct="true"> Governance authority and policy ownership</label>
-          <label class="option"><input type="checkbox" data-correct="true"> References to supporting standards, obligations, and related policies</label>
-          <label class="option"><input type="checkbox" data-correct="false"> Exact firewall commands for every store</label>
-          <label class="option"><input type="checkbox" data-correct="false"> Every employee's daily task list</label>
+          <label class="option"><input type="checkbox" data-correct="true" data-explanation="The CPP must connect cybersecurity direction to organizational purpose and priorities."> Purpose and connection to the business mission</label>
+          <label class="option"><input type="checkbox" data-correct="true" data-explanation="Scope establishes where, to whom, and to which information and technologies the policy applies."> Program scope and the information or technology covered</label>
+          <label class="option"><input type="checkbox" data-correct="true" data-explanation="A CPP assigns shared responsibilities and clarifies responsibilities unique to key roles."> Shared and role-specific responsibilities</label>
+          <label class="option"><input type="checkbox" data-correct="true" data-explanation="Executive authority, ownership, and accountability make the program governable."> Governance authority and policy ownership</label>
+          <label class="option"><input type="checkbox" data-correct="true" data-explanation="References connect the CPP to laws, frameworks, standards, and supporting organizational policies."> References to supporting standards, obligations, and related policies</label>
+          <label class="option"><input type="checkbox" data-correct="false" data-explanation="Exact commands change frequently and belong in system-specific procedures or configuration documentation."> Exact firewall commands for every store</label>
+          <label class="option"><input type="checkbox" data-correct="false" data-explanation="Daily task lists are operational work instructions, not executive cybersecurity direction."> Every employee's daily task list</label>
         </fieldset>
         <label class="text-label" for="cppStatement">Write one original CPP statement for BrewByte</label>
-        <textarea id="cppStatement" placeholder="Example structure: BrewByte will protect..." data-required-text="20"></textarea>
+        <textarea id="cppStatement" placeholder="Example structure: BrewByte will protect..." data-required-text="20" data-criteria="State management intent, identify the protected outcome or scope, and avoid product-specific commands or step-by-step instructions."></textarea>
         <details class="hint"><summary>Writing hint</summary><div>State management intent and the required outcome. Keep vendor settings and detailed steps in supporting standards or procedures.</div></details>
         <div class="knowledge"><strong>Knowledge:</strong> A CPP remains relatively stable because it sets direction. Detailed technology settings change more frequently and belong in supporting documents.</div>
         <div class="actions"><button class="btn btn-primary check-step" type="button">Check Step 2</button></div>
@@ -690,16 +725,16 @@
         <div class="step-header"><span class="step-number">3</span><div><h3>Select issue-specific policy topics</h3><p>Choose the policies that directly address the observed risks.</p></div></div>
         <fieldset class="question checkboxes" data-min-correct="5">
           <legend>Issue-specific modules</legend>
-          <label class="option"><input type="checkbox" data-correct="true"> Identity and privileged access</label>
-          <label class="option"><input type="checkbox" data-correct="true"> Guest and internal network use</label>
-          <label class="option"><input type="checkbox" data-correct="true"> Customer information handling</label>
-          <label class="option"><input type="checkbox" data-correct="true"> Vendor remote access</label>
-          <label class="option"><input type="checkbox" data-correct="true"> Responsible use of generative AI</label>
-          <label class="option"><input type="checkbox" data-correct="false"> Coffee bean roast temperature</label>
-          <label class="option"><input type="checkbox" data-correct="false"> Employee parking preferences</label>
+          <label class="option"><input type="checkbox" data-correct="true" data-explanation="Shared administrator accounts create accountability and privilege risks that need targeted rules."> Identity and privileged access</label>
+          <label class="option"><input type="checkbox" data-correct="true" data-explanation="The shared network observation requires rules for acceptable connections and segmentation."> Guest and internal network use</label>
+          <label class="option"><input type="checkbox" data-correct="true" data-explanation="Copying customer details into spreadsheets requires targeted handling, storage, access, and retention rules."> Customer information handling</label>
+          <label class="option"><input type="checkbox" data-correct="true" data-explanation="Persistent vendor access requires defined authorization, duration, authentication, monitoring, and review."> Vendor remote access</label>
+          <label class="option"><input type="checkbox" data-correct="true" data-explanation="Public AI use creates data-handling, accuracy, intellectual-property, and approval concerns."> Responsible use of generative AI</label>
+          <label class="option"><input type="checkbox" data-correct="false" data-explanation="Roast temperature is a product-quality issue unless a separate business policy requires it; it does not address the listed cybersecurity risks."> Coffee bean roast temperature</label>
+          <label class="option"><input type="checkbox" data-correct="false" data-explanation="Parking preferences are unrelated to the technology and information risks in this scenario."> Employee parking preferences</label>
         </fieldset>
         <label class="text-label" for="issueRule">Write one authorized or prohibited use statement</label>
-        <textarea id="issueRule" placeholder="State who may do what, with which resource, and under what condition." data-required-text="25"></textarea>
+        <textarea id="issueRule" placeholder="State who may do what, with which resource, and under what condition." data-required-text="25" data-criteria="Identify the audience, technology or information involved, authorized or prohibited behavior, and at least one condition such as approval, monitoring, or protection."></textarea>
         <details class="hint"><summary>Hint</summary><div>A useful issue-specific rule identifies the audience, resource, approved purpose, prohibited behavior, approval path, or monitoring expectation.</div></details>
         <div class="actions"><button class="btn btn-primary check-step" type="button">Check Step 3</button></div>
         <div class="feedback" aria-live="polite"></div>
@@ -708,12 +743,12 @@
       <article class="lab-step" data-step="4">
         <div class="step-header"><span class="step-number">4</span><div><h3>Map policy to technical controls</h3><p>Identify whether each implementation uses an ACL or a configuration rule.</p></div></div>
         <div class="sort-list">
-          <label class="sort-row"><span>Only the Payroll group can open the payroll folder.</span><select data-answer="ACL"><option value="">Choose</option><option>ACL</option><option>Configuration rule</option></select></label>
-          <label class="sort-row"><span>Point-of-sale terminals may connect only to approved payment destinations.</span><select data-answer="Configuration rule"><option value="">Choose</option><option>ACL</option><option>Configuration rule</option></select></label>
-          <label class="sort-row"><span>Store managers can view schedules for their assigned store.</span><select data-answer="ACL"><option value="">Choose</option><option>ACL</option><option>Configuration rule</option></select></label>
-          <label class="sort-row"><span>Block and alert when a payment terminal attempts an unapproved outbound connection.</span><select data-answer="Configuration rule"><option value="">Choose</option><option>ACL</option><option>Configuration rule</option></select></label>
+          <label class="sort-row"><span>Only the Payroll group can open the payroll folder.</span><select data-answer="ACL" data-explanation="This maps a subject group to permission on a specific object."><option value="">Choose</option><option>ACL</option><option>Configuration rule</option></select></label>
+          <label class="sort-row"><span>Point-of-sale terminals may connect only to approved payment destinations.</span><select data-answer="Configuration rule" data-explanation="This directs system behavior based on source, destination, and connection conditions."><option value="">Choose</option><option>ACL</option><option>Configuration rule</option></select></label>
+          <label class="sort-row"><span>Store managers can view schedules for their assigned store.</span><select data-answer="ACL" data-explanation="This assigns a defined permission to a role for a defined information object."><option value="">Choose</option><option>ACL</option><option>Configuration rule</option></select></label>
+          <label class="sort-row"><span>Block and alert when a payment terminal attempts an unapproved outbound connection.</span><select data-answer="Configuration rule" data-explanation="This evaluates a condition and instructs technology to block traffic and create an alert."><option value="">Choose</option><option>ACL</option><option>Configuration rule</option></select></label>
         </div>
-        <fieldset class="question radio-question" data-answer="Named access with approval, MFA, expiration, and logging">
+        <fieldset class="question radio-question" data-answer="Named access with approval, MFA, expiration, and logging" data-rationale="Zero Trust requires explicit verification, least privilege, limited duration, individual accountability, and observable activity. Trust in the vendor does not replace these controls.">
           <legend>A vendor requests permanent shared remote access. Which response best supports Zero Trust?</legend>
           <label class="option"><input type="radio" name="vendor" value="Allow permanent shared access"> Allow permanent shared access because the vendor is trusted</label>
           <label class="option"><input type="radio" name="vendor" value="Named access with approval, MFA, expiration, and logging"> Use named access with approval, MFA, expiration, and logging</label>
@@ -733,20 +768,20 @@
           <div class="phase">4. Implement<small>Publish, train, acknowledge</small></div>
           <div class="phase">5. Maintain<small>Measure, review, revise</small></div>
         </div>
-        <fieldset class="question radio-question" data-answer="Acknowledgment and comprehension results">
+        <fieldset class="question radio-question" data-answer="Acknowledgment and comprehension results" data-rationale="A sent message proves distribution, but acknowledgment and comprehension results provide stronger evidence that personnel received and understood the policy.">
           <legend>Which evidence best shows that employees received and understood a new policy?</legend>
           <label class="option"><input type="radio" name="evidence" value="A sent email"> A copy of the sent email</label>
           <label class="option"><input type="radio" name="evidence" value="Acknowledgment and comprehension results"> Acknowledgment records and comprehension results</label>
           <label class="option"><input type="radio" name="evidence" value="A draft file"> The author's draft file</label>
         </fieldset>
-        <fieldset class="question radio-question" data-answer="Review after scheduled intervals and material change">
+        <fieldset class="question radio-question" data-answer="Review after scheduled intervals and material change" data-rationale="Scheduled reviews keep policy current, while event-driven reviews address significant changes in technology, business operations, obligations, incidents, or threats.">
           <legend>When should BrewByte review policy?</legend>
           <label class="option"><input type="radio" name="review" value="Only after a breach"> Only after a breach</label>
           <label class="option"><input type="radio" name="review" value="Review after scheduled intervals and material change"> At scheduled intervals and after material change</label>
           <label class="option"><input type="radio" name="review" value="Never after approval"> Never after executive approval</label>
         </fieldset>
         <label class="text-label" for="successMeasure">Name one measure that would show whether the policy works</label>
-        <textarea id="successMeasure" placeholder="Examples may involve access reviews, exceptions, training, incidents, or control tests." data-required-text="15"></textarea>
+        <textarea id="successMeasure" placeholder="Examples may involve access reviews, exceptions, training, incidents, or control tests." data-required-text="15" data-criteria="Name a measurable indicator, what it reveals about policy effectiveness, and—when possible—a target, frequency, or responsible owner."></textarea>
         <div class="actions"><button class="btn btn-primary check-step" type="button">Check Step 5</button></div>
         <div class="feedback" aria-live="polite"></div>
       </article>
@@ -775,9 +810,9 @@
   </footer>
 
   <script>
-    const storageKey = "brewbyte-module-06-v1";
+    const storageKey = "brewbyte-module-06-v2";
     const steps = [...document.querySelectorAll(".lab-step")];
-    const state = { checked: {}, scores: {} };
+    const state = { checked: {}, scores: {}, attempts: {} };
 
     function saveState() {
       const values = {};
@@ -785,7 +820,7 @@
         if (el.type === "radio" || el.type === "checkbox") values[index] = el.checked;
         else values[index] = el.value;
       });
-      localStorage.setItem(storageKey, JSON.stringify({ values, checked: state.checked, scores: state.scores }));
+      localStorage.setItem(storageKey, JSON.stringify({ values, checked: state.checked, scores: state.scores, attempts: state.attempts }));
     }
 
     function loadState() {
@@ -799,51 +834,123 @@
         });
         Object.assign(state.checked, saved.checked || {});
         Object.assign(state.scores, saved.scores || {});
+        Object.assign(state.attempts, saved.attempts || {});
         steps.forEach(step => {
           const n = step.dataset.step;
-          if (state.checked[n]) showFeedback(step, state.scores[n]);
+          if (state.checked[n]) {
+            state.scores[n] = evaluateStep(step, true);
+            showFeedback(step, state.scores[n], state.attempts[n] || 1);
+            step.querySelector(".check-step").textContent = `Check Step ${n} Again`;
+          }
         });
         updateProgress();
       } catch (_) { localStorage.removeItem(storageKey); }
     }
 
-    function evaluateStep(step) {
+    function addItemFeedback(container, correct, message) {
+      const note = document.createElement("span");
+      note.className = `item-feedback ${correct ? "correct" : "review"}`;
+      note.textContent = message;
+      container.appendChild(note);
+    }
+
+    function clearEvaluation(step) {
+      step.querySelectorAll(".item-feedback").forEach(note => note.remove());
+      step.querySelectorAll(".correct, .review").forEach(el => el.classList.remove("correct", "review"));
+      step.querySelectorAll(".correct-field, .review-field").forEach(el => el.classList.remove("correct-field", "review-field"));
+    }
+
+    function evaluateStep(step, render = false) {
       let earned = 0;
       let possible = 0;
+      if (render) clearEvaluation(step);
 
       step.querySelectorAll("select[data-answer]").forEach(select => {
         possible += 1;
-        if (select.value === select.dataset.answer) earned += 1;
+        const correct = select.value === select.dataset.answer;
+        if (correct) earned += 1;
+        if (render) {
+          const row = select.closest(".sort-row");
+          row.classList.add(correct ? "correct" : "review");
+          select.classList.add(correct ? "correct-field" : "review-field");
+          const explanation = select.dataset.explanation || "Compare the statement's purpose with the definition.";
+          const message = correct
+            ? `Correct — ${explanation}`
+            : select.value
+              ? `Review — ${select.value} is not the best fit. Correct answer: ${select.dataset.answer}. ${explanation}`
+              : `Not answered. Correct answer: ${select.dataset.answer}. ${explanation}`;
+          addItemFeedback(row, correct, message);
+        }
       });
 
       step.querySelectorAll(".checkboxes").forEach(group => {
         group.querySelectorAll("input[type='checkbox']").forEach(box => {
           possible += 1;
           const shouldCheck = box.dataset.correct === "true";
-          if (box.checked === shouldCheck) earned += 1;
+          const correct = box.checked === shouldCheck;
+          if (correct) earned += 1;
+          if (render) {
+            const option = box.closest(".option");
+            option.classList.add(correct ? "correct" : "review");
+            const explanation = box.dataset.explanation || "Compare this choice with the scope of the requested policy document.";
+            let message;
+            if (correct && shouldCheck) message = `Correctly included — ${explanation}`;
+            else if (correct) message = `Correctly excluded — ${explanation}`;
+            else if (shouldCheck) message = `Review — this item should be selected. ${explanation}`;
+            else message = `Review — this item should not be selected. ${explanation}`;
+            addItemFeedback(option, correct, message);
+          }
         });
       });
 
       step.querySelectorAll(".radio-question").forEach(group => {
         possible += 1;
         const selected = group.querySelector("input:checked");
-        if (selected && selected.value === group.dataset.answer) earned += 1;
+        const correct = Boolean(selected && selected.value === group.dataset.answer);
+        if (correct) earned += 1;
+        if (render) {
+          group.querySelectorAll(".option").forEach(option => option.classList.remove("correct", "review"));
+          if (selected) selected.closest(".option").classList.add(correct ? "correct" : "review");
+          if (!correct) {
+            const answer = [...group.querySelectorAll("input")].find(input => input.value === group.dataset.answer);
+            if (answer) answer.closest(".option").classList.add("correct");
+          }
+          const message = correct
+            ? `Correct — ${group.dataset.rationale}`
+            : selected
+              ? `Review — the strongest answer is “${group.dataset.answer}.” ${group.dataset.rationale}`
+              : `Not answered. The strongest answer is “${group.dataset.answer}.” ${group.dataset.rationale}`;
+          addItemFeedback(group, correct, message);
+        }
       });
 
       step.querySelectorAll("textarea[data-required-text]").forEach(area => {
         possible += 1;
-        if (area.value.trim().length >= Number(area.dataset.requiredText)) earned += 1;
+        const complete = area.value.trim().length >= Number(area.dataset.requiredText);
+        if (complete) earned += 1;
+        if (render) {
+          area.classList.add(complete ? "correct-field" : "review-field");
+          const note = document.createElement("span");
+          note.className = `item-feedback ${complete ? "correct" : "review"}`;
+          note.textContent = complete
+            ? `Response recorded. Self-check its quality: ${area.dataset.criteria}`
+            : `Add a more complete original response. Quality standard: ${area.dataset.criteria}`;
+          area.insertAdjacentElement("afterend", note);
+        }
       });
 
       return possible ? Math.round((earned / possible) * 100) : 0;
     }
 
-    function showFeedback(step, percent) {
+    function showFeedback(step, percent, attempts = 1) {
       const box = step.querySelector(".feedback");
       box.className = "feedback show " + (percent >= 80 ? "good" : "review");
-      box.textContent = percent >= 80
-        ? `Step ${step.dataset.step}: ${percent}% complete. Your selections demonstrate the main concept.`
-        : `Step ${step.dataset.step}: ${percent}%. Review the definitions and hints, then try again.`;
+      const status = percent === 100
+        ? "Mastery demonstrated"
+        : percent >= 80
+          ? "Proficient—review any orange item"
+          : "Revision needed";
+      box.innerHTML = `<strong>Step ${step.dataset.step}: ${percent}% — ${status}</strong><ul><li>Green items are correct or appropriately excluded.</li><li>Orange items identify what to reconsider and explain why.</li><li>Written responses are checked for completion; use the displayed quality criteria for your self-review.</li><li>Attempt ${attempts}: revise any orange item and select the check button again.</li></ul>`;
     }
 
     function updateProgress() {
@@ -866,23 +973,40 @@
       button.addEventListener("click", () => {
         const step = button.closest(".lab-step");
         const n = step.dataset.step;
-        const percent = evaluateStep(step);
+        state.attempts[n] = (state.attempts[n] || 0) + 1;
+        const percent = evaluateStep(step, true);
         state.checked[n] = true;
         state.scores[n] = percent;
-        showFeedback(step, percent);
+        showFeedback(step, percent, state.attempts[n]);
+        button.textContent = `Check Step ${n} Again`;
         updateProgress();
         saveState();
       });
     });
 
-    document.querySelectorAll("select, textarea, input").forEach(el => el.addEventListener("change", saveState));
+    document.querySelectorAll("select, textarea, input").forEach(el => el.addEventListener("change", () => {
+      const step = el.closest(".lab-step");
+      if (step && state.checked[step.dataset.step]) {
+        state.checked[step.dataset.step] = false;
+        delete state.scores[step.dataset.step];
+        clearEvaluation(step);
+        const feedback = step.querySelector(".feedback");
+        feedback.className = "feedback show review";
+        feedback.textContent = `Step ${step.dataset.step} changed. Select “Check Step ${step.dataset.step} Again” to update your score and feedback.`;
+        updateProgress();
+      }
+      saveState();
+    }));
 
     function buildSummary() {
       const scores = steps.map(step => `Step ${step.dataset.step}: ${state.scores[step.dataset.step] ?? "not checked"}%`).join("\n");
       const cpp = document.getElementById("cppStatement").value.trim() || "Not entered";
       const issue = document.getElementById("issueRule").value.trim() || "Not entered";
       const measure = document.getElementById("successMeasure").value.trim() || "Not entered";
-      const output = `BrewByte Coffee - Module 6 Completion Summary\n\n${scores}\n\nCPP statement:\n${cpp}\n\nIssue-specific rule:\n${issue}\n\nSuccess measure:\n${measure}\n\nStudent reflection: Explain how one policy statement connects to a standard, procedure, ACL, or configuration rule.`;
+      const checkedScores = Object.values(state.scores);
+      const overall = checkedScores.length ? Math.round(checkedScores.reduce((a,b) => a+b, 0) / steps.length) : 0;
+      const mastery = checkedScores.length < steps.length ? "Incomplete" : overall >= 80 ? "Proficient" : "Review recommended";
+      const output = `BrewByte Coffee - Module 6 Completion Summary\nGenerated: ${new Date().toLocaleString()}\nOverall result: ${overall}% (${mastery})\n\n${scores}\n\nCPP statement:\n${cpp}\n\nIssue-specific rule:\n${issue}\n\nSuccess measure:\n${measure}\n\nLearning reflection: Explain how one policy statement connects to a standard, procedure, ACL, configuration rule, and evidence of compliance.`;
       const box = document.getElementById("summaryOutput");
       box.textContent = output;
       box.hidden = false;
