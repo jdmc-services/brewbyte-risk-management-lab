@@ -3,31 +3,41 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BrewByte Coffee | Phase 2: Build the Cybersecurity Program</title>
+<title>BrewByte Coffee | Building the Cybersecurity Program</title>
 <style>
-:root{--bg:#0f172a;--panel:#111827;--card:#1f2937;--ink:#f8fafc;--muted:#cbd5e1;--accent:#f59e0b;--good:#22c55e;--bad:#ef4444;--line:#334155}
-*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:linear-gradient(180deg,#0f172a,#111827);color:var(--ink);line-height:1.5}
-header{padding:38px 20px;border-bottom:1px solid var(--line);background:#111827} .wrap{max-width:1050px;margin:auto}
-.kicker{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.08em}.sub{color:var(--muted);max-width:800px}
-nav{position:sticky;top:0;background:#0f172aeF;border-bottom:1px solid var(--line);z-index:5}nav .wrap{display:flex;gap:8px;overflow:auto;padding:10px 20px}
-nav a{color:var(--muted);text-decoration:none;padding:7px 10px;border-radius:8px;white-space:nowrap}nav a:hover{background:var(--card);color:white}
-main{padding:24px 20px 70px}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;margin:18px 0;box-shadow:0 12px 30px #0003}
-h1{font-size:clamp(2rem,5vw,3.6rem);line-height:1.05;margin:.25em 0}h2{margin-top:0}h3{color:#fde68a}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.choice{display:block;width:100%;text-align:left;background:var(--card);border:1px solid #475569;color:white;padding:14px;border-radius:12px;cursor:pointer;margin:8px 0}.choice:hover{border-color:var(--accent)}
-.feedback{display:none;margin-top:10px;padding:12px;border-radius:10px;background:#0b1220;border-left:4px solid var(--accent)}
-.badge{display:inline-block;background:#422006;color:#fde68a;padding:4px 9px;border-radius:999px;font-size:.85rem}.metric{font-size:2rem;font-weight:800;color:#fde68a}
-input[type=range]{width:100%}.budgetRow{display:grid;grid-template-columns:1fr 90px;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid #253047}
-button.primary{background:var(--accent);color:#1c1917;border:0;padding:12px 18px;border-radius:10px;font-weight:800;cursor:pointer}
-.result{margin-top:14px;padding:15px;border:1px solid var(--line);border-radius:12px;background:#0b1220}
-.small{font-size:.9rem;color:var(--muted)}footer{color:var(--muted);border-top:1px solid var(--line);padding:28px 20px}
+:root{--coffee:#4b2e22;--cream:#f6f1e7;--paper:#fffdf8;--ink:#26343d;--muted:#64717a;--line:#d8d3c9;--blue:#244b64;--bluebg:#eaf1f5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.wrap{max-width:1080px;margin:auto}
+header{padding:46px 24px 34px;background:var(--paper);border-top:12px solid var(--coffee);border-bottom:1px solid var(--line)}
+.kicker{color:var(--coffee);font-weight:800;text-transform:uppercase;letter-spacing:.09em;font-size:.8rem}
+h1{font-family:Georgia,serif;font-size:clamp(2.2rem,5vw,3.7rem);line-height:1.05;margin:.25em 0;color:#30231e}
+.sub{color:#4e5b63;max-width:830px;font-size:1.08rem}.badge{display:none}
+nav{position:sticky;top:0;background:white;border-bottom:1px solid var(--line);z-index:5}
+nav .wrap{display:flex;gap:4px;overflow:auto;padding:9px 24px}
+nav a{color:#46545d;text-decoration:none;padding:7px 10px;border-radius:5px;white-space:nowrap;font-size:.92rem}
+nav a:hover{background:var(--bluebg);color:var(--blue)}
+main{padding:28px 24px 70px}.card{background:white;border:1px solid var(--line);border-radius:8px;padding:24px;margin:0 0 28px;box-shadow:none}
+h2{font-family:Georgia,serif;color:#30231e;margin-top:0;border-bottom:2px solid var(--coffee);padding-bottom:9px}
+h3{color:#3f302a}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.choice{display:block;width:100%;text-align:left;background:white;border:1px solid #c7ced2;color:var(--ink);padding:12px 14px;border-radius:6px;cursor:pointer;margin:8px 0;font:inherit}
+.choice:hover,.choice:focus{border-color:var(--blue);background:var(--bluebg);outline:none}
+.feedback{display:none;margin-top:12px;padding:13px 15px;border-radius:4px;background:var(--bluebg);border-left:4px solid var(--blue)}
+.metric{font-family:Georgia,serif;font-size:1.55rem;font-weight:700;color:var(--coffee)}
+input[type=range]{width:100%}.budgetRow{display:grid;grid-template-columns:1fr 100px;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid #e5e1d8}
+button.primary{background:var(--coffee);color:white;border:0;padding:11px 16px;border-radius:6px;font-weight:700;cursor:pointer}
+.result{margin-top:14px;padding:15px;border:1px solid var(--line);border-radius:6px;background:#faf8f2}
+.small{font-size:.9rem;color:var(--muted)}
+footer{color:#e8dfd7;background:#30231e;padding:28px 24px}
+@media(max-width:700px){.wrap{max-width:100%}header,main{padding-left:18px;padding-right:18px}}
 </style>
 </head>
 <body>
 <header><div class="wrap">
-<div class="kicker">BrewByte Coffee Cybersecurity Simulation</div>
-<h1>Phase 2: Build the Cybersecurity Program</h1>
-<p class="sub">You already identified assets, threats, vulnerabilities, and risk. Now management has a harder question: who will own security, how will the program operate, and what should BrewByte fund?</p>
-<span class="badge">Instructor-designed synthetic case study</span>
+<div class="kicker">BrewByte Coffee • Cybersecurity Management Case Study</div>
+<h1>Building the Cybersecurity Program</h1>
+<p class="sub">BrewByte is expanding. You have already identified the company’s critical assets, examined threats and vulnerabilities, and evaluated risk. Management now wants a practical plan for organizing, staffing, training, and governing cybersecurity as the business grows.</p>
+<span class="badge"></span>
 </div></header>
 
 <nav><div class="wrap">
@@ -36,7 +46,7 @@ button.primary{background:var(--accent);color:#1c1917;border:0;padding:12px 18px
 
 <main class="wrap">
 <section id="brief" class="card">
-<h2>Executive Brief</h2>
+<h2>Management Briefing</h2>
 <p>BrewByte has expanded to multiple locations and now depends on point-of-sale systems, online ordering, cloud services, Wi-Fi, employee identities, vendors, and remote administration. Buying tools alone will not create a cybersecurity program.</p>
 <div class="grid">
 <div><div class="metric">People</div><p class="small">Who owns, operates, and governs security?</p></div>
@@ -47,7 +57,7 @@ button.primary{background:var(--accent);color:#1c1917;border:0;padding:12px 18px
 </section>
 
 <section id="organization" class="card">
-<h2>Decision 1 — Where Should Cybersecurity Live?</h2>
+<h2>Management Challenge 1 — Design the Reporting Relationship</h2>
 <p>The CIO argues that cybersecurity belongs inside IT because IT operates the technology. The risk leader argues that security needs enough independence to challenge technology decisions.</p>
 <button class="choice" onclick="fb('org','A strong option for a growing company if governance provides independent escalation. The key is avoiding unchecked conflicts between delivery and oversight.')">A. Security reports to the CIO</button>
 <button class="choice" onclick="fb('org','This can strengthen independence, but BrewByte still needs tight operational coordination with IT. Reporting structure alone does not create effective governance.')">B. Security reports outside IT</button>
@@ -56,7 +66,7 @@ button.primary{background:var(--accent);color:#1c1917;border:0;padding:12px 18px
 </section>
 
 <section id="staffing" class="card">
-<h2>Decision 2 — The $450,000 Staffing Challenge</h2>
+<h2>Management Challenge 2 — Build the Team Within Budget</h2>
 <p>Build a security capability without exceeding the annual classroom budget. Values are synthetic for this exercise and are not market salary data.</p>
 <div id="budget"></div>
 <p><strong>Spent:</strong> $<span id="spent">0</span> &nbsp; <strong>Remaining:</strong> $<span id="remain">450000</span></p>
@@ -65,7 +75,7 @@ button.primary{background:var(--accent);color:#1c1917;border:0;padding:12px 18px
 </section>
 
 <section id="careers" class="card">
-<h2>Decision 3 — Who Handles the Work?</h2>
+<h2>Workforce Challenge — Put the Right Work in the Right Role</h2>
 <p>BrewByte detects suspicious authentication activity against a cloud administrator account. Match responsibility to capability.</p>
 <button class="choice" onclick="fb('career','Correct direction: monitoring and investigation are Protect/Defend and Investigate-type activities. Analysts may triage logs, validate alerts, and escalate.')">Investigate alerts and authentication logs → Security analyst / defender</button>
 <button class="choice" onclick="fb('career','Architecture and engineering work securely provisions or changes systems and controls. This is different from merely reviewing an alert.')">Redesign identity controls → Security engineer / architect</button>
@@ -74,7 +84,7 @@ button.primary{background:var(--accent);color:#1c1917;border:0;padding:12px 18px
 </section>
 
 <section id="seta" class="card">
-<h2>Decision 4 — SETA: Education, Training, or Awareness?</h2>
+<h2>SETA Challenge — Education, Training, or Awareness?</h2>
 <p>Use the memory model: <strong>Education = know why. Training = know how. Awareness = remember to act.</strong></p>
 <div class="grid">
 <div><h3>MFA Fatigue</h3><p>Employees approve unexpected prompts.</p><button class="choice" onclick="fb('s1','Awareness is central: employees must recognize the warning and remember the expected action. Technical controls can reinforce the behavior.')">Awareness</button><div id="s1" class="feedback"></div></div>
@@ -84,7 +94,7 @@ button.primary{background:var(--accent);color:#1c1917;border:0;padding:12px 18px
 </section>
 
 <section id="ai" class="card">
-<h2>Decision 5 — AI: Recommend or Execute?</h2>
+<h2>New Management Request — Set Boundaries for AI</h2>
 <p>BrewByte wants an AI security assistant. Apply least privilege, authorization boundaries, logging, and human oversight.</p>
 <button class="choice" onclick="fb('aifb','Lower-risk starting point: AI can summarize evidence and recommend priority while an authorized human validates consequential actions.')">AI analyzes SIEM alerts and recommends priority</button>
 <button class="choice" onclick="fb('aifb','Useful, but content should be reviewed for accuracy, policy alignment, and inappropriate or misleading simulations.')">AI generates role-specific awareness material</button>
@@ -93,7 +103,7 @@ button.primary{background:var(--accent);color:#1c1917;border:0;padding:12px 18px
 </section>
 
 <section id="project" class="card">
-<h2>Decision 6 — Project or Process?</h2>
+<h2>Project Management Challenge — Control the MFA Project</h2>
 <p>BrewByte approves a project to deploy MFA to all administrative accounts. Halfway through, leadership adds SSO, passwordless authentication, a VPN replacement, and a new identity provider without changing budget or schedule.</p>
 <button class="choice" onclick="fb('proj','Correct. The approved deliverables expanded without corresponding control of schedule, resources, or budget: classic scope creep.')">This is scope creep</button>
 <button class="choice" onclick="fb('proj','Not quite. Continuous improvement is ongoing; this scenario changes the defined project deliverables during execution.')">This is continuous improvement</button>
@@ -101,7 +111,7 @@ button.primary{background:var(--accent);color:#1c1917;border:0;padding:12px 18px
 </section>
 
 <section id="check" class="card">
-<h2>Final Knowledge Check</h2>
+<h2>Executive Close</h2>
 <p><strong>Question:</strong> BrewByte buys EDR, MFA, a firewall, and a SIEM. Does BrewByte now have a complete cybersecurity program?</p>
 <button class="choice" onclick="finalAnswer(false)">Yes — the major controls are installed.</button>
 <button class="choice" onclick="finalAnswer(true)">No — tools are capabilities; a program also requires people, processes, governance, training, ownership, and measurement.</button>
@@ -112,7 +122,7 @@ button.primary{background:var(--accent);color:#1c1917;border:0;padding:12px 18px
 </section>
 </main>
 
-<footer><div class="wrap">BrewByte Coffee is a fictional instructional environment. This module paraphrases and applies course concepts; it does not reproduce proprietary textbook or certification exam content.</div></footer>
+<footer><div class="wrap">BrewByte Coffee is a fictional company used for cybersecurity instruction. Scenario values and business conditions are synthetic. Course concepts are applied through original instructional scenarios.</div></footer>
 
 <script>
 function fb(id,msg){let e=document.getElementById(id);e.textContent=msg;e.style.display='block'}
