@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BrewByte Coffee | Phase 2: Build the Cybersecurity Program</title>
+<style>
+:root{--bg:#0f172a;--panel:#111827;--card:#1f2937;--ink:#f8fafc;--muted:#cbd5e1;--accent:#f59e0b;--good:#22c55e;--bad:#ef4444;--line:#334155}
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:linear-gradient(180deg,#0f172a,#111827);color:var(--ink);line-height:1.5}
+header{padding:38px 20px;border-bottom:1px solid var(--line);background:#111827} .wrap{max-width:1050px;margin:auto}
+.kicker{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.08em}.sub{color:var(--muted);max-width:800px}
+nav{position:sticky;top:0;background:#0f172aeF;border-bottom:1px solid var(--line);z-index:5}nav .wrap{display:flex;gap:8px;overflow:auto;padding:10px 20px}
+nav a{color:var(--muted);text-decoration:none;padding:7px 10px;border-radius:8px;white-space:nowrap}nav a:hover{background:var(--card);color:white}
+main{padding:24px 20px 70px}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;margin:18px 0;box-shadow:0 12px 30px #0003}
+h1{font-size:clamp(2rem,5vw,3.6rem);line-height:1.05;margin:.25em 0}h2{margin-top:0}h3{color:#fde68a}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.choice{display:block;width:100%;text-align:left;background:var(--card);border:1px solid #475569;color:white;padding:14px;border-radius:12px;cursor:pointer;margin:8px 0}.choice:hover{border-color:var(--accent)}
+.feedback{display:none;margin-top:10px;padding:12px;border-radius:10px;background:#0b1220;border-left:4px solid var(--accent)}
+.badge{display:inline-block;background:#422006;color:#fde68a;padding:4px 9px;border-radius:999px;font-size:.85rem}.metric{font-size:2rem;font-weight:800;color:#fde68a}
+input[type=range]{width:100%}.budgetRow{display:grid;grid-template-columns:1fr 90px;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid #253047}
+button.primary{background:var(--accent);color:#1c1917;border:0;padding:12px 18px;border-radius:10px;font-weight:800;cursor:pointer}
+.result{margin-top:14px;padding:15px;border:1px solid var(--line);border-radius:12px;background:#0b1220}
+.small{font-size:.9rem;color:var(--muted)}footer{color:var(--muted);border-top:1px solid var(--line);padding:28px 20px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="kicker">BrewByte Coffee Cybersecurity Simulation</div>
+<h1>Phase 2: Build the Cybersecurity Program</h1>
+<p class="sub">You already identified assets, threats, vulnerabilities, and risk. Now management has a harder question: who will own security, how will the program operate, and what should BrewByte fund?</p>
+<span class="badge">Instructor-designed synthetic case study</span>
+</div></header>
+
+<nav><div class="wrap">
+<a href="#brief">Brief</a><a href="#organization">Organization</a><a href="#staffing">Staffing</a><a href="#careers">NICE Roles</a><a href="#seta">SETA</a><a href="#ai">AI Decision</a><a href="#project">Project</a><a href="#check">Knowledge Check</a>
+</div></nav>
+
+<main class="wrap">
+<section id="brief" class="card">
+<h2>Executive Brief</h2>
+<p>BrewByte has expanded to multiple locations and now depends on point-of-sale systems, online ordering, cloud services, Wi-Fi, employee identities, vendors, and remote administration. Buying tools alone will not create a cybersecurity program.</p>
+<div class="grid">
+<div><div class="metric">People</div><p class="small">Who owns, operates, and governs security?</p></div>
+<div><div class="metric">Process</div><p class="small">How are repeatable security activities performed?</p></div>
+<div><div class="metric">Technology</div><p class="small">Which controls support the business?</p></div>
+<div><div class="metric">Governance</div><p class="small">Who makes risk decisions and measures results?</p></div>
+</div>
+</section>
+
+<section id="organization" class="card">
+<h2>Decision 1 — Where Should Cybersecurity Live?</h2>
+<p>The CIO argues that cybersecurity belongs inside IT because IT operates the technology. The risk leader argues that security needs enough independence to challenge technology decisions.</p>
+<button class="choice" onclick="fb('org','A strong option for a growing company if governance provides independent escalation. The key is avoiding unchecked conflicts between delivery and oversight.')">A. Security reports to the CIO</button>
+<button class="choice" onclick="fb('org','This can strengthen independence, but BrewByte still needs tight operational coordination with IT. Reporting structure alone does not create effective governance.')">B. Security reports outside IT</button>
+<button class="choice" onclick="fb('org','A defensible hybrid: operational alignment with IT plus independent risk escalation. Your recommendation should explain accountability, authority, and escalation.')">C. Hybrid reporting and independent risk escalation</button>
+<div id="org" class="feedback"></div>
+</section>
+
+<section id="staffing" class="card">
+<h2>Decision 2 — The $450,000 Staffing Challenge</h2>
+<p>Build a security capability without exceeding the annual classroom budget. Values are synthetic for this exercise and are not market salary data.</p>
+<div id="budget"></div>
+<p><strong>Spent:</strong> $<span id="spent">0</span> &nbsp; <strong>Remaining:</strong> $<span id="remain">450000</span></p>
+<button class="primary" onclick="scoreBudget()">Evaluate My Team</button>
+<div id="budgetResult" class="result">Choose resources, then evaluate your design.</div>
+</section>
+
+<section id="careers" class="card">
+<h2>Decision 3 — Who Handles the Work?</h2>
+<p>BrewByte detects suspicious authentication activity against a cloud administrator account. Match responsibility to capability.</p>
+<button class="choice" onclick="fb('career','Correct direction: monitoring and investigation are Protect/Defend and Investigate-type activities. Analysts may triage logs, validate alerts, and escalate.')">Investigate alerts and authentication logs → Security analyst / defender</button>
+<button class="choice" onclick="fb('career','Architecture and engineering work securely provisions or changes systems and controls. This is different from merely reviewing an alert.')">Redesign identity controls → Security engineer / architect</button>
+<button class="choice" onclick="fb('career','Governance leadership accepts, transfers, avoids, or mitigates business risk. Technical staff inform the decision; management owns the business decision.')">Approve risk treatment → Security leadership / governance</button>
+<div id="career" class="feedback"></div>
+</section>
+
+<section id="seta" class="card">
+<h2>Decision 4 — SETA: Education, Training, or Awareness?</h2>
+<p>Use the memory model: <strong>Education = know why. Training = know how. Awareness = remember to act.</strong></p>
+<div class="grid">
+<div><h3>MFA Fatigue</h3><p>Employees approve unexpected prompts.</p><button class="choice" onclick="fb('s1','Awareness is central: employees must recognize the warning and remember the expected action. Technical controls can reinforce the behavior.')">Awareness</button><div id="s1" class="feedback"></div></div>
+<div><h3>POS Procedure</h3><p>Cashiers do not know the secure login process.</p><button class="choice" onclick="fb('s2','Training fits: users need the skill to perform a specific task correctly and securely.')">Training</button><div id="s2" class="feedback"></div></div>
+<div><h3>Future Security Leader</h3><p>A student needs deeper understanding of governance and program design.</p><button class="choice" onclick="fb('s3','Education fits: the goal is broader, deeper knowledge that supports judgment and future responsibilities.')">Education</button><div id="s3" class="feedback"></div></div>
+</div>
+</section>
+
+<section id="ai" class="card">
+<h2>Decision 5 — AI: Recommend or Execute?</h2>
+<p>BrewByte wants an AI security assistant. Apply least privilege, authorization boundaries, logging, and human oversight.</p>
+<button class="choice" onclick="fb('aifb','Lower-risk starting point: AI can summarize evidence and recommend priority while an authorized human validates consequential actions.')">AI analyzes SIEM alerts and recommends priority</button>
+<button class="choice" onclick="fb('aifb','Useful, but content should be reviewed for accuracy, policy alignment, and inappropriate or misleading simulations.')">AI generates role-specific awareness material</button>
+<button class="choice" onclick="fb('aifb','Highest operational risk of the three. Autonomous firewall changes can disrupt business or expand access. Require constrained permissions, validation, logging, rollback, and approval appropriate to risk.')">AI automatically changes production firewall rules</button>
+<div id="aifb" class="feedback"></div>
+</section>
+
+<section id="project" class="card">
+<h2>Decision 6 — Project or Process?</h2>
+<p>BrewByte approves a project to deploy MFA to all administrative accounts. Halfway through, leadership adds SSO, passwordless authentication, a VPN replacement, and a new identity provider without changing budget or schedule.</p>
+<button class="choice" onclick="fb('proj','Correct. The approved deliverables expanded without corresponding control of schedule, resources, or budget: classic scope creep.')">This is scope creep</button>
+<button class="choice" onclick="fb('proj','Not quite. Continuous improvement is ongoing; this scenario changes the defined project deliverables during execution.')">This is continuous improvement</button>
+<div id="proj" class="feedback"></div>
+</section>
+
+<section id="check" class="card">
+<h2>Final Knowledge Check</h2>
+<p><strong>Question:</strong> BrewByte buys EDR, MFA, a firewall, and a SIEM. Does BrewByte now have a complete cybersecurity program?</p>
+<button class="choice" onclick="finalAnswer(false)">Yes — the major controls are installed.</button>
+<button class="choice" onclick="finalAnswer(true)">No — tools are capabilities; a program also requires people, processes, governance, training, ownership, and measurement.</button>
+<div id="finalfb" class="feedback"></div>
+<hr style="border-color:#334155;margin:22px 0">
+<h3>Exit Ticket</h3>
+<p>In 60 seconds, explain to an executive why a cybersecurity program is more than a collection of security products. Name one role, one process, one control, and one governance responsibility BrewByte needs.</p>
+</section>
+</main>
+
+<footer><div class="wrap">BrewByte Coffee is a fictional instructional environment. This module paraphrases and applies course concepts; it does not reproduce proprietary textbook or certification exam content.</div></footer>
+
+<script>
+function fb(id,msg){let e=document.getElementById(id);e.textContent=msg;e.style.display='block'}
+const items=[
+['Security Manager',135000],['Security Analyst',105000],['Security Engineer',120000],
+['Security Technician',75000],['MSSP Service',100000],['Awareness Program',20000]
+];
+let b=document.getElementById('budget');
+items.forEach((x,i)=>{b.innerHTML+=`<div class="budgetRow"><label><input type="checkbox" id="b${i}" onchange="calc()"> ${x[0]}</label><span>$${x[1].toLocaleString()}</span></div>`});
+function calc(){let s=0;items.forEach((x,i)=>{if(document.getElementById('b'+i).checked)s+=x[1]});document.getElementById('spent').textContent=s.toLocaleString();document.getElementById('remain').textContent=(450000-s).toLocaleString()}
+function scoreBudget(){let chosen=items.filter((x,i)=>document.getElementById('b'+i).checked);let s=chosen.reduce((a,x)=>a+x[1],0), r=document.getElementById('budgetResult');if(s>450000){r.textContent='Over budget. Reprioritize based on BrewByte’s highest risks and required capabilities.';return}let names=chosen.map(x=>x[0]);let gaps=[];if(!names.includes('Security Manager'))gaps.push('governance/ownership');if(!names.includes('Security Analyst')&&!names.includes('MSSP Service'))gaps.push('monitoring and incident triage');if(!names.includes('Security Engineer')&&!names.includes('MSSP Service'))gaps.push('engineering capability');if(!names.includes('Awareness Program'))gaps.push('workforce awareness');r.textContent=gaps.length?`Within budget, but discuss these possible gaps: ${gaps.join(', ')}. There is no single perfect team—defend your choices using risk.`:`Balanced capability mix within budget. Now justify why this mix matches BrewByte’s risk and business needs.`}
+function finalAnswer(ok){fb('finalfb',ok?'Correct. Program effectiveness depends on coordinated people, processes, technology, governance, and continual measurement—not tool ownership alone.':'Reconsider the difference between owning security technology and operating a governed cybersecurity program.')}
+</script>
+</body></html>
