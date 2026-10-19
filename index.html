@@ -1,235 +1,419 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Interactive BrewByte Coffee cybersecurity risk management lab for Regional Technical College.">
-  <title>BrewByte Coffee Risk Management Lab</title>
-  <style>
-    :root{color-scheme:dark;--bg:#0f172a;--panel:#111c30;--panel2:#162238;--line:#2b3b55;--text:#e5edf7;--muted:#9fb0c6;--emerald:#10b981;--amber:#f59e0b;--cyan:#06b6d4;--red:#ef4444;--orange:#f97316;--shadow:0 18px 55px rgba(0,0,0,.28);--radius:18px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% 0,rgba(6,182,212,.11),transparent 28rem),var(--bg);color:var(--text);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    button,input,select{font:inherit}button{color:inherit}.shell{max-width:1440px;margin:auto;padding:0 24px 48px}.topbar{position:sticky;top:0;z-index:20;margin:0 -24px;padding:14px 24px;background:rgba(15,23,42,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-    .brandrow{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1440px;margin:auto}.brand{display:flex;align-items:center;gap:12px}.brandmark{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--emerald),var(--cyan));color:#041716;font-weight:900;box-shadow:0 0 28px rgba(16,185,129,.25)}.brand h1{font-size:1rem;margin:0;letter-spacing:.01em}.brand small,.muted{color:var(--muted)}
-    .scope-pill{border:1px solid rgba(239,68,68,.55);background:rgba(239,68,68,.09);color:#fecaca;padding:8px 12px;border-radius:999px;font-size:.8rem;font-weight:800;white-space:nowrap}
-    .tabs{display:grid;grid-template-columns:repeat(5,minmax(150px,1fr));gap:8px;margin-top:14px;overflow-x:auto;padding-bottom:2px}.tab{border:1px solid var(--line);background:#101a2d;padding:11px 12px;border-radius:12px;color:var(--muted);cursor:pointer;text-align:left;font-size:.84rem;font-weight:750;min-height:50px}.tab:hover,.tab:focus-visible{border-color:var(--cyan);color:var(--text)}.tab[aria-selected="true"]{background:linear-gradient(135deg,rgba(16,185,129,.17),rgba(6,182,212,.1));border-color:var(--emerald);color:white;box-shadow:inset 0 -2px var(--emerald)}
-    .module-links{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}.module-link{display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 14px;border:1px solid rgba(245,158,11,.58);border-radius:12px;background:linear-gradient(135deg,rgba(245,158,11,.13),rgba(6,182,212,.08));color:#fde1a9;text-decoration:none;font-weight:900;text-align:center}.module-link:hover,.module-link:focus-visible{border-color:var(--amber);color:#fff7e6}.module-link.current{border-color:var(--emerald);background:linear-gradient(135deg,rgba(16,185,129,.2),rgba(6,182,212,.1));color:#dffcf2}
-    .course-notice{margin-bottom:22px;border-color:rgba(245,158,11,.55);background:linear-gradient(150deg,rgba(78,50,10,.45),rgba(17,28,48,.96))}.course-notice h2{margin:.35rem 0 .65rem;font-size:clamp(1.45rem,3vw,2.15rem)}.course-notice p{margin:.4rem 0;color:#d8e3f0}.instruction-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}.instruction-step{padding:13px;border:1px solid var(--line);border-radius:12px;background:rgba(5,13,27,.35)}.instruction-step strong{display:block;color:var(--emerald);margin-bottom:3px}.instruction-step span{color:var(--muted);font-size:.9rem}
-    main{padding-top:28px}.view{display:none}.view.active{display:block;animation:rise .25s ease}@keyframes rise{from{opacity:0;transform:translateY(8px)}}.eyebrow{text-transform:uppercase;letter-spacing:.14em;color:var(--cyan);font-size:.75rem;font-weight:900}.hero{display:grid;grid-template-columns:1.35fr .65fr;gap:20px;align-items:stretch}.hero h2{font-size:clamp(2rem,5vw,4.7rem);line-height:1.03;max-width:950px;margin:10px 0 18px;letter-spacing:-.045em}.hero h2 span{color:var(--emerald)}.lede{font-size:1.12rem;color:#c3d2e4;max-width:800px}.panel,.card{background:linear-gradient(160deg,rgba(22,34,56,.96),rgba(15,25,44,.96));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.panel{padding:24px}.safety{border-color:rgba(239,68,68,.45);background:linear-gradient(150deg,rgba(76,22,31,.62),rgba(17,28,48,.95))}.safety h3{color:#fca5a5;margin-top:0}.safety ul{padding-left:20px;margin-bottom:0}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}.metric{padding:16px;border:1px solid var(--line);border-radius:14px;background:rgba(5,13,27,.35)}.metric strong{display:block;font-size:1.45rem;color:var(--emerald)}h2.section{font-size:clamp(1.75rem,4vw,2.7rem);margin:0 0 8px}h3{line-height:1.25}.section-intro{color:var(--muted);max-width:900px;margin-top:0}
-    .asset-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:24px 0}.asset{padding:18px;min-height:148px}.asset .icon{font-size:1.55rem}.asset h3{font-size:1rem;margin:12px 0 6px}.asset p{margin:0;color:var(--muted);font-size:.91rem}.philosophy{margin-top:28px}.philosophy-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.flip-card{position:relative;text-align:left;padding:24px;min-height:245px;cursor:pointer;color:var(--text)}.flip-card .hint{color:var(--cyan);font-size:.8rem;font-weight:800}.flip-card h3{font-size:1.5rem;margin:12px 0}.flip-card .detail{max-height:0;overflow:hidden;opacity:0;transition:.3s}.flip-card.open .detail{max-height:240px;opacity:1;margin-top:15px}.mapline{display:flex;gap:8px;align-items:center;margin:8px 0;color:#c9d7e8}.mapline b{color:var(--emerald)}
-    .toolbar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:20px 0}.search{flex:1;min-width:250px;position:relative}.search input{width:100%;padding:14px 16px 14px 44px;border-radius:13px;border:1px solid var(--line);background:#0b1322;color:white;outline:none}.search input:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(6,182,212,.12)}.search span{position:absolute;left:16px;top:12px;color:var(--muted)}.count{color:var(--muted);font-size:.9rem}.terms{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.term{min-height:122px;text-align:left;padding:18px;border:1px solid var(--line);background:linear-gradient(150deg,#142139,#101a2d);border-radius:15px;cursor:pointer;color:white}.term:hover,.term:focus-visible{transform:translateY(-2px);border-color:var(--emerald);box-shadow:0 12px 30px rgba(0,0,0,.25)}.term strong{display:block;color:#dffcf2;font-size:1rem}.term small{display:block;color:var(--muted);margin-top:8px}.empty{grid-column:1/-1;padding:32px;text-align:center;color:var(--muted)}
-    dialog{max-width:760px;width:calc(100% - 32px);border:1px solid var(--cyan);border-radius:18px;background:#111c30;color:var(--text);padding:0;box-shadow:0 30px 90px #000}dialog::backdrop{background:rgba(2,6,23,.82);backdrop-filter:blur(5px)}.modal-head{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid var(--line)}.modal-head h3{margin:0;color:var(--emerald)}.close{border:1px solid var(--line);background:#0b1322;border-radius:10px;width:38px;height:38px;cursor:pointer}.modal-body{padding:22px 24px}.definition-block{padding:16px;border-left:3px solid var(--cyan);background:rgba(6,182,212,.07);margin-bottom:14px;border-radius:0 12px 12px 0}.definition-block:nth-child(2){border-color:var(--emerald);background:rgba(16,185,129,.07)}.definition-block:nth-child(3){border-color:var(--amber);background:rgba(245,158,11,.07)}.definition-block h4{margin:0 0 6px;font-size:.84rem;text-transform:uppercase;letter-spacing:.08em}.definition-block p{margin:0;color:#d8e3f0}
-    .commandbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.cmd-btn{border:1px solid #31506a;background:#12243a;color:#d8f9ff;padding:10px 13px;border-radius:11px;cursor:pointer;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.84rem}.cmd-btn:hover,.cmd-btn:focus-visible{border-color:var(--cyan);background:#15304a}.lab-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:16px}.terminal{background:#020604;border:1px solid #1e513f;border-radius:16px;overflow:hidden;box-shadow:0 0 35px rgba(16,185,129,.08);min-height:520px}.terminal-head{display:flex;align-items:center;gap:7px;padding:11px 14px;background:#08110e;border-bottom:1px solid #17392e;color:#8ca69c;font-size:.8rem}.dot{width:11px;height:11px;border-radius:50%}.dot.r{background:#ef4444}.dot.y{background:#f59e0b}.dot.g{background:#10b981}.terminal-body{padding:18px;color:#d5e7df;font:14px/1.58 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre-wrap;overflow:auto;min-height:460px}.prompt{color:#34d399}.fake-label{display:inline-block;background:rgba(245,158,11,.13);color:#fbbf24;border:1px solid rgba(245,158,11,.5);padding:5px 9px;border-radius:999px;font:700 .75rem system-ui;margin-left:auto}.analysis{min-height:520px}.analysis h3{margin-top:0}.analysis-section{padding:15px 0;border-top:1px solid var(--line)}.analysis-section:first-of-type{border-top:0}.analysis-section h4{margin:0 0 6px;color:var(--cyan)}.analysis-section p{margin:0;color:#c7d5e6}.evidence-rule{margin-top:16px;padding:14px;border-radius:12px;background:rgba(245,158,11,.09);border:1px solid rgba(245,158,11,.35);color:#fde1a9}
-    .risk-layout{display:grid;grid-template-columns:.7fr 1.3fr;gap:16px}.asset-select{display:grid;gap:10px}.asset-choice{padding:15px;border:1px solid var(--line);border-radius:13px;background:#101b2f;cursor:pointer;text-align:left}.asset-choice.active{border-color:var(--emerald);background:rgba(16,185,129,.1)}.asset-choice strong{display:block}.asset-choice small{color:var(--muted)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field label,.field-title{display:block;color:#b7c5d8;font-size:.88rem;font-weight:800;margin-bottom:6px}.field select{width:100%;padding:12px;border-radius:11px;background:#0b1322;color:white;border:1px solid var(--line)}.score-card{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:18px 0;padding:18px;border-radius:15px;background:#0a1425;border:1px solid var(--line)}.score-number{font-size:2.8rem;font-weight:900;line-height:1}.badge{padding:8px 13px;border-radius:999px;font-weight:900}.badge.low{background:rgba(16,185,129,.16);color:#6ee7b7}.badge.moderate{background:rgba(234,179,8,.16);color:#fde047}.badge.high{background:rgba(249,115,22,.17);color:#fdba74}.badge.critical{background:rgba(239,68,68,.17);color:#fca5a5}.treatments{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.treatment input{position:absolute;opacity:0}.treatment label{display:block;text-align:center;border:1px solid var(--line);padding:11px 8px;border-radius:10px;cursor:pointer}.treatment input:checked+label{border-color:var(--cyan);background:rgba(6,182,212,.12);color:white}.feedback{margin-top:16px;padding:16px;border-radius:13px;border-left:4px solid var(--cyan);background:rgba(6,182,212,.08)}.feedback.warn{border-color:var(--amber);background:rgba(245,158,11,.08)}.feedback.danger{border-color:var(--red);background:rgba(239,68,68,.08)}.matrix-key{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:15px}.keybox{padding:10px;text-align:center;border-radius:9px;font-size:.82rem;font-weight:800}.keybox.low{background:#064e3b}.keybox.moderate{background:#713f12}.keybox.high{background:#7c2d12}.keybox.critical{background:#7f1d1d}.actionbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.action{border:1px solid var(--line);border-radius:10px;background:#122038;padding:10px 13px;cursor:pointer}.action.primary{background:var(--emerald);color:#03241a;border-color:var(--emerald);font-weight:900}
-    .quiz-summary{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;margin:18px 0 22px}.progress-track{height:12px;background:#08111f;border-radius:999px;overflow:hidden}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--emerald));transition:.25s}.quiz-score{font-weight:900;color:var(--emerald)}.questions{display:grid;gap:16px}.question{padding:22px}.question h3{margin:0 0 14px;font-size:1.05rem}.choices{display:grid;grid-template-columns:1fr 1fr;gap:9px}.choice{border:1px solid var(--line);background:#0e1a2d;text-align:left;padding:12px;border-radius:11px;cursor:pointer}.choice:hover:not(:disabled){border-color:var(--cyan)}.choice.correct{background:rgba(16,185,129,.17);border-color:var(--emerald)}.choice.incorrect{background:rgba(239,68,68,.16);border-color:var(--red)}.choice:disabled{cursor:default;color:#d8e3ef}.explain{display:none;margin-top:13px;padding:14px;border-radius:11px;background:#0a1424;border-left:3px solid var(--cyan);color:#cad8e7}.explain.show{display:block}.quiz-finish{display:none;margin-top:18px;padding:22px}.quiz-finish.show{display:block}.sources{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}.sources a{color:#67e8f9}.toast{position:fixed;right:22px;bottom:22px;background:#0b1322;border:1px solid var(--emerald);padding:12px 16px;border-radius:11px;box-shadow:var(--shadow);opacity:0;transform:translateY(15px);pointer-events:none;transition:.25s;z-index:40}.toast.show{opacity:1;transform:none}
-    :focus-visible{outline:3px solid rgba(6,182,212,.45);outline-offset:2px}@media(max-width:1050px){.hero,.lab-grid,.risk-layout{grid-template-columns:1fr}.asset-grid{grid-template-columns:repeat(2,1fr)}.terms{grid-template-columns:repeat(2,1fr)}.tabs{grid-template-columns:repeat(5,210px)}.instruction-grid{grid-template-columns:1fr 1fr}}@media(max-width:650px){.shell{padding:0 15px 30px}.topbar{margin:0 -15px;padding:12px 15px}.brand small,.scope-pill{display:none}.asset-grid,.philosophy-grid,.terms,.form-grid,.choices,.module-links,.instruction-grid{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}.treatments,.matrix-key{grid-template-columns:1fr 1fr}.panel{padding:18px}.hero h2{font-size:2.35rem}.quiz-summary{grid-template-columns:1fr}.terminal-body{font-size:12px}.tab{min-height:44px}}
-    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
-    @media print{body:before{content:"This zero-paper lab is designed for interactive browser use.";display:block;padding:20px}.shell{display:none}}
-  </style>
-</head>
-<body>
-<div class="shell">
-  <header class="topbar">
-    <div class="brandrow">
-      <div class="brand"><div class="brandmark" aria-hidden="true">BB</div><div><h1>BrewByte Risk Management Lab</h1><small>Regional Technical College · zero-paper learning portal</small></div></div>
-      <div class="scope-pill">SIMULATED · AUTHORIZED LAB ONLY</div>
-    </div>
-    <nav class="tabs" role="tablist" aria-label="Lab sections">
-      <button class="tab" role="tab" aria-selected="true" aria-controls="overview" id="tab-overview" data-tab="overview">01 · Overview &amp; Philosophy</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="terms" id="tab-terms" data-tab="terms">02 · Key Terms Explorer</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="nmap" id="tab-nmap" data-tab="nmap">03 · Nmap Simulator</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="risk" id="tab-risk" data-tab="risk">04 · Risk Matrix</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="quiz" id="tab-quiz" data-tab="quiz">05 · Knowledge Check</button>
-    </nav>
-    <div class="module-links" aria-label="Course modules">
-      <a class="module-link" href="week4.html">Module 4 · Risk Treatment <span aria-hidden="true">→</span></a>
-      <a class="module-link" href="week5.html">Module 5 · Recovery Assurance <span aria-hidden="true">→</span></a>
-      <a class="module-link current" href="brewbyte-module-06-cybersecurity-policy.html">Module 6 · Cybersecurity Policy <span aria-hidden="true">→</span></a>
-    </div>
-  </header>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BrewByte | Technology Startup Learning Lab</title><style>
+:root{--bg:#0d1c22;--panel:#172e36;--panel2:#203e47;--gold:#f0b65d;--cream:#fff9ef;--ink:#152a32;--text:#f5f6f2;--muted:#b6cbd1;--green:#9ce0b2}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:2px}header{background:linear-gradient(120deg,#152d35,#234a50);border-bottom:3px solid var(--gold)}.wrap{max-width:1240px;margin:auto;padding:24px}.hero{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.eyebrow{color:var(--gold);font-size:.8rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}h1{font-size:clamp(2rem,4vw,3.3rem);line-height:1.12;margin:8px 0 16px}h2{line-height:1.2;margin:4px 0 16px}h3{margin:12px 0 8px}p{margin:8px 0 16px}.muted{color:var(--muted)}.layout{display:grid;grid-template-columns:245px minmax(0,1fr);gap:22px;align-items:start}.side{position:sticky;top:16px;background:var(--panel);padding:18px;border:1px solid #35535d;border-radius:14px}.side button{display:block;width:100%;text-align:left;padding:11px 12px;margin:6px 0;border-radius:8px;border:1px solid #43616b;background:#102630;color:#f8faf8}.side button.active{background:var(--gold);color:#17242a;font-weight:800}.side button:hover{border-color:var(--gold)}.card{background:var(--panel);border:1px solid #34535c;border-radius:16px;padding:24px;margin-bottom:18px}.card.light{background:var(--cream);color:var(--ink)}.hidden{display:none!important}.btn{background:var(--gold);color:#14252c;border:0;border-radius:8px;padding:10px 16px;font-weight:800}.btn.alt{background:#2c515d;color:white;border:1px solid #74929a}.btn.small{padding:6px 10px;font-size:.88rem}.btn:disabled{opacity:.5;cursor:not-allowed}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.tile{background:#f7f0e5;color:var(--ink);padding:16px;border-radius:12px}.tile h3{color:#573821}.tile svg{width:100%;height:105px}.stepper{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.stepper button{background:#294650;color:white;border:1px solid #63818b;border-radius:10px;padding:12px 6px}.stepper button.active{background:var(--gold);color:var(--ink);font-weight:800}.callout{background:#24434e;border-left:4px solid var(--gold);border-radius:8px;padding:14px;margin:16px 0}.q{padding:16px 0;border-top:1px solid #47636b}.choice{display:block;background:#fff;color:#152a32!important;border:2px solid transparent;border-radius:8px;margin:7px 0;padding:10px 12px;cursor:pointer;font-weight:600}.choice:has(input:checked){border-color:#d89424;background:#fff0d1}.choice input{margin-right:10px;accent-color:#8c5415}.feedback{padding:12px;background:#274751;border-radius:8px;margin:10px 0}.feedback.good{border-left:4px solid var(--green)}.feedback.bad{border-left:4px solid var(--gold)}.term{background:#fff9ef;color:#18303a;border-radius:10px;padding:15px}.term h3{margin-top:0}.term .example{display:none;background:#f0e4d0;padding:10px;border-radius:6px}.term .example.open{display:block}.bar{height:12px;background:#37535b;border-radius:99px;overflow:hidden}.bar span{display:block;height:100%;background:var(--gold);width:0}.field{display:block;margin:10px 0}.field input,.field select,.field textarea{width:100%;padding:10px;background:white;color:#152a32;border:1px solid #a9bdc3;border-radius:7px}.field textarea{min-height:110px}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.pill{display:inline-block;border-radius:99px;padding:3px 10px;background:#31535b;color:#fff;font-size:.8rem}.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.flow>div{padding:12px;border:1px solid #66828b;border-radius:10px;flex:1;min-width:120px;text-align:center}.flow b{display:block;color:var(--gold)}.svg-frame{background:#f5e8d5;border-radius:12px;overflow:hidden}.svg-frame svg{display:block;width:100%;height:auto}.mini{font-size:.9rem}.stat{background:#21414b;padding:12px;border-radius:10px}a{color:#ffcc81}footer{padding:30px;text-align:center;color:var(--muted)}@media(max-width:850px){.hero,.layout{grid-template-columns:1fr}.side{position:static}.stepper{grid-template-columns:repeat(2,1fr)}}@media print{header,.side,.btn,.no-print{display:none!important}.layout{display:block}.card{background:white;color:black;border:1px solid #999;break-inside:avoid}.hidden{display:block!important}body{background:white;color:black}}
 
-  <main>
-    <section class="panel course-notice" aria-labelledby="module-six-heading">
-      <div class="eyebrow">Open learning module · Module 6</div>
-      <h2 id="module-six-heading">Cybersecurity Program Policy</h2>
-      <p>This learning experience is available to anyone who wants to understand how organizations create, communicate, and apply cybersecurity policy. The content is aligned with the Module 6 classroom topics but can also be completed independently for practice or professional development.</p>
-      <p>Work through the activities in order, use the synthetic BrewByte Coffee scenario to apply each concept, and review the feedback provided throughout the lab.</p>
-      <div class="instruction-grid" aria-label="How to complete Module 6">
-        <div class="instruction-step"><strong>1 · Learn</strong><span>Review the Module 6 lecture and key terms.</span></div>
-        <div class="instruction-step"><strong>2 · Explore</strong><span>Connect policy types, roles, standards, procedures, and technical rules.</span></div>
-        <div class="instruction-step"><strong>3 · Practice</strong><span>Complete each synthetic BrewByte activity in order.</span></div>
-        <div class="instruction-step"><strong>4 · Review</strong><span>Use the feedback and completion summary to reinforce the concepts.</span></div>
-      </div>
-    </section>
-    <section class="view active" id="overview" role="tabpanel" aria-labelledby="tab-overview">
-      <div class="hero">
-        <div class="panel">
-          <div class="eyebrow">BrewByte Coffee · three-store expansion</div>
-          <h2>Turn network evidence into <span>business risk decisions.</span></h2>
-          <p class="lede">BrewByte is growing from one location to three. Students must identify what supports the business, analyze authorized evidence, compare risk with appetite, and recommend accountable treatment.</p>
-          <div class="metrics"><div class="metric"><strong>3</strong><span>store locations</span></div><div class="metric"><strong>4</strong><span>RM components</span></div><div class="metric"><strong>0</strong><span>real systems scanned</span></div></div>
-        </div>
-        <aside class="panel safety" aria-label="Lab safety rules">
-          <h3>Authorization boundary</h3>
-          <p>All output in this portal is fictional. In a live class, scan only the instructor-provided isolated network.</p>
-          <ul><li>No production, college, public, personal, or third-party targets.</li><li>Discovery and analysis only.</li><li>No exploitation, password attacks, persistence, evasion, or destructive testing.</li><li>All organizations, findings, definitions, and questions in this portal are synthetic or instructor-created.</li></ul>
-        </aside>
-      </div>
-      <div class="asset-grid" aria-label="BrewByte technology environment">
-        <article class="card asset"><div class="icon">▣</div><h3>Store operations</h3><p>POS terminals, management workstations, employee and guest Wi-Fi.</p></article>
-        <article class="card asset"><div class="icon">◈</div><h3>Customer experience</h3><p>Mobile ordering, loyalty database, payment-processing API.</p></article>
-        <article class="card asset"><div class="icon">☁</div><h3>Cloud dependencies</h3><p>Inventory platform, application services, administrator credentials.</p></article>
-        <article class="card asset"><div class="icon">◎</div><h3>Connected devices</h3><p>IoT cameras and supporting system components across three stores.</p></article>
-      </div>
-      <section class="philosophy">
-        <div class="eyebrow">Foundational strategy</div><h2 class="section">“Know yourself and know the enemy.”</h2>
-        <p class="section-intro">Select each card to reveal how Sun Tzu’s observation becomes a cybersecurity risk-management practice.</p>
-        <div class="philosophy-grid">
-          <button class="card flip-card" aria-expanded="false"><span class="hint">SELECT TO EXPAND</span><h3>Know yourself</h3><p>Understand the mission, processes, assets, owners, data, dependencies, vulnerabilities, and controls.</p><div class="detail"><div class="mapline"><b>Asset inventory</b> → what exists and why it matters</div><div class="mapline"><b>Nmap discovery</b> → authorized technical evidence</div><div class="mapline"><b>Classification</b> → confidentiality and access expectations</div><p class="muted">BrewByte cannot prioritize protection until it understands how payment, loyalty, ordering, and store operations depend on technology.</p></div></button>
-          <button class="card flip-card" aria-expanded="false"><span class="hint">SELECT TO EXPAND</span><h3>Know the enemy</h3><p>Understand credible threat sources, events, capabilities, intent, and the conditions they may exploit.</p><div class="detail"><div class="mapline"><b>Threat assessment</b> → who or what can cause harm</div><div class="mapline"><b>Exposure analysis</b> → reachable paths and weaknesses</div><div class="mapline"><b>Uncertainty</b> → what evidence is still missing</div><p class="muted">A listening service is not automatically a vulnerability. BrewByte must validate configuration, access, patching, controls, and credible threat scenarios.</p></div></button>
-        </div>
-      </section>
-      <div class="sources">Content integrity: BrewByte Coffee, its systems, findings, definitions, and assessment questions are synthetic and instructor-created. Technical command behavior is supported by the <a href="https://nmap.org/book/man.html" target="_blank" rel="noopener">official Nmap Reference Guide</a>.</div>
-    </section>
+/* Public learning experience upgrades */
+:root{--focus-ring:#f0b65d}html{scroll-behavior:smooth}body{background:radial-gradient(circle at 90% 0%,#1a3b3b 0,transparent 32%),var(--bg)}.hero{min-height:320px}.side-tools{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0}.side-tools .btn{width:auto;flex:1;text-align:center}.card{box-shadow:0 8px 28px #0002}.tile{transition:transform .18s ease,box-shadow .18s ease}.tile:hover{transform:translateY(-2px);box-shadow:0 6px 18px #0002}.hardware-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(250px,1fr);gap:16px;align-items:start}.component-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.component-controls button,.network-choice{padding:12px 9px;border-radius:10px;border:2px solid #76949b;background:#244650;color:#fff;font-weight:700}.component-controls button[aria-pressed="true"]{background:var(--gold);color:#1c2b30;border-color:var(--gold)}.network-flow{display:flex;gap:8px;flex-wrap:wrap;min-height:75px;align-items:center;padding:12px;background:#102c34;border-radius:12px;margin:12px 0}.network-node{padding:9px 12px;border-radius:8px;background:#f0b65d;color:#1c2b30;font-weight:800}.network-choice:hover{border-color:var(--gold)}.flashcard{min-height:200px;display:grid;place-content:center;text-align:center;padding:28px;border:2px solid #a5bdba;border-radius:16px;background:linear-gradient(135deg,#f6e8d3,#d9e8e1);color:#18323a;margin:16px 0}.flashcard h3{font-size:clamp(1.5rem,3vw,2.3rem)}.flashcard p{max-width:620px}.sort-item{border-top:1px solid #49646b;padding:16px 0}.sort-item select{max-width:320px;padding:10px;border-radius:8px;background:white;color:#13262c}.sort-result{margin-top:8px}.focus-on header,.focus-on footer,.focus-on .side{display:none}.focus-on .layout{grid-template-columns:1fr;max-width:950px}.focus-exit{position:fixed;bottom:14px;right:14px;z-index:20;display:none}.focus-on .focus-exit{display:block}.light-theme{--bg:#f2efe8;--panel:#fffdfa;--panel2:#e4ede8;--text:#203a3c;--muted:#4b6467;--gold:#9b5a1f;--green:#276944;background:#f2efe8}.light-theme header{background:linear-gradient(120deg,#1a3838,#2d5750);color:#fff}.light-theme header .eyebrow{color:#ffd49a}.light-theme .side{background:#e6e9e2}.light-theme .side button{background:#fff;color:#203a3c}.light-theme .side button.active{background:#e8ae66}.light-theme .card{border-color:#c2d0c9}.light-theme .callout,.light-theme .feedback,.light-theme .stat{background:#e9f1eb;color:#203a3c}.light-theme .callout{border-left-color:#a76928}.light-theme .tile{background:#f7f0e5}.light-theme .component-controls button,.light-theme .network-choice{background:#315d57}.light-theme .muted{color:#496268}.light-theme .pill{background:#28534e}.light-theme .eyebrow{color:#965119}.light-theme .btn{background:#b97832;color:#101f22}.light-theme .btn.alt{background:#28534e;color:white}.light-theme .network-flow{background:#e6e9e2}.light-theme .flow b{color:#8e4b17}@media(max-width:900px){.hardware-layout{grid-template-columns:1fr}}@media(max-width:560px){.component-controls{grid-template-columns:repeat(2,minmax(0,1fr))}.wrap{padding:14px}.card{padding:17px}.hero{min-height:unset}.side{padding:12px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tile{transition:none}}@media print{.focus-exit{display:none!important}}
+</style></head><body><header><div class="wrap hero"><div><div class="eyebrow">FREE · SELF-PACED · COMPUTER & TECHNOLOGY FUNDAMENTALS</div><h1>BrewByte<br>Technology Learning Lab</h1><p>Understand computers and technology by helping a fictional coffee startup make real decisions. Explore hardware, networks, digital privacy, cybersecurity, and AI—no experience required.</p><div class="row"><span class="pill">Original learning scenarios</span><span class="pill">Works offline</span><span class="pill">No account or API key</span></div></div><div class="svg-frame" role="img" aria-label="Original vector illustration of a new coffee shop with touchscreen checkout, laptop, wireless router and coffee cup"><svg viewBox="0 0 620 340" xmlns="http://www.w3.org/2000/svg"><rect width="620" height="340" fill="#f5e8d5"/><rect y="235" width="620" height="105" fill="#d8bd95"/><rect x="35" y="45" width="550" height="180" rx="14" fill="#fffaf1" stroke="#b98755" stroke-width="4"/><rect x="35" y="45" width="550" height="43" fill="#7d4e36"/><text x="310" y="75" font-family="sans-serif" font-size="23" text-anchor="middle" fill="white" font-weight="bold">BREWBYTE · NOW OPEN</text><rect x="80" y="115" width="130" height="95" rx="8" fill="#d6eceb"/><path d="M80 165h130M145 115v95" stroke="#96b2b0" stroke-width="4"/><rect x="250" y="158" width="310" height="92" rx="8" fill="#9b6548"/><rect x="283" y="115" width="95" height="85" rx="7" fill="#223d46"/><rect x="294" y="125" width="73" height="53" fill="#77c5bb"/><text x="330" y="155" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#18323b">ORDER</text><rect x="322" y="200" width="18" height="20" fill="#223d46"/><rect x="306" y="218" width="52" height="7" fill="#223d46"/><rect x="420" y="138" width="72" height="43" rx="6" fill="#d4dce0" stroke="#556d75" stroke-width="3"/><rect x="430" y="147" width="52" height="25" fill="#7ba8b5"/><path d="M410 190h95l12 20H398z" fill="#526b73"/><path d="M520 120q16 -18 32 0M526 130q10 -10 20 0" fill="none" stroke="#9a6c36" stroke-width="5" stroke-linecap="round"/><path d="M165 265h50l-7 43h-36z" fill="#fff5e9" stroke="#795039" stroke-width="4"/><path d="M215 274q25 0 0 24" fill="none" stroke="#795039" stroke-width="5"/><path d="M180 255q-12 -14 0 -24m15 24q-12 -14 0 -24" stroke="#795039" stroke-width="4" fill="none"/><text x="300" y="316" font-size="17" font-family="sans-serif" fill="#573a29">You are BrewByte's new technology advisor</text></svg></div></div></header>
+<div class="wrap layout"><aside class="side"><strong>Learning dashboard</strong><p class="muted mini">Choose a lesson or simulation.</p><button data-page="welcome" class="active">00 · Welcome to BrewByte</button><button data-page="m1">01 · Understanding Tech Basics</button><button data-page="cycle">Lab · Computing Cycle</button><button data-page="hardware">Explore · Computer Hardware</button><button data-page="network">Lab · Build a Network</button><button data-page="devices">Lab · Device Decisions</button><button data-page="m2">02 · Data & Privacy</button><button data-page="privacy">Lab · Privacy Investigator</button><button data-page="sorting">Lab · Data Sorting</button><button data-page="flashcards">Review · Flashcards</button><button data-page="cipher">Lab · Encryption Explorer</button><button data-page="ai">AI Connections & Coach</button><button data-page="quiz1">Module 01 Mastery Quiz</button><button data-page="quiz2">Module 02 Mastery Quiz</button><button data-page="report">Progress & Learning Report</button><div class="bar" aria-label="Course completion progress"><span id="progressBar"></span></div><p id="progressText" class="mini muted">Progress is saved in this browser.</p><div class="side-tools"><button class="btn alt small" id="focusToggle" type="button" aria-pressed="false">Focus mode</button><button class="btn alt small" id="themeToggle" type="button" aria-pressed="false">Light mode</button></div><button class="btn alt" id="reset" type="button">Reset my progress</button></aside><main>
+<section id="welcome" class="card page"><div class="eyebrow">00 · Your technology journey</div><h2>Welcome to BrewByte Coffee</h2><p>BrewByte is a fictional startup opening its <b>first coffee shop</b>. The founders understand coffee but need someone to help choose devices, set up checkout, protect customers, and decide when AI could be useful. That person is you.</p><div class="grid"><div class="tile"><h3>Our business</h3><p>One store, eight employees, a modest startup budget, and a plan to sell drinks in person and online.</p></div><div class="tile"><h3>Your role</h3><p>Act as a junior technology advisor. Explain your decisions in everyday language, then use the correct IT terms.</p></div><div class="tile"><h3>Your mission</h3><p>Help BrewByte open safely and grow responsibly. Every decision connects to a foundational computing concept.</p></div></div><div class="callout"><b>How learning works:</b> Read a concept, explore a diagram, make a decision, request a hint only when needed, and complete an original four-choice assessment. You can learn without entering real personal data.</div><button class="btn" onclick="go('m1')">Begin Module 01 →</button></section>
+<section id="m1" class="card page hidden"><div class="eyebrow">01 · Understanding Tech Basics</div><h2>Technology makes the coffee shop possible</h2><p><b>Learning objectives:</b> Recognize the computing cycle, distinguish major device categories, identify common components, practice digital citizenship, and describe where AI uses computing resources.</p><div class="grid" id="terms1"></div><div class="callout"><b>AI connection:</b> A forecasting model still needs input data, processing hardware, memory, storage, and output. AI is an application of computing—not a replacement for the computing cycle.</div><button class="btn" onclick="go('cycle')">Try the computing-cycle simulation →</button></section>
+<section id="cycle" class="card page hidden"><div class="eyebrow">Interactive lab · Module 01</div><h2>Follow a customer's first order</h2><p>A customer taps a latte on BrewByte's ordering screen. Select each step to see what happens inside the system.</p><div class="stepper" id="cycleButtons"></div><div class="callout" id="cycleDetail" aria-live="polite"></div><div class="svg-frame"><svg viewBox="0 0 780 200" role="img" aria-label="Illustrated point-of-sale system connecting input screen, processor, database and receipt"><rect width="780" height="200" fill="#f8eddd"/><g font-family="sans-serif" text-anchor="middle" fill="#17313a"><rect x="25" y="45" width="135" height="105" rx="12" fill="#9bd2d0"/><text x="92" y="86" font-size="18" font-weight="bold">TOUCH</text><text x="92" y="110" font-size="15">Input</text><rect x="225" y="45" width="135" height="105" rx="12" fill="#b8d5e3"/><text x="292" y="86" font-size="18" font-weight="bold">CPU</text><text x="292" y="110" font-size="15">Processing</text><rect x="425" y="45" width="135" height="105" rx="12" fill="#e9c98c"/><text x="492" y="86" font-size="18" font-weight="bold">SSD</text><text x="492" y="110" font-size="15">Storage</text><rect x="625" y="45" width="135" height="105" rx="12" fill="#d6b9d6"/><text x="692" y="86" font-size="18" font-weight="bold">RECEIPT</text><text x="692" y="110" font-size="15">Output</text></g><g stroke="#785d43" stroke-width="5" fill="none"><path d="M165 97h52m-12 -12 12 12 -12 12M365 97h52m-12 -12 12 12 -12 12M565 97h52m-12 -12 12 12 -12 12"/></g></svg></div><p class="mini muted">Real systems can process, store, and output data in overlapping sequences; this simplified diagram teaches the basic roles.</p><button class="btn" onclick="complete('cycle');go('devices')">I understand the cycle → Device lab</button></section>
+<section id="devices" class="card page hidden"><div class="eyebrow">Interactive lab · Module 01</div><h2>Equip the startup</h2><p>Choose a device for each business need. Your goal is to match device capabilities to a real requirement—not select the most expensive equipment.</p><div id="deviceLab"></div><button class="btn" onclick="complete('devices');go('m2')">Continue to Data & Privacy →</button></section>
 
-    <section class="view" id="terms" role="tabpanel" aria-labelledby="tab-terms">
-      <div class="eyebrow">33 course concepts</div><h2 class="section">Interactive key terms explorer</h2><p class="section-intro">Search by term or meaning. Select a card for an original course definition, a plain-language explanation, and a synthetic BrewByte example. No definitions are reproduced from a textbook.</p>
-      <div class="toolbar"><label class="search"><span aria-hidden="true">⌕</span><input id="termSearch" type="search" placeholder="Search risk, appetite, control, communication…" aria-label="Search key terms"></label><div class="count" id="termCount" aria-live="polite"></div></div>
-      <div class="terms" id="termGrid"></div>
-      <dialog id="termDialog" aria-labelledby="modalTerm"><div class="modal-head"><h3 id="modalTerm"></h3><button class="close" id="closeDialog" aria-label="Close definition">×</button></div><div class="modal-body" id="modalBody"></div></dialog>
-    </section>
+<section id="hardware" class="card page hidden"><div class="eyebrow">Visual explorer · Hardware and AI</div><h2>Inside BrewByte's computer</h2><p>Select a labeled component to see what it does, how it helps the coffee shop, and how it supports artificial intelligence. The diagram is an original schematic—not a photograph of a particular computer.</p><div class="hardware-layout"><div class="svg-frame"><svg viewBox="0 0 700 420" role="img" aria-label="Stylized computer board with labeled CPU, RAM, solid-state storage, GPU, and network interface"><rect width="700" height="420" fill="#f5e8d5"/><rect x="65" y="40" width="560" height="330" rx="24" fill="#254d48" stroke="#102e30" stroke-width="12"/><path d="M110 110H590M110 205H590M110 300H590M185 70V335M360 70V335M515 70V335" stroke="#558779" stroke-width="4" stroke-dasharray="8 9"/><rect x="120" y="115" width="175" height="150" rx="16" fill="#dbad65" stroke="#744f28" stroke-width="6"/><text x="207" y="197" text-anchor="middle" font-size="35" font-weight="bold" fill="#293d40">CPU</text><rect x="345" y="90" width="55" height="210" rx="7" fill="#88c5aa"/><rect x="414" y="90" width="55" height="210" rx="7" fill="#88c5aa"/><text x="407" y="326" text-anchor="middle" font-size="23" font-weight="bold" fill="white">RAM</text><rect x="125" y="285" width="170" height="55" rx="8" fill="#c6d4d7"/><text x="210" y="320" text-anchor="middle" font-size="26" font-weight="bold" fill="#203a40">SSD</text><rect x="490" y="155" width="110" height="90" rx="9" fill="#c98264"/><text x="545" y="208" text-anchor="middle" font-size="29" font-weight="bold" fill="#23333a">GPU</text><rect x="520" y="285" width="80" height="55" rx="7" fill="#d5d2a0"/><text x="560" y="320" text-anchor="middle" font-size="22" font-weight="bold" fill="#23333a">NIC</text></svg></div><div><div class="component-controls" id="hardwareControls"></div><div id="hardwareInfo" class="callout" aria-live="polite"></div></div></div><div class="callout"><b>Think about AI:</b> Some AI tools run on remote cloud hardware, while others run locally. A powerful GPU is useful for many parallel workloads, but it is not required on every device that uses AI.</div><button class="btn" onclick="complete('hardware');go('network')">Continue to network lab →</button></section>
+<section id="network" class="card page hidden"><div class="eyebrow">Interactive simulation · Network basics</div><h2>Connect the coffee shop</h2><p>BrewByte's new point-of-sale terminal needs to reach its cloud ordering service. Select the devices in the correct sequence. This is a simplified logical path; real networks may contain additional equipment.</p><div class="network-flow" id="networkFlow" aria-label="Selected network route"></div><div class="grid" id="networkChoices"></div><div class="callout" id="networkFeedback" aria-live="polite">Choose the first device to begin.</div><div class="row"><button class="btn alt" id="networkReset">Start again</button><button class="btn" onclick="complete('network');go('devices')">Continue to device decisions →</button></div><p class="mini muted">AI connection: An online AI assistant also relies on networks to carry requests to a remote service and return responses. HTTPS helps protect web traffic in transit.</p></section>
+<section id="sorting" class="card page hidden"><div class="eyebrow">Apply · Privacy and data</div><h2>Sort BrewByte's customer information</h2><p>Choose the most appropriate classification for each example. Information can become identifiable when combined with other records, so classifications are contextual.</p><div id="sortItems"></div><div class="callout" id="sortScore" aria-live="polite">Classify all six examples to complete the challenge.</div><button class="btn" onclick="complete('sorting');go('flashcards')">Review key terms →</button></section>
+<section id="flashcards" class="card page hidden"><div class="eyebrow">Recall · Spaced practice</div><h2>Technology flashcards</h2><p>Try to define the term before revealing the answer. Mark terms for review; they will be prioritized when you return to the flashcards on this device.</p><div class="flashcard" id="flashcard" tabindex="0" aria-live="polite"></div><div class="row"><button class="btn alt" id="revealCard">Reveal explanation</button><button class="btn alt" id="reviewCard">Review again</button><button class="btn" id="nextCard">Next term →</button></div><p id="flashStatus" class="muted mini"></p><button class="btn" onclick="complete('flashcards');go('ai')">Explore AI connections →</button></section>
+<section id="m2" class="card page hidden"><div class="eyebrow">02 · Data & Privacy</div><h2>Customers trust BrewByte with information</h2><p>The startup introduces online ordering and a loyalty program. Students must recognize identifiers, understand privacy practices, protect accounts, and distinguish secure communication from insecure communication.</p><div class="grid" id="terms2"></div><div class="callout"><b>AI connection:</b> AI can help predict demand or summarize customer feedback, but combining records can also expose identities. AI systems differ in how they collect, store, and use prompts. Never assume a service automatically deletes or anonymizes information.</div><button class="btn" onclick="go('privacy')">Open the privacy investigator →</button></section>
+<section id="privacy" class="card page hidden"><div class="eyebrow">Interactive lab · Module 02</div><h2>Privacy Investigator: Should we collect it?</h2><p>BrewByte's marketing team wants to build customer profiles. Click each data item to see how it could affect privacy. These are fictional examples.</p><div class="grid" id="privacyCards"></div><div class="callout" id="privacyResult" aria-live="polite">Select a data item to investigate.</div><h3>AI decision</h3><p>A marketing assistant offers to analyze customer purchases. Before sharing identifiable records, check authorization, data minimization, vendor retention and training policies, and whether a deidentified or aggregated dataset will meet the goal.</p><button class="btn" onclick="complete('privacy');go('cipher')">Continue to encryption →</button></section>
+<section id="cipher" class="card page hidden"><div class="eyebrow">Interactive lab · Module 02</div><h2>Encryption Explorer: Learn with a Caesar cipher</h2><p>Move the shift slider to see a historical substitution cipher transform a message. This is a teaching demonstration, <b>not secure modern encryption</b>.</p><label class="field">Message (letters only for the demonstration)<input id="cipherInput" maxlength="60" value="BREWBYTE"></label><label class="field">Alphabet shift: <output id="shiftNum">3</output><input type="range" id="shift" min="1" max="25" value="3"></label><div class="callout"><b>Encoded output:</b> <span id="cipherOutput" style="font-family:monospace;letter-spacing:.12em;font-size:1.3rem"></span></div><div class="grid"><div class="tile"><h3>Data in transit</h3><p>Information traveling between systems; HTTPS typically uses TLS to protect web connections.</p></div><div class="tile"><h3>Data at rest</h3><p>Saved information on devices or in cloud storage; access controls and appropriate encryption may protect it.</p></div><div class="tile"><h3>Authentication</h3><p>Checking a claimed identity. MFA combines different categories, such as a password and a security key.</p></div></div><button class="btn" onclick="complete('cipher');go('ai')">Explore AI connections →</button></section>
+<section id="ai" class="card page hidden"><div class="eyebrow">AI throughout computer concepts</div><h2>AI is part of the technology story</h2><div class="grid"><div class="tile"><h3>Hardware</h3><p>CPUs and GPUs perform computation; RAM and storage support workloads and data.</p></div><div class="tile"><h3>Data</h3><p>Training learns statistical patterns from datasets. Retrieval can supply fresh context when a model is used.</p></div><div class="tile"><h3>Privacy</h3><p>Before sharing information, assess consent, minimization, access, retention, and vendor terms.</p></div><div class="tile"><h3>Human judgment</h3><p>AI-generated responses may be inaccurate or biased. Verify claims before acting.</p></div></div><h3>AI learning coach</h3><p>Draft your own answer, then copy a coaching prompt to an AI assistant of your choice. No AI service is connected to this page.</p><label class="field">Choose a coaching topic<select id="aiTopic"><option value="hardware">Choosing computing devices</option><option value="privacy">Protecting customer data</option><option value="encryption">Explaining encryption and authentication</option><option value="prediction">AI prediction versus ordinary software</option></select></label><label class="field">My reasoning<textarea id="aiDraft" placeholder="Explain your decision in your own words before using AI."></textarea></label><div class="row"><button class="btn" id="copyPrompt">Copy AI coaching prompt</button><span id="copyStatus" aria-live="polite" class="muted mini"></span></div><div class="callout">The prompt asks AI to question your reasoning, point out misconceptions, and request a revision—<b>not write the answer for you</b>. Do not paste real customer or student information.</div><button class="btn alt" onclick="complete('ai');go('quiz1')">Go to mastery assessments →</button></section>
+<section id="quiz1" class="card page hidden"><div class="eyebrow">Independent mastery · Module 01</div><h2>Understanding Tech Basics Assessment</h2><p>12 original questions · four answer choices each · answer positions are varied to prevent predictable patterns. Submit a response to see the explanation. Hints are optional and tracked separately from independent attempts.</p><div id="questions1"></div><div class="callout" id="score1">Not started.</div><button class="btn" onclick="go('quiz2')">Module 02 Assessment →</button></section>
+<section id="quiz2" class="card page hidden"><div class="eyebrow">Independent mastery · Module 02</div><h2>Data & Privacy Assessment</h2><p>18 original questions covering the major concepts in your instructional outline. Four choices, optional hints, and detailed concept feedback.</p><div id="questions2"></div><div class="callout" id="score2">Not started.</div><button class="btn" onclick="go('report')">View learning report →</button></section>
+<section id="report" class="card page hidden"><div class="eyebrow">Your progress</div><h2>Technology Learning Report</h2><p>Progress is stored only in this browser. It is not sent to anyone. Download or print your report to keep a personal record of your learning.</p><div class="grid" id="reportStats"></div><h3>Concepts to review</h3><div id="weakTopics" class="callout"></div><label class="field">My most important learning takeaway<textarea id="reflection" placeholder="Explain one concept you understand better and how it applies to BrewByte or AI."></textarea></label><div class="row"><button class="btn" id="downloadReport">Download report (.txt)</button><button class="btn alt" onclick="window.print()">Print / Save PDF</button></div><p class="mini muted">This is an independent, publicly accessible learning resource, not an official certification exam. CompTIA and Tech+ are trademarks of their respective owner. No proprietary questions or images are reproduced.</p></section>
+</main></div><footer>© BrewByte fictional instructional scenario · Original public learning resource · Not affiliated with CompTIA or TestOut</footer>
+<script>const QUESTIONS={
+  "m1": [
+    {
+      "topic": "Computing cycle",
+      "q": "A barista taps “iced tea” on a touchscreen. Which stage occurs first?",
+      "options": [
+        "Processing",
+        "Input",
+        "Storage",
+        "Output"
+      ],
+      "correct": 1,
+      "why": "The touchscreen captures a customer selection; processing, saving and displaying results follow."
+    },
+    {
+      "topic": "Computing cycle",
+      "q": "The checkout application calculates sales tax. What component principally executes these instructions?",
+      "options": [
+        "CPU",
+        "Keyboard",
+        "Monitor",
+        "SSD"
+      ],
+      "correct": 0,
+      "why": "The CPU executes program instructions. Storage retains data, while a monitor and keyboard provide output and input."
+    },
+    {
+      "topic": "Computing cycle",
+      "q": "Which component holds currently running applications and data for fast access?",
+      "options": [
+        "SSD",
+        "RAM",
+        "Printer",
+        "Router"
+      ],
+      "correct": 1,
+      "why": "RAM is working memory; an SSD is persistent storage, a printer produces output, and a router forwards network traffic."
+    },
+    {
+      "topic": "Computing cycle",
+      "q": "BrewByte needs to keep yesterday’s transactions after a power outage. Which is the best location?",
+      "options": [
+        "RAM alone",
+        "CPU registers",
+        "Persistent storage",
+        "Display memory"
+      ],
+      "correct": 2,
+      "why": "Persistent storage retains saved information without power; ordinary RAM does not."
+    },
+    {
+      "topic": "Devices",
+      "q": "A manager must move between tables and take handwritten inventory notes. Which device fits best?",
+      "options": [
+        "Rack server",
+        "Gaming console",
+        "Fixed desktop tower",
+        "Tablet with stylus"
+      ],
+      "correct": 3,
+      "why": "A tablet is portable and supports touch or pen input. The alternatives do not suit mobile note-taking."
+    },
+    {
+      "topic": "Devices",
+      "q": "A new employee needs an upgradeable workstation for accounting and inventory analysis. Which device is generally easiest to expand?",
+      "options": [
+        "Smartwatch",
+        "Desktop computer",
+        "Tablet",
+        "Basic smartphone"
+      ],
+      "correct": 1,
+      "why": "Many desktops support component replacement and expansion; mobile devices tend to have more limited upgrade options."
+    },
+    {
+      "topic": "Devices",
+      "q": "What device is designed to provide shared applications or files to multiple network users?",
+      "options": [
+        "Stylus",
+        "Scanner",
+        "Smart speaker",
+        "Server"
+      ],
+      "correct": 3,
+      "why": "A server provides resources to clients; the other devices do not normally fill that role."
+    },
+    {
+      "topic": "Devices",
+      "q": "BrewByte installs a smart thermostat that automatically adjusts the store temperature. What category best describes it?",
+      "options": [
+        "Standalone paper record",
+        "Output-only peripheral",
+        "Internet of Things device",
+        "Optical storage"
+      ],
+      "correct": 2,
+      "why": "An IoT device senses or controls the physical environment and communicates over a network."
+    },
+    {
+      "topic": "Devices",
+      "q": "A headset places a trainee in an entirely computer-generated coffee shop. Which technology is being used?",
+      "options": [
+        "Virtual reality",
+        "Augmented reality",
+        "Spreadsheet automation",
+        "Optical character recognition"
+      ],
+      "correct": 0,
+      "why": "VR immerses users in a simulated environment; AR overlays digital information onto the real world."
+    },
+    {
+      "topic": "Devices",
+      "q": "A designer needs smooth rendering of complex 3D scenes. Which processor is particularly suited to graphics rendering?",
+      "options": [
+        "SSD",
+        "Keyboard controller",
+        "GPU",
+        "NIC"
+      ],
+      "correct": 2,
+      "why": "A GPU accelerates graphics and parallel computation; a NIC connects networks and SSD stores data."
+    },
+    {
+      "topic": "AI connections",
+      "q": "BrewByte uses a model to estimate tomorrow’s pastry demand from prior sales. What is the AI system mainly doing?",
+      "options": [
+        "Encrypting every transaction",
+        "Providing internet access",
+        "Replacing all storage devices",
+        "Predicting patterns from data"
+      ],
+      "correct": 3,
+      "why": "Prediction models use patterns in data to estimate future outcomes; they do not automatically provide networking, storage, or encryption."
+    },
+    {
+      "topic": "Digital citizenship",
+      "q": "A coworker posts an unverified accusation about a customer. What is the most responsible response?",
+      "options": [
+        "Verify facts and avoid amplifying the claim",
+        "Publish the customer’s address",
+        "Create an impersonation account",
+        "Repost it quickly"
+      ],
+      "correct": 0,
+      "why": "Responsible digital citizenship involves verification, respect, and protecting people from harm."
+    }
+  ],
+  "m2": [
+    {
+      "topic": "PII",
+      "q": "Several individually ordinary details—ZIP code, job title, and purchase times—are combined. What is the main privacy concern?",
+      "options": [
+        "They may identify a person when combined",
+        "They guarantee anonymity",
+        "They automatically become encrypted",
+        "They cannot be analyzed"
+      ],
+      "correct": 0,
+      "why": "Indirect details can become identifying when linked; context matters."
+    },
+    {
+      "topic": "PII",
+      "q": "Which is the clearest example of a direct personal identifier?",
+      "options": [
+        "General weather forecast",
+        "Average store sales",
+        "Favorite drink category",
+        "Passport number"
+      ],
+      "correct": 3,
+      "why": "A passport number can directly identify a person; the other choices are not inherently direct identifiers."
+    },
+    {
+      "topic": "Privacy laws",
+      "q": "BrewByte offers online ordering to people in the European Union. Which privacy framework should it assess for applicability?",
+      "options": [
+        "A Wi-Fi standard",
+        "GDPR",
+        "HTTP",
+        "HIPAA alone"
+      ],
+      "correct": 1,
+      "why": "GDPR governs covered processing of personal data in the EU/EEA context. Other laws may also apply depending on facts."
+    },
+    {
+      "topic": "Digital safety",
+      "q": "A stranger with mutual contacts requests access to a staff member’s private profile. What is the safest initial approach?",
+      "options": [
+        "Share work credentials first",
+        "Post a home address to verify",
+        "Accept because of mutual contacts",
+        "Verify identity through trusted channels before deciding"
+      ],
+      "correct": 3,
+      "why": "Mutual contacts do not establish identity; independent verification reduces impersonation risk."
+    },
+    {
+      "topic": "AI privacy",
+      "q": "An employee wants to paste identifiable customer complaints into a public AI chatbot. What should they do first?",
+      "options": [
+        "Disable all privacy settings",
+        "Upload full payment details",
+        "Check approved use and remove unnecessary personal data",
+        "Assume every chatbot deletes submissions"
+      ],
+      "correct": 2,
+      "why": "AI tools differ in retention and data-use rules. Approval and data minimization should precede disclosure."
+    },
+    {
+      "topic": "Passwords",
+      "q": "Which change generally offers the greatest improvement to a randomly chosen password’s resistance to guessing?",
+      "options": [
+        "Add one symbol to a very short password",
+        "Reuse it across sites",
+        "Use a pet name",
+        "Increase its length"
+      ],
+      "correct": 3,
+      "why": "For a randomly generated password, more length increases search space. Uniqueness and unpredictability also matter."
+    },
+    {
+      "topic": "Passwords",
+      "q": "A student has 25 accounts. Which tool helps generate and store unique credentials securely?",
+      "options": [
+        "Password manager",
+        "Presentation editor",
+        "Search engine",
+        "Network switch"
+      ],
+      "correct": 0,
+      "why": "A password manager creates and stores unique credentials; the other tools do not serve that purpose."
+    },
+    {
+      "topic": "Data economy",
+      "q": "Which business collects information from multiple sources and sells or licenses data products?",
+      "options": [
+        "Monitor manufacturer",
+        "Local printer technician",
+        "Data broker",
+        "Operating system kernel"
+      ],
+      "correct": 2,
+      "why": "Data brokers aggregate and distribute information; the other options have different functions."
+    },
+    {
+      "topic": "Data economy",
+      "q": "A quiz app asks for access to contacts and location to show a personality result. What is the key concern?",
+      "options": [
+        "The quiz has multiple questions",
+        "The app uses colorful graphics",
+        "The result may be amusing",
+        "Unnecessary collection of personal information"
+      ],
+      "correct": 3,
+      "why": "Excessive permissions can expose information unrelated to the stated service."
+    },
+    {
+      "topic": "AI concepts",
+      "q": "Which statement best distinguishes model training from answering a question with retrieved documents?",
+      "options": [
+        "Training requires live web browsing for every answer",
+        "Training changes learned model parameters; retrieval supplies context at use time",
+        "Both always change model weights",
+        "Retrieval can only read government sites"
+      ],
+      "correct": 1,
+      "why": "Models learn from training data during training; retrieval may fetch relevant information during use without retraining."
+    },
+    {
+      "topic": "Encryption",
+      "q": "Which option ordinarily protects a browser connection to an online ordering website in transit?",
+      "options": [
+        "HTTPS with TLS",
+        "A privacy law acronym",
+        "Traditional unencrypted FTP",
+        "Plain HTTP"
+      ],
+      "correct": 0,
+      "why": "HTTPS uses TLS to protect web traffic in transit; HTTP and basic FTP do not provide equivalent protection."
+    },
+    {
+      "topic": "Encryption",
+      "q": "A store classifies customer payment information as sensitive. What is the best reason to prioritize its protection?",
+      "options": [
+        "Encryption makes all transfers faster",
+        "Sensitive records never need access controls",
+        "The potential harm from exposure is high",
+        "Encryption is only for images"
+      ],
+      "correct": 2,
+      "why": "Security controls should reflect sensitivity, risk, applicable requirements, and system design."
+    },
+    {
+      "topic": "Encryption",
+      "q": "A toy cipher shifts every letter three positions in the alphabet. Which technique is demonstrated?",
+      "options": [
+        "Public-key encryption",
+        "Caesar shift cipher",
+        "Hashing",
+        "Multifactor authentication"
+      ],
+      "correct": 1,
+      "why": "A Caesar cipher substitutes letters by a fixed shift; it is a learning illustration, not modern secure encryption."
+    },
+    {
+      "topic": "Authentication",
+      "q": "Which example uses two different authentication factors?",
+      "options": [
+        "A password plus a hardware security key",
+        "Two security questions",
+        "Two passwords",
+        "A password and a PIN"
+      ],
+      "correct": 0,
+      "why": "A password is knowledge; a hardware security key is possession. Two knowledge factors are not two factor categories."
+    },
+    {
+      "topic": "Data economy",
+      "q": "A customer voluntarily joins a paid survey panel and shares preferences. What are they exchanging?",
+      "options": [
+        "A guaranteed anonymous identity",
+        "Selected information for an incentive",
+        "Their browser’s encryption key",
+        "Ownership of every website"
+      ],
+      "correct": 1,
+      "why": "Survey panels may compensate participation; participants should still review terms and data handling."
+    },
+    {
+      "topic": "Digital safety",
+      "q": "A suspicious “prize” message asks a teenager for their full name and home address. What is the best response?",
+      "options": [
+        "Send the address if the prize is valuable",
+        "Trade addresses with the sender",
+        "Do not disclose details; verify through an official channel",
+        "Share a password as proof"
+      ],
+      "correct": 2,
+      "why": "Unsolicited prize claims can be scams. Personal identifiers should not be given to unverified contacts."
+    },
+    {
+      "topic": "AI concepts",
+      "q": "Which statement about AI-generated text is most accurate?",
+      "options": [
+        "It never uses computing resources",
+        "It can sound confident while being inaccurate",
+        "It cannot contain bias",
+        "It is always factually correct"
+      ],
+      "correct": 1,
+      "why": "Generative systems can produce plausible but false content; verification remains essential."
+    },
+    {
+      "topic": "Digital citizenship",
+      "q": "A student finds an AI-generated picture of a classmate that could embarrass them. What should they do?",
+      "options": [
+        "Avoid sharing and follow appropriate reporting channels",
+        "Assume AI output cannot harm anyone",
+        "Repost to get opinions",
+        "Remove attribution and share"
+      ],
+      "correct": 0,
+      "why": "Responsible behavior considers consent, accuracy, privacy, and potential harm."
+    }
+  ]
+};
+const glossary={terms1:[['Technology as a resource','Technology helps people perform tasks, communicate, solve problems, and create value.','A point-of-sale terminal makes ordering faster.'],['Digital citizenship','Responsible, respectful, informed behavior when using connected technology.','A BrewByte employee verifies information before reposting it.'],['Input','Data or instructions supplied to a computer.','A customer taps a drink on a touchscreen.'],['Processing','A computer follows instructions to transform input into useful results.','The POS calculates the price and tax.'],['Storage','Keeping data for later retrieval; persistent storage retains information after shutdown.','The system saves the sale in a database.'],['Output','Information a system presents or sends as a result.','A receipt or order number appears.'],['CPU','The central processing unit executes general program instructions.','It runs the checkout software.'],['RAM','Fast temporary working memory for active applications.','It holds the running checkout application’s data.'],['SSD','A solid-state drive provides persistent storage.','It stores the operating system and saved files.'],['GPU','A processor designed for graphics and many parallel workloads.','It accelerates graphics and some AI computation.'],['Server','A computer or service providing shared resources to clients.','It hosts inventory records for staff.'],['IoT','Connected physical devices with sensors or controls.','A smart thermostat adjusts the store temperature.'],['VR vs. AR','VR creates an immersive digital world; AR overlays information onto the physical world.','VR trains staff in a simulated shop; AR could overlay repair instructions.']],terms2:[['PII','Information that can identify or be linked to an individual; context matters.','A customer email address or account identifier.'],['Direct identifier','Information that can directly distinguish an individual.','A passport number.'],['Indirect identifier','A detail that may identify someone when combined with other data.','ZIP code combined with work schedule and purchase history.'],['Data broker','A business that collects and distributes information products.','A marketing provider aggregates customer segments from many sources.'],['Data analytics','Examining information to discover patterns and support decisions.','BrewByte reviews sales by hour to plan staffing.'],['AI model training','A process that adjusts a model based on examples or feedback.','A forecasting model learns patterns from historical sales.'],['Retrieval','Obtaining relevant information during use, without necessarily retraining a model.','An assistant looks up the current drink menu.'],['HTTPS / TLS','Web communication protected in transit using Transport Layer Security.','A browser securely connects to the ordering site.'],['Encryption','Transforming readable information into protected form using cryptographic methods and keys.','Protecting stored customer records or web traffic.'],['Caesar cipher','A simple letter-shift substitution cipher; not secure today.','Shift BREWBYTE three letters for practice.'],['Authentication','Verifying a claimed identity.','A worker signs in using a password and security key.'],['MFA','Authentication using two or more different factor categories.','A password plus a hardware security key.'],['Password manager','Software that generates and securely stores unique credentials.','Staff use unique passwords for approved accounts.'],['GDPR','An EU data-protection regulation applying to covered processing activities.','BrewByte checks whether its online service falls within its scope.'],['Digital footprint','Information left through online activities and disclosures.','Posts and shopping activity may reveal patterns.'],['Data minimization','Collecting and sharing only the information necessary for a defined purpose.','A survey asks for preferences without demanding a passport number.']]};
+const cycle=[['Input','The touchscreen records the customer’s selection. The device turns a physical tap into data the application can process.'],['Processing','Software running on a CPU validates the order, calculates prices and taxes, and updates the transaction state. RAM holds active working data.'],['Storage','The completed transaction is saved in persistent storage, possibly through a cloud database. The data remains available after power is removed.'],['Output','The customer sees an order number, and a printer or kitchen screen receives a result. A device can serve as both input and output.']];
+const deviceCases=[{q:'A cashier needs a compact touch-operated ordering station.',a:['Tablet or POS touchscreen','Rack-mounted server','Graphics workstation','Network printer'],c:0,why:'A touchscreen POS captures orders directly. A server can support it behind the scenes but is not the cashier interface.'},{q:'A manager needs to write notes while walking through the store.',a:['Fixed desktop','Tablet with stylus','Rack server','Gaming console'],c:1,why:'A tablet supports mobility, pen input, and battery operation.'},{q:'The company needs centrally available inventory records for staff.',a:['Smartwatch','Receipt printer','Server or cloud service','Webcam'],c:2,why:'A server or managed cloud service can provide shared access with appropriate permissions.'},{q:'The store wants to adjust temperature based on sensor readings.',a:['Spreadsheet chart','Desktop monitor','USB drive','Network-connected smart thermostat'],c:3,why:'A smart thermostat is an IoT device that senses and controls a physical process.'}];
+const privacyCases=[['Full name','Often a direct identifier; consider whether it is needed for the transaction.'],['ZIP code','May seem general, but can contribute to reidentification when combined with other data.'],['Favorite drink','Usually a preference, but linking it to purchase history and an account can create a detailed profile.'],['Email address','Can identify or contact a person; protect it and limit access.'],['Purchase timestamp','Can help infer routines or identity when combined with other records.'],['Passport number','Highly sensitive direct identifier; BrewByte normally has no legitimate reason to collect it.']];
+const KEY='brewbyte-tech-startup-v2';let state;try{state=JSON.parse(localStorage.getItem(KEY))||{}}catch{state={}};state.done??={};state.answers??={};state.hints??={};function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch{} updateProgress()}
+function go(id){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('hidden',x.id!==id));document.querySelectorAll('.side [data-page]').forEach(x=>x.classList.toggle('active',x.dataset.page===id));window.scrollTo({top:0,behavior:'instant'});if(id==='report')renderReport()}
+document.querySelectorAll('[data-page]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.page)));function complete(id){state.done[id]=true;save()}
+function renderTerms(id){document.getElementById(id).innerHTML=glossary[id].map((t,i)=>`<article class="term"><h3>${t[0]}</h3><p>${t[1]}</p><button type="button" class="btn small alt" data-term="${id}-${i}">Reveal BrewByte example</button><div class="example" id="${id}-${i}"><b>Example:</b> ${t[2]}</div></article>`).join('');document.querySelectorAll(`[data-term^="${id}-"]`).forEach(b=>b.onclick=()=>{const e=document.getElementById(b.dataset.term);e.classList.toggle('open');b.textContent=e.classList.contains('open')?'Hide example':'Reveal BrewByte example'})}renderTerms('terms1');renderTerms('terms2');
+document.getElementById('cycleButtons').innerHTML=cycle.map((x,i)=>`<button type="button" data-cycle="${i}">${i+1}. ${x[0]}</button>`).join('');function cycleSelect(i){document.querySelectorAll('[data-cycle]').forEach(b=>b.classList.toggle('active',Number(b.dataset.cycle)===i));document.getElementById('cycleDetail').innerHTML=`<b>${cycle[i][0]}:</b> ${cycle[i][1]}`}document.querySelectorAll('[data-cycle]').forEach(b=>b.onclick=()=>cycleSelect(Number(b.dataset.cycle)));cycleSelect(0);
+function renderDevices(){document.getElementById('deviceLab').innerHTML=deviceCases.map((x,i)=>`<div class="q"><b>${i+1}. ${x.q}</b><div class="row">${x.a.map((v,j)=>`<button class="btn alt small" data-device="${i}-${j}">${v}</button>`).join('')}</div><div class="feedback" id="deviceFeedback${i}" aria-live="polite">Select a device.</div></div>`).join('');document.querySelectorAll('[data-device]').forEach(b=>b.onclick=()=>{let [i,j]=b.dataset.device.split('-').map(Number),x=deviceCases[i],ok=j===x.c;document.getElementById('deviceFeedback'+i).innerHTML=`<b>${ok?'Good choice.':'Consider the requirement again.'}</b> ${x.why}`;if(ok){state.done['device'+i]=true;save()}})}renderDevices();
+document.getElementById('privacyCards').innerHTML=privacyCases.map((x,i)=>`<button class="btn alt" data-privacy="${i}">${x[0]} →</button>`).join('');document.querySelectorAll('[data-privacy]').forEach(b=>b.onclick=()=>{const x=privacyCases[Number(b.dataset.privacy)];document.getElementById('privacyResult').innerHTML=`<b>${x[0]}:</b> ${x[1]}`});function updateCipher(){const n=Number(document.getElementById('shift').value);document.getElementById('shiftNum').textContent=n;document.getElementById('cipherOutput').textContent=document.getElementById('cipherInput').value.toUpperCase().replace(/[A-Z]/g,c=>String.fromCharCode((c.charCodeAt(0)-65+n)%26+65))}['shift','cipherInput'].forEach(id=>document.getElementById(id).addEventListener('input',updateCipher));updateCipher();
+function escapeText(t){return String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function renderQuiz(module,container,scoreId){const list=QUESTIONS[module];document.getElementById(container).innerHTML=list.map((q,i)=>`<article class="q"><div class="eyebrow">${escapeText(q.topic)} · Question ${i+1}/${list.length}</div><h3>${escapeText(q.q)}</h3>${q.options.map((a,j)=>`<label class="choice"><input type="radio" name="${module}-${i}" value="${j}"> ${'ABCD'[j]}. ${escapeText(a)}</label>`).join('')}<div class="row"><button class="btn alt small" data-hint="${module}-${i}">Need a hint?</button><button class="btn small" data-grade="${module}-${i}">Check answer</button></div><div class="feedback" id="feedback-${module}-${i}" aria-live="polite">Choose an answer to test your reasoning.</div></article>`).join('');document.querySelectorAll(`[data-hint^="${module}-"]`).forEach(b=>b.onclick=()=>{const i=Number(b.dataset.hint.split('-')[1]),q=list[i];state.hints[module+'-'+i]=true;document.getElementById(`feedback-${module}-${i}`).textContent='Hint: Think about the core purpose of '+q.topic.toLowerCase()+' and which choice directly meets the scenario’s requirement.';save()});document.querySelectorAll(`[data-grade^="${module}-"]`).forEach(b=>b.onclick=()=>{const i=Number(b.dataset.grade.split('-')[1]),q=list[i],selected=document.querySelector(`input[name="${module}-${i}"]:checked`),f=document.getElementById(`feedback-${module}-${i}`);if(!selected){f.textContent='Select one answer before checking.';return}const chosen=Number(selected.value),ok=chosen===q.correct;state.answers[module+'-'+i]={chosen,ok,assisted:!!state.hints[module+'-'+i],topic:q.topic};f.className='feedback '+(ok?'good':'bad');f.innerHTML=`<b>${ok?'Correct.':'Not yet. The best choice is '+('ABCD'[q.correct])+'.'}</b> ${escapeText(q.why)}<br><b>Choice review:</b> ${q.options.map((opt,j)=>`${'ABCD'[j]}: ${escapeText(opt)} — ${j===q.correct?'meets the requirement':'does not best meet the requirement'}`).join('; ')}.`;save();scoreUpdate(module,scoreId)});scoreUpdate(module,scoreId)}
+function scoreUpdate(module,id){const a=Object.entries(state.answers).filter(([k])=>k.startsWith(module+'-')).map(([,v])=>v);document.getElementById(id).textContent=`Answered ${a.length}/${QUESTIONS[module].length} · Correct ${a.filter(x=>x.ok).length} · Hint-assisted ${a.filter(x=>x.assisted).length} · Independent correct ${a.filter(x=>x.ok&&!x.assisted).length}`}
+renderQuiz('m1','questions1','score1');renderQuiz('m2','questions2','score2');
+document.getElementById('copyPrompt').onclick=async()=>{const draft=document.getElementById('aiDraft').value.trim();if(draft.length<25){document.getElementById('copyStatus').textContent='Write at least 25 characters of your own reasoning first.';return}const topic=document.getElementById('aiTopic').selectedOptions[0].text;const prompt=`You are a patient computer and technology fundamentals learning coach for a fictional startup called BrewByte Coffee. Topic: ${topic}. My original reasoning: ${draft}. Ask two diagnostic questions, identify one possible misconception, and request that I revise my own answer. Do not supply a finished assignment or invent business facts. Connect the topic to an AI use case and one risk. Do not ask for personal information.`;try{await navigator.clipboard.writeText(prompt);document.getElementById('copyStatus').textContent='Prompt copied. Paste it into your preferred AI assistant.'}catch{const t=document.createElement('textarea');t.value=prompt;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();document.getElementById('copyStatus').textContent='Copy attempted. If blocked, open this page using HTTPS.'}complete('ai')};
+function updateProgress(){const total=QUESTIONS.m1.length+QUESTIONS.m2.length;const count=Object.keys(state.answers).length;const completed=Object.values(state.done).filter(Boolean).length;document.getElementById('progressBar').style.width=Math.round(100*count/total)+'%';document.getElementById('progressText').textContent=`${count}/${total} assessment responses · ${completed} activities marked complete`}
+function renderReport(){const entries=Object.values(state.answers),correct=entries.filter(x=>x.ok),ind=entries.filter(x=>x.ok&&!x.assisted);document.getElementById('reportStats').innerHTML=[['Answered',entries.length+'/'+(QUESTIONS.m1.length+QUESTIONS.m2.length)],['Correct',correct.length],['Independent correct',ind.length],['Hint-assisted',entries.filter(x=>x.assisted).length]].map(x=>`<div class="stat"><div class="muted mini">${x[0]}</div><h2>${x[1]}</h2></div>`).join('');const weak=[...new Set(entries.filter(x=>!x.ok).map(x=>x.topic))];document.getElementById('weakTopics').textContent=weak.length?'Review: '+weak.join(', '):'No missed topics recorded yet. Continue the quizzes to build a meaningful review plan.'}
+document.getElementById('downloadReport').onclick=()=>{const entries=Object.entries(state.answers),lines=['BREWBYTE TECHNOLOGY STARTUP — LEARNING REPORT','Generated: '+new Date().toLocaleString(),'No personal information collected by this site.','',...entries.map(([k,v])=>`${k}: ${v.ok?'Correct':'Needs review'}${v.assisted?' (hint-assisted)':' (independent)'} — ${v.topic}`),'','Reflection:',document.getElementById('reflection').value];const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([lines.join('\n')],{type:'text/plain'}));a.download='brewbyte-learning-report.txt';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
+document.getElementById('reset').onclick=()=>{if(confirm('Reset all locally saved answers, review flags, and activity progress on this device?')){state={done:{},answers:{},hints:{}};save();location.reload()}};updateProgress();
 
-    <section class="view" id="nmap" role="tabpanel" aria-labelledby="tab-nmap">
-      <div class="eyebrow">Controlled discovery · simulated output</div><h2 class="section">Interactive Nmap terminal simulator</h2><p class="section-intro">Choose a preset. Observe exactly what the simulated result says, then separate technical evidence from risk conclusions.</p>
-      <div class="commandbar" id="commandButtons"></div>
-      <div class="lab-grid">
-        <section class="terminal" aria-label="Simulated Linux terminal"><div class="terminal-head"><i class="dot r"></i><i class="dot y"></i><i class="dot g"></i><span>student@brewbyte-lab:~</span><span class="fake-label">FICTIONAL OUTPUT</span></div><div class="terminal-body" id="terminal" aria-live="polite"><span class="prompt">student@brewbyte-lab:~$</span> Select an authorized preset above.
-
-Safety gate: instructor-provided isolated systems only.</div></section>
-        <aside class="panel analysis" id="analysisPanel"><h3>Analysis panel</h3><p class="muted">Run a preset to examine command syntax, observed evidence, required validation, and BrewByte business context.</p><div class="evidence-rule"><strong>Evidence rule:</strong> Nmap can identify responding hosts, ports, and probable services. It does not automatically prove exploitability, business impact, or unacceptable risk.</div></aside>
-      </div>
-      <div class="sources">Command behavior: <a href="https://nmap.org/book/man.html" target="_blank" rel="noopener">official Nmap Reference Guide</a>. Outputs and hostnames are fabricated for classroom analysis.</div>
-    </section>
-
-    <section class="view" id="risk" role="tabpanel" aria-labelledby="tab-risk">
-      <div class="eyebrow">Identify → analyze → evaluate → treat</div><h2 class="section">BrewByte risk rating &amp; treatment matrix</h2><p class="section-intro">Use the classroom method: likelihood × impact. Actual organizations must use their approved risk-rating methodology.</p>
-      <div class="risk-layout">
-        <aside class="panel"><h3>Select an information asset</h3><div class="asset-select" id="assetChoices"></div><div class="matrix-key"><div class="keybox low">Low 1–5</div><div class="keybox moderate">Moderate 6–10</div><div class="keybox high">High 11–15</div><div class="keybox critical">Critical 16–25</div></div></aside>
-        <section class="panel">
-          <div class="form-grid"><div class="field"><label for="likelihood">Likelihood (1–5)</label><select id="likelihood"><option value="1">1 · Rare / constrained</option><option value="2">2 · Unlikely</option><option value="3" selected>3 · Possible</option><option value="4">4 · Likely</option><option value="5">5 · Highly likely</option></select></div><div class="field"><label for="impact">Impact / consequence (1–5)</label><select id="impact"><option value="1">1 · Minimal harm</option><option value="2">2 · Limited harm</option><option value="3">3 · Meaningful harm</option><option value="4">4 · Major harm</option><option value="5" selected>5 · Severe harm</option></select></div></div>
-          <div class="score-card"><div><span class="muted">Calculated risk score</span><div class="score-number" id="riskScore">15</div></div><div class="badge high" id="riskBadge">High</div></div>
-          <fieldset style="border:0;padding:0;margin:0"><legend class="field-title">Recommended risk treatment</legend><div class="treatments" id="treatments"><div class="treatment"><input type="radio" name="treatment" id="avoid" value="Avoid"><label for="avoid">Avoid</label></div><div class="treatment"><input type="radio" name="treatment" id="mitigate" value="Mitigate" checked><label for="mitigate">Mitigate</label></div><div class="treatment"><input type="radio" name="treatment" id="transfer" value="Transfer"><label for="transfer">Transfer</label></div><div class="treatment"><input type="radio" name="treatment" id="accept" value="Accept"><label for="accept">Accept</label></div></div></fieldset>
-          <div class="field" style="margin-top:14px"><label for="owner">Control owner</label><select id="owner"><option>Network &amp; Security Team</option><option>Database / Application Team</option><option>Store Operations Manager</option><option>Cloud Service Owner</option><option>Third-Party Provider</option></select></div>
-          <div class="feedback" id="riskFeedback" aria-live="polite"></div>
-          <div class="actionbar"><button class="action primary" id="saveRisk">Save decision locally</button><button class="action" id="downloadRisk">Download risk record (.json)</button><button class="action" id="resetRisk">Reset</button></div>
-        </section>
-      </div>
-      <div class="sources">Classroom scale: Low 1–5, Moderate 6–10, High 11–15, Critical 16–25. Risk decisions require validated evidence, an accountable risk owner, and the organization’s approved methodology.</div>
-    </section>
-
-    <section class="view" id="quiz" role="tabpanel" aria-labelledby="tab-quiz">
-      <div class="eyebrow">Immediate feedback · eight questions</div><h2 class="section">Self-scoring knowledge assessment</h2><p class="section-intro">Select one answer for each question. Feedback appears immediately, and each item can be answered once until the assessment is reset.</p>
-      <div class="panel quiz-summary"><strong id="progressText">0 of 8 answered</strong><div class="progress-track" aria-label="Quiz progress"><div class="progress-fill" id="progressFill"></div></div><span class="quiz-score" id="quizScore">Score: 0%</span></div>
-      <div class="questions" id="questions"></div>
-      <div class="panel quiz-finish" id="quizFinish" aria-live="polite"></div>
-      <div class="actionbar"><button class="action" id="resetQuiz">Reset assessment</button></div>
-      <div class="sources">All assessment questions and explanations were written specifically for this synthetic BrewByte learning experience. They are not copied from a textbook or publisher test bank.</div>
-    </section>
-  </main>
-</div>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-<script>
-const terms=[
-["consequence","A result the organization could experience if a threat successfully uses an exposure associated with an asset.","The harm that could occur if the risk event succeeds.","Unauthorized access to the loyalty database could expose customer records and damage trust."],
-["cyber hygiene","Routine behaviors that keep devices, accounts, data, software, and connections in a safer operating condition.","Everyday habits that reduce avoidable exposure.","BrewByte employees use MFA, install approved updates, lock screens, and report suspicious messages."],
-["cybersecurity risk management","A governed practice for understanding cyber-related uncertainty, selecting safeguards, and maintaining exposure within leadership-approved limits.","Use business-approved protections to bring cyber risk within acceptable boundaries.","BrewByte segments payment systems, hardens remote access, and monitors activity until the accountable owner accepts the remaining risk."],
-["data classification scheme","An organizational labeling structure that groups information according to sensitivity, business value, and required handling protections.","Labels data by sensitivity so access and handling rules match its value.","Payment and customer records receive a more restrictive classification than the public café menu."],
-["enterprise risk management (ERM)","An organization-wide approach that considers strategic, operational, financial, legal, safety, and technology uncertainty together.","Coordinate technology risk with the other risks leadership manages.","Leadership considers how a payment outage affects revenue, contracts, reputation, and store operations—not just servers."],
-["impact","The degree of operational, financial, legal, safety, or reputational harm that could follow a defined risk event.","The severity of credible harm if the event occurs.","A payment API failure could stop transactions at all three locations and produce a high impact score."],
-["information media","The technical mechanisms that create, handle, store, display, move, or protect information, including hardware and software.","The technology that handles information throughout its life cycle.","POS hardware, its operating system, payment application, cloud database, and network links are information media."],
-["likelihood","An evidence-based estimate of how probable a defined risk event is within stated conditions and a stated period.","How probable successful exploitation is in the defined context.","An exposed, weakly controlled remote service with observed attack attempts may be more likely than an isolated service."],
-["process communications","Planned sharing of risk evidence, assumptions, decisions, responsibilities, and status with the people who need them.","Keep the right people informed before, during, and after risk decisions.","The champion shares scan scope, the database owner validates purpose, and leadership receives the treatment decision."],
-["process monitoring and review","Recurring checks used to determine whether risks, controls, assumptions, and risk-management activities remain current and effective.","Continually verify that assumptions, controls, and decisions still make sense.","BrewByte reviews firewall rules and rescans after each new store, system change, or control failure."],
-["residual risk","The exposure that still exists after a treatment or safeguard has been implemented.","The remaining exposure after treatment.","After access to the payment database is restricted, credential theft, insider misuse, and configuration drift can still remain."],
-["risk aggregation","A combined view of multiple risks used to reveal cumulative, shared, or interconnected business effects.","Look at connected risks together instead of treating every finding as isolated.","Small Wi-Fi, credential, and camera exposures may combine into a credible path toward store-management systems."],
-["risk analysis","A structured examination of an identified risk using evidence, likelihood, potential harm, existing controls, and confidence in the available information.","Use evidence and context to judge probability and harm.","Students combine port evidence, reachability, asset value, controls, and missing information before scoring."],
-["risk appetite","Leadership’s broad willingness to pursue or retain particular kinds and amounts of risk while meeting business objectives.","Leadership’s overall willingness to take risk.","BrewByte may accept limited guest Wi-Fi inconvenience but has a low appetite for payment-data exposure."],
-["risk appetite statement","A written description of the risk categories and broad boundaries leadership is prepared to pursue, retain, or reject.","The documented boundary that guides consistent decisions.","BrewByte states that unencrypted or broadly reachable payment data is outside its appetite and requires escalation."],
-["risk control","An administrative, physical, or technical measure used to change the probability or potential harm of a risk.","A specific protection used to change likelihood or impact.","A firewall rule allowing PostgreSQL only from an approved application subnet is a risk control."],
-["risk determination","The act of translating selected rating factors and supporting evidence into an assigned risk value or category.","Turn evidence into a consistent rating.","The class assigns likelihood 3 and impact 5, producing a score of 15 under the classroom method."],
-["risk evaluation","A decision step that compares analyzed risk with approved criteria, boundaries, and escalation rules.","Decide whether the analyzed risk is acceptable or needs action.","A score of 15 for customer data is compared with BrewByte’s low payment-data appetite and treated."],
-["risk identification","The activity of recognizing and describing scenarios that could interfere with the confidentiality, integrity, availability, or business use of an asset.","State what can go wrong, involving which asset, threat, exposure, and consequence.","Students identify that unauthorized users could reach a listening database service and expose customer information."],
-["risk management","Coordinated governance and decision-making used to understand uncertainty, assign accountability, select responses, and review results.","A governed cycle for understanding risk and making accountable decisions.","BrewByte establishes policy, assigns owners, analyzes exposures, selects treatment, and reviews results."],
-["risk management plan","An implementation document describing the people, methods, schedule, communications, rollout, records, and review activities required to operate risk management.","The actionable roadmap for people, timing, tools, rollout, and review.","BrewByte’s plan names the champion, project manager, pilot store, scoring method, owners, milestones, and review schedule."],
-["risk management policy","A leadership-approved directive establishing risk-management expectations, authority, required responsibilities, and decision rules.","Leadership’s rules for how risk must be governed.","The policy requires authorized scans, documented ratings, named risk owners, approval thresholds, and periodic review."],
-["risk rating factor","A defined input used by a rating method, such as probability, severity, asset importance, exposure, or control strength.","One of the inputs used to make ratings consistent.","BrewByte uses likelihood and impact in class; a professional method may also weight data sensitivity, dependencies, and controls."],
-["risk rating worksheet","A structured decision record that captures the scenario, evidence, rating inputs, conclusion, response, accountable owners, and review information.","The form that preserves the reasoning behind a risk decision.","Students record the asset, threat, exposure, Nmap evidence, score, treatment, control owner, residual risk, and review date."],
-["risk threshold","A predetermined rating or condition that triggers a required response, approval, notification, or escalation.","The trigger point for mandatory action.","BrewByte may require all High and Critical customer-data risks to be escalated before a store goes live."],
-["risk tolerance","A specific amount of variation or exposure leadership will permit for a particular objective, process, metric, or risk category.","A more precise operating limit than broad appetite.","BrewByte tolerates up to 30 minutes of inventory-app interruption but has near-zero tolerance for unauthorized payment-data disclosure."],
-["risk treatment","The approved response to a risk—avoidance, mitigation, transfer or sharing, or acceptance—together with the actions needed to carry it out.","Choose, authorize, and implement the response.","BrewByte mitigates a reachable database by restricting paths, hardening access, monitoring, and retesting."],
-["RM framework","The connected policies, principles, roles, methods, records, and oversight mechanisms that make risk management consistent across an organization.","The management structure that keeps risk work repeatable.","BrewByte adapts a recognized framework to its size, stores, cloud services, obligations, and available staff."],
-["RM process","A repeatable decision cycle that discovers risk scenarios, examines them, compares them with approved boundaries, and applies a response.","The four-stage risk decision cycle.","The class moves from the observed open service to analysis, comparison with appetite, and a documented response."],
-["system components","The people, procedures, data, devices, applications, platforms, networks, and external services required for an information system to work.","Everything required for the system to deliver its business function.","Mobile app code, API, database, cloud platform, credentials, network rules, developers, and support procedures form one system."],
-["threat assessment","A structured examination of possible threat sources and events, including their capability, intent, opportunity, and relevance to specific assets.","Determine which harmful actors or events are credible in this context.","BrewByte considers cybercriminals targeting payments, compromised employee accounts, accidental misconfiguration, and service outages."],
-["uncertainty","The limitation created when facts, estimates, assumptions, measurements, or future outcomes are incomplete or unreliable.","What the team does not yet know and how that limits confidence.","Nmap reports a probable service, but patch level, authentication, exposure path, and exploitability still require validation."],
-["zero tolerance risk exposure","A prohibited risk condition that has no routine acceptance path and therefore requires immediate escalation, avoidance, or corrective action.","An exposure leadership has decided cannot remain untreated.","BrewByte treats confirmed storage of unencrypted payment-card data on an internet-reachable system as a zero-tolerance condition."]
-];
-
-const commands=[
-{label:"Subnet Discovery",cmd:"nmap -sn 192.168.10.0/24",flags:"-sn performs host discovery without a port scan. The /24 describes the authorized training subnet.",evidence:"The output shows which simulated lab hosts responded. A response suggests a device is reachable; silence does not prove a device is absent.",risk:"Unexpected hosts can reveal gaps in BrewByte’s asset inventory. Students must confirm each device, business purpose, owner, and network segment.",output:t=>`Starting Nmap 7.95 ( https://nmap.org ) at ${t}\nNmap scan report for pos-lab-01.brewbyte.test (192.168.10.20)\nHost is up (0.0012s latency).\nNmap scan report for db-lab-01.brewbyte.test (192.168.10.50)\nHost is up (0.0018s latency).\nNmap scan report for camera-lab-01.brewbyte.test (192.168.10.60)\nHost is up (0.0024s latency).\nNmap done: 256 IP addresses (3 hosts up) scanned in 2.41 seconds`},
-{label:"Service & Version Detection",cmd:"nmap -sV --version-light 192.168.10.50",flags:"-sV probes open ports to identify probable services and versions. --version-light uses a lighter set of probes for faster, less intrusive identification.",evidence:"The simulated banners suggest SSH, Telnet, web, RDP, and PostgreSQL services. Banner identification can be incomplete or wrong and must be validated.",risk:"TCP 23 maps to a training IoT camera management service; clear-text Telnet conflicts with good cyber hygiene. TCP 5432 shows a probable database listener. Neither line alone proves a vulnerability.",output:t=>`Starting Nmap 7.95 ( https://nmap.org ) at ${t}\nNmap scan report for brewbyte-training-host.test (192.168.10.50)\nHost is up (0.0015s latency).\nPORT     STATE SERVICE       VERSION\n22/tcp   open  ssh           OpenSSH 8.9p1 Ubuntu 3ubuntu0.10 (training banner)\n23/tcp   open  telnet        BusyBox telnetd (simulated IoT camera service)\n80/tcp   open  http          nginx 1.24.0 (training banner)\n443/tcp  open  ssl/http      nginx 1.24.0 (training banner)\n3389/tcp open  ms-wbt-server Microsoft Terminal Services (simulated)\n5432/tcp open  postgresql    PostgreSQL DB 13.12 (training banner)\nService Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel\nNmap done: 1 IP address (1 host up) scanned in 8.62 seconds`},
-{label:"Targeted Port Scan",cmd:"nmap -p 22,80,443,3389,5432 192.168.10.50",flags:"-p limits the scan to the listed TCP ports: SSH, HTTP, HTTPS, RDP, and PostgreSQL. This reduces scope and supports a specific validation question.",evidence:"The result says those five ports accepted connections in the simulated lab. “Open” means a service is listening; it does not establish weak authentication, missing patches, or exploitability.",risk:"Open 3389 may represent remote administration and open 5432 may represent a database. BrewByte must validate authorized users, segmentation, source networks, service need, controls, and ownership.",output:t=>`Starting Nmap 7.95 ( https://nmap.org ) at ${t}\nNmap scan report for db-lab-01.brewbyte.test (192.168.10.50)\nHost is up (0.0013s latency).\nPORT     STATE SERVICE\n22/tcp   open  ssh\n80/tcp   open  http\n443/tcp  open  https\n3389/tcp open  ms-wbt-server\n5432/tcp open  postgresql\nNmap done: 1 IP address (1 host up) scanned in 0.48 seconds`},
-{label:"Save Evidence Formats",cmd:"nmap -oA brewbyte_baseline 192.168.10.50",flags:"-oA writes normal (.nmap), XML (.xml), and grepable (.gnmap) output using the brewbyte_baseline filename prefix.",evidence:"The terminal confirms three simulated evidence files. Preserving output supports repeatable analysis, peer review, trend comparison, and process communications.",risk:"A baseline helps BrewByte detect new or removed services after changes. Evidence still needs timestamps, scope, analyst notes, validation, access control, and approved retention.",output:t=>`Starting Nmap 7.95 ( https://nmap.org ) at ${t}\nNmap scan report for db-lab-01.brewbyte.test (192.168.10.50)\nHost is up (0.0014s latency).\nNot shown: 995 closed tcp ports (reset)\nPORT     STATE SERVICE\n22/tcp   open  ssh\n80/tcp   open  http\n443/tcp  open  https\n3389/tcp open  ms-wbt-server\n5432/tcp open  postgresql\nNmap done: 1 IP address (1 host up) scanned in 1.08 seconds\n\n[SIMULATED] Evidence saved as:\n  brewbyte_baseline.nmap\n  brewbyte_baseline.xml\n  brewbyte_baseline.gnmap`}
-];
-
-const assets=[
-{name:"POS Terminals",function:"Process customer purchases at all three stores.",appetite:"low",defaultOwner:"Network & Security Team"},
-{name:"Payment DB",function:"Stores or supports highly sensitive payment-related transactions.",appetite:"very low",defaultOwner:"Database / Application Team"},
-{name:"Customer Loyalty Data",function:"Supports customer accounts, rewards, and marketing preferences.",appetite:"low",defaultOwner:"Database / Application Team"},
-{name:"IoT Cameras",function:"Supports store safety and physical-security monitoring.",appetite:"moderate",defaultOwner:"Store Operations Manager"}
-];
-
-const quiz=[
-{q:"BrewByte inventories its systems and studies credible attackers before selecting controls. Which strategic idea is the team applying?",opts:["Buy the newest tools first","Know yourself and know the enemy","Treat every asset as equally critical","Let technical severity determine business impact"],a:1,e:"The team is learning its own mission, assets, dependencies, exposures, and controls while also examining credible threat sources and events."},
-{q:"A team documents a risk scenario, estimates probability and harm, compares the result with approved limits, and selects a response. Which sequence matches that work?",opts:["Discover, purchase, install, close","Prevent, detect, respond, recover","Classify, encrypt, archive, delete","Identify, analyze, evaluate, treat"],a:3,e:"The scenario is identified, examined for likelihood and impact, evaluated against decision boundaries, and then assigned an authorized treatment."},
-{q:"BrewByte selects a recognized risk framework. What should happen before it is used across all three stores?",opts:["Adapt roles, records, methods, and thresholds to BrewByte’s mission and obligations","Apply every element without modification","Replace business owners with the security team","Use only the framework sections supported by Nmap"],a:0,e:"A framework provides structure. BrewByte still must tailor governance, responsibilities, methodology, escalation rules, and rollout to its own operating environment."},
-{q:"Six months after rollout, BrewByte adds a new mobile-ordering provider. What is the best risk-management response?",opts:["Keep the original assessment unchanged","Delete the former risk records","Reassess affected assets, dependencies, threats, controls, and decisions","Accept all provider risk automatically"],a:2,e:"Continuous improvement requires monitoring and review when systems, suppliers, threats, controls, or business priorities change."},
-{q:"Leadership accepts short inventory interruptions but will not accept uncontrolled access to payment information. What do these statements establish?",opts:["Scanning permissions","Risk appetite and specific tolerance boundaries","Service-detection accuracy","A guarantee that incidents cannot occur"],a:1,e:"The statements distinguish broad willingness to take risk from more specific operating limits and escalation conditions."},
-{q:"Which implementation approach gives BrewByte the strongest governance for its new risk-management plan?",opts:["Install a scanner and consider implementation complete","Allow each location to create unrelated scoring rules","Make production changes before stakeholders review the plan","Assign accountable leaders, define the method, pilot it, communicate responsibilities, validate results, and improve"],a:3,e:"A workable plan needs sponsorship, management, an approved method, controlled rollout, communications, validation, monitoring, and improvement."},
-{q:"During the authorized simulation, TCP 5432 responds on a training host. Which student statement is defensible?",opts:["The database has definitely been compromised","The response proves a critical software vulnerability","A probable database service is reachable and requires technical validation plus business context","Students should attempt exploitation before notifying the instructor"],a:2,e:"The observation supports a listening-service finding. Purpose, network path, version, configuration, authentication, safeguards, data, ownership, and threat relevance remain to be validated."},
-{q:"BrewByte restricts database access, adds stronger authentication, and rescans successfully. Credential theft is still possible. How should the team record that possibility?",opts:["As residual risk requiring ownership and continued review","As proof that the controls failed completely","As a closed issue requiring no monitoring","As a new risk appetite statement"],a:0,e:"Treatment can reduce exposure without eliminating it. The remaining exposure must stay owned, compared with approved boundaries, and monitored."}
-];
-
-const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-function toast(msg){const el=$("#toast");el.textContent=msg;el.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove("show"),2200)}
-function switchTab(id){$$(".tab").forEach(b=>{const on=b.dataset.tab===id;b.setAttribute("aria-selected",on);b.tabIndex=on?0:-1});$$(".view").forEach(v=>v.classList.toggle("active",v.id===id));history.replaceState(null,"","#"+id);window.scrollTo({top:0,behavior:"smooth"})}
-$$(".tab").forEach((b,i)=>{b.addEventListener("click",()=>switchTab(b.dataset.tab));b.addEventListener("keydown",e=>{if(["ArrowRight","ArrowLeft"].includes(e.key)){const n=(i+(e.key==="ArrowRight"?1:-1)+5)%5;$$(".tab")[n].focus();switchTab($$(".tab")[n].dataset.tab)}})});
-$$(".flip-card").forEach(c=>c.addEventListener("click",()=>{c.classList.toggle("open");c.setAttribute("aria-expanded",c.classList.contains("open"))}));
-
-function renderTerms(filter=""){const f=filter.toLowerCase().trim(), hits=terms.filter(t=>t.join(" ").toLowerCase().includes(f));$("#termGrid").innerHTML=hits.length?hits.map((t,i)=>`<button class="term" data-name="${t[0]}"><strong>${t[0]}</strong><small>${t[2]}</small></button>`).join(""):`<div class="empty">No term matches “${filter.replace(/[<>]/g,"")}”. Try risk, control, asset, or process.</div>`;$("#termCount").textContent=`${hits.length} of ${terms.length} terms`;$$(".term").forEach(b=>b.onclick=()=>openTerm(b.dataset.name))}
-function openTerm(name){const t=terms.find(x=>x[0]===name);$("#modalTerm").textContent=t[0];$("#modalBody").innerHTML=`<div class="definition-block"><h4>Instructor-created definition</h4><p>${t[1]}</p></div><div class="definition-block"><h4>Plain-language explanation</h4><p>${t[2]}</p></div><div class="definition-block"><h4>Synthetic BrewByte example</h4><p>${t[3]}</p></div>`;$("#termDialog").showModal()}
-$("#termSearch").addEventListener("input",e=>renderTerms(e.target.value));$("#closeDialog").onclick=()=>$("#termDialog").close();$("#termDialog").addEventListener("click",e=>{if(e.target===$("#termDialog"))$("#termDialog").close()});renderTerms();
-
-$("#commandButtons").innerHTML=commands.map((c,i)=>`<button class="cmd-btn" data-command="${i}">${i+1}. ${c.label}</button>`).join("");
-let runToken=0;
-async function runCommand(i){const c=commands[i], token=++runToken, term=$("#terminal"), stamp=new Date().toLocaleString("en-US",{hour12:false,timeZoneName:"short"});term.innerHTML='<span class="prompt">student@brewbyte-lab:~$</span> ';for(const ch of c.cmd){if(token!==runToken)return;term.textContent+=ch;await new Promise(r=>setTimeout(r,12))}term.textContent+="\n";await new Promise(r=>setTimeout(r,220));if(token!==runToken)return;term.textContent+=c.output(stamp);term.scrollTop=term.scrollHeight;$("#analysisPanel").innerHTML=`<h3>${c.label}</h3><div class="analysis-section"><h4>Command breakdown</h4><p><code>${c.cmd}</code><br>${c.flags}</p></div><div class="analysis-section"><h4>Evidence explanation</h4><p>${c.evidence}</p></div><div class="analysis-section"><h4>BrewByte risk mapping</h4><p>${c.risk}</p></div><div class="evidence-rule"><strong>Required next step:</strong> confirm scope, asset owner, business purpose, data classification, access path, configuration, patch status, controls, and uncertainty before assigning risk.</div>`}
-$$(".cmd-btn").forEach(b=>b.onclick=()=>runCommand(+b.dataset.command));
-
-let selectedAsset=1;
-function renderAssets(){ $("#assetChoices").innerHTML=assets.map((a,i)=>`<button class="asset-choice ${i===selectedAsset?"active":""}" data-asset="${i}"><strong>${a.name}</strong><small>${a.function}</small></button>`).join("");$$(".asset-choice").forEach(b=>b.onclick=()=>{selectedAsset=+b.dataset.asset;$("#owner").value=assets[selectedAsset].defaultOwner;renderAssets();updateRisk()})}
-function category(score){return score<=5?["Low","low"]:score<=10?["Moderate","moderate"]:score<=15?["High","high"]:["Critical","critical"]}
-function updateRisk(){const l=+$("#likelihood").value,i=+$("#impact").value,s=l*i,[name,cls]=category(s),a=assets[selectedAsset],t=$('input[name="treatment"]:checked').value;$("#riskScore").textContent=s;$("#riskBadge").textContent=name;$("#riskBadge").className="badge "+cls;let msg="",tone="";const sensitive=["Payment DB","Customer Loyalty Data","POS Terminals"].includes(a.name);if(sensitive&&["Accept","Transfer"].includes(t)){msg=`BrewByte has a ${a.appetite} appetite for exposure affecting ${a.name}. “${t}” alone is not well aligned at a ${name} rating. Validate evidence, escalate to the risk owner, and consider mitigation or avoidance. Transfer can share cost but does not transfer accountability.`;tone=s>=11?"danger":"warn"}else if(t==="Mitigate"){msg=`Mitigation is defensible when controls can reduce likelihood or impact while preserving ${a.function.toLowerCase()} Name the specific safeguard, control owner, validation test, residual risk, and review date.`;tone=s>=16?"danger":""}else if(t==="Avoid"){msg=`Avoidance may align when BrewByte can stop the risky activity or remove the exposure without unacceptable mission impact. Confirm the business owner approves the operational consequence.`}else{msg=`${t} may be defensible only with documented rationale, accountable approval, and residual-risk monitoring. A scanner or AI system cannot accept risk for BrewByte.`;tone="warn"}$("#riskFeedback").className="feedback "+tone;$("#riskFeedback").innerHTML=`<strong>${a.name} · ${name} (${s})</strong><br>${msg}`}
-["likelihood","impact","owner"].forEach(id=>$("#"+id).addEventListener("change",updateRisk));$$('input[name="treatment"]').forEach(r=>r.addEventListener("change",updateRisk));
-function riskRecord(){const a=assets[selectedAsset],l=+$("#likelihood").value,i=+$("#impact").value,s=l*i;return{scenario:"BrewByte Coffee authorized classroom exercise",asset:a.name,businessFunction:a.function,likelihood:l,impact:i,riskScore:s,riskCategory:category(s)[0],treatment:$('input[name="treatment"]:checked').value,controlOwner:$("#owner").value,studentReminder:"Validate evidence; name the risk owner; document residual risk and review date.",savedAt:new Date().toISOString()}}
-$("#saveRisk").onclick=()=>{localStorage.setItem("brewbyte-risk-record",JSON.stringify(riskRecord()));toast("Risk decision saved on this device.")};$("#downloadRisk").onclick=()=>{const blob=new Blob([JSON.stringify(riskRecord(),null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="brewbyte-risk-record.json";a.click();URL.revokeObjectURL(a.href)};$("#resetRisk").onclick=()=>{selectedAsset=1;$("#likelihood").value=3;$("#impact").value=5;$("#mitigate").checked=true;$("#owner").value=assets[1].defaultOwner;localStorage.removeItem("brewbyte-risk-record");renderAssets();updateRisk();toast("Risk worksheet reset.")};renderAssets();updateRisk();
-
-let answered=Array(quiz.length).fill(null);
-function renderQuiz(){$("#questions").innerHTML=quiz.map((x,i)=>`<article class="panel question" data-q="${i}"><h3>${i+1}. ${x.q}</h3><div class="choices">${x.opts.map((o,j)=>`<button class="choice" data-choice="${j}">${String.fromCharCode(65+j)}. ${o}</button>`).join("")}</div><div class="explain" id="explain-${i}"></div></article>`).join("");$$(".question").forEach(q=>q.querySelectorAll(".choice").forEach(b=>b.onclick=()=>answer(+q.dataset.q,+b.dataset.choice)));updateQuiz()}
-function answer(i,j){if(answered[i]!==null)return;answered[i]=j;const card=$(`.question[data-q="${i}"]`),correct=quiz[i].a;card.querySelectorAll(".choice").forEach((b,k)=>{b.disabled=true;if(k===correct)b.classList.add("correct");if(k===j&&j!==correct)b.classList.add("incorrect")});const ex=$("#explain-"+i);ex.innerHTML=`<strong>${j===correct?"Correct.":"Not quite."}</strong> ${quiz[i].e}`;ex.classList.add("show");updateQuiz()}
-function updateQuiz(){const done=answered.filter(x=>x!==null).length,correct=answered.reduce((n,x,i)=>n+(x===quiz[i].a),0),pct=done?Math.round(correct/done*100):0;$("#progressText").textContent=`${done} of ${quiz.length} answered`;$("#progressFill").style.width=`${done/quiz.length*100}%`;$("#quizScore").textContent=`Score: ${pct}%`;if(done===quiz.length){const overall=Math.round(correct/quiz.length*100),level=overall>=88?"Strong mastery":overall>=75?"Developing mastery":"Review and retry";$("#quizFinish").classList.add("show");$("#quizFinish").innerHTML=`<div class="eyebrow">Assessment complete</div><h3 style="font-size:1.8rem;margin:.35rem 0">${level} · ${overall}%</h3><p>You answered ${correct} of ${quiz.length} correctly. ${overall<88?"Review the explanations, revisit the key terms and risk matrix, then reset the assessment.":"You can connect technical evidence to risk-management decisions while preserving authorization and accountability."}</p>`}else{$("#quizFinish").classList.remove("show")}}
-$("#resetQuiz").onclick=()=>{answered=Array(quiz.length).fill(null);renderQuiz();toast("Assessment reset.")};renderQuiz();
-
-const initial=location.hash.slice(1);if(["overview","terms","nmap","risk","quiz"].includes(initial))switchTab(initial);
-</script>
-</body>
-</html>
+// New visual and practice modules: no external scripts, accounts, or data transmission.
+const hardwareData=[['CPU','Central processing unit','Executes instructions for the checkout software.','Runs general-purpose operations; many AI tasks also depend on CPUs.'],['RAM','Random-access memory','Holds the current order and running application data temporarily.','Working memory holds data while an AI model processes a request.'],['SSD','Solid-state drive','Retains the operating system and saved transactions when power is off.','Can store model files, datasets, and application software.'],['GPU','Graphics processing unit','Useful for 3D visualization and graphics work.','Parallel computation can accelerate training and inference for many AI models.'],['NIC','Network interface','Connects the point-of-sale device to the local network.','Enables communication with remote AI services and cloud applications.']];
+const hwButtons=document.getElementById('hardwareControls');hwButtons.innerHTML=hardwareData.map((d,i)=>`<button type="button" data-hw="${i}" aria-pressed="false">${d[0]}</button>`).join('');function selectHardware(i){hwButtons.querySelectorAll('button').forEach((b,j)=>b.setAttribute('aria-pressed',String(i===j)));const d=hardwareData[i];document.getElementById('hardwareInfo').innerHTML=`<h3>${d[0]} — ${d[1]}</h3><p><b>At BrewByte:</b> ${d[2]}</p><p><b>Technology meets AI:</b> ${d[3]}</p>`}hwButtons.addEventListener('click',e=>{const b=e.target.closest('[data-hw]');if(b)selectHardware(Number(b.dataset.hw))});selectHardware(0);
+const networkDevices=[{id:'pos',name:'POS terminal',info:'The point-of-sale system starts the request.'},{id:'switch',name:'Network switch',info:'A wired switch forwards local network frames.'},{id:'router',name:'Router',info:'A router forwards traffic toward other networks, including the internet.'},{id:'cloud',name:'Cloud service',info:'The remote ordering service processes the request and returns a response.'}];let networkPath=[];function drawNetwork(){document.getElementById('networkFlow').innerHTML=networkPath.length?networkPath.map((id,i)=>`${i?'<span aria-hidden="true">→</span>':''}<span class="network-node">${networkDevices.find(x=>x.id===id).name}</span>`).join(''):'<span class="muted">Your connection path appears here.</span>';document.getElementById('networkChoices').innerHTML=networkDevices.map(d=>`<button class="network-choice" type="button" data-network="${d.id}" ${networkPath.includes(d.id)?'disabled':''}>${d.name}</button>`).join('')};document.getElementById('networkChoices').addEventListener('click',e=>{const b=e.target.closest('[data-network]');if(!b)return;const expected=networkDevices[networkPath.length],f=document.getElementById('networkFeedback');if(b.dataset.network===expected?.id){networkPath.push(b.dataset.network);f.textContent=networkPath.length===4?'Connected! The request can reach the cloud service. Responses return through the network.':networkDevices[networkPath.length-1].info;if(networkPath.length===4){state.done.network=true;save()}}else{f.textContent=`Not quite. Think about where the request starts and which equipment forwards it next. Current step: ${networkPath.length+1} of 4.`}drawNetwork()});document.getElementById('networkReset').onclick=()=>{networkPath=[];drawNetwork();document.getElementById('networkFeedback').textContent='Choose the first device to begin.'};drawNetwork();
+const sortingData=[{label:'Customer email address',correct:'direct',why:'An email address can identify or contact a specific person.'},{label:'Customer ZIP code without other details',correct:'indirect',why:'A ZIP code is not necessarily identifying alone, but can contribute to reidentification.'},{label:'Anonymous total number of lattes sold today',correct:'aggregate',why:'A properly aggregated total contains no customer-level identifiers.'},{label:'Passport number',correct:'direct',why:'A passport number is a strong direct identifier and unnecessary for routine coffee sales.'},{label:'Purchase time linked to a loyalty account',correct:'indirect',why:'Behavioral information linked to other records can help identify or profile a customer.'},{label:'Total shop revenue this week with no customer details',correct:'aggregate',why:'An overall revenue total generally describes the business rather than a person.'}];let sortAnswers={};document.getElementById('sortItems').innerHTML=sortingData.map((d,i)=>`<div class="sort-item"><label for="sort${i}"><b>${i+1}. ${d.label}</b></label><div><select id="sort${i}" data-sort="${i}"><option value="">Choose a classification</option><option value="direct">Direct identifier</option><option value="indirect">Indirect / linkable information</option><option value="aggregate">Aggregated nonpersonal information</option></select></div><div class="sort-result mini" id="sortResult${i}" aria-live="polite"></div></div>`).join('');document.getElementById('sortItems').addEventListener('change',e=>{if(!e.target.matches('[data-sort]'))return;const i=Number(e.target.dataset.sort),d=sortingData[i],ok=e.target.value===d.correct;sortAnswers[i]=ok;document.getElementById('sortResult'+i).textContent=(ok?'Correct. ':'Review: ')+d.why;const answered=Object.keys(sortAnswers).length;document.getElementById('sortScore').textContent=`${answered}/6 classified · ${Object.values(sortAnswers).filter(Boolean).length} correct. ${answered===6?'Try again on any missed item to improve.':''}`;if(answered===6&&Object.values(sortAnswers).every(Boolean)){state.done.sorting=true;save()}});
+const cards=[...glossary.terms1,...glossary.terms2];state.review??={};let cardOrder=[],cardIndex=0,cardRevealed=false;function buildCardOrder(){const flagged=Object.keys(state.review).filter(k=>state.review[k]).map(Number).filter(i=>i>=0&&i<cards.length);cardOrder=[...flagged,...cards.map((_,i)=>i).filter(i=>!flagged.includes(i))];cardIndex=0}function showCard(){const id=cardOrder[cardIndex%cardOrder.length],c=cards[id];document.getElementById('flashcard').innerHTML=`<h3>${escapeText(c[0])}</h3>${cardRevealed?`<p>${escapeText(c[1])}</p><p><b>BrewByte example:</b> ${escapeText(c[2])}</p>`:'<p>Explain this term in your own words before revealing it.</p>'}`;document.getElementById('flashStatus').textContent=`Card ${cardIndex%cardOrder.length+1} of ${cardOrder.length} · ${Object.values(state.review).filter(Boolean).length} terms marked for review`}buildCardOrder();showCard();document.getElementById('revealCard').onclick=()=>{cardRevealed=true;showCard()};document.getElementById('reviewCard').onclick=()=>{state.review[cardOrder[cardIndex%cardOrder.length]]=true;save();document.getElementById('flashStatus').textContent='Marked for review. It will appear early next time.'};document.getElementById('nextCard').onclick=()=>{cardIndex++;cardRevealed=false;if(cardIndex>=cardOrder.length){buildCardOrder()}showCard()};
+function setFocus(on){document.body.classList.toggle('focus-on',on);document.getElementById('focusToggle').setAttribute('aria-pressed',String(on));document.getElementById('focusToggle').textContent=on?'Exit focus':'Focus mode'}document.getElementById('focusToggle').onclick=()=>setFocus(!document.body.classList.contains('focus-on'));document.getElementById('focusExit').onclick=()=>setFocus(false);document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.body.classList.contains('focus-on'))setFocus(false)});function setTheme(light){document.body.classList.toggle('light-theme',light);document.getElementById('themeToggle').setAttribute('aria-pressed',String(light));document.getElementById('themeToggle').textContent=light?'Dark mode':'Light mode';state.theme=light?'light':'dark';save()}document.getElementById('themeToggle').onclick=()=>setTheme(!document.body.classList.contains('light-theme'));if(state.theme==='light')setTheme(true);
+</script><button id="focusExit" class="btn focus-exit">Exit focus mode</button></body></html>
