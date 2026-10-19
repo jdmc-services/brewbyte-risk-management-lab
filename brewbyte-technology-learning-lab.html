@@ -1,0 +1,419 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BrewByte | Technology Startup Learning Lab</title><style>
+:root{--bg:#0d1c22;--panel:#172e36;--panel2:#203e47;--gold:#f0b65d;--cream:#fff9ef;--ink:#152a32;--text:#f5f6f2;--muted:#b6cbd1;--green:#9ce0b2}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:2px}header{background:linear-gradient(120deg,#152d35,#234a50);border-bottom:3px solid var(--gold)}.wrap{max-width:1240px;margin:auto;padding:24px}.hero{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.eyebrow{color:var(--gold);font-size:.8rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}h1{font-size:clamp(2rem,4vw,3.3rem);line-height:1.12;margin:8px 0 16px}h2{line-height:1.2;margin:4px 0 16px}h3{margin:12px 0 8px}p{margin:8px 0 16px}.muted{color:var(--muted)}.layout{display:grid;grid-template-columns:245px minmax(0,1fr);gap:22px;align-items:start}.side{position:sticky;top:16px;background:var(--panel);padding:18px;border:1px solid #35535d;border-radius:14px}.side button{display:block;width:100%;text-align:left;padding:11px 12px;margin:6px 0;border-radius:8px;border:1px solid #43616b;background:#102630;color:#f8faf8}.side button.active{background:var(--gold);color:#17242a;font-weight:800}.side button:hover{border-color:var(--gold)}.card{background:var(--panel);border:1px solid #34535c;border-radius:16px;padding:24px;margin-bottom:18px}.card.light{background:var(--cream);color:var(--ink)}.hidden{display:none!important}.btn{background:var(--gold);color:#14252c;border:0;border-radius:8px;padding:10px 16px;font-weight:800}.btn.alt{background:#2c515d;color:white;border:1px solid #74929a}.btn.small{padding:6px 10px;font-size:.88rem}.btn:disabled{opacity:.5;cursor:not-allowed}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.tile{background:#f7f0e5;color:var(--ink);padding:16px;border-radius:12px}.tile h3{color:#573821}.tile svg{width:100%;height:105px}.stepper{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.stepper button{background:#294650;color:white;border:1px solid #63818b;border-radius:10px;padding:12px 6px}.stepper button.active{background:var(--gold);color:var(--ink);font-weight:800}.callout{background:#24434e;border-left:4px solid var(--gold);border-radius:8px;padding:14px;margin:16px 0}.q{padding:16px 0;border-top:1px solid #47636b}.choice{display:block;background:#fff;color:#152a32!important;border:2px solid transparent;border-radius:8px;margin:7px 0;padding:10px 12px;cursor:pointer;font-weight:600}.choice:has(input:checked){border-color:#d89424;background:#fff0d1}.choice input{margin-right:10px;accent-color:#8c5415}.feedback{padding:12px;background:#274751;border-radius:8px;margin:10px 0}.feedback.good{border-left:4px solid var(--green)}.feedback.bad{border-left:4px solid var(--gold)}.term{background:#fff9ef;color:#18303a;border-radius:10px;padding:15px}.term h3{margin-top:0}.term .example{display:none;background:#f0e4d0;padding:10px;border-radius:6px}.term .example.open{display:block}.bar{height:12px;background:#37535b;border-radius:99px;overflow:hidden}.bar span{display:block;height:100%;background:var(--gold);width:0}.field{display:block;margin:10px 0}.field input,.field select,.field textarea{width:100%;padding:10px;background:white;color:#152a32;border:1px solid #a9bdc3;border-radius:7px}.field textarea{min-height:110px}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.pill{display:inline-block;border-radius:99px;padding:3px 10px;background:#31535b;color:#fff;font-size:.8rem}.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.flow>div{padding:12px;border:1px solid #66828b;border-radius:10px;flex:1;min-width:120px;text-align:center}.flow b{display:block;color:var(--gold)}.svg-frame{background:#f5e8d5;border-radius:12px;overflow:hidden}.svg-frame svg{display:block;width:100%;height:auto}.mini{font-size:.9rem}.stat{background:#21414b;padding:12px;border-radius:10px}a{color:#ffcc81}footer{padding:30px;text-align:center;color:var(--muted)}@media(max-width:850px){.hero,.layout{grid-template-columns:1fr}.side{position:static}.stepper{grid-template-columns:repeat(2,1fr)}}@media print{header,.side,.btn,.no-print{display:none!important}.layout{display:block}.card{background:white;color:black;border:1px solid #999;break-inside:avoid}.hidden{display:block!important}body{background:white;color:black}}
+
+/* Public learning experience upgrades */
+:root{--focus-ring:#f0b65d}html{scroll-behavior:smooth}body{background:radial-gradient(circle at 90% 0%,#1a3b3b 0,transparent 32%),var(--bg)}.hero{min-height:320px}.side-tools{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0}.side-tools .btn{width:auto;flex:1;text-align:center}.card{box-shadow:0 8px 28px #0002}.tile{transition:transform .18s ease,box-shadow .18s ease}.tile:hover{transform:translateY(-2px);box-shadow:0 6px 18px #0002}.hardware-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(250px,1fr);gap:16px;align-items:start}.component-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.component-controls button,.network-choice{padding:12px 9px;border-radius:10px;border:2px solid #76949b;background:#244650;color:#fff;font-weight:700}.component-controls button[aria-pressed="true"]{background:var(--gold);color:#1c2b30;border-color:var(--gold)}.network-flow{display:flex;gap:8px;flex-wrap:wrap;min-height:75px;align-items:center;padding:12px;background:#102c34;border-radius:12px;margin:12px 0}.network-node{padding:9px 12px;border-radius:8px;background:#f0b65d;color:#1c2b30;font-weight:800}.network-choice:hover{border-color:var(--gold)}.flashcard{min-height:200px;display:grid;place-content:center;text-align:center;padding:28px;border:2px solid #a5bdba;border-radius:16px;background:linear-gradient(135deg,#f6e8d3,#d9e8e1);color:#18323a;margin:16px 0}.flashcard h3{font-size:clamp(1.5rem,3vw,2.3rem)}.flashcard p{max-width:620px}.sort-item{border-top:1px solid #49646b;padding:16px 0}.sort-item select{max-width:320px;padding:10px;border-radius:8px;background:white;color:#13262c}.sort-result{margin-top:8px}.focus-on header,.focus-on footer,.focus-on .side{display:none}.focus-on .layout{grid-template-columns:1fr;max-width:950px}.focus-exit{position:fixed;bottom:14px;right:14px;z-index:20;display:none}.focus-on .focus-exit{display:block}.light-theme{--bg:#f2efe8;--panel:#fffdfa;--panel2:#e4ede8;--text:#203a3c;--muted:#4b6467;--gold:#9b5a1f;--green:#276944;background:#f2efe8}.light-theme header{background:linear-gradient(120deg,#1a3838,#2d5750);color:#fff}.light-theme header .eyebrow{color:#ffd49a}.light-theme .side{background:#e6e9e2}.light-theme .side button{background:#fff;color:#203a3c}.light-theme .side button.active{background:#e8ae66}.light-theme .card{border-color:#c2d0c9}.light-theme .callout,.light-theme .feedback,.light-theme .stat{background:#e9f1eb;color:#203a3c}.light-theme .callout{border-left-color:#a76928}.light-theme .tile{background:#f7f0e5}.light-theme .component-controls button,.light-theme .network-choice{background:#315d57}.light-theme .muted{color:#496268}.light-theme .pill{background:#28534e}.light-theme .eyebrow{color:#965119}.light-theme .btn{background:#b97832;color:#101f22}.light-theme .btn.alt{background:#28534e;color:white}.light-theme .network-flow{background:#e6e9e2}.light-theme .flow b{color:#8e4b17}@media(max-width:900px){.hardware-layout{grid-template-columns:1fr}}@media(max-width:560px){.component-controls{grid-template-columns:repeat(2,minmax(0,1fr))}.wrap{padding:14px}.card{padding:17px}.hero{min-height:unset}.side{padding:12px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tile{transition:none}}@media print{.focus-exit{display:none!important}}
+</style></head><body><header><div class="wrap hero"><div><div class="eyebrow">FREE · SELF-PACED · COMPUTER & TECHNOLOGY FUNDAMENTALS</div><h1>BrewByte<br>Technology Learning Lab</h1><p>Understand computers and technology by helping a fictional coffee startup make real decisions. Explore hardware, networks, digital privacy, cybersecurity, and AI—no experience required.</p><div class="row"><span class="pill">Original learning scenarios</span><span class="pill">Works offline</span><span class="pill">No account or API key</span></div></div><div class="svg-frame" role="img" aria-label="Original vector illustration of a new coffee shop with touchscreen checkout, laptop, wireless router and coffee cup"><svg viewBox="0 0 620 340" xmlns="http://www.w3.org/2000/svg"><rect width="620" height="340" fill="#f5e8d5"/><rect y="235" width="620" height="105" fill="#d8bd95"/><rect x="35" y="45" width="550" height="180" rx="14" fill="#fffaf1" stroke="#b98755" stroke-width="4"/><rect x="35" y="45" width="550" height="43" fill="#7d4e36"/><text x="310" y="75" font-family="sans-serif" font-size="23" text-anchor="middle" fill="white" font-weight="bold">BREWBYTE · NOW OPEN</text><rect x="80" y="115" width="130" height="95" rx="8" fill="#d6eceb"/><path d="M80 165h130M145 115v95" stroke="#96b2b0" stroke-width="4"/><rect x="250" y="158" width="310" height="92" rx="8" fill="#9b6548"/><rect x="283" y="115" width="95" height="85" rx="7" fill="#223d46"/><rect x="294" y="125" width="73" height="53" fill="#77c5bb"/><text x="330" y="155" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#18323b">ORDER</text><rect x="322" y="200" width="18" height="20" fill="#223d46"/><rect x="306" y="218" width="52" height="7" fill="#223d46"/><rect x="420" y="138" width="72" height="43" rx="6" fill="#d4dce0" stroke="#556d75" stroke-width="3"/><rect x="430" y="147" width="52" height="25" fill="#7ba8b5"/><path d="M410 190h95l12 20H398z" fill="#526b73"/><path d="M520 120q16 -18 32 0M526 130q10 -10 20 0" fill="none" stroke="#9a6c36" stroke-width="5" stroke-linecap="round"/><path d="M165 265h50l-7 43h-36z" fill="#fff5e9" stroke="#795039" stroke-width="4"/><path d="M215 274q25 0 0 24" fill="none" stroke="#795039" stroke-width="5"/><path d="M180 255q-12 -14 0 -24m15 24q-12 -14 0 -24" stroke="#795039" stroke-width="4" fill="none"/><text x="300" y="316" font-size="17" font-family="sans-serif" fill="#573a29">You are BrewByte's new technology advisor</text></svg></div></div></header>
+<div class="wrap layout"><aside class="side"><strong>Learning dashboard</strong><p class="muted mini">Choose a lesson or simulation.</p><button data-page="welcome" class="active">00 · Welcome to BrewByte</button><button data-page="m1">01 · Understanding Tech Basics</button><button data-page="cycle">Lab · Computing Cycle</button><button data-page="hardware">Explore · Computer Hardware</button><button data-page="network">Lab · Build a Network</button><button data-page="devices">Lab · Device Decisions</button><button data-page="m2">02 · Data & Privacy</button><button data-page="privacy">Lab · Privacy Investigator</button><button data-page="sorting">Lab · Data Sorting</button><button data-page="flashcards">Review · Flashcards</button><button data-page="cipher">Lab · Encryption Explorer</button><button data-page="ai">AI Connections & Coach</button><button data-page="quiz1">Module 01 Mastery Quiz</button><button data-page="quiz2">Module 02 Mastery Quiz</button><button data-page="report">Progress & Learning Report</button><div class="bar" aria-label="Course completion progress"><span id="progressBar"></span></div><p id="progressText" class="mini muted">Progress is saved in this browser.</p><div class="side-tools"><button class="btn alt small" id="focusToggle" type="button" aria-pressed="false">Focus mode</button><button class="btn alt small" id="themeToggle" type="button" aria-pressed="false">Light mode</button></div><button class="btn alt" id="reset" type="button">Reset my progress</button></aside><main>
+<section id="welcome" class="card page"><div class="eyebrow">00 · Your technology journey</div><h2>Welcome to BrewByte Coffee</h2><p>BrewByte is a fictional startup opening its <b>first coffee shop</b>. The founders understand coffee but need someone to help choose devices, set up checkout, protect customers, and decide when AI could be useful. That person is you.</p><div class="grid"><div class="tile"><h3>Our business</h3><p>One store, eight employees, a modest startup budget, and a plan to sell drinks in person and online.</p></div><div class="tile"><h3>Your role</h3><p>Act as a junior technology advisor. Explain your decisions in everyday language, then use the correct IT terms.</p></div><div class="tile"><h3>Your mission</h3><p>Help BrewByte open safely and grow responsibly. Every decision connects to a foundational computing concept.</p></div></div><div class="callout"><b>How learning works:</b> Read a concept, explore a diagram, make a decision, request a hint only when needed, and complete an original four-choice assessment. You can learn without entering real personal data.</div><button class="btn" onclick="go('m1')">Begin Module 01 →</button></section>
+<section id="m1" class="card page hidden"><div class="eyebrow">01 · Understanding Tech Basics</div><h2>Technology makes the coffee shop possible</h2><p><b>Learning objectives:</b> Recognize the computing cycle, distinguish major device categories, identify common components, practice digital citizenship, and describe where AI uses computing resources.</p><div class="grid" id="terms1"></div><div class="callout"><b>AI connection:</b> A forecasting model still needs input data, processing hardware, memory, storage, and output. AI is an application of computing—not a replacement for the computing cycle.</div><button class="btn" onclick="go('cycle')">Try the computing-cycle simulation →</button></section>
+<section id="cycle" class="card page hidden"><div class="eyebrow">Interactive lab · Module 01</div><h2>Follow a customer's first order</h2><p>A customer taps a latte on BrewByte's ordering screen. Select each step to see what happens inside the system.</p><div class="stepper" id="cycleButtons"></div><div class="callout" id="cycleDetail" aria-live="polite"></div><div class="svg-frame"><svg viewBox="0 0 780 200" role="img" aria-label="Illustrated point-of-sale system connecting input screen, processor, database and receipt"><rect width="780" height="200" fill="#f8eddd"/><g font-family="sans-serif" text-anchor="middle" fill="#17313a"><rect x="25" y="45" width="135" height="105" rx="12" fill="#9bd2d0"/><text x="92" y="86" font-size="18" font-weight="bold">TOUCH</text><text x="92" y="110" font-size="15">Input</text><rect x="225" y="45" width="135" height="105" rx="12" fill="#b8d5e3"/><text x="292" y="86" font-size="18" font-weight="bold">CPU</text><text x="292" y="110" font-size="15">Processing</text><rect x="425" y="45" width="135" height="105" rx="12" fill="#e9c98c"/><text x="492" y="86" font-size="18" font-weight="bold">SSD</text><text x="492" y="110" font-size="15">Storage</text><rect x="625" y="45" width="135" height="105" rx="12" fill="#d6b9d6"/><text x="692" y="86" font-size="18" font-weight="bold">RECEIPT</text><text x="692" y="110" font-size="15">Output</text></g><g stroke="#785d43" stroke-width="5" fill="none"><path d="M165 97h52m-12 -12 12 12 -12 12M365 97h52m-12 -12 12 12 -12 12M565 97h52m-12 -12 12 12 -12 12"/></g></svg></div><p class="mini muted">Real systems can process, store, and output data in overlapping sequences; this simplified diagram teaches the basic roles.</p><button class="btn" onclick="complete('cycle');go('devices')">I understand the cycle → Device lab</button></section>
+<section id="devices" class="card page hidden"><div class="eyebrow">Interactive lab · Module 01</div><h2>Equip the startup</h2><p>Choose a device for each business need. Your goal is to match device capabilities to a real requirement—not select the most expensive equipment.</p><div id="deviceLab"></div><button class="btn" onclick="complete('devices');go('m2')">Continue to Data & Privacy →</button></section>
+
+<section id="hardware" class="card page hidden"><div class="eyebrow">Visual explorer · Hardware and AI</div><h2>Inside BrewByte's computer</h2><p>Select a labeled component to see what it does, how it helps the coffee shop, and how it supports artificial intelligence. The diagram is an original schematic—not a photograph of a particular computer.</p><div class="hardware-layout"><div class="svg-frame"><svg viewBox="0 0 700 420" role="img" aria-label="Stylized computer board with labeled CPU, RAM, solid-state storage, GPU, and network interface"><rect width="700" height="420" fill="#f5e8d5"/><rect x="65" y="40" width="560" height="330" rx="24" fill="#254d48" stroke="#102e30" stroke-width="12"/><path d="M110 110H590M110 205H590M110 300H590M185 70V335M360 70V335M515 70V335" stroke="#558779" stroke-width="4" stroke-dasharray="8 9"/><rect x="120" y="115" width="175" height="150" rx="16" fill="#dbad65" stroke="#744f28" stroke-width="6"/><text x="207" y="197" text-anchor="middle" font-size="35" font-weight="bold" fill="#293d40">CPU</text><rect x="345" y="90" width="55" height="210" rx="7" fill="#88c5aa"/><rect x="414" y="90" width="55" height="210" rx="7" fill="#88c5aa"/><text x="407" y="326" text-anchor="middle" font-size="23" font-weight="bold" fill="white">RAM</text><rect x="125" y="285" width="170" height="55" rx="8" fill="#c6d4d7"/><text x="210" y="320" text-anchor="middle" font-size="26" font-weight="bold" fill="#203a40">SSD</text><rect x="490" y="155" width="110" height="90" rx="9" fill="#c98264"/><text x="545" y="208" text-anchor="middle" font-size="29" font-weight="bold" fill="#23333a">GPU</text><rect x="520" y="285" width="80" height="55" rx="7" fill="#d5d2a0"/><text x="560" y="320" text-anchor="middle" font-size="22" font-weight="bold" fill="#23333a">NIC</text></svg></div><div><div class="component-controls" id="hardwareControls"></div><div id="hardwareInfo" class="callout" aria-live="polite"></div></div></div><div class="callout"><b>Think about AI:</b> Some AI tools run on remote cloud hardware, while others run locally. A powerful GPU is useful for many parallel workloads, but it is not required on every device that uses AI.</div><button class="btn" onclick="complete('hardware');go('network')">Continue to network lab →</button></section>
+<section id="network" class="card page hidden"><div class="eyebrow">Interactive simulation · Network basics</div><h2>Connect the coffee shop</h2><p>BrewByte's new point-of-sale terminal needs to reach its cloud ordering service. Select the devices in the correct sequence. This is a simplified logical path; real networks may contain additional equipment.</p><div class="network-flow" id="networkFlow" aria-label="Selected network route"></div><div class="grid" id="networkChoices"></div><div class="callout" id="networkFeedback" aria-live="polite">Choose the first device to begin.</div><div class="row"><button class="btn alt" id="networkReset">Start again</button><button class="btn" onclick="complete('network');go('devices')">Continue to device decisions →</button></div><p class="mini muted">AI connection: An online AI assistant also relies on networks to carry requests to a remote service and return responses. HTTPS helps protect web traffic in transit.</p></section>
+<section id="sorting" class="card page hidden"><div class="eyebrow">Apply · Privacy and data</div><h2>Sort BrewByte's customer information</h2><p>Choose the most appropriate classification for each example. Information can become identifiable when combined with other records, so classifications are contextual.</p><div id="sortItems"></div><div class="callout" id="sortScore" aria-live="polite">Classify all six examples to complete the challenge.</div><button class="btn" onclick="complete('sorting');go('flashcards')">Review key terms →</button></section>
+<section id="flashcards" class="card page hidden"><div class="eyebrow">Recall · Spaced practice</div><h2>Technology flashcards</h2><p>Try to define the term before revealing the answer. Mark terms for review; they will be prioritized when you return to the flashcards on this device.</p><div class="flashcard" id="flashcard" tabindex="0" aria-live="polite"></div><div class="row"><button class="btn alt" id="revealCard">Reveal explanation</button><button class="btn alt" id="reviewCard">Review again</button><button class="btn" id="nextCard">Next term →</button></div><p id="flashStatus" class="muted mini"></p><button class="btn" onclick="complete('flashcards');go('ai')">Explore AI connections →</button></section>
+<section id="m2" class="card page hidden"><div class="eyebrow">02 · Data & Privacy</div><h2>Customers trust BrewByte with information</h2><p>The startup introduces online ordering and a loyalty program. Students must recognize identifiers, understand privacy practices, protect accounts, and distinguish secure communication from insecure communication.</p><div class="grid" id="terms2"></div><div class="callout"><b>AI connection:</b> AI can help predict demand or summarize customer feedback, but combining records can also expose identities. AI systems differ in how they collect, store, and use prompts. Never assume a service automatically deletes or anonymizes information.</div><button class="btn" onclick="go('privacy')">Open the privacy investigator →</button></section>
+<section id="privacy" class="card page hidden"><div class="eyebrow">Interactive lab · Module 02</div><h2>Privacy Investigator: Should we collect it?</h2><p>BrewByte's marketing team wants to build customer profiles. Click each data item to see how it could affect privacy. These are fictional examples.</p><div class="grid" id="privacyCards"></div><div class="callout" id="privacyResult" aria-live="polite">Select a data item to investigate.</div><h3>AI decision</h3><p>A marketing assistant offers to analyze customer purchases. Before sharing identifiable records, check authorization, data minimization, vendor retention and training policies, and whether a deidentified or aggregated dataset will meet the goal.</p><button class="btn" onclick="complete('privacy');go('cipher')">Continue to encryption →</button></section>
+<section id="cipher" class="card page hidden"><div class="eyebrow">Interactive lab · Module 02</div><h2>Encryption Explorer: Learn with a Caesar cipher</h2><p>Move the shift slider to see a historical substitution cipher transform a message. This is a teaching demonstration, <b>not secure modern encryption</b>.</p><label class="field">Message (letters only for the demonstration)<input id="cipherInput" maxlength="60" value="BREWBYTE"></label><label class="field">Alphabet shift: <output id="shiftNum">3</output><input type="range" id="shift" min="1" max="25" value="3"></label><div class="callout"><b>Encoded output:</b> <span id="cipherOutput" style="font-family:monospace;letter-spacing:.12em;font-size:1.3rem"></span></div><div class="grid"><div class="tile"><h3>Data in transit</h3><p>Information traveling between systems; HTTPS typically uses TLS to protect web connections.</p></div><div class="tile"><h3>Data at rest</h3><p>Saved information on devices or in cloud storage; access controls and appropriate encryption may protect it.</p></div><div class="tile"><h3>Authentication</h3><p>Checking a claimed identity. MFA combines different categories, such as a password and a security key.</p></div></div><button class="btn" onclick="complete('cipher');go('ai')">Explore AI connections →</button></section>
+<section id="ai" class="card page hidden"><div class="eyebrow">AI throughout computer concepts</div><h2>AI is part of the technology story</h2><div class="grid"><div class="tile"><h3>Hardware</h3><p>CPUs and GPUs perform computation; RAM and storage support workloads and data.</p></div><div class="tile"><h3>Data</h3><p>Training learns statistical patterns from datasets. Retrieval can supply fresh context when a model is used.</p></div><div class="tile"><h3>Privacy</h3><p>Before sharing information, assess consent, minimization, access, retention, and vendor terms.</p></div><div class="tile"><h3>Human judgment</h3><p>AI-generated responses may be inaccurate or biased. Verify claims before acting.</p></div></div><h3>AI learning coach</h3><p>Draft your own answer, then copy a coaching prompt to an AI assistant of your choice. No AI service is connected to this page.</p><label class="field">Choose a coaching topic<select id="aiTopic"><option value="hardware">Choosing computing devices</option><option value="privacy">Protecting customer data</option><option value="encryption">Explaining encryption and authentication</option><option value="prediction">AI prediction versus ordinary software</option></select></label><label class="field">My reasoning<textarea id="aiDraft" placeholder="Explain your decision in your own words before using AI."></textarea></label><div class="row"><button class="btn" id="copyPrompt">Copy AI coaching prompt</button><span id="copyStatus" aria-live="polite" class="muted mini"></span></div><div class="callout">The prompt asks AI to question your reasoning, point out misconceptions, and request a revision—<b>not write the answer for you</b>. Do not paste real customer or student information.</div><button class="btn alt" onclick="complete('ai');go('quiz1')">Go to mastery assessments →</button></section>
+<section id="quiz1" class="card page hidden"><div class="eyebrow">Independent mastery · Module 01</div><h2>Understanding Tech Basics Assessment</h2><p>12 original questions · four answer choices each · answer positions are varied to prevent predictable patterns. Submit a response to see the explanation. Hints are optional and tracked separately from independent attempts.</p><div id="questions1"></div><div class="callout" id="score1">Not started.</div><button class="btn" onclick="go('quiz2')">Module 02 Assessment →</button></section>
+<section id="quiz2" class="card page hidden"><div class="eyebrow">Independent mastery · Module 02</div><h2>Data & Privacy Assessment</h2><p>18 original questions covering the major concepts in your instructional outline. Four choices, optional hints, and detailed concept feedback.</p><div id="questions2"></div><div class="callout" id="score2">Not started.</div><button class="btn" onclick="go('report')">View learning report →</button></section>
+<section id="report" class="card page hidden"><div class="eyebrow">Your progress</div><h2>Technology Learning Report</h2><p>Progress is stored only in this browser. It is not sent to anyone. Download or print your report to keep a personal record of your learning.</p><div class="grid" id="reportStats"></div><h3>Concepts to review</h3><div id="weakTopics" class="callout"></div><label class="field">My most important learning takeaway<textarea id="reflection" placeholder="Explain one concept you understand better and how it applies to BrewByte or AI."></textarea></label><div class="row"><button class="btn" id="downloadReport">Download report (.txt)</button><button class="btn alt" onclick="window.print()">Print / Save PDF</button></div><p class="mini muted">This is an independent, publicly accessible learning resource, not an official certification exam. CompTIA and Tech+ are trademarks of their respective owner. No proprietary questions or images are reproduced.</p></section>
+</main></div><footer>© BrewByte fictional instructional scenario · Original public learning resource · Not affiliated with CompTIA or TestOut</footer>
+<script>const QUESTIONS={
+  "m1": [
+    {
+      "topic": "Computing cycle",
+      "q": "A barista taps “iced tea” on a touchscreen. Which stage occurs first?",
+      "options": [
+        "Processing",
+        "Input",
+        "Storage",
+        "Output"
+      ],
+      "correct": 1,
+      "why": "The touchscreen captures a customer selection; processing, saving and displaying results follow."
+    },
+    {
+      "topic": "Computing cycle",
+      "q": "The checkout application calculates sales tax. What component principally executes these instructions?",
+      "options": [
+        "CPU",
+        "Keyboard",
+        "Monitor",
+        "SSD"
+      ],
+      "correct": 0,
+      "why": "The CPU executes program instructions. Storage retains data, while a monitor and keyboard provide output and input."
+    },
+    {
+      "topic": "Computing cycle",
+      "q": "Which component holds currently running applications and data for fast access?",
+      "options": [
+        "SSD",
+        "RAM",
+        "Printer",
+        "Router"
+      ],
+      "correct": 1,
+      "why": "RAM is working memory; an SSD is persistent storage, a printer produces output, and a router forwards network traffic."
+    },
+    {
+      "topic": "Computing cycle",
+      "q": "BrewByte needs to keep yesterday’s transactions after a power outage. Which is the best location?",
+      "options": [
+        "RAM alone",
+        "CPU registers",
+        "Persistent storage",
+        "Display memory"
+      ],
+      "correct": 2,
+      "why": "Persistent storage retains saved information without power; ordinary RAM does not."
+    },
+    {
+      "topic": "Devices",
+      "q": "A manager must move between tables and take handwritten inventory notes. Which device fits best?",
+      "options": [
+        "Rack server",
+        "Gaming console",
+        "Fixed desktop tower",
+        "Tablet with stylus"
+      ],
+      "correct": 3,
+      "why": "A tablet is portable and supports touch or pen input. The alternatives do not suit mobile note-taking."
+    },
+    {
+      "topic": "Devices",
+      "q": "A new employee needs an upgradeable workstation for accounting and inventory analysis. Which device is generally easiest to expand?",
+      "options": [
+        "Smartwatch",
+        "Desktop computer",
+        "Tablet",
+        "Basic smartphone"
+      ],
+      "correct": 1,
+      "why": "Many desktops support component replacement and expansion; mobile devices tend to have more limited upgrade options."
+    },
+    {
+      "topic": "Devices",
+      "q": "What device is designed to provide shared applications or files to multiple network users?",
+      "options": [
+        "Stylus",
+        "Scanner",
+        "Smart speaker",
+        "Server"
+      ],
+      "correct": 3,
+      "why": "A server provides resources to clients; the other devices do not normally fill that role."
+    },
+    {
+      "topic": "Devices",
+      "q": "BrewByte installs a smart thermostat that automatically adjusts the store temperature. What category best describes it?",
+      "options": [
+        "Standalone paper record",
+        "Output-only peripheral",
+        "Internet of Things device",
+        "Optical storage"
+      ],
+      "correct": 2,
+      "why": "An IoT device senses or controls the physical environment and communicates over a network."
+    },
+    {
+      "topic": "Devices",
+      "q": "A headset places a trainee in an entirely computer-generated coffee shop. Which technology is being used?",
+      "options": [
+        "Virtual reality",
+        "Augmented reality",
+        "Spreadsheet automation",
+        "Optical character recognition"
+      ],
+      "correct": 0,
+      "why": "VR immerses users in a simulated environment; AR overlays digital information onto the real world."
+    },
+    {
+      "topic": "Devices",
+      "q": "A designer needs smooth rendering of complex 3D scenes. Which processor is particularly suited to graphics rendering?",
+      "options": [
+        "SSD",
+        "Keyboard controller",
+        "GPU",
+        "NIC"
+      ],
+      "correct": 2,
+      "why": "A GPU accelerates graphics and parallel computation; a NIC connects networks and SSD stores data."
+    },
+    {
+      "topic": "AI connections",
+      "q": "BrewByte uses a model to estimate tomorrow’s pastry demand from prior sales. What is the AI system mainly doing?",
+      "options": [
+        "Encrypting every transaction",
+        "Providing internet access",
+        "Replacing all storage devices",
+        "Predicting patterns from data"
+      ],
+      "correct": 3,
+      "why": "Prediction models use patterns in data to estimate future outcomes; they do not automatically provide networking, storage, or encryption."
+    },
+    {
+      "topic": "Digital citizenship",
+      "q": "A coworker posts an unverified accusation about a customer. What is the most responsible response?",
+      "options": [
+        "Verify facts and avoid amplifying the claim",
+        "Publish the customer’s address",
+        "Create an impersonation account",
+        "Repost it quickly"
+      ],
+      "correct": 0,
+      "why": "Responsible digital citizenship involves verification, respect, and protecting people from harm."
+    }
+  ],
+  "m2": [
+    {
+      "topic": "PII",
+      "q": "Several individually ordinary details—ZIP code, job title, and purchase times—are combined. What is the main privacy concern?",
+      "options": [
+        "They may identify a person when combined",
+        "They guarantee anonymity",
+        "They automatically become encrypted",
+        "They cannot be analyzed"
+      ],
+      "correct": 0,
+      "why": "Indirect details can become identifying when linked; context matters."
+    },
+    {
+      "topic": "PII",
+      "q": "Which is the clearest example of a direct personal identifier?",
+      "options": [
+        "General weather forecast",
+        "Average store sales",
+        "Favorite drink category",
+        "Passport number"
+      ],
+      "correct": 3,
+      "why": "A passport number can directly identify a person; the other choices are not inherently direct identifiers."
+    },
+    {
+      "topic": "Privacy laws",
+      "q": "BrewByte offers online ordering to people in the European Union. Which privacy framework should it assess for applicability?",
+      "options": [
+        "A Wi-Fi standard",
+        "GDPR",
+        "HTTP",
+        "HIPAA alone"
+      ],
+      "correct": 1,
+      "why": "GDPR governs covered processing of personal data in the EU/EEA context. Other laws may also apply depending on facts."
+    },
+    {
+      "topic": "Digital safety",
+      "q": "A stranger with mutual contacts requests access to a staff member’s private profile. What is the safest initial approach?",
+      "options": [
+        "Share work credentials first",
+        "Post a home address to verify",
+        "Accept because of mutual contacts",
+        "Verify identity through trusted channels before deciding"
+      ],
+      "correct": 3,
+      "why": "Mutual contacts do not establish identity; independent verification reduces impersonation risk."
+    },
+    {
+      "topic": "AI privacy",
+      "q": "An employee wants to paste identifiable customer complaints into a public AI chatbot. What should they do first?",
+      "options": [
+        "Disable all privacy settings",
+        "Upload full payment details",
+        "Check approved use and remove unnecessary personal data",
+        "Assume every chatbot deletes submissions"
+      ],
+      "correct": 2,
+      "why": "AI tools differ in retention and data-use rules. Approval and data minimization should precede disclosure."
+    },
+    {
+      "topic": "Passwords",
+      "q": "Which change generally offers the greatest improvement to a randomly chosen password’s resistance to guessing?",
+      "options": [
+        "Add one symbol to a very short password",
+        "Reuse it across sites",
+        "Use a pet name",
+        "Increase its length"
+      ],
+      "correct": 3,
+      "why": "For a randomly generated password, more length increases search space. Uniqueness and unpredictability also matter."
+    },
+    {
+      "topic": "Passwords",
+      "q": "A student has 25 accounts. Which tool helps generate and store unique credentials securely?",
+      "options": [
+        "Password manager",
+        "Presentation editor",
+        "Search engine",
+        "Network switch"
+      ],
+      "correct": 0,
+      "why": "A password manager creates and stores unique credentials; the other tools do not serve that purpose."
+    },
+    {
+      "topic": "Data economy",
+      "q": "Which business collects information from multiple sources and sells or licenses data products?",
+      "options": [
+        "Monitor manufacturer",
+        "Local printer technician",
+        "Data broker",
+        "Operating system kernel"
+      ],
+      "correct": 2,
+      "why": "Data brokers aggregate and distribute information; the other options have different functions."
+    },
+    {
+      "topic": "Data economy",
+      "q": "A quiz app asks for access to contacts and location to show a personality result. What is the key concern?",
+      "options": [
+        "The quiz has multiple questions",
+        "The app uses colorful graphics",
+        "The result may be amusing",
+        "Unnecessary collection of personal information"
+      ],
+      "correct": 3,
+      "why": "Excessive permissions can expose information unrelated to the stated service."
+    },
+    {
+      "topic": "AI concepts",
+      "q": "Which statement best distinguishes model training from answering a question with retrieved documents?",
+      "options": [
+        "Training requires live web browsing for every answer",
+        "Training changes learned model parameters; retrieval supplies context at use time",
+        "Both always change model weights",
+        "Retrieval can only read government sites"
+      ],
+      "correct": 1,
+      "why": "Models learn from training data during training; retrieval may fetch relevant information during use without retraining."
+    },
+    {
+      "topic": "Encryption",
+      "q": "Which option ordinarily protects a browser connection to an online ordering website in transit?",
+      "options": [
+        "HTTPS with TLS",
+        "A privacy law acronym",
+        "Traditional unencrypted FTP",
+        "Plain HTTP"
+      ],
+      "correct": 0,
+      "why": "HTTPS uses TLS to protect web traffic in transit; HTTP and basic FTP do not provide equivalent protection."
+    },
+    {
+      "topic": "Encryption",
+      "q": "A store classifies customer payment information as sensitive. What is the best reason to prioritize its protection?",
+      "options": [
+        "Encryption makes all transfers faster",
+        "Sensitive records never need access controls",
+        "The potential harm from exposure is high",
+        "Encryption is only for images"
+      ],
+      "correct": 2,
+      "why": "Security controls should reflect sensitivity, risk, applicable requirements, and system design."
+    },
+    {
+      "topic": "Encryption",
+      "q": "A toy cipher shifts every letter three positions in the alphabet. Which technique is demonstrated?",
+      "options": [
+        "Public-key encryption",
+        "Caesar shift cipher",
+        "Hashing",
+        "Multifactor authentication"
+      ],
+      "correct": 1,
+      "why": "A Caesar cipher substitutes letters by a fixed shift; it is a learning illustration, not modern secure encryption."
+    },
+    {
+      "topic": "Authentication",
+      "q": "Which example uses two different authentication factors?",
+      "options": [
+        "A password plus a hardware security key",
+        "Two security questions",
+        "Two passwords",
+        "A password and a PIN"
+      ],
+      "correct": 0,
+      "why": "A password is knowledge; a hardware security key is possession. Two knowledge factors are not two factor categories."
+    },
+    {
+      "topic": "Data economy",
+      "q": "A customer voluntarily joins a paid survey panel and shares preferences. What are they exchanging?",
+      "options": [
+        "A guaranteed anonymous identity",
+        "Selected information for an incentive",
+        "Their browser’s encryption key",
+        "Ownership of every website"
+      ],
+      "correct": 1,
+      "why": "Survey panels may compensate participation; participants should still review terms and data handling."
+    },
+    {
+      "topic": "Digital safety",
+      "q": "A suspicious “prize” message asks a teenager for their full name and home address. What is the best response?",
+      "options": [
+        "Send the address if the prize is valuable",
+        "Trade addresses with the sender",
+        "Do not disclose details; verify through an official channel",
+        "Share a password as proof"
+      ],
+      "correct": 2,
+      "why": "Unsolicited prize claims can be scams. Personal identifiers should not be given to unverified contacts."
+    },
+    {
+      "topic": "AI concepts",
+      "q": "Which statement about AI-generated text is most accurate?",
+      "options": [
+        "It never uses computing resources",
+        "It can sound confident while being inaccurate",
+        "It cannot contain bias",
+        "It is always factually correct"
+      ],
+      "correct": 1,
+      "why": "Generative systems can produce plausible but false content; verification remains essential."
+    },
+    {
+      "topic": "Digital citizenship",
+      "q": "A student finds an AI-generated picture of a classmate that could embarrass them. What should they do?",
+      "options": [
+        "Avoid sharing and follow appropriate reporting channels",
+        "Assume AI output cannot harm anyone",
+        "Repost to get opinions",
+        "Remove attribution and share"
+      ],
+      "correct": 0,
+      "why": "Responsible behavior considers consent, accuracy, privacy, and potential harm."
+    }
+  ]
+};
+const glossary={terms1:[['Technology as a resource','Technology helps people perform tasks, communicate, solve problems, and create value.','A point-of-sale terminal makes ordering faster.'],['Digital citizenship','Responsible, respectful, informed behavior when using connected technology.','A BrewByte employee verifies information before reposting it.'],['Input','Data or instructions supplied to a computer.','A customer taps a drink on a touchscreen.'],['Processing','A computer follows instructions to transform input into useful results.','The POS calculates the price and tax.'],['Storage','Keeping data for later retrieval; persistent storage retains information after shutdown.','The system saves the sale in a database.'],['Output','Information a system presents or sends as a result.','A receipt or order number appears.'],['CPU','The central processing unit executes general program instructions.','It runs the checkout software.'],['RAM','Fast temporary working memory for active applications.','It holds the running checkout application’s data.'],['SSD','A solid-state drive provides persistent storage.','It stores the operating system and saved files.'],['GPU','A processor designed for graphics and many parallel workloads.','It accelerates graphics and some AI computation.'],['Server','A computer or service providing shared resources to clients.','It hosts inventory records for staff.'],['IoT','Connected physical devices with sensors or controls.','A smart thermostat adjusts the store temperature.'],['VR vs. AR','VR creates an immersive digital world; AR overlays information onto the physical world.','VR trains staff in a simulated shop; AR could overlay repair instructions.']],terms2:[['PII','Information that can identify or be linked to an individual; context matters.','A customer email address or account identifier.'],['Direct identifier','Information that can directly distinguish an individual.','A passport number.'],['Indirect identifier','A detail that may identify someone when combined with other data.','ZIP code combined with work schedule and purchase history.'],['Data broker','A business that collects and distributes information products.','A marketing provider aggregates customer segments from many sources.'],['Data analytics','Examining information to discover patterns and support decisions.','BrewByte reviews sales by hour to plan staffing.'],['AI model training','A process that adjusts a model based on examples or feedback.','A forecasting model learns patterns from historical sales.'],['Retrieval','Obtaining relevant information during use, without necessarily retraining a model.','An assistant looks up the current drink menu.'],['HTTPS / TLS','Web communication protected in transit using Transport Layer Security.','A browser securely connects to the ordering site.'],['Encryption','Transforming readable information into protected form using cryptographic methods and keys.','Protecting stored customer records or web traffic.'],['Caesar cipher','A simple letter-shift substitution cipher; not secure today.','Shift BREWBYTE three letters for practice.'],['Authentication','Verifying a claimed identity.','A worker signs in using a password and security key.'],['MFA','Authentication using two or more different factor categories.','A password plus a hardware security key.'],['Password manager','Software that generates and securely stores unique credentials.','Staff use unique passwords for approved accounts.'],['GDPR','An EU data-protection regulation applying to covered processing activities.','BrewByte checks whether its online service falls within its scope.'],['Digital footprint','Information left through online activities and disclosures.','Posts and shopping activity may reveal patterns.'],['Data minimization','Collecting and sharing only the information necessary for a defined purpose.','A survey asks for preferences without demanding a passport number.']]};
+const cycle=[['Input','The touchscreen records the customer’s selection. The device turns a physical tap into data the application can process.'],['Processing','Software running on a CPU validates the order, calculates prices and taxes, and updates the transaction state. RAM holds active working data.'],['Storage','The completed transaction is saved in persistent storage, possibly through a cloud database. The data remains available after power is removed.'],['Output','The customer sees an order number, and a printer or kitchen screen receives a result. A device can serve as both input and output.']];
+const deviceCases=[{q:'A cashier needs a compact touch-operated ordering station.',a:['Tablet or POS touchscreen','Rack-mounted server','Graphics workstation','Network printer'],c:0,why:'A touchscreen POS captures orders directly. A server can support it behind the scenes but is not the cashier interface.'},{q:'A manager needs to write notes while walking through the store.',a:['Fixed desktop','Tablet with stylus','Rack server','Gaming console'],c:1,why:'A tablet supports mobility, pen input, and battery operation.'},{q:'The company needs centrally available inventory records for staff.',a:['Smartwatch','Receipt printer','Server or cloud service','Webcam'],c:2,why:'A server or managed cloud service can provide shared access with appropriate permissions.'},{q:'The store wants to adjust temperature based on sensor readings.',a:['Spreadsheet chart','Desktop monitor','USB drive','Network-connected smart thermostat'],c:3,why:'A smart thermostat is an IoT device that senses and controls a physical process.'}];
+const privacyCases=[['Full name','Often a direct identifier; consider whether it is needed for the transaction.'],['ZIP code','May seem general, but can contribute to reidentification when combined with other data.'],['Favorite drink','Usually a preference, but linking it to purchase history and an account can create a detailed profile.'],['Email address','Can identify or contact a person; protect it and limit access.'],['Purchase timestamp','Can help infer routines or identity when combined with other records.'],['Passport number','Highly sensitive direct identifier; BrewByte normally has no legitimate reason to collect it.']];
+const KEY='brewbyte-tech-startup-v2';let state;try{state=JSON.parse(localStorage.getItem(KEY))||{}}catch{state={}};state.done??={};state.answers??={};state.hints??={};function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch{} updateProgress()}
+function go(id){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('hidden',x.id!==id));document.querySelectorAll('.side [data-page]').forEach(x=>x.classList.toggle('active',x.dataset.page===id));window.scrollTo({top:0,behavior:'instant'});if(id==='report')renderReport()}
+document.querySelectorAll('[data-page]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.page)));function complete(id){state.done[id]=true;save()}
+function renderTerms(id){document.getElementById(id).innerHTML=glossary[id].map((t,i)=>`<article class="term"><h3>${t[0]}</h3><p>${t[1]}</p><button type="button" class="btn small alt" data-term="${id}-${i}">Reveal BrewByte example</button><div class="example" id="${id}-${i}"><b>Example:</b> ${t[2]}</div></article>`).join('');document.querySelectorAll(`[data-term^="${id}-"]`).forEach(b=>b.onclick=()=>{const e=document.getElementById(b.dataset.term);e.classList.toggle('open');b.textContent=e.classList.contains('open')?'Hide example':'Reveal BrewByte example'})}renderTerms('terms1');renderTerms('terms2');
+document.getElementById('cycleButtons').innerHTML=cycle.map((x,i)=>`<button type="button" data-cycle="${i}">${i+1}. ${x[0]}</button>`).join('');function cycleSelect(i){document.querySelectorAll('[data-cycle]').forEach(b=>b.classList.toggle('active',Number(b.dataset.cycle)===i));document.getElementById('cycleDetail').innerHTML=`<b>${cycle[i][0]}:</b> ${cycle[i][1]}`}document.querySelectorAll('[data-cycle]').forEach(b=>b.onclick=()=>cycleSelect(Number(b.dataset.cycle)));cycleSelect(0);
+function renderDevices(){document.getElementById('deviceLab').innerHTML=deviceCases.map((x,i)=>`<div class="q"><b>${i+1}. ${x.q}</b><div class="row">${x.a.map((v,j)=>`<button class="btn alt small" data-device="${i}-${j}">${v}</button>`).join('')}</div><div class="feedback" id="deviceFeedback${i}" aria-live="polite">Select a device.</div></div>`).join('');document.querySelectorAll('[data-device]').forEach(b=>b.onclick=()=>{let [i,j]=b.dataset.device.split('-').map(Number),x=deviceCases[i],ok=j===x.c;document.getElementById('deviceFeedback'+i).innerHTML=`<b>${ok?'Good choice.':'Consider the requirement again.'}</b> ${x.why}`;if(ok){state.done['device'+i]=true;save()}})}renderDevices();
+document.getElementById('privacyCards').innerHTML=privacyCases.map((x,i)=>`<button class="btn alt" data-privacy="${i}">${x[0]} →</button>`).join('');document.querySelectorAll('[data-privacy]').forEach(b=>b.onclick=()=>{const x=privacyCases[Number(b.dataset.privacy)];document.getElementById('privacyResult').innerHTML=`<b>${x[0]}:</b> ${x[1]}`});function updateCipher(){const n=Number(document.getElementById('shift').value);document.getElementById('shiftNum').textContent=n;document.getElementById('cipherOutput').textContent=document.getElementById('cipherInput').value.toUpperCase().replace(/[A-Z]/g,c=>String.fromCharCode((c.charCodeAt(0)-65+n)%26+65))}['shift','cipherInput'].forEach(id=>document.getElementById(id).addEventListener('input',updateCipher));updateCipher();
+function escapeText(t){return String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function renderQuiz(module,container,scoreId){const list=QUESTIONS[module];document.getElementById(container).innerHTML=list.map((q,i)=>`<article class="q"><div class="eyebrow">${escapeText(q.topic)} · Question ${i+1}/${list.length}</div><h3>${escapeText(q.q)}</h3>${q.options.map((a,j)=>`<label class="choice"><input type="radio" name="${module}-${i}" value="${j}"> ${'ABCD'[j]}. ${escapeText(a)}</label>`).join('')}<div class="row"><button class="btn alt small" data-hint="${module}-${i}">Need a hint?</button><button class="btn small" data-grade="${module}-${i}">Check answer</button></div><div class="feedback" id="feedback-${module}-${i}" aria-live="polite">Choose an answer to test your reasoning.</div></article>`).join('');document.querySelectorAll(`[data-hint^="${module}-"]`).forEach(b=>b.onclick=()=>{const i=Number(b.dataset.hint.split('-')[1]),q=list[i];state.hints[module+'-'+i]=true;document.getElementById(`feedback-${module}-${i}`).textContent='Hint: Think about the core purpose of '+q.topic.toLowerCase()+' and which choice directly meets the scenario’s requirement.';save()});document.querySelectorAll(`[data-grade^="${module}-"]`).forEach(b=>b.onclick=()=>{const i=Number(b.dataset.grade.split('-')[1]),q=list[i],selected=document.querySelector(`input[name="${module}-${i}"]:checked`),f=document.getElementById(`feedback-${module}-${i}`);if(!selected){f.textContent='Select one answer before checking.';return}const chosen=Number(selected.value),ok=chosen===q.correct;state.answers[module+'-'+i]={chosen,ok,assisted:!!state.hints[module+'-'+i],topic:q.topic};f.className='feedback '+(ok?'good':'bad');f.innerHTML=`<b>${ok?'Correct.':'Not yet. The best choice is '+('ABCD'[q.correct])+'.'}</b> ${escapeText(q.why)}<br><b>Choice review:</b> ${q.options.map((opt,j)=>`${'ABCD'[j]}: ${escapeText(opt)} — ${j===q.correct?'meets the requirement':'does not best meet the requirement'}`).join('; ')}.`;save();scoreUpdate(module,scoreId)});scoreUpdate(module,scoreId)}
+function scoreUpdate(module,id){const a=Object.entries(state.answers).filter(([k])=>k.startsWith(module+'-')).map(([,v])=>v);document.getElementById(id).textContent=`Answered ${a.length}/${QUESTIONS[module].length} · Correct ${a.filter(x=>x.ok).length} · Hint-assisted ${a.filter(x=>x.assisted).length} · Independent correct ${a.filter(x=>x.ok&&!x.assisted).length}`}
+renderQuiz('m1','questions1','score1');renderQuiz('m2','questions2','score2');
+document.getElementById('copyPrompt').onclick=async()=>{const draft=document.getElementById('aiDraft').value.trim();if(draft.length<25){document.getElementById('copyStatus').textContent='Write at least 25 characters of your own reasoning first.';return}const topic=document.getElementById('aiTopic').selectedOptions[0].text;const prompt=`You are a patient computer and technology fundamentals learning coach for a fictional startup called BrewByte Coffee. Topic: ${topic}. My original reasoning: ${draft}. Ask two diagnostic questions, identify one possible misconception, and request that I revise my own answer. Do not supply a finished assignment or invent business facts. Connect the topic to an AI use case and one risk. Do not ask for personal information.`;try{await navigator.clipboard.writeText(prompt);document.getElementById('copyStatus').textContent='Prompt copied. Paste it into your preferred AI assistant.'}catch{const t=document.createElement('textarea');t.value=prompt;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();document.getElementById('copyStatus').textContent='Copy attempted. If blocked, open this page using HTTPS.'}complete('ai')};
+function updateProgress(){const total=QUESTIONS.m1.length+QUESTIONS.m2.length;const count=Object.keys(state.answers).length;const completed=Object.values(state.done).filter(Boolean).length;document.getElementById('progressBar').style.width=Math.round(100*count/total)+'%';document.getElementById('progressText').textContent=`${count}/${total} assessment responses · ${completed} activities marked complete`}
+function renderReport(){const entries=Object.values(state.answers),correct=entries.filter(x=>x.ok),ind=entries.filter(x=>x.ok&&!x.assisted);document.getElementById('reportStats').innerHTML=[['Answered',entries.length+'/'+(QUESTIONS.m1.length+QUESTIONS.m2.length)],['Correct',correct.length],['Independent correct',ind.length],['Hint-assisted',entries.filter(x=>x.assisted).length]].map(x=>`<div class="stat"><div class="muted mini">${x[0]}</div><h2>${x[1]}</h2></div>`).join('');const weak=[...new Set(entries.filter(x=>!x.ok).map(x=>x.topic))];document.getElementById('weakTopics').textContent=weak.length?'Review: '+weak.join(', '):'No missed topics recorded yet. Continue the quizzes to build a meaningful review plan.'}
+document.getElementById('downloadReport').onclick=()=>{const entries=Object.entries(state.answers),lines=['BREWBYTE TECHNOLOGY STARTUP — LEARNING REPORT','Generated: '+new Date().toLocaleString(),'No personal information collected by this site.','',...entries.map(([k,v])=>`${k}: ${v.ok?'Correct':'Needs review'}${v.assisted?' (hint-assisted)':' (independent)'} — ${v.topic}`),'','Reflection:',document.getElementById('reflection').value];const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([lines.join('\n')],{type:'text/plain'}));a.download='brewbyte-learning-report.txt';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
+document.getElementById('reset').onclick=()=>{if(confirm('Reset all locally saved answers, review flags, and activity progress on this device?')){state={done:{},answers:{},hints:{}};save();location.reload()}};updateProgress();
+
+// New visual and practice modules: no external scripts, accounts, or data transmission.
+const hardwareData=[['CPU','Central processing unit','Executes instructions for the checkout software.','Runs general-purpose operations; many AI tasks also depend on CPUs.'],['RAM','Random-access memory','Holds the current order and running application data temporarily.','Working memory holds data while an AI model processes a request.'],['SSD','Solid-state drive','Retains the operating system and saved transactions when power is off.','Can store model files, datasets, and application software.'],['GPU','Graphics processing unit','Useful for 3D visualization and graphics work.','Parallel computation can accelerate training and inference for many AI models.'],['NIC','Network interface','Connects the point-of-sale device to the local network.','Enables communication with remote AI services and cloud applications.']];
+const hwButtons=document.getElementById('hardwareControls');hwButtons.innerHTML=hardwareData.map((d,i)=>`<button type="button" data-hw="${i}" aria-pressed="false">${d[0]}</button>`).join('');function selectHardware(i){hwButtons.querySelectorAll('button').forEach((b,j)=>b.setAttribute('aria-pressed',String(i===j)));const d=hardwareData[i];document.getElementById('hardwareInfo').innerHTML=`<h3>${d[0]} — ${d[1]}</h3><p><b>At BrewByte:</b> ${d[2]}</p><p><b>Technology meets AI:</b> ${d[3]}</p>`}hwButtons.addEventListener('click',e=>{const b=e.target.closest('[data-hw]');if(b)selectHardware(Number(b.dataset.hw))});selectHardware(0);
+const networkDevices=[{id:'pos',name:'POS terminal',info:'The point-of-sale system starts the request.'},{id:'switch',name:'Network switch',info:'A wired switch forwards local network frames.'},{id:'router',name:'Router',info:'A router forwards traffic toward other networks, including the internet.'},{id:'cloud',name:'Cloud service',info:'The remote ordering service processes the request and returns a response.'}];let networkPath=[];function drawNetwork(){document.getElementById('networkFlow').innerHTML=networkPath.length?networkPath.map((id,i)=>`${i?'<span aria-hidden="true">→</span>':''}<span class="network-node">${networkDevices.find(x=>x.id===id).name}</span>`).join(''):'<span class="muted">Your connection path appears here.</span>';document.getElementById('networkChoices').innerHTML=networkDevices.map(d=>`<button class="network-choice" type="button" data-network="${d.id}" ${networkPath.includes(d.id)?'disabled':''}>${d.name}</button>`).join('')};document.getElementById('networkChoices').addEventListener('click',e=>{const b=e.target.closest('[data-network]');if(!b)return;const expected=networkDevices[networkPath.length],f=document.getElementById('networkFeedback');if(b.dataset.network===expected?.id){networkPath.push(b.dataset.network);f.textContent=networkPath.length===4?'Connected! The request can reach the cloud service. Responses return through the network.':networkDevices[networkPath.length-1].info;if(networkPath.length===4){state.done.network=true;save()}}else{f.textContent=`Not quite. Think about where the request starts and which equipment forwards it next. Current step: ${networkPath.length+1} of 4.`}drawNetwork()});document.getElementById('networkReset').onclick=()=>{networkPath=[];drawNetwork();document.getElementById('networkFeedback').textContent='Choose the first device to begin.'};drawNetwork();
+const sortingData=[{label:'Customer email address',correct:'direct',why:'An email address can identify or contact a specific person.'},{label:'Customer ZIP code without other details',correct:'indirect',why:'A ZIP code is not necessarily identifying alone, but can contribute to reidentification.'},{label:'Anonymous total number of lattes sold today',correct:'aggregate',why:'A properly aggregated total contains no customer-level identifiers.'},{label:'Passport number',correct:'direct',why:'A passport number is a strong direct identifier and unnecessary for routine coffee sales.'},{label:'Purchase time linked to a loyalty account',correct:'indirect',why:'Behavioral information linked to other records can help identify or profile a customer.'},{label:'Total shop revenue this week with no customer details',correct:'aggregate',why:'An overall revenue total generally describes the business rather than a person.'}];let sortAnswers={};document.getElementById('sortItems').innerHTML=sortingData.map((d,i)=>`<div class="sort-item"><label for="sort${i}"><b>${i+1}. ${d.label}</b></label><div><select id="sort${i}" data-sort="${i}"><option value="">Choose a classification</option><option value="direct">Direct identifier</option><option value="indirect">Indirect / linkable information</option><option value="aggregate">Aggregated nonpersonal information</option></select></div><div class="sort-result mini" id="sortResult${i}" aria-live="polite"></div></div>`).join('');document.getElementById('sortItems').addEventListener('change',e=>{if(!e.target.matches('[data-sort]'))return;const i=Number(e.target.dataset.sort),d=sortingData[i],ok=e.target.value===d.correct;sortAnswers[i]=ok;document.getElementById('sortResult'+i).textContent=(ok?'Correct. ':'Review: ')+d.why;const answered=Object.keys(sortAnswers).length;document.getElementById('sortScore').textContent=`${answered}/6 classified · ${Object.values(sortAnswers).filter(Boolean).length} correct. ${answered===6?'Try again on any missed item to improve.':''}`;if(answered===6&&Object.values(sortAnswers).every(Boolean)){state.done.sorting=true;save()}});
+const cards=[...glossary.terms1,...glossary.terms2];state.review??={};let cardOrder=[],cardIndex=0,cardRevealed=false;function buildCardOrder(){const flagged=Object.keys(state.review).filter(k=>state.review[k]).map(Number).filter(i=>i>=0&&i<cards.length);cardOrder=[...flagged,...cards.map((_,i)=>i).filter(i=>!flagged.includes(i))];cardIndex=0}function showCard(){const id=cardOrder[cardIndex%cardOrder.length],c=cards[id];document.getElementById('flashcard').innerHTML=`<h3>${escapeText(c[0])}</h3>${cardRevealed?`<p>${escapeText(c[1])}</p><p><b>BrewByte example:</b> ${escapeText(c[2])}</p>`:'<p>Explain this term in your own words before revealing it.</p>'}`;document.getElementById('flashStatus').textContent=`Card ${cardIndex%cardOrder.length+1} of ${cardOrder.length} · ${Object.values(state.review).filter(Boolean).length} terms marked for review`}buildCardOrder();showCard();document.getElementById('revealCard').onclick=()=>{cardRevealed=true;showCard()};document.getElementById('reviewCard').onclick=()=>{state.review[cardOrder[cardIndex%cardOrder.length]]=true;save();document.getElementById('flashStatus').textContent='Marked for review. It will appear early next time.'};document.getElementById('nextCard').onclick=()=>{cardIndex++;cardRevealed=false;if(cardIndex>=cardOrder.length){buildCardOrder()}showCard()};
+function setFocus(on){document.body.classList.toggle('focus-on',on);document.getElementById('focusToggle').setAttribute('aria-pressed',String(on));document.getElementById('focusToggle').textContent=on?'Exit focus':'Focus mode'}document.getElementById('focusToggle').onclick=()=>setFocus(!document.body.classList.contains('focus-on'));document.getElementById('focusExit').onclick=()=>setFocus(false);document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.body.classList.contains('focus-on'))setFocus(false)});function setTheme(light){document.body.classList.toggle('light-theme',light);document.getElementById('themeToggle').setAttribute('aria-pressed',String(light));document.getElementById('themeToggle').textContent=light?'Dark mode':'Light mode';state.theme=light?'light':'dark';save()}document.getElementById('themeToggle').onclick=()=>setTheme(!document.body.classList.contains('light-theme'));if(state.theme==='light')setTheme(true);
+</script><button id="focusExit" class="btn focus-exit">Exit focus mode</button></body></html>
