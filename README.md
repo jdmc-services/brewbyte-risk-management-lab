@@ -1,39 +1,53 @@
-# BrewByte Cybersecurity Learning Portal
+# BrewByte Learning Portal
 
-An original, synthetic, zero-paper learning experience.
+Welcome to the BrewByte Learning Portal, a free, interactive learning environment designed to help students develop practical technology and cybersecurity skills.
 
-- index.html — Week 3 risk identification, analysis, evaluation, and simulated Nmap evidence.
-- week4.html — Week 4 risk treatment, controls, ownership, methods, and residual risk.
-- week5.html — Week 5 compliance, ethics, backup scope, recovery testing, and assurance evidence.
+BrewByte Coffee is a fictional startup used throughout the lessons to demonstrate how technology supports business operations, protects information, and enables better decisions.
 
-All organizations, systems, paths, files, logs, scenarios, definitions, and questions are fictional and instructor-created. The repository contains no real targets, credentials, student information, textbook pages, publisher definitions, publisher lab instructions, or publisher test-bank questions.
+## Learning Pathways
 
-The applications run entirely in the browser. Saved work remains in that browser unless the student intentionally downloads a synthetic record.
+### 1. Computer & Technology Fundamentals
 
-## Week 5 sequence
+Explore essential computer concepts through explanations, interactive activities, real-world business scenarios, and knowledge assessments.
 
-1. Connect Week 3 evidence and Week 4 treatment to control verification.
-2. Distinguish law, contract, standard, policy, due care, due diligence, ethics, and liability.
-3. Work through original ethical decision scenarios.
-4. Run a fictional backup that succeeds while omitting a critical folder.
-5. Observe a failed restore, diagnose the scope gap, recover an approved template, correct scope, and prove restoration.
-6. Compare file history, VSS, system restore, and independent backup.
-7. Create a synthetic assurance record with owners, exception, correction, residual risk, and review date.
-8. Complete an original 12-question assessment with balanced answer positions.
+**Current learning units:**
+- Unit 1 — Understanding Tech Basics
+- Unit 2 — Data and Privacy
 
-Suggested 30-minute facilitation: 0–4 mission and prior-week connection; 4–8 obligations; 8–12 ethics; 12–23 recovery simulation; 23–26 evidence and AI boundary; 26–30 assessment and exit discussion.
+**Additional hands-on labs:**
+- Lab 1.4 — Explore Your Computer: Windows GUI, PowerShell, Command Prompt, Linux, and AI fundamentals.
+- Lab 2.4 — Protect the Customer: Data classification, privacy, access controls, incident investigation, and responsible AI use.
 
-## Publish Week 5
+[Launch Computer & Technology Fundamentals](https://jdmc-services.github.io/brewbyte-risk-management-lab/brewbyte-technology-learning-lab.html)
 
-1. Upload the revised index.html, revised week4.html, new week5.html, and revised README.md to the repository root.
-2. Commit with: Add synthetic BrewByte Week 5 recovery assurance lab
-3. Wait for GitHub Pages deployment.
-4. Open the public site in a private window and select Week 5 · Recovery Assurance.
-5. Test every tab, decision, recovery step, save/load/download, and assessment reset.
+### 2. Cybersecurity & Risk Management
 
-## Boundaries
+Develop practical cybersecurity knowledge using simulated business scenarios involving risk management, governance, policies, security programs, and organizational decision-making.
 
-- Browser simulation only; it does not change disks, run Windows tools, scan systems, or exploit anything.
-- Use the assigned authorized virtual environment for operating-system practice.
-- No real records, credentials, identifiers, or confidential data.
-- AI may organize authorized synthetic evidence. People must validate facts, determine legal applicability, authorize changes, assign ownership, and accept residual risk.
+The pathway includes interactive cybersecurity labs and applied learning activities.
+
+## Start Learning
+
+**[Open the BrewByte Learning Portal](https://jdmc-services.github.io/brewbyte-risk-management-lab/)**
+
+## Learning Features
+
+- Self-paced interactive instruction
+- Fictional business scenarios
+- Hands-on simulations and guided exercises
+- Knowledge checks with explanations
+- AI applications and technology connections
+- Practical workplace decision-making
+- No student account required
+
+## Educational Use
+
+BrewByte is an independent educational demonstration using fictional organizations, systems, customer information, and scenarios.
+
+The learning activities are designed to reinforce foundational technology and cybersecurity concepts. They do not require access to production systems or real customer information.
+
+Students should follow their institution's policies when performing exercises on personal, school, or workplace devices.
+
+## Future Development
+
+Additional units, practical labs, and assessments will be added as the learning pathways expand.
