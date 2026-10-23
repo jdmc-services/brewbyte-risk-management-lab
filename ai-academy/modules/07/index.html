@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="BrewByte AI Academy: practical AI, data and security learning."><title>Applied Generative AI &amp; API Integration | BrewByte AI Academy</title><link rel="stylesheet" href="../../assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="../../index.html">BrewByte AI Academy</a><a href="../../../index.html">Learning Portal</a><a href="../../docs/start-here.html">Start here</a><a href="../../docs/curriculum-blueprint.html">Curriculum</a></header><main id="main"><h1>Module 07: Applied Generative AI &amp; API Integration</h1>
+<p>Quarter 3 · Four weeks · 12–15 hours per week · Pilot learning material</p>
+<h2>Learning objectives</h2>
+<p>Students will describe HTTP, JSON, REST, SDKs, and status codes; build a small Python model client and FastAPI endpoint; validate structured outputs; handle timeout/retry/rate errors; compare prompting, RAG, and fine-tuning; and measure quality, latency, and estimated cost.</p>
+<h2>Certification alignment</h2>
+<p>S1.1, S2.2–2.3; AWS 2.3, 3.1–3.4, 5.1; AI-901 Foundry SDK/client/deployment skills only when the optional platform bridge is executed.</p>
+<p>These are partial curriculum mappings, not complete exam coverage or endorsement. See the <a href="../../docs/curriculum-blueprint.html">blueprint</a> for versions and platform gaps.</p>
+<h2>Weekly lessons</h2>
+<ul>
+<li><a href="week-1.html">Week 1: Understand requests, responses, and adapters</a></li>
+<li><a href="week-2.html">Week 2: Build a small validated API</a></li>
+<li><a href="week-3.html">Week 3: Bound failures and consumption</a></li>
+<li><a href="week-4.html">Week 4: Choose customization from evidence</a></li>
+</ul>
+<h2>Proof-of-work project: 07-model-gateway</h2>
+<p>Build a ticket-summary API with a provider-neutral adapter, a deterministic fixture, and one real small-model backend. Add adapters from official OpenAI/Anthropic examples without requiring paid calls. Record any unexecuted adapter as untested.</p>
+<h2>Acceptance evidence</h2>
+<p>Evaluate at least 30 held-out requests; report schema success, factual correctness against inputs, rejection behavior, and latency. Test 429/5xx errors, unavailable backends, timeout, malformed responses, and retry limits. Use a representative small pretrained model for genuine inference; fixture success cannot substitute for model quality.</p>
+<h2>Security integration</h2>
+<p>Environment-based secrets, restricted credentials, authenticated routes, payload/token limits, bounded retries, dependency review, sanitized logs, and explicit output validation. Never execute model-generated code or allow arbitrary outbound URLs. Use an instructor-provided simple authentication scaffold until students understand it.</p>
+<h2>Lab access</h2>
+<ul>
+<li><a href="lab.ipynb">Guided notebook</a></li>
+<li><a href="starter.py">Starter Python script</a></li>
+<li><a href="https://colab.research.google.com/github/jdmc-services/brewbyte-risk-management-lab/blob/main/ai-academy/modules/07/lab.ipynb">Open notebook in Colab</a> — available after the reviewed branch is merged</li>
+<li><a href="../../docs/model-and-deployment-labs.html">Live-model and deployment instructions</a></li>
+<li><a href="../../data/README.md">Shared synthetic dataset guide</a></li>
+<li><a href="../../data/sales.csv">Raw sales CSV</a> · <a href="../../data/tickets.csv">Synthetic tickets CSV</a></li>
+</ul>
+<p>Run from the repository root: <code>python ai-academy/modules/07/starter.py</code>. Module 4 needs the optional classical-ML environment. The default examples for generative modules are explicitly labeled fixtures/baselines.</p>
+<h2>Assessment rubric</h2>
+<table>
+<tr><th>Criterion</th><th>Weight</th><th>Evidence</th></tr>
+<tr><td>Functional behavior</td><td>35%</td><td>Meets the stated task and handles meaningful failures</td></tr>
+<tr><td>Evaluation</td><td>25%</td><td>Held-out cases, denominators, observed errors, limitations</td></tr>
+<tr><td>Security/privacy</td><td>20%</td><td>Appropriate boundaries and tested controls</td></tr>
+<tr><td>Reproducibility</td><td>10%</td><td>Clear setup, versions, provenance, commands</td></tr>
+<tr><td>Explanation</td><td>10%</td><td>Own reasoning and an unseen independent modification</td></tr>
+</table>
+<p>Target at least 80/100 plus mandatory controls. Repair credential exposures, seeded access bypasses, or fabricated results before progression. This threshold is an instructional rule, not an exam passing score. Public worked examples do not replace independent work.</p>
+<h2>Free assigned resources</h2>
+<ul>
+<li><a href="https://fastapi.tiangolo.com/tutorial/">FastAPI tutorial</a></li>
+<li><a href="https://huggingface.co/learn/llm-course/chapter1/1">Hugging Face inference course</a></li>
+<li><a href="https://platform.openai.com/docs/overview">OpenAI API documentation; inference may cost money</a></li>
+<li><a href="https://docs.anthropic.com/en/docs/overview">Anthropic API documentation; inference may cost money</a></li>
+</ul>
+<p><a href="../../index.html">Academy home</a> · <a href="../../docs/start-here.html">Course guide</a></p></main><footer>Fictional business and synthetic data. Pilot curriculum; no certification endorsement or employment guarantee. No learner telemetry. Python/model exercises execute separately from this website.</footer></body></html>

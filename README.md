@@ -26,6 +26,14 @@ Develop practical cybersecurity knowledge using simulated business scenarios inv
 
 The pathway includes interactive cybersecurity labs and applied learning activities.
 
+### 3. BrewByte AI Academy
+
+A 12-module, 48-week pilot pathway covering Python, data literacy, machine learning, generative AI, retrieval, security, governance, and portfolio development. BrewByte Coffee provides the shared fictional business case.
+
+[Launch the AI Academy](ai-academy/index.html) · [Authoring and validation guide](ai-academy/README.md)
+
+Includes 48 weekly lessons, 12 guided notebooks and starter scripts, synthetic datasets, independent assignments/rubrics, and automated structural/code checks. Live-model, container, and cloud evidence is recorded separately; fixtures do not establish those skills. No paid API is required for the core learning route. Instructor pilot review is required before treating this as a finished teaching release.
+
 ## Start Learning
 
 **[Open the BrewByte Learning Portal](https://jdmc-services.github.io/brewbyte-risk-management-lab/)**
