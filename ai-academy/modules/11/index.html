@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="BrewByte AI Academy: practical AI, data and security learning."><title>AI Governance, Risk &amp; Compliance | BrewByte AI Academy</title><link rel="stylesheet" href="../../assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="../../index.html">BrewByte AI Academy</a><a href="../../../index.html">Learning Portal</a><a href="../../docs/start-here.html">Start here</a><a href="../../docs/curriculum-blueprint.html">Curriculum</a></header><main id="main"><h1>Module 11: AI Governance, Risk &amp; Compliance</h1>
+<p>Quarter 4 · Four weeks · 12–15 hours per week · Pilot learning material</p>
+<h2>Learning objectives</h2>
+<p>Students will inventory an AI use case and assign owners; organize risks using NIST Govern/Map/Measure/Manage; assess impacts and evidence; write proportionate AI-use and data policies; implement a testable guardrail; and communicate a release decision to an executive audience.</p>
+<h2>Certification alignment</h2>
+<p>S4.1–4.3, S2.2, S2.5; AWS 4.1–4.2, 5.2; AI-901 responsible AI principles.</p>
+<p>These are partial curriculum mappings, not complete exam coverage or endorsement. See the <a href="../../docs/curriculum-blueprint.html">blueprint</a> for versions and platform gaps.</p>
+<h2>Weekly lessons</h2>
+<ul>
+<li><a href="week-1.html">Week 1: Inventory the use case and owners</a></li>
+<li><a href="week-2.html">Week 2: Connect risk to evidence</a></li>
+<li><a href="week-3.html">Week 3: Implement and evaluate a policy</a></li>
+<li><a href="week-4.html">Week 4: Defend a release recommendation</a></li>
+</ul>
+<h2>Proof-of-work project: 11-ai-governance-release-pack</h2>
+<p>Produce a short application/system card, an AI inventory entry, data-flow map, RACI, ten-risk register, control/evidence matrix, supplier questionnaire, monitoring/incident plan, and a two-page release memo. Apply the pack to the actual student application, including known weaknesses.</p>
+<h2>Acceptance evidence</h2>
+<p>Every material risk has an owner, mitigation, evidence pointer, residual rating, and review trigger. Each governance claim must link to a test or clearly identify missing evidence. Test at least 20 prohibited and 20 permitted cases against one implemented policy, reporting bypasses and false rejections. An independent reviewer should reproduce the decision from the supplied record.</p>
+<h2>Security integration</h2>
+<p>Integrate privacy, fairness, transparency, data residency, retention, model/supplier change control, shadow AI, and human oversight. Use deterministic policy enforcement as the required low-compute path; optionally compare NeMo Guardrails or a suitable Llama Guard model. Evaluate their model/backend requirements and license. Guardrails are fallible and do not confer legal compliance.</p>
+<h2>Lab access</h2>
+<ul>
+<li><a href="lab.ipynb">Guided notebook</a></li>
+<li><a href="starter.py">Starter Python script</a></li>
+<li><a href="https://colab.research.google.com/github/jdmc-services/brewbyte-risk-management-lab/blob/main/ai-academy/modules/11/lab.ipynb">Open notebook in Colab</a> — available after the reviewed branch is merged</li>
+<li><a href="../../docs/model-and-deployment-labs.html">Live-model and deployment instructions</a></li>
+<li><a href="../../data/README.md">Shared synthetic dataset guide</a></li>
+<li><a href="../../data/sales.csv">Raw sales CSV</a> · <a href="../../data/tickets.csv">Synthetic tickets CSV</a></li>
+</ul>
+<p>Run from the repository root: <code>python ai-academy/modules/11/starter.py</code>. Module 4 needs the optional classical-ML environment. The default examples for generative modules are explicitly labeled fixtures/baselines.</p>
+<h2>Assessment rubric</h2>
+<table>
+<tr><th>Criterion</th><th>Weight</th><th>Evidence</th></tr>
+<tr><td>Functional behavior</td><td>35%</td><td>Meets the stated task and handles meaningful failures</td></tr>
+<tr><td>Evaluation</td><td>25%</td><td>Held-out cases, denominators, observed errors, limitations</td></tr>
+<tr><td>Security/privacy</td><td>20%</td><td>Appropriate boundaries and tested controls</td></tr>
+<tr><td>Reproducibility</td><td>10%</td><td>Clear setup, versions, provenance, commands</td></tr>
+<tr><td>Explanation</td><td>10%</td><td>Own reasoning and an unseen independent modification</td></tr>
+</table>
+<p>Target at least 80/100 plus mandatory controls. Repair credential exposures, seeded access bypasses, or fabricated results before progression. This threshold is an instructional rule, not an exam passing score. Public worked examples do not replace independent work.</p>
+<h2>Free assigned resources</h2>
+<ul>
+<li><a href="https://airc.nist.gov/airmf-resources/playbook/">NIST AI RMF Playbook</a></li>
+<li><a href="https://oecd.ai/en/ai-principles">OECD AI Principles</a></li>
+<li><a href="https://github.com/NVIDIA-NeMo/Guardrails">NeMo Guardrails</a></li>
+</ul>
+<p><a href="../../index.html">Academy home</a> · <a href="../../docs/start-here.html">Course guide</a></p></main><footer>Fictional business and synthetic data. Pilot curriculum; no certification endorsement or employment guarantee. No learner telemetry. Python/model exercises execute separately from this website.</footer></body></html>

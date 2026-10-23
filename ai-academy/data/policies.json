@@ -1,0 +1,44 @@
+[
+  {
+    "id": "SYN-P01",
+    "access": "public",
+    "version": "1",
+    "title": "Opening hours",
+    "text": "BrewByte opens at 07:00 and closes at 19:00. Public opening hours apply at all locations."
+  },
+  {
+    "id": "SYN-P02",
+    "access": "public",
+    "version": "1",
+    "title": "Refund requests",
+    "text": "For a refund request, contact staff. A manager reviews refunds. The assistant cannot approve or promise a refund."
+  },
+  {
+    "id": "SYN-P03",
+    "access": "staff",
+    "version": "1",
+    "title": "Service recovery",
+    "text": "Staff record an incorrect drink order and ask the manager before issuing a refund. Service recovery must cite the order record."
+  },
+  {
+    "id": "SYN-P04",
+    "access": "staff",
+    "version": "1",
+    "title": "Account support",
+    "text": "Staff report login problems to the support queue. Never share passwords in a ticket or assistant prompt."
+  },
+  {
+    "id": "SYN-P05",
+    "access": "manager",
+    "version": "1",
+    "title": "Manager refund review",
+    "text": "Manager-only refund review requires an order record and approval evidence. SYN-MANAGER-CANARY is a synthetic access-test marker, not a real secret."
+  },
+  {
+    "id": "SYN-P06",
+    "access": "manager",
+    "version": "1",
+    "title": "Security incident escalation",
+    "text": "Managers review repeated failed login events and retain evidence IDs. The assistant proposes actions in dry-run mode and cannot disable accounts."
+  }
+]

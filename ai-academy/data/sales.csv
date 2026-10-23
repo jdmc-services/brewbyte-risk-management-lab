@@ -1,0 +1,2161 @@
+date,day_index,location,product,weekend,unit_price,units
+2026-01-01,0,Central,Espresso,0,3,39
+2026-01-01,0,Central,Latte,0,5,52
+2026-01-01,0,Central,Tea,0,3,27
+2026-01-01,0,Central,Cold Brew,0,4,40
+2026-01-01,0,Riverside,Espresso,0,3,34
+2026-01-01,0,Riverside,Latte,0,5,41
+2026-01-01,0,Riverside,Tea,0,3,25
+2026-01-01,0,Riverside,Cold Brew,0,4,30
+2026-01-01,0,Market,Espresso,0,3,31
+2026-01-01,0,Market,Latte,0,5,46
+2026-01-01,0,Market,Tea,0,3,21
+2026-01-01,0,Market,Cold Brew,0,4,34
+2026-01-02,1,Central,Espresso,0,3,43
+2026-01-02,1,Central,Latte,0,5,54
+2026-01-02,1,Central,Tea,0,3,24
+2026-01-02,1,Central,Cold Brew,0,4,31
+2026-01-02,1,Riverside,Espresso,0,3,36
+2026-01-02,1,Riverside,Latte,0,5,55
+2026-01-02,1,Riverside,Tea,0,3,23
+2026-01-02,1,Riverside,Cold Brew,0,4,31
+2026-01-02,1,Market,Espresso,0,3,35
+2026-01-02,1,Market,Latte,0,5,38
+2026-01-02,1,Market,Tea,0,3,18
+2026-01-02,1,Market,Cold Brew,0,4,30
+2026-01-03,2,Central,Espresso,1,3,56
+2026-01-03,2,Central,Latte,1,5,64
+2026-01-03,2,Central,Tea,1,3,42
+2026-01-03,2,Central,Cold Brew,1,4,49
+2026-01-03,2,Riverside,Espresso,1,3,51
+2026-01-03,2,Riverside,Latte,1,5,55
+2026-01-03,2,Riverside,Tea,1,3,38
+2026-01-03,2,Riverside,Cold Brew,1,4,36
+2026-01-03,2,Market,Espresso,1,3,31
+2026-01-03,2,Market,Latte,1,5,54
+2026-01-03,2,Market,Tea,1,3,28
+2026-01-03,2,Market,Cold Brew,1,4,44
+2026-01-04,3,Central,Espresso,1,3,55
+2026-01-04,3,Central,Latte,1,5,59
+2026-01-04,3,Central,Tea,1,3,44
+2026-01-04,3,Central,Cold Brew,1,4,43
+2026-01-04,3,Riverside,Espresso,1,3,47
+2026-01-04,3,Riverside,Latte,1,5,59
+2026-01-04,3,Riverside,Tea,1,3,36
+2026-01-04,3,Riverside,Cold Brew,1,4,47
+2026-01-04,3,Market,Espresso,1,3,47
+2026-01-04,3,Market,Latte,1,5,59
+2026-01-04,3,Market,Tea,1,3,35
+2026-01-04,3,Market,Cold Brew,1,4,43
+2026-01-05,4,Central,Espresso,0,3,37
+2026-01-05,4,Central,Latte,0,5,50
+2026-01-05,4,Central,Tea,0,3,26
+2026-01-05,4,Central,Cold Brew,0,4,39
+2026-01-05,4,Riverside,Espresso,0,3,34
+2026-01-05,4,Riverside,Latte,0,5,60
+2026-01-05,4,Riverside,Tea,0,3,19
+2026-01-05,4,Riverside,Cold Brew,0,4,26
+2026-01-05,4,Market,Espresso,0,3,36
+2026-01-05,4,Market,Latte,0,5,52
+2026-01-05,4,Market,Tea,0,3,23
+2026-01-05,4,Market,Cold Brew,0,4,32
+2026-01-06,5,Central,Espresso,0,3,47
+2026-01-06,5,Central,Latte,0,5,53
+2026-01-06,5,Central,Tea,0,3,21
+2026-01-06,5,Central,Cold Brew,0,4,34
+2026-01-06,5,Riverside,Espresso,0,3,40
+2026-01-06,5,Riverside,Latte,0,5,41
+2026-01-06,5,Riverside,Tea,0,3,23
+2026-01-06,5,Riverside,Cold Brew,0,4,32
+2026-01-06,5,Market,Espresso,0,3,31
+2026-01-06,5,Market,Latte,0,5,49
+2026-01-06,5,Market,Tea,0,3,23
+2026-01-06,5,Market,Cold Brew,0,4,40
+2026-01-07,6,Central,Espresso,0,3,43
+2026-01-07,6,Central,Latte,0,5,50
+2026-01-07,6,Central,Tea,0,3,25
+2026-01-07,6,Central,Cold Brew,0,4,32
+2026-01-07,6,Riverside,Espresso,0,3,40
+2026-01-07,6,Riverside,Latte,0,5,45
+2026-01-07,6,Riverside,Tea,0,3,23
+2026-01-07,6,Riverside,Cold Brew,0,4,35
+2026-01-07,6,Market,Espresso,0,3,29
+2026-01-07,6,Market,Latte,0,5,44
+2026-01-07,6,Market,Tea,0,3,11
+2026-01-07,6,Market,Cold Brew,0,4,23
+2026-01-08,7,Central,Espresso,0,3,37
+2026-01-08,7,Central,Latte,0,5,55
+2026-01-08,7,Central,Tea,0,3,34
+2026-01-08,7,Central,Cold Brew,0,4,36
+2026-01-08,7,Riverside,Espresso,0,3,37
+2026-01-08,7,Riverside,Latte,0,5,49
+2026-01-08,7,Riverside,Tea,0,3,29
+2026-01-08,7,Riverside,Cold Brew,0,4,36
+2026-01-08,7,Market,Espresso,0,3,34
+2026-01-08,7,Market,Latte,0,5,40
+2026-01-08,7,Market,Tea,0,3,25
+2026-01-08,7,Market,Cold Brew,0,4,30
+2026-01-09,8,Central,Espresso,0,3,46
+2026-01-09,8,Central,Latte,0,5,53
+2026-01-09,8,Central,Tea,0,3,38
+2026-01-09,8,Central,Cold Brew,0,4,35
+2026-01-09,8,Riverside,Espresso,0,3,43
+2026-01-09,8,Riverside,Latte,0,5,49
+2026-01-09,8,Riverside,Tea,0,3,21
+2026-01-09,8,Riverside,Cold Brew,0,4,26
+2026-01-09,8,Market,Espresso,0,3,32
+2026-01-09,8,Market,Latte,0,5,52
+2026-01-09,8,Market,Tea,0,3,24
+2026-01-09,8,Market,Cold Brew,0,4,32
+2026-01-10,9,Central,Espresso,1,3,40
+2026-01-10,9,Central,Latte,1,5,69
+2026-01-10,9,Central,Tea,1,3,43
+2026-01-10,9,Central,Cold Brew,1,4,46
+2026-01-10,9,Riverside,Espresso,1,3,44
+2026-01-10,9,Riverside,Latte,1,5,60
+2026-01-10,9,Riverside,Tea,1,3,44
+2026-01-10,9,Riverside,Cold Brew,1,4,38
+2026-01-10,9,Market,Espresso,1,3,42
+2026-01-10,9,Market,Latte,1,5,64
+2026-01-10,9,Market,Tea,1,3,30
+2026-01-10,9,Market,Cold Brew,1,4,39
+2026-01-11,10,Central,Espresso,1,3,53
+2026-01-11,10,Central,Latte,1,5,59
+2026-01-11,10,Central,Tea,1,3,41
+2026-01-11,10,Central,Cold Brew,1,4,42
+2026-01-11,10,Riverside,Espresso,1,3,52
+2026-01-11,10,Riverside,Latte,1,5,60
+2026-01-11,10,Riverside,Tea,1,3,47
+2026-01-11,10,Riverside,Cold Brew,1,4,45
+2026-01-11,10,Market,Espresso,1,3,51
+2026-01-11,10,Market,Latte,1,5,51
+2026-01-11,10,Market,Tea,1,3,32
+2026-01-11,10,Market,Cold Brew,1,4,42
+2026-01-12,11,Central,Espresso,0,3,49
+2026-01-12,11,Central,Latte,0,5,45
+2026-01-12,11,Central,Tea,0,3,33
+2026-01-12,11,Central,Cold Brew,0,4,39
+2026-01-12,11,Riverside,Espresso,0,3,43
+2026-01-12,11,Riverside,Latte,0,5,52
+2026-01-12,11,Riverside,Tea,0,3,24
+2026-01-12,11,Riverside,Cold Brew,0,4,29
+2026-01-12,11,Market,Espresso,0,3,26
+2026-01-12,11,Market,Latte,0,5,46
+2026-01-12,11,Market,Tea,0,3,19
+2026-01-12,11,Market,Cold Brew,0,4,39
+2026-01-13,12,Central,Espresso,0,3,37
+2026-01-13,12,Central,Latte,0,5,55
+2026-01-13,12,Central,Tea,0,3,21
+2026-01-13,12,Central,Cold Brew,0,4,35
+2026-01-13,12,Riverside,Espresso,0,3,37
+2026-01-13,12,Riverside,Latte,0,5,53
+2026-01-13,12,Riverside,Tea,0,3,31
+2026-01-13,12,Riverside,Cold Brew,0,4,31
+2026-01-13,12,Market,Espresso,0,3,27
+2026-01-13,12,Market,Latte,0,5,48
+2026-01-13,12,Market,Tea,0,3,23
+2026-01-13,12,Market,Cold Brew,0,4,31
+2026-01-14,13,Central,Espresso,0,3,37
+2026-01-14,13,Central,Latte,0,5,59
+2026-01-14,13,Central,Tea,0,3,29
+2026-01-14,13,Central,Cold Brew,0,4,40
+2026-01-14,13,Riverside,Espresso,0,3,42
+2026-01-14,13,Riverside,Latte,0,5,52
+2026-01-14,13,Riverside,Tea,0,3,25
+2026-01-14,13,Riverside,Cold Brew,0,4,42
+2026-01-14,13,Market,Espresso,0,3,34
+2026-01-14,13,Market,Latte,0,5,44
+2026-01-14,13,Market,Tea,0,3,21
+2026-01-14,13,Market,Cold Brew,0,4,36
+2026-01-15,14,Central,Espresso,0,3,41
+2026-01-15,14,Central,Latte,0,5,56
+2026-01-15,14,Central,Tea,0,3,35
+2026-01-15,14,Central,Cold Brew,0,4,34
+2026-01-15,14,Riverside,Espresso,0,3,27
+2026-01-15,14,Riverside,Latte,0,5,50
+2026-01-15,14,Riverside,Tea,0,3,25
+2026-01-15,14,Riverside,Cold Brew,0,4,29
+2026-01-15,14,Market,Espresso,0,3,37
+2026-01-15,14,Market,Latte,0,5,49
+2026-01-15,14,Market,Tea,0,3,16
+2026-01-15,14,Market,Cold Brew,0,4,31
+2026-01-16,15,Central,Espresso,0,3,40
+2026-01-16,15,Central,Latte,0,5,46
+2026-01-16,15,Central,Tea,0,3,31
+2026-01-16,15,Central,Cold Brew,0,4,36
+2026-01-16,15,Riverside,Espresso,0,3,32
+2026-01-16,15,Riverside,Latte,0,5,51
+2026-01-16,15,Riverside,Tea,0,3,26
+2026-01-16,15,Riverside,Cold Brew,0,4,29
+2026-01-16,15,Market,Espresso,0,3,35
+2026-01-16,15,Market,Latte,0,5,51
+2026-01-16,15,Market,Tea,0,3,17
+2026-01-16,15,Market,Cold Brew,0,4,31
+2026-01-17,16,Central,Espresso,1,3,53
+2026-01-17,16,Central,Latte,1,5,77
+2026-01-17,16,Central,Tea,1,3,31
+2026-01-17,16,Central,Cold Brew,1,4,52
+2026-01-17,16,Riverside,Espresso,1,3,46
+2026-01-17,16,Riverside,Latte,1,5,60
+2026-01-17,16,Riverside,Tea,1,3,45
+2026-01-17,16,Riverside,Cold Brew,1,4,44
+2026-01-17,16,Market,Espresso,1,3,56
+2026-01-17,16,Market,Latte,1,5,55
+2026-01-17,16,Market,Tea,1,3,34
+2026-01-17,16,Market,Cold Brew,1,4,38
+2026-01-18,17,Central,Espresso,1,3,49
+2026-01-18,17,Central,Latte,1,5,66
+2026-01-18,17,Central,Tea,1,3,39
+2026-01-18,17,Central,Cold Brew,1,4,50
+2026-01-18,17,Riverside,Espresso,1,3,37
+2026-01-18,17,Riverside,Latte,1,5,71
+2026-01-18,17,Riverside,Tea,1,3,35
+2026-01-18,17,Riverside,Cold Brew,1,4,52
+2026-01-18,17,Market,Espresso,1,3,40
+2026-01-18,17,Market,Latte,1,5,59
+2026-01-18,17,Market,Tea,1,3,49
+2026-01-18,17,Market,Cold Brew,1,4,36
+2026-01-19,18,Central,Espresso,0,3,33
+2026-01-19,18,Central,Latte,0,5,51
+2026-01-19,18,Central,Tea,0,3,31
+2026-01-19,18,Central,Cold Brew,0,4,40
+2026-01-19,18,Riverside,Espresso,0,3,42
+2026-01-19,18,Riverside,Latte,0,5,47
+2026-01-19,18,Riverside,Tea,0,3,16
+2026-01-19,18,Riverside,Cold Brew,0,4,30
+2026-01-19,18,Market,Espresso,0,3,39
+2026-01-19,18,Market,Latte,0,5,48
+2026-01-19,18,Market,Tea,0,3,11
+2026-01-19,18,Market,Cold Brew,0,4,29
+2026-01-20,19,Central,Espresso,0,3,48
+2026-01-20,19,Central,Latte,0,5,64
+2026-01-20,19,Central,Tea,0,3,32
+2026-01-20,19,Central,Cold Brew,0,4,38
+2026-01-20,19,Riverside,Espresso,0,3,30
+2026-01-20,19,Riverside,Latte,0,5,45
+2026-01-20,19,Riverside,Tea,0,3,24
+2026-01-20,19,Riverside,Cold Brew,0,4,34
+2026-01-20,19,Market,Espresso,0,3,36
+2026-01-20,19,Market,Latte,0,5,43
+2026-01-20,19,Market,Tea,0,3,15
+2026-01-20,19,Market,Cold Brew,0,4,25
+2026-01-21,20,Central,Espresso,0,3,35
+2026-01-21,20,Central,Latte,0,5,57
+2026-01-21,20,Central,Tea,0,3,17
+2026-01-21,20,Central,Cold Brew,0,4,35
+2026-01-21,20,Riverside,Espresso,0,3,38
+2026-01-21,20,Riverside,Latte,0,5,56
+2026-01-21,20,Riverside,Tea,0,3,24
+2026-01-21,20,Riverside,Cold Brew,0,4,37
+2026-01-21,20,Market,Espresso,0,3,31
+2026-01-21,20,Market,Latte,0,5,42
+2026-01-21,20,Market,Tea,0,3,17
+2026-01-21,20,Market,Cold Brew,0,4,36
+2026-01-22,21,Central,Espresso,0,3,46
+2026-01-22,21,Central,Latte,0,5,56
+2026-01-22,21,Central,Tea,0,3,45
+2026-01-22,21,Central,Cold Brew,0,4,37
+2026-01-22,21,Riverside,Espresso,0,3,39
+2026-01-22,21,Riverside,Latte,0,5,50
+2026-01-22,21,Riverside,Tea,0,3,23
+2026-01-22,21,Riverside,Cold Brew,0,4,43
+2026-01-22,21,Market,Espresso,0,3,40
+2026-01-22,21,Market,Latte,0,5,39
+2026-01-22,21,Market,Tea,0,3,19
+2026-01-22,21,Market,Cold Brew,0,4,31
+2026-01-23,22,Central,Espresso,0,3,45
+2026-01-23,22,Central,Latte,0,5,47
+2026-01-23,22,Central,Tea,0,3,18
+2026-01-23,22,Central,Cold Brew,0,4,27
+2026-01-23,22,Riverside,Espresso,0,3,36
+2026-01-23,22,Riverside,Latte,0,5,48
+2026-01-23,22,Riverside,Tea,0,3,26
+2026-01-23,22,Riverside,Cold Brew,0,4,28
+2026-01-23,22,Market,Espresso,0,3,27
+2026-01-23,22,Market,Latte,0,5,36
+2026-01-23,22,Market,Tea,0,3,23
+2026-01-23,22,Market,Cold Brew,0,4,31
+2026-01-24,23,Central,Espresso,1,3,58
+2026-01-24,23,Central,Latte,1,5,70
+2026-01-24,23,Central,Tea,1,3,40
+2026-01-24,23,Central,Cold Brew,1,4,56
+2026-01-24,23,Riverside,Espresso,1,3,47
+2026-01-24,23,Riverside,Latte,1,5,58
+2026-01-24,23,Riverside,Tea,1,3,33
+2026-01-24,23,Riverside,Cold Brew,1,4,41
+2026-01-24,23,Market,Espresso,1,3,34
+2026-01-24,23,Market,Latte,1,5,59
+2026-01-24,23,Market,Tea,1,3,34
+2026-01-24,23,Market,Cold Brew,1,4,39
+2026-01-25,24,Central,Espresso,1,3,49
+2026-01-25,24,Central,Latte,1,5,68
+2026-01-25,24,Central,Tea,1,3,50
+2026-01-25,24,Central,Cold Brew,1,4,49
+2026-01-25,24,Riverside,Espresso,1,3,45
+2026-01-25,24,Riverside,Latte,1,5,58
+2026-01-25,24,Riverside,Tea,1,3,36
+2026-01-25,24,Riverside,Cold Brew,1,4,38
+2026-01-25,24,Market,Espresso,1,3,44
+2026-01-25,24,Market,Latte,1,5,58
+2026-01-25,24,Market,Tea,1,3,42
+2026-01-25,24,Market,Cold Brew,1,4,46
+2026-01-26,25,Central,Espresso,0,3,46
+2026-01-26,25,Central,Latte,0,5,50
+2026-01-26,25,Central,Tea,0,3,32
+2026-01-26,25,Central,Cold Brew,0,4,31
+2026-01-26,25,Riverside,Espresso,0,3,38
+2026-01-26,25,Riverside,Latte,0,5,51
+2026-01-26,25,Riverside,Tea,0,3,20
+2026-01-26,25,Riverside,Cold Brew,0,4,42
+2026-01-26,25,Market,Espresso,0,3,36
+2026-01-26,25,Market,Latte,0,5,36
+2026-01-26,25,Market,Tea,0,3,24
+2026-01-26,25,Market,Cold Brew,0,4,27
+2026-01-27,26,Central,Espresso,0,3,41
+2026-01-27,26,Central,Latte,0,5,56
+2026-01-27,26,Central,Tea,0,3,31
+2026-01-27,26,Central,Cold Brew,0,4,27
+2026-01-27,26,Riverside,Espresso,0,3,30
+2026-01-27,26,Riverside,Latte,0,5,53
+2026-01-27,26,Riverside,Tea,0,3,31
+2026-01-27,26,Riverside,Cold Brew,0,4,42
+2026-01-27,26,Market,Espresso,0,3,42
+2026-01-27,26,Market,Latte,0,5,36
+2026-01-27,26,Market,Tea,0,3,25
+2026-01-27,26,Market,Cold Brew,0,4,19
+2026-01-28,27,Central,Espresso,0,3,49
+2026-01-28,27,Central,Latte,0,5,55
+2026-01-28,27,Central,Tea,0,3,23
+2026-01-28,27,Central,Cold Brew,0,4,47
+2026-01-28,27,Riverside,Espresso,0,3,39
+2026-01-28,27,Riverside,Latte,0,5,40
+2026-01-28,27,Riverside,Tea,0,3,26
+2026-01-28,27,Riverside,Cold Brew,0,4,28
+2026-01-28,27,Market,Espresso,0,3,34
+2026-01-28,27,Market,Latte,0,5,44
+2026-01-28,27,Market,Tea,0,3,28
+2026-01-28,27,Market,Cold Brew,0,4,22
+2026-01-29,28,Central,Espresso,0,3,43
+2026-01-29,28,Central,Latte,0,5,63
+2026-01-29,28,Central,Tea,0,3,25
+2026-01-29,28,Central,Cold Brew,0,4,38
+2026-01-29,28,Riverside,Espresso,0,3,37
+2026-01-29,28,Riverside,Latte,0,5,46
+2026-01-29,28,Riverside,Tea,0,3,27
+2026-01-29,28,Riverside,Cold Brew,0,4,33
+2026-01-29,28,Market,Espresso,0,3,28
+2026-01-29,28,Market,Latte,0,5,55
+2026-01-29,28,Market,Tea,0,3,25
+2026-01-29,28,Market,Cold Brew,0,4,28
+2026-01-30,29,Central,Espresso,0,3,38
+2026-01-30,29,Central,Latte,0,5,50
+2026-01-30,29,Central,Tea,0,3,35
+2026-01-30,29,Central,Cold Brew,0,4,36
+2026-01-30,29,Riverside,Espresso,0,3,38
+2026-01-30,29,Riverside,Latte,0,5,48
+2026-01-30,29,Riverside,Tea,0,3,27
+2026-01-30,29,Riverside,Cold Brew,0,4,32
+2026-01-30,29,Market,Espresso,0,3,37
+2026-01-30,29,Market,Latte,0,5,45
+2026-01-30,29,Market,Tea,0,3,25
+2026-01-30,29,Market,Cold Brew,0,4,33
+2026-01-31,30,Central,Espresso,1,3,53
+2026-01-31,30,Central,Latte,1,5,62
+2026-01-31,30,Central,Tea,1,3,36
+2026-01-31,30,Central,Cold Brew,1,4,45
+2026-01-31,30,Riverside,Espresso,1,3,43
+2026-01-31,30,Riverside,Latte,1,5,66
+2026-01-31,30,Riverside,Tea,1,3,36
+2026-01-31,30,Riverside,Cold Brew,1,4,52
+2026-01-31,30,Market,Espresso,1,3,57
+2026-01-31,30,Market,Latte,1,5,58
+2026-01-31,30,Market,Tea,1,3,25
+2026-01-31,30,Market,Cold Brew,1,4,39
+2026-02-01,31,Central,Espresso,1,3,53
+2026-02-01,31,Central,Latte,1,5,59
+2026-02-01,31,Central,Tea,1,3,40
+2026-02-01,31,Central,Cold Brew,1,4,51
+2026-02-01,31,Riverside,Espresso,1,3,46
+2026-02-01,31,Riverside,Latte,1,5,57
+2026-02-01,31,Riverside,Tea,1,3,32
+2026-02-01,31,Riverside,Cold Brew,1,4,53
+2026-02-01,31,Market,Espresso,1,3,44
+2026-02-01,31,Market,Latte,1,5,54
+2026-02-01,31,Market,Tea,1,3,31
+2026-02-01,31,Market,Cold Brew,1,4,46
+2026-02-02,32,Central,Espresso,0,3,38
+2026-02-02,32,Central,Latte,0,5,57
+2026-02-02,32,Central,Tea,0,3,33
+2026-02-02,32,Central,Cold Brew,0,4,41
+2026-02-02,32,Riverside,Espresso,0,3,43
+2026-02-02,32,Riverside,Latte,0,5,47
+2026-02-02,32,Riverside,Tea,0,3,30
+2026-02-02,32,Riverside,Cold Brew,0,4,28
+2026-02-02,32,Market,Espresso,0,3,31
+2026-02-02,32,Market,Latte,0,5,52
+2026-02-02,32,Market,Tea,0,3,25
+2026-02-02,32,Market,Cold Brew,0,4,29
+2026-02-03,33,Central,Espresso,0,3,35
+2026-02-03,33,Central,Latte,0,5,57
+2026-02-03,33,Central,Tea,0,3,26
+2026-02-03,33,Central,Cold Brew,0,4,33
+2026-02-03,33,Riverside,Espresso,0,3,33
+2026-02-03,33,Riverside,Latte,0,5,51
+2026-02-03,33,Riverside,Tea,0,3,14
+2026-02-03,33,Riverside,Cold Brew,0,4,34
+2026-02-03,33,Market,Espresso,0,3,34
+2026-02-03,33,Market,Latte,0,5,43
+2026-02-03,33,Market,Tea,0,3,27
+2026-02-03,33,Market,Cold Brew,0,4,32
+2026-02-04,34,Central,Espresso,0,3,38
+2026-02-04,34,Central,Latte,0,5,51
+2026-02-04,34,Central,Tea,0,3,33
+2026-02-04,34,Central,Cold Brew,0,4,30
+2026-02-04,34,Riverside,Espresso,0,3,35
+2026-02-04,34,Riverside,Latte,0,5,46
+2026-02-04,34,Riverside,Tea,0,3,25
+2026-02-04,34,Riverside,Cold Brew,0,4,33
+2026-02-04,34,Market,Espresso,0,3,34
+2026-02-04,34,Market,Latte,0,5,52
+2026-02-04,34,Market,Tea,0,3,23
+2026-02-04,34,Market,Cold Brew,0,4,28
+2026-02-05,35,Central,Espresso,0,3,35
+2026-02-05,35,Central,Latte,0,5,58
+2026-02-05,35,Central,Tea,0,3,32
+2026-02-05,35,Central,Cold Brew,0,4,45
+2026-02-05,35,Riverside,Espresso,0,3,33
+2026-02-05,35,Riverside,Latte,0,5,50
+2026-02-05,35,Riverside,Tea,0,3,24
+2026-02-05,35,Riverside,Cold Brew,0,4,32
+2026-02-05,35,Market,Espresso,0,3,33
+2026-02-05,35,Market,Latte,0,5,38
+2026-02-05,35,Market,Tea,0,3,26
+2026-02-05,35,Market,Cold Brew,0,4,33
+2026-02-06,36,Central,Espresso,0,3,47
+2026-02-06,36,Central,Latte,0,5,66
+2026-02-06,36,Central,Tea,0,3,28
+2026-02-06,36,Central,Cold Brew,0,4,37
+2026-02-06,36,Riverside,Espresso,0,3,36
+2026-02-06,36,Riverside,Latte,0,5,59
+2026-02-06,36,Riverside,Tea,0,3,16
+2026-02-06,36,Riverside,Cold Brew,0,4,35
+2026-02-06,36,Market,Espresso,0,3,26
+2026-02-06,36,Market,Latte,0,5,34
+2026-02-06,36,Market,Tea,0,3,11
+2026-02-06,36,Market,Cold Brew,0,4,23
+2026-02-07,37,Central,Espresso,1,3,59
+2026-02-07,37,Central,Latte,1,5,62
+2026-02-07,37,Central,Tea,1,3,40
+2026-02-07,37,Central,Cold Brew,1,4,44
+2026-02-07,37,Riverside,Espresso,1,3,52
+2026-02-07,37,Riverside,Latte,1,5,56
+2026-02-07,37,Riverside,Tea,1,3,43
+2026-02-07,37,Riverside,Cold Brew,1,4,40
+2026-02-07,37,Market,Espresso,1,3,42
+2026-02-07,37,Market,Latte,1,5,59
+2026-02-07,37,Market,Tea,1,3,34
+2026-02-07,37,Market,Cold Brew,1,4,49
+2026-02-08,38,Central,Espresso,1,3,54
+2026-02-08,38,Central,Latte,1,5,60
+2026-02-08,38,Central,Tea,1,3,39
+2026-02-08,38,Central,Cold Brew,1,4,47
+2026-02-08,38,Riverside,Espresso,1,3,52
+2026-02-08,38,Riverside,Latte,1,5,63
+2026-02-08,38,Riverside,Tea,1,3,36
+2026-02-08,38,Riverside,Cold Brew,1,4,49
+2026-02-08,38,Market,Espresso,1,3,43
+2026-02-08,38,Market,Latte,1,5,58
+2026-02-08,38,Market,Tea,1,3,34
+2026-02-08,38,Market,Cold Brew,1,4,49
+2026-02-09,39,Central,Espresso,0,3,41
+2026-02-09,39,Central,Latte,0,5,53
+2026-02-09,39,Central,Tea,0,3,24
+2026-02-09,39,Central,Cold Brew,0,4,41
+2026-02-09,39,Riverside,Espresso,0,3,34
+2026-02-09,39,Riverside,Latte,0,5,51
+2026-02-09,39,Riverside,Tea,0,3,15
+2026-02-09,39,Riverside,Cold Brew,0,4,38
+2026-02-09,39,Market,Espresso,0,3,27
+2026-02-09,39,Market,Latte,0,5,43
+2026-02-09,39,Market,Tea,0,3,27
+2026-02-09,39,Market,Cold Brew,0,4,23
+2026-02-10,40,Central,Espresso,0,3,41
+2026-02-10,40,Central,Latte,0,5,55
+2026-02-10,40,Central,Tea,0,3,25
+2026-02-10,40,Central,Cold Brew,0,4,44
+2026-02-10,40,Riverside,Espresso,0,3,44
+2026-02-10,40,Riverside,Latte,0,5,40
+2026-02-10,40,Riverside,Tea,0,3,17
+2026-02-10,40,Riverside,Cold Brew,0,4,37
+2026-02-10,40,Market,Espresso,0,3,27
+2026-02-10,40,Market,Latte,0,5,45
+2026-02-10,40,Market,Tea,0,3,22
+2026-02-10,40,Market,Cold Brew,0,4,33
+2026-02-11,41,Central,Espresso,0,3,41
+2026-02-11,41,Central,Latte,0,5,55
+2026-02-11,41,Central,Tea,0,3,26
+2026-02-11,41,Central,Cold Brew,0,4,44
+2026-02-11,41,Riverside,Espresso,0,3,34
+2026-02-11,41,Riverside,Latte,0,5,51
+2026-02-11,41,Riverside,Tea,0,3,22
+2026-02-11,41,Riverside,Cold Brew,0,4,33
+2026-02-11,41,Market,Espresso,0,3,33
+2026-02-11,41,Market,Latte,0,5,46
+2026-02-11,41,Market,Tea,0,3,17
+2026-02-11,41,Market,Cold Brew,0,4,34
+2026-02-12,42,Central,Espresso,0,3,49
+2026-02-12,42,Central,Latte,0,5,56
+2026-02-12,42,Central,Tea,0,3,33
+2026-02-12,42,Central,Cold Brew,0,4,42
+2026-02-12,42,Riverside,Espresso,0,3,41
+2026-02-12,42,Riverside,Latte,0,5,51
+2026-02-12,42,Riverside,Tea,0,3,26
+2026-02-12,42,Riverside,Cold Brew,0,4,37
+2026-02-12,42,Market,Espresso,0,3,34
+2026-02-12,42,Market,Latte,0,5,42
+2026-02-12,42,Market,Tea,0,3,22
+2026-02-12,42,Market,Cold Brew,0,4,20
+2026-02-13,43,Central,Espresso,0,3,42
+2026-02-13,43,Central,Latte,0,5,57
+2026-02-13,43,Central,Tea,0,3,36
+2026-02-13,43,Central,Cold Brew,0,4,38
+2026-02-13,43,Riverside,Espresso,0,3,41
+2026-02-13,43,Riverside,Latte,0,5,50
+2026-02-13,43,Riverside,Tea,0,3,20
+2026-02-13,43,Riverside,Cold Brew,0,4,26
+2026-02-13,43,Market,Espresso,0,3,29
+2026-02-13,43,Market,Latte,0,5,40
+2026-02-13,43,Market,Tea,0,3,25
+2026-02-13,43,Market,Cold Brew,0,4,29
+2026-02-14,44,Central,Espresso,1,3,57
+2026-02-14,44,Central,Latte,1,5,67
+2026-02-14,44,Central,Tea,1,3,47
+2026-02-14,44,Central,Cold Brew,1,4,55
+2026-02-14,44,Riverside,Espresso,1,3,46
+2026-02-14,44,Riverside,Latte,1,5,60
+2026-02-14,44,Riverside,Tea,1,3,34
+2026-02-14,44,Riverside,Cold Brew,1,4,37
+2026-02-14,44,Market,Espresso,1,3,49
+2026-02-14,44,Market,Latte,1,5,65
+2026-02-14,44,Market,Tea,1,3,34
+2026-02-14,44,Market,Cold Brew,1,4,39
+2026-02-15,45,Central,Espresso,1,3,59
+2026-02-15,45,Central,Latte,1,5,55
+2026-02-15,45,Central,Tea,1,3,43
+2026-02-15,45,Central,Cold Brew,1,4,51
+2026-02-15,45,Riverside,Espresso,1,3,46
+2026-02-15,45,Riverside,Latte,1,5,69
+2026-02-15,45,Riverside,Tea,1,3,42
+2026-02-15,45,Riverside,Cold Brew,1,4,43
+2026-02-15,45,Market,Espresso,1,3,45
+2026-02-15,45,Market,Latte,1,5,57
+2026-02-15,45,Market,Tea,1,3,31
+2026-02-15,45,Market,Cold Brew,1,4,35
+2026-02-16,46,Central,Espresso,0,3,49
+2026-02-16,46,Central,Latte,0,5,60
+2026-02-16,46,Central,Tea,0,3,34
+2026-02-16,46,Central,Cold Brew,0,4,32
+2026-02-16,46,Riverside,Espresso,0,3,47
+2026-02-16,46,Riverside,Latte,0,5,60
+2026-02-16,46,Riverside,Tea,0,3,26
+2026-02-16,46,Riverside,Cold Brew,0,4,28
+2026-02-16,46,Market,Espresso,0,3,30
+2026-02-16,46,Market,Latte,0,5,49
+2026-02-16,46,Market,Tea,0,3,17
+2026-02-16,46,Market,Cold Brew,0,4,30
+2026-02-17,47,Central,Espresso,0,3,47
+2026-02-17,47,Central,Latte,0,5,47
+2026-02-17,47,Central,Tea,0,3,40
+2026-02-17,47,Central,Cold Brew,0,4,46
+2026-02-17,47,Riverside,Espresso,0,3,31
+2026-02-17,47,Riverside,Latte,0,5,43
+2026-02-17,47,Riverside,Tea,0,3,23
+2026-02-17,47,Riverside,Cold Brew,0,4,28
+2026-02-17,47,Market,Espresso,0,3,33
+2026-02-17,47,Market,Latte,0,5,34
+2026-02-17,47,Market,Tea,0,3,21
+2026-02-17,47,Market,Cold Brew,0,4,39
+2026-02-18,48,Central,Espresso,0,3,36
+2026-02-18,48,Central,Latte,0,5,54
+2026-02-18,48,Central,Tea,0,3,22
+2026-02-18,48,Central,Cold Brew,0,4,41
+2026-02-18,48,Riverside,Espresso,0,3,36
+2026-02-18,48,Riverside,Latte,0,5,60
+2026-02-18,48,Riverside,Tea,0,3,26
+2026-02-18,48,Riverside,Cold Brew,0,4,31
+2026-02-18,48,Market,Espresso,0,3,37
+2026-02-18,48,Market,Latte,0,5,44
+2026-02-18,48,Market,Tea,0,3,15
+2026-02-18,48,Market,Cold Brew,0,4,31
+2026-02-19,49,Central,Espresso,0,3,41
+2026-02-19,49,Central,Latte,0,5,56
+2026-02-19,49,Central,Tea,0,3,32
+2026-02-19,49,Central,Cold Brew,0,4,35
+2026-02-19,49,Riverside,Espresso,0,3,39
+2026-02-19,49,Riverside,Latte,0,5,59
+2026-02-19,49,Riverside,Tea,0,3,19
+2026-02-19,49,Riverside,Cold Brew,0,4,42
+2026-02-19,49,Market,Espresso,0,3,33
+2026-02-19,49,Market,Latte,0,5,43
+2026-02-19,49,Market,Tea,0,3,34
+2026-02-19,49,Market,Cold Brew,0,4,31
+2026-02-20,50,Central,Espresso,0,3,49
+2026-02-20,50,Central,Latte,0,5,59
+2026-02-20,50,Central,Tea,0,3,22
+2026-02-20,50,Central,Cold Brew,0,4,39
+2026-02-20,50,Riverside,Espresso,0,3,34
+2026-02-20,50,Riverside,Latte,0,5,43
+2026-02-20,50,Riverside,Tea,0,3,16
+2026-02-20,50,Riverside,Cold Brew,0,4,34
+2026-02-20,50,Market,Espresso,0,3,37
+2026-02-20,50,Market,Latte,0,5,49
+2026-02-20,50,Market,Tea,0,3,20
+2026-02-20,50,Market,Cold Brew,0,4,26
+2026-02-21,51,Central,Espresso,1,3,49
+2026-02-21,51,Central,Latte,1,5,64
+2026-02-21,51,Central,Tea,1,3,37
+2026-02-21,51,Central,Cold Brew,1,4,49
+2026-02-21,51,Riverside,Espresso,1,3,49
+2026-02-21,51,Riverside,Latte,1,5,58
+2026-02-21,51,Riverside,Tea,1,3,36
+2026-02-21,51,Riverside,Cold Brew,1,4,41
+2026-02-21,51,Market,Espresso,1,3,46
+2026-02-21,51,Market,Latte,1,5,62
+2026-02-21,51,Market,Tea,1,3,35
+2026-02-21,51,Market,Cold Brew,1,4,44
+2026-02-22,52,Central,Espresso,1,3,46
+2026-02-22,52,Central,Latte,1,5,65
+2026-02-22,52,Central,Tea,1,3,43
+2026-02-22,52,Central,Cold Brew,1,4,53
+2026-02-22,52,Riverside,Espresso,1,3,41
+2026-02-22,52,Riverside,Latte,1,5,63
+2026-02-22,52,Riverside,Tea,1,3,43
+2026-02-22,52,Riverside,Cold Brew,1,4,44
+2026-02-22,52,Market,Espresso,1,3,46
+2026-02-22,52,Market,Latte,1,5,61
+2026-02-22,52,Market,Tea,1,3,35
+2026-02-22,52,Market,Cold Brew,1,4,45
+2026-02-23,53,Central,Espresso,0,3,42
+2026-02-23,53,Central,Latte,0,5,56
+2026-02-23,53,Central,Tea,0,3,26
+2026-02-23,53,Central,Cold Brew,0,4,37
+2026-02-23,53,Riverside,Espresso,0,3,43
+2026-02-23,53,Riverside,Latte,0,5,49
+2026-02-23,53,Riverside,Tea,0,3,24
+2026-02-23,53,Riverside,Cold Brew,0,4,31
+2026-02-23,53,Market,Espresso,0,3,38
+2026-02-23,53,Market,Latte,0,5,43
+2026-02-23,53,Market,Tea,0,3,27
+2026-02-23,53,Market,Cold Brew,0,4,25
+2026-02-24,54,Central,Espresso,0,3,37
+2026-02-24,54,Central,Latte,0,5,56
+2026-02-24,54,Central,Tea,0,3,31
+2026-02-24,54,Central,Cold Brew,0,4,40
+2026-02-24,54,Riverside,Espresso,0,3,42
+2026-02-24,54,Riverside,Latte,0,5,48
+2026-02-24,54,Riverside,Tea,0,3,27
+2026-02-24,54,Riverside,Cold Brew,0,4,29
+2026-02-24,54,Market,Espresso,0,3,40
+2026-02-24,54,Market,Latte,0,5,50
+2026-02-24,54,Market,Tea,0,3,25
+2026-02-24,54,Market,Cold Brew,0,4,31
+2026-02-25,55,Central,Espresso,0,3,38
+2026-02-25,55,Central,Latte,0,5,54
+2026-02-25,55,Central,Tea,0,3,33
+2026-02-25,55,Central,Cold Brew,0,4,38
+2026-02-25,55,Riverside,Espresso,0,3,38
+2026-02-25,55,Riverside,Latte,0,5,43
+2026-02-25,55,Riverside,Tea,0,3,26
+2026-02-25,55,Riverside,Cold Brew,0,4,30
+2026-02-25,55,Market,Espresso,0,3,29
+2026-02-25,55,Market,Latte,0,5,46
+2026-02-25,55,Market,Tea,0,3,13
+2026-02-25,55,Market,Cold Brew,0,4,34
+2026-02-26,56,Central,Espresso,0,3,47
+2026-02-26,56,Central,Latte,0,5,55
+2026-02-26,56,Central,Tea,0,3,25
+2026-02-26,56,Central,Cold Brew,0,4,34
+2026-02-26,56,Riverside,Espresso,0,3,36
+2026-02-26,56,Riverside,Latte,0,5,38
+2026-02-26,56,Riverside,Tea,0,3,26
+2026-02-26,56,Riverside,Cold Brew,0,4,37
+2026-02-26,56,Market,Espresso,0,3,33
+2026-02-26,56,Market,Latte,0,5,45
+2026-02-26,56,Market,Tea,0,3,23
+2026-02-26,56,Market,Cold Brew,0,4,32
+2026-02-27,57,Central,Espresso,0,3,48
+2026-02-27,57,Central,Latte,0,5,55
+2026-02-27,57,Central,Tea,0,3,27
+2026-02-27,57,Central,Cold Brew,0,4,36
+2026-02-27,57,Riverside,Espresso,0,3,38
+2026-02-27,57,Riverside,Latte,0,5,58
+2026-02-27,57,Riverside,Tea,0,3,24
+2026-02-27,57,Riverside,Cold Brew,0,4,28
+2026-02-27,57,Market,Espresso,0,3,30
+2026-02-27,57,Market,Latte,0,5,37
+2026-02-27,57,Market,Tea,0,3,24
+2026-02-27,57,Market,Cold Brew,0,4,23
+2026-02-28,58,Central,Espresso,1,3,48
+2026-02-28,58,Central,Latte,1,5,57
+2026-02-28,58,Central,Tea,1,3,37
+2026-02-28,58,Central,Cold Brew,1,4,53
+2026-02-28,58,Riverside,Espresso,1,3,43
+2026-02-28,58,Riverside,Latte,1,5,54
+2026-02-28,58,Riverside,Tea,1,3,38
+2026-02-28,58,Riverside,Cold Brew,1,4,44
+2026-02-28,58,Market,Espresso,1,3,48
+2026-02-28,58,Market,Latte,1,5,63
+2026-02-28,58,Market,Tea,1,3,34
+2026-02-28,58,Market,Cold Brew,1,4,36
+2026-03-01,59,Central,Espresso,1,3,54
+2026-03-01,59,Central,Latte,1,5,70
+2026-03-01,59,Central,Tea,1,3,39
+2026-03-01,59,Central,Cold Brew,1,4,43
+2026-03-01,59,Riverside,Espresso,1,3,55
+2026-03-01,59,Riverside,Latte,1,5,60
+2026-03-01,59,Riverside,Tea,1,3,35
+2026-03-01,59,Riverside,Cold Brew,1,4,45
+2026-03-01,59,Market,Espresso,1,3,52
+2026-03-01,59,Market,Latte,1,5,61
+2026-03-01,59,Market,Tea,1,3,33
+2026-03-01,59,Market,Cold Brew,1,4,46
+2026-03-02,60,Central,Espresso,0,3,53
+2026-03-02,60,Central,Latte,0,5,62
+2026-03-02,60,Central,Tea,0,3,34
+2026-03-02,60,Central,Cold Brew,0,4,33
+2026-03-02,60,Riverside,Espresso,0,3,56
+2026-03-02,60,Riverside,Latte,0,5,44
+2026-03-02,60,Riverside,Tea,0,3,24
+2026-03-02,60,Riverside,Cold Brew,0,4,30
+2026-03-02,60,Market,Espresso,0,3,43
+2026-03-02,60,Market,Latte,0,5,50
+2026-03-02,60,Market,Tea,0,3,15
+2026-03-02,60,Market,Cold Brew,0,4,32
+2026-03-03,61,Central,Espresso,0,3,45
+2026-03-03,61,Central,Latte,0,5,54
+2026-03-03,61,Central,Tea,0,3,24
+2026-03-03,61,Central,Cold Brew,0,4,35
+2026-03-03,61,Riverside,Espresso,0,3,35
+2026-03-03,61,Riverside,Latte,0,5,51
+2026-03-03,61,Riverside,Tea,0,3,23
+2026-03-03,61,Riverside,Cold Brew,0,4,37
+2026-03-03,61,Market,Espresso,0,3,30
+2026-03-03,61,Market,Latte,0,5,39
+2026-03-03,61,Market,Tea,0,3,19
+2026-03-03,61,Market,Cold Brew,0,4,37
+2026-03-04,62,Central,Espresso,0,3,40
+2026-03-04,62,Central,Latte,0,5,67
+2026-03-04,62,Central,Tea,0,3,33
+2026-03-04,62,Central,Cold Brew,0,4,33
+2026-03-04,62,Riverside,Espresso,0,3,33
+2026-03-04,62,Riverside,Latte,0,5,52
+2026-03-04,62,Riverside,Tea,0,3,20
+2026-03-04,62,Riverside,Cold Brew,0,4,45
+2026-03-04,62,Market,Espresso,0,3,30
+2026-03-04,62,Market,Latte,0,5,51
+2026-03-04,62,Market,Tea,0,3,30
+2026-03-04,62,Market,Cold Brew,0,4,30
+2026-03-05,63,Central,Espresso,0,3,38
+2026-03-05,63,Central,Latte,0,5,54
+2026-03-05,63,Central,Tea,0,3,32
+2026-03-05,63,Central,Cold Brew,0,4,43
+2026-03-05,63,Riverside,Espresso,0,3,38
+2026-03-05,63,Riverside,Latte,0,5,44
+2026-03-05,63,Riverside,Tea,0,3,26
+2026-03-05,63,Riverside,Cold Brew,0,4,30
+2026-03-05,63,Market,Espresso,0,3,24
+2026-03-05,63,Market,Latte,0,5,44
+2026-03-05,63,Market,Tea,0,3,15
+2026-03-05,63,Market,Cold Brew,0,4,33
+2026-03-06,64,Central,Espresso,0,3,52
+2026-03-06,64,Central,Latte,0,5,65
+2026-03-06,64,Central,Tea,0,3,28
+2026-03-06,64,Central,Cold Brew,0,4,36
+2026-03-06,64,Riverside,Espresso,0,3,41
+2026-03-06,64,Riverside,Latte,0,5,56
+2026-03-06,64,Riverside,Tea,0,3,23
+2026-03-06,64,Riverside,Cold Brew,0,4,33
+2026-03-06,64,Market,Espresso,0,3,46
+2026-03-06,64,Market,Latte,0,5,47
+2026-03-06,64,Market,Tea,0,3,20
+2026-03-06,64,Market,Cold Brew,0,4,31
+2026-03-07,65,Central,Espresso,1,3,57
+2026-03-07,65,Central,Latte,1,5,62
+2026-03-07,65,Central,Tea,1,3,41
+2026-03-07,65,Central,Cold Brew,1,4,45
+2026-03-07,65,Riverside,Espresso,1,3,48
+2026-03-07,65,Riverside,Latte,1,5,72
+2026-03-07,65,Riverside,Tea,1,3,41
+2026-03-07,65,Riverside,Cold Brew,1,4,45
+2026-03-07,65,Market,Espresso,1,3,42
+2026-03-07,65,Market,Latte,1,5,58
+2026-03-07,65,Market,Tea,1,3,40
+2026-03-07,65,Market,Cold Brew,1,4,40
+2026-03-08,66,Central,Espresso,1,3,62
+2026-03-08,66,Central,Latte,1,5,61
+2026-03-08,66,Central,Tea,1,3,41
+2026-03-08,66,Central,Cold Brew,1,4,59
+2026-03-08,66,Riverside,Espresso,1,3,40
+2026-03-08,66,Riverside,Latte,1,5,69
+2026-03-08,66,Riverside,Tea,1,3,28
+2026-03-08,66,Riverside,Cold Brew,1,4,45
+2026-03-08,66,Market,Espresso,1,3,46
+2026-03-08,66,Market,Latte,1,5,64
+2026-03-08,66,Market,Tea,1,3,19
+2026-03-08,66,Market,Cold Brew,1,4,33
+2026-03-09,67,Central,Espresso,0,3,40
+2026-03-09,67,Central,Latte,0,5,56
+2026-03-09,67,Central,Tea,0,3,26
+2026-03-09,67,Central,Cold Brew,0,4,38
+2026-03-09,67,Riverside,Espresso,0,3,32
+2026-03-09,67,Riverside,Latte,0,5,49
+2026-03-09,67,Riverside,Tea,0,3,21
+2026-03-09,67,Riverside,Cold Brew,0,4,35
+2026-03-09,67,Market,Espresso,0,3,38
+2026-03-09,67,Market,Latte,0,5,55
+2026-03-09,67,Market,Tea,0,3,19
+2026-03-09,67,Market,Cold Brew,0,4,29
+2026-03-10,68,Central,Espresso,0,3,43
+2026-03-10,68,Central,Latte,0,5,54
+2026-03-10,68,Central,Tea,0,3,30
+2026-03-10,68,Central,Cold Brew,0,4,31
+2026-03-10,68,Riverside,Espresso,0,3,40
+2026-03-10,68,Riverside,Latte,0,5,46
+2026-03-10,68,Riverside,Tea,0,3,21
+2026-03-10,68,Riverside,Cold Brew,0,4,26
+2026-03-10,68,Market,Espresso,0,3,41
+2026-03-10,68,Market,Latte,0,5,47
+2026-03-10,68,Market,Tea,0,3,28
+2026-03-10,68,Market,Cold Brew,0,4,32
+2026-03-11,69,Central,Espresso,0,3,34
+2026-03-11,69,Central,Latte,0,5,50
+2026-03-11,69,Central,Tea,0,3,35
+2026-03-11,69,Central,Cold Brew,0,4,35
+2026-03-11,69,Riverside,Espresso,0,3,32
+2026-03-11,69,Riverside,Latte,0,5,50
+2026-03-11,69,Riverside,Tea,0,3,25
+2026-03-11,69,Riverside,Cold Brew,0,4,29
+2026-03-11,69,Market,Espresso,0,3,33
+2026-03-11,69,Market,Latte,0,5,45
+2026-03-11,69,Market,Tea,0,3,10
+2026-03-11,69,Market,Cold Brew,0,4,33
+2026-03-12,70,Central,Espresso,0,3,39
+2026-03-12,70,Central,Latte,0,5,62
+2026-03-12,70,Central,Tea,0,3,25
+2026-03-12,70,Central,Cold Brew,0,4,31
+2026-03-12,70,Riverside,Espresso,0,3,44
+2026-03-12,70,Riverside,Latte,0,5,43
+2026-03-12,70,Riverside,Tea,0,3,23
+2026-03-12,70,Riverside,Cold Brew,0,4,37
+2026-03-12,70,Market,Espresso,0,3,33
+2026-03-12,70,Market,Latte,0,5,40
+2026-03-12,70,Market,Tea,0,3,24
+2026-03-12,70,Market,Cold Brew,0,4,30
+2026-03-13,71,Central,Espresso,0,3,49
+2026-03-13,71,Central,Latte,0,5,59
+2026-03-13,71,Central,Tea,0,3,46
+2026-03-13,71,Central,Cold Brew,0,4,31
+2026-03-13,71,Riverside,Espresso,0,3,38
+2026-03-13,71,Riverside,Latte,0,5,46
+2026-03-13,71,Riverside,Tea,0,3,32
+2026-03-13,71,Riverside,Cold Brew,0,4,38
+2026-03-13,71,Market,Espresso,0,3,39
+2026-03-13,71,Market,Latte,0,5,44
+2026-03-13,71,Market,Tea,0,3,19
+2026-03-13,71,Market,Cold Brew,0,4,21
+2026-03-14,72,Central,Espresso,1,3,63
+2026-03-14,72,Central,Latte,1,5,70
+2026-03-14,72,Central,Tea,1,3,42
+2026-03-14,72,Central,Cold Brew,1,4,56
+2026-03-14,72,Riverside,Espresso,1,3,54
+2026-03-14,72,Riverside,Latte,1,5,68
+2026-03-14,72,Riverside,Tea,1,3,30
+2026-03-14,72,Riverside,Cold Brew,1,4,42
+2026-03-14,72,Market,Espresso,1,3,48
+2026-03-14,72,Market,Latte,1,5,62
+2026-03-14,72,Market,Tea,1,3,40
+2026-03-14,72,Market,Cold Brew,1,4,38
+2026-03-15,73,Central,Espresso,1,3,56
+2026-03-15,73,Central,Latte,1,5,79
+2026-03-15,73,Central,Tea,1,3,46
+2026-03-15,73,Central,Cold Brew,1,4,55
+2026-03-15,73,Riverside,Espresso,1,3,50
+2026-03-15,73,Riverside,Latte,1,5,67
+2026-03-15,73,Riverside,Tea,1,3,47
+2026-03-15,73,Riverside,Cold Brew,1,4,46
+2026-03-15,73,Market,Espresso,1,3,53
+2026-03-15,73,Market,Latte,1,5,56
+2026-03-15,73,Market,Tea,1,3,38
+2026-03-15,73,Market,Cold Brew,1,4,47
+2026-03-16,74,Central,Espresso,0,3,39
+2026-03-16,74,Central,Latte,0,5,61
+2026-03-16,74,Central,Tea,0,3,28
+2026-03-16,74,Central,Cold Brew,0,4,35
+2026-03-16,74,Riverside,Espresso,0,3,38
+2026-03-16,74,Riverside,Latte,0,5,61
+2026-03-16,74,Riverside,Tea,0,3,28
+2026-03-16,74,Riverside,Cold Brew,0,4,39
+2026-03-16,74,Market,Espresso,0,3,31
+2026-03-16,74,Market,Latte,0,5,48
+2026-03-16,74,Market,Tea,0,3,17
+2026-03-16,74,Market,Cold Brew,0,4,28
+2026-03-17,75,Central,Espresso,0,3,47
+2026-03-17,75,Central,Latte,0,5,56
+2026-03-17,75,Central,Tea,0,3,38
+2026-03-17,75,Central,Cold Brew,0,4,38
+2026-03-17,75,Riverside,Espresso,0,3,37
+2026-03-17,75,Riverside,Latte,0,5,57
+2026-03-17,75,Riverside,Tea,0,3,23
+2026-03-17,75,Riverside,Cold Brew,0,4,26
+2026-03-17,75,Market,Espresso,0,3,42
+2026-03-17,75,Market,Latte,0,5,50
+2026-03-17,75,Market,Tea,0,3,12
+2026-03-17,75,Market,Cold Brew,0,4,31
+2026-03-18,76,Central,Espresso,0,3,41
+2026-03-18,76,Central,Latte,0,5,65
+2026-03-18,76,Central,Tea,0,3,27
+2026-03-18,76,Central,Cold Brew,0,4,36
+2026-03-18,76,Riverside,Espresso,0,3,33
+2026-03-18,76,Riverside,Latte,0,5,46
+2026-03-18,76,Riverside,Tea,0,3,23
+2026-03-18,76,Riverside,Cold Brew,0,4,27
+2026-03-18,76,Market,Espresso,0,3,30
+2026-03-18,76,Market,Latte,0,5,40
+2026-03-18,76,Market,Tea,0,3,16
+2026-03-18,76,Market,Cold Brew,0,4,23
+2026-03-19,77,Central,Espresso,0,3,40
+2026-03-19,77,Central,Latte,0,5,53
+2026-03-19,77,Central,Tea,0,3,25
+2026-03-19,77,Central,Cold Brew,0,4,41
+2026-03-19,77,Riverside,Espresso,0,3,38
+2026-03-19,77,Riverside,Latte,0,5,49
+2026-03-19,77,Riverside,Tea,0,3,24
+2026-03-19,77,Riverside,Cold Brew,0,4,42
+2026-03-19,77,Market,Espresso,0,3,36
+2026-03-19,77,Market,Latte,0,5,50
+2026-03-19,77,Market,Tea,0,3,10
+2026-03-19,77,Market,Cold Brew,0,4,28
+2026-03-20,78,Central,Espresso,0,3,32
+2026-03-20,78,Central,Latte,0,5,54
+2026-03-20,78,Central,Tea,0,3,33
+2026-03-20,78,Central,Cold Brew,0,4,36
+2026-03-20,78,Riverside,Espresso,0,3,41
+2026-03-20,78,Riverside,Latte,0,5,46
+2026-03-20,78,Riverside,Tea,0,3,29
+2026-03-20,78,Riverside,Cold Brew,0,4,26
+2026-03-20,78,Market,Espresso,0,3,34
+2026-03-20,78,Market,Latte,0,5,50
+2026-03-20,78,Market,Tea,0,3,26
+2026-03-20,78,Market,Cold Brew,0,4,30
+2026-03-21,79,Central,Espresso,1,3,65
+2026-03-21,79,Central,Latte,1,5,66
+2026-03-21,79,Central,Tea,1,3,41
+2026-03-21,79,Central,Cold Brew,1,4,37
+2026-03-21,79,Riverside,Espresso,1,3,59
+2026-03-21,79,Riverside,Latte,1,5,61
+2026-03-21,79,Riverside,Tea,1,3,32
+2026-03-21,79,Riverside,Cold Brew,1,4,53
+2026-03-21,79,Market,Espresso,1,3,53
+2026-03-21,79,Market,Latte,1,5,61
+2026-03-21,79,Market,Tea,1,3,28
+2026-03-21,79,Market,Cold Brew,1,4,45
+2026-03-22,80,Central,Espresso,1,3,52
+2026-03-22,80,Central,Latte,1,5,62
+2026-03-22,80,Central,Tea,1,3,48
+2026-03-22,80,Central,Cold Brew,1,4,41
+2026-03-22,80,Riverside,Espresso,1,3,53
+2026-03-22,80,Riverside,Latte,1,5,65
+2026-03-22,80,Riverside,Tea,1,3,48
+2026-03-22,80,Riverside,Cold Brew,1,4,48
+2026-03-22,80,Market,Espresso,1,3,37
+2026-03-22,80,Market,Latte,1,5,56
+2026-03-22,80,Market,Tea,1,3,36
+2026-03-22,80,Market,Cold Brew,1,4,45
+2026-03-23,81,Central,Espresso,0,3,48
+2026-03-23,81,Central,Latte,0,5,46
+2026-03-23,81,Central,Tea,0,3,30
+2026-03-23,81,Central,Cold Brew,0,4,44
+2026-03-23,81,Riverside,Espresso,0,3,46
+2026-03-23,81,Riverside,Latte,0,5,61
+2026-03-23,81,Riverside,Tea,0,3,24
+2026-03-23,81,Riverside,Cold Brew,0,4,40
+2026-03-23,81,Market,Espresso,0,3,44
+2026-03-23,81,Market,Latte,0,5,54
+2026-03-23,81,Market,Tea,0,3,27
+2026-03-23,81,Market,Cold Brew,0,4,35
+2026-03-24,82,Central,Espresso,0,3,39
+2026-03-24,82,Central,Latte,0,5,49
+2026-03-24,82,Central,Tea,0,3,36
+2026-03-24,82,Central,Cold Brew,0,4,38
+2026-03-24,82,Riverside,Espresso,0,3,38
+2026-03-24,82,Riverside,Latte,0,5,48
+2026-03-24,82,Riverside,Tea,0,3,24
+2026-03-24,82,Riverside,Cold Brew,0,4,35
+2026-03-24,82,Market,Espresso,0,3,30
+2026-03-24,82,Market,Latte,0,5,49
+2026-03-24,82,Market,Tea,0,3,25
+2026-03-24,82,Market,Cold Brew,0,4,31
+2026-03-25,83,Central,Espresso,0,3,40
+2026-03-25,83,Central,Latte,0,5,60
+2026-03-25,83,Central,Tea,0,3,41
+2026-03-25,83,Central,Cold Brew,0,4,36
+2026-03-25,83,Riverside,Espresso,0,3,44
+2026-03-25,83,Riverside,Latte,0,5,56
+2026-03-25,83,Riverside,Tea,0,3,13
+2026-03-25,83,Riverside,Cold Brew,0,4,31
+2026-03-25,83,Market,Espresso,0,3,32
+2026-03-25,83,Market,Latte,0,5,52
+2026-03-25,83,Market,Tea,0,3,24
+2026-03-25,83,Market,Cold Brew,0,4,34
+2026-03-26,84,Central,Espresso,0,3,47
+2026-03-26,84,Central,Latte,0,5,52
+2026-03-26,84,Central,Tea,0,3,28
+2026-03-26,84,Central,Cold Brew,0,4,33
+2026-03-26,84,Riverside,Espresso,0,3,38
+2026-03-26,84,Riverside,Latte,0,5,51
+2026-03-26,84,Riverside,Tea,0,3,27
+2026-03-26,84,Riverside,Cold Brew,0,4,31
+2026-03-26,84,Market,Espresso,0,3,40
+2026-03-26,84,Market,Latte,0,5,53
+2026-03-26,84,Market,Tea,0,3,31
+2026-03-26,84,Market,Cold Brew,0,4,35
+2026-03-27,85,Central,Espresso,0,3,44
+2026-03-27,85,Central,Latte,0,5,60
+2026-03-27,85,Central,Tea,0,3,34
+2026-03-27,85,Central,Cold Brew,0,4,36
+2026-03-27,85,Riverside,Espresso,0,3,45
+2026-03-27,85,Riverside,Latte,0,5,60
+2026-03-27,85,Riverside,Tea,0,3,36
+2026-03-27,85,Riverside,Cold Brew,0,4,35
+2026-03-27,85,Market,Espresso,0,3,37
+2026-03-27,85,Market,Latte,0,5,50
+2026-03-27,85,Market,Tea,0,3,23
+2026-03-27,85,Market,Cold Brew,0,4,34
+2026-03-28,86,Central,Espresso,1,3,55
+2026-03-28,86,Central,Latte,1,5,67
+2026-03-28,86,Central,Tea,1,3,52
+2026-03-28,86,Central,Cold Brew,1,4,52
+2026-03-28,86,Riverside,Espresso,1,3,51
+2026-03-28,86,Riverside,Latte,1,5,68
+2026-03-28,86,Riverside,Tea,1,3,39
+2026-03-28,86,Riverside,Cold Brew,1,4,48
+2026-03-28,86,Market,Espresso,1,3,47
+2026-03-28,86,Market,Latte,1,5,54
+2026-03-28,86,Market,Tea,1,3,35
+2026-03-28,86,Market,Cold Brew,1,4,38
+2026-03-29,87,Central,Espresso,1,3,57
+2026-03-29,87,Central,Latte,1,5,63
+2026-03-29,87,Central,Tea,1,3,48
+2026-03-29,87,Central,Cold Brew,1,4,55
+2026-03-29,87,Riverside,Espresso,1,3,52
+2026-03-29,87,Riverside,Latte,1,5,63
+2026-03-29,87,Riverside,Tea,1,3,41
+2026-03-29,87,Riverside,Cold Brew,1,4,37
+2026-03-29,87,Market,Espresso,1,3,42
+2026-03-29,87,Market,Latte,1,5,60
+2026-03-29,87,Market,Tea,1,3,37
+2026-03-29,87,Market,Cold Brew,1,4,43
+2026-03-30,88,Central,Espresso,0,3,38
+2026-03-30,88,Central,Latte,0,5,57
+2026-03-30,88,Central,Tea,0,3,29
+2026-03-30,88,Central,Cold Brew,0,4,34
+2026-03-30,88,Riverside,Espresso,0,3,40
+2026-03-30,88,Riverside,Latte,0,5,50
+2026-03-30,88,Riverside,Tea,0,3,33
+2026-03-30,88,Riverside,Cold Brew,0,4,38
+2026-03-30,88,Market,Espresso,0,3,39
+2026-03-30,88,Market,Latte,0,5,50
+2026-03-30,88,Market,Tea,0,3,19
+2026-03-30,88,Market,Cold Brew,0,4,27
+2026-03-31,89,Central,Espresso,0,3,36
+2026-03-31,89,Central,Latte,0,5,71
+2026-03-31,89,Central,Tea,0,3,26
+2026-03-31,89,Central,Cold Brew,0,4,39
+2026-03-31,89,Riverside,Espresso,0,3,37
+2026-03-31,89,Riverside,Latte,0,5,50
+2026-03-31,89,Riverside,Tea,0,3,24
+2026-03-31,89,Riverside,Cold Brew,0,4,25
+2026-03-31,89,Market,Espresso,0,3,31
+2026-03-31,89,Market,Latte,0,5,42
+2026-03-31,89,Market,Tea,0,3,23
+2026-03-31,89,Market,Cold Brew,0,4,28
+2026-04-01,90,Central,Espresso,0,3,40
+2026-04-01,90,Central,Latte,0,5,58
+2026-04-01,90,Central,Tea,0,3,29
+2026-04-01,90,Central,Cold Brew,0,4,44
+2026-04-01,90,Riverside,Espresso,0,3,37
+2026-04-01,90,Riverside,Latte,0,5,53
+2026-04-01,90,Riverside,Tea,0,3,20
+2026-04-01,90,Riverside,Cold Brew,0,4,38
+2026-04-01,90,Market,Espresso,0,3,34
+2026-04-01,90,Market,Latte,0,5,51
+2026-04-01,90,Market,Tea,0,3,25
+2026-04-01,90,Market,Cold Brew,0,4,31
+2026-04-02,91,Central,Espresso,0,3,45
+2026-04-02,91,Central,Latte,0,5,55
+2026-04-02,91,Central,Tea,0,3,38
+2026-04-02,91,Central,Cold Brew,0,4,44
+2026-04-02,91,Riverside,Espresso,0,3,41
+2026-04-02,91,Riverside,Latte,0,5,46
+2026-04-02,91,Riverside,Tea,0,3,21
+2026-04-02,91,Riverside,Cold Brew,0,4,31
+2026-04-02,91,Market,Espresso,0,3,34
+2026-04-02,91,Market,Latte,0,5,51
+2026-04-02,91,Market,Tea,0,3,19
+2026-04-02,91,Market,Cold Brew,0,4,38
+2026-04-03,92,Central,Espresso,0,3,44
+2026-04-03,92,Central,Latte,0,5,47
+2026-04-03,92,Central,Tea,0,3,29
+2026-04-03,92,Central,Cold Brew,0,4,27
+2026-04-03,92,Riverside,Espresso,0,3,35
+2026-04-03,92,Riverside,Latte,0,5,49
+2026-04-03,92,Riverside,Tea,0,3,24
+2026-04-03,92,Riverside,Cold Brew,0,4,33
+2026-04-03,92,Market,Espresso,0,3,34
+2026-04-03,92,Market,Latte,0,5,46
+2026-04-03,92,Market,Tea,0,3,31
+2026-04-03,92,Market,Cold Brew,0,4,38
+2026-04-04,93,Central,Espresso,1,3,50
+2026-04-04,93,Central,Latte,1,5,75
+2026-04-04,93,Central,Tea,1,3,36
+2026-04-04,93,Central,Cold Brew,1,4,48
+2026-04-04,93,Riverside,Espresso,1,3,58
+2026-04-04,93,Riverside,Latte,1,5,53
+2026-04-04,93,Riverside,Tea,1,3,42
+2026-04-04,93,Riverside,Cold Brew,1,4,40
+2026-04-04,93,Market,Espresso,1,3,47
+2026-04-04,93,Market,Latte,1,5,60
+2026-04-04,93,Market,Tea,1,3,44
+2026-04-04,93,Market,Cold Brew,1,4,40
+2026-04-05,94,Central,Espresso,1,3,55
+2026-04-05,94,Central,Latte,1,5,72
+2026-04-05,94,Central,Tea,1,3,43
+2026-04-05,94,Central,Cold Brew,1,4,48
+2026-04-05,94,Riverside,Espresso,1,3,50
+2026-04-05,94,Riverside,Latte,1,5,64
+2026-04-05,94,Riverside,Tea,1,3,43
+2026-04-05,94,Riverside,Cold Brew,1,4,42
+2026-04-05,94,Market,Espresso,1,3,46
+2026-04-05,94,Market,Latte,1,5,62
+2026-04-05,94,Market,Tea,1,3,35
+2026-04-05,94,Market,Cold Brew,1,4,43
+2026-04-06,95,Central,Espresso,0,3,44
+2026-04-06,95,Central,Latte,0,5,53
+2026-04-06,95,Central,Tea,0,3,28
+2026-04-06,95,Central,Cold Brew,0,4,42
+2026-04-06,95,Riverside,Espresso,0,3,33
+2026-04-06,95,Riverside,Latte,0,5,58
+2026-04-06,95,Riverside,Tea,0,3,28
+2026-04-06,95,Riverside,Cold Brew,0,4,28
+2026-04-06,95,Market,Espresso,0,3,37
+2026-04-06,95,Market,Latte,0,5,50
+2026-04-06,95,Market,Tea,0,3,28
+2026-04-06,95,Market,Cold Brew,0,4,38
+2026-04-07,96,Central,Espresso,0,3,42
+2026-04-07,96,Central,Latte,0,5,53
+2026-04-07,96,Central,Tea,0,3,29
+2026-04-07,96,Central,Cold Brew,0,4,35
+2026-04-07,96,Riverside,Espresso,0,3,35
+2026-04-07,96,Riverside,Latte,0,5,53
+2026-04-07,96,Riverside,Tea,0,3,27
+2026-04-07,96,Riverside,Cold Brew,0,4,32
+2026-04-07,96,Market,Espresso,0,3,32
+2026-04-07,96,Market,Latte,0,5,51
+2026-04-07,96,Market,Tea,0,3,21
+2026-04-07,96,Market,Cold Brew,0,4,27
+2026-04-08,97,Central,Espresso,0,3,43
+2026-04-08,97,Central,Latte,0,5,56
+2026-04-08,97,Central,Tea,0,3,27
+2026-04-08,97,Central,Cold Brew,0,4,44
+2026-04-08,97,Riverside,Espresso,0,3,43
+2026-04-08,97,Riverside,Latte,0,5,52
+2026-04-08,97,Riverside,Tea,0,3,28
+2026-04-08,97,Riverside,Cold Brew,0,4,38
+2026-04-08,97,Market,Espresso,0,3,36
+2026-04-08,97,Market,Latte,0,5,53
+2026-04-08,97,Market,Tea,0,3,32
+2026-04-08,97,Market,Cold Brew,0,4,32
+2026-04-09,98,Central,Espresso,0,3,46
+2026-04-09,98,Central,Latte,0,5,61
+2026-04-09,98,Central,Tea,0,3,30
+2026-04-09,98,Central,Cold Brew,0,4,34
+2026-04-09,98,Riverside,Espresso,0,3,43
+2026-04-09,98,Riverside,Latte,0,5,44
+2026-04-09,98,Riverside,Tea,0,3,36
+2026-04-09,98,Riverside,Cold Brew,0,4,39
+2026-04-09,98,Market,Espresso,0,3,37
+2026-04-09,98,Market,Latte,0,5,49
+2026-04-09,98,Market,Tea,0,3,33
+2026-04-09,98,Market,Cold Brew,0,4,27
+2026-04-10,99,Central,Espresso,0,3,38
+2026-04-10,99,Central,Latte,0,5,54
+2026-04-10,99,Central,Tea,0,3,31
+2026-04-10,99,Central,Cold Brew,0,4,35
+2026-04-10,99,Riverside,Espresso,0,3,40
+2026-04-10,99,Riverside,Latte,0,5,53
+2026-04-10,99,Riverside,Tea,0,3,23
+2026-04-10,99,Riverside,Cold Brew,0,4,43
+2026-04-10,99,Market,Espresso,0,3,29
+2026-04-10,99,Market,Latte,0,5,43
+2026-04-10,99,Market,Tea,0,3,26
+2026-04-10,99,Market,Cold Brew,0,4,31
+2026-04-11,100,Central,Espresso,1,3,58
+2026-04-11,100,Central,Latte,1,5,66
+2026-04-11,100,Central,Tea,1,3,39
+2026-04-11,100,Central,Cold Brew,1,4,49
+2026-04-11,100,Riverside,Espresso,1,3,48
+2026-04-11,100,Riverside,Latte,1,5,67
+2026-04-11,100,Riverside,Tea,1,3,37
+2026-04-11,100,Riverside,Cold Brew,1,4,51
+2026-04-11,100,Market,Espresso,1,3,51
+2026-04-11,100,Market,Latte,1,5,66
+2026-04-11,100,Market,Tea,1,3,41
+2026-04-11,100,Market,Cold Brew,1,4,48
+2026-04-12,101,Central,Espresso,1,3,60
+2026-04-12,101,Central,Latte,1,5,66
+2026-04-12,101,Central,Tea,1,3,43
+2026-04-12,101,Central,Cold Brew,1,4,43
+2026-04-12,101,Riverside,Espresso,1,3,52
+2026-04-12,101,Riverside,Latte,1,5,61
+2026-04-12,101,Riverside,Tea,1,3,41
+2026-04-12,101,Riverside,Cold Brew,1,4,50
+2026-04-12,101,Market,Espresso,1,3,41
+2026-04-12,101,Market,Latte,1,5,56
+2026-04-12,101,Market,Tea,1,3,34
+2026-04-12,101,Market,Cold Brew,1,4,41
+2026-04-13,102,Central,Espresso,0,3,45
+2026-04-13,102,Central,Latte,0,5,51
+2026-04-13,102,Central,Tea,0,3,32
+2026-04-13,102,Central,Cold Brew,0,4,32
+2026-04-13,102,Riverside,Espresso,0,3,28
+2026-04-13,102,Riverside,Latte,0,5,56
+2026-04-13,102,Riverside,Tea,0,3,21
+2026-04-13,102,Riverside,Cold Brew,0,4,32
+2026-04-13,102,Market,Espresso,0,3,29
+2026-04-13,102,Market,Latte,0,5,42
+2026-04-13,102,Market,Tea,0,3,22
+2026-04-13,102,Market,Cold Brew,0,4,30
+2026-04-14,103,Central,Espresso,0,3,49
+2026-04-14,103,Central,Latte,0,5,59
+2026-04-14,103,Central,Tea,0,3,31
+2026-04-14,103,Central,Cold Brew,0,4,44
+2026-04-14,103,Riverside,Espresso,0,3,45
+2026-04-14,103,Riverside,Latte,0,5,54
+2026-04-14,103,Riverside,Tea,0,3,25
+2026-04-14,103,Riverside,Cold Brew,0,4,40
+2026-04-14,103,Market,Espresso,0,3,45
+2026-04-14,103,Market,Latte,0,5,52
+2026-04-14,103,Market,Tea,0,3,33
+2026-04-14,103,Market,Cold Brew,0,4,37
+2026-04-15,104,Central,Espresso,0,3,48
+2026-04-15,104,Central,Latte,0,5,52
+2026-04-15,104,Central,Tea,0,3,27
+2026-04-15,104,Central,Cold Brew,0,4,40
+2026-04-15,104,Riverside,Espresso,0,3,31
+2026-04-15,104,Riverside,Latte,0,5,49
+2026-04-15,104,Riverside,Tea,0,3,31
+2026-04-15,104,Riverside,Cold Brew,0,4,32
+2026-04-15,104,Market,Espresso,0,3,39
+2026-04-15,104,Market,Latte,0,5,42
+2026-04-15,104,Market,Tea,0,3,22
+2026-04-15,104,Market,Cold Brew,0,4,37
+2026-04-16,105,Central,Espresso,0,3,45
+2026-04-16,105,Central,Latte,0,5,59
+2026-04-16,105,Central,Tea,0,3,41
+2026-04-16,105,Central,Cold Brew,0,4,47
+2026-04-16,105,Riverside,Espresso,0,3,35
+2026-04-16,105,Riverside,Latte,0,5,59
+2026-04-16,105,Riverside,Tea,0,3,24
+2026-04-16,105,Riverside,Cold Brew,0,4,35
+2026-04-16,105,Market,Espresso,0,3,36
+2026-04-16,105,Market,Latte,0,5,55
+2026-04-16,105,Market,Tea,0,3,19
+2026-04-16,105,Market,Cold Brew,0,4,34
+2026-04-17,106,Central,Espresso,0,3,47
+2026-04-17,106,Central,Latte,0,5,61
+2026-04-17,106,Central,Tea,0,3,31
+2026-04-17,106,Central,Cold Brew,0,4,45
+2026-04-17,106,Riverside,Espresso,0,3,36
+2026-04-17,106,Riverside,Latte,0,5,58
+2026-04-17,106,Riverside,Tea,0,3,29
+2026-04-17,106,Riverside,Cold Brew,0,4,28
+2026-04-17,106,Market,Espresso,0,3,38
+2026-04-17,106,Market,Latte,0,5,50
+2026-04-17,106,Market,Tea,0,3,22
+2026-04-17,106,Market,Cold Brew,0,4,29
+2026-04-18,107,Central,Espresso,1,3,55
+2026-04-18,107,Central,Latte,1,5,62
+2026-04-18,107,Central,Tea,1,3,53
+2026-04-18,107,Central,Cold Brew,1,4,47
+2026-04-18,107,Riverside,Espresso,1,3,48
+2026-04-18,107,Riverside,Latte,1,5,70
+2026-04-18,107,Riverside,Tea,1,3,42
+2026-04-18,107,Riverside,Cold Brew,1,4,51
+2026-04-18,107,Market,Espresso,1,3,56
+2026-04-18,107,Market,Latte,1,5,60
+2026-04-18,107,Market,Tea,1,3,31
+2026-04-18,107,Market,Cold Brew,1,4,49
+2026-04-19,108,Central,Espresso,1,3,60
+2026-04-19,108,Central,Latte,1,5,68
+2026-04-19,108,Central,Tea,1,3,38
+2026-04-19,108,Central,Cold Brew,1,4,59
+2026-04-19,108,Riverside,Espresso,1,3,54
+2026-04-19,108,Riverside,Latte,1,5,57
+2026-04-19,108,Riverside,Tea,1,3,43
+2026-04-19,108,Riverside,Cold Brew,1,4,40
+2026-04-19,108,Market,Espresso,1,3,46
+2026-04-19,108,Market,Latte,1,5,56
+2026-04-19,108,Market,Tea,1,3,33
+2026-04-19,108,Market,Cold Brew,1,4,40
+2026-04-20,109,Central,Espresso,0,3,41
+2026-04-20,109,Central,Latte,0,5,61
+2026-04-20,109,Central,Tea,0,3,34
+2026-04-20,109,Central,Cold Brew,0,4,44
+2026-04-20,109,Riverside,Espresso,0,3,45
+2026-04-20,109,Riverside,Latte,0,5,50
+2026-04-20,109,Riverside,Tea,0,3,28
+2026-04-20,109,Riverside,Cold Brew,0,4,38
+2026-04-20,109,Market,Espresso,0,3,45
+2026-04-20,109,Market,Latte,0,5,54
+2026-04-20,109,Market,Tea,0,3,31
+2026-04-20,109,Market,Cold Brew,0,4,37
+2026-04-21,110,Central,Espresso,0,3,50
+2026-04-21,110,Central,Latte,0,5,48
+2026-04-21,110,Central,Tea,0,3,37
+2026-04-21,110,Central,Cold Brew,0,4,41
+2026-04-21,110,Riverside,Espresso,0,3,40
+2026-04-21,110,Riverside,Latte,0,5,50
+2026-04-21,110,Riverside,Tea,0,3,25
+2026-04-21,110,Riverside,Cold Brew,0,4,37
+2026-04-21,110,Market,Espresso,0,3,41
+2026-04-21,110,Market,Latte,0,5,42
+2026-04-21,110,Market,Tea,0,3,25
+2026-04-21,110,Market,Cold Brew,0,4,30
+2026-04-22,111,Central,Espresso,0,3,40
+2026-04-22,111,Central,Latte,0,5,59
+2026-04-22,111,Central,Tea,0,3,31
+2026-04-22,111,Central,Cold Brew,0,4,37
+2026-04-22,111,Riverside,Espresso,0,3,36
+2026-04-22,111,Riverside,Latte,0,5,54
+2026-04-22,111,Riverside,Tea,0,3,27
+2026-04-22,111,Riverside,Cold Brew,0,4,30
+2026-04-22,111,Market,Espresso,0,3,32
+2026-04-22,111,Market,Latte,0,5,49
+2026-04-22,111,Market,Tea,0,3,26
+2026-04-22,111,Market,Cold Brew,0,4,27
+2026-04-23,112,Central,Espresso,0,3,47
+2026-04-23,112,Central,Latte,0,5,53
+2026-04-23,112,Central,Tea,0,3,46
+2026-04-23,112,Central,Cold Brew,0,4,36
+2026-04-23,112,Riverside,Espresso,0,3,36
+2026-04-23,112,Riverside,Latte,0,5,53
+2026-04-23,112,Riverside,Tea,0,3,23
+2026-04-23,112,Riverside,Cold Brew,0,4,40
+2026-04-23,112,Market,Espresso,0,3,45
+2026-04-23,112,Market,Latte,0,5,48
+2026-04-23,112,Market,Tea,0,3,25
+2026-04-23,112,Market,Cold Brew,0,4,30
+2026-04-24,113,Central,Espresso,0,3,45
+2026-04-24,113,Central,Latte,0,5,65
+2026-04-24,113,Central,Tea,0,3,37
+2026-04-24,113,Central,Cold Brew,0,4,36
+2026-04-24,113,Riverside,Espresso,0,3,47
+2026-04-24,113,Riverside,Latte,0,5,58
+2026-04-24,113,Riverside,Tea,0,3,30
+2026-04-24,113,Riverside,Cold Brew,0,4,32
+2026-04-24,113,Market,Espresso,0,3,37
+2026-04-24,113,Market,Latte,0,5,46
+2026-04-24,113,Market,Tea,0,3,27
+2026-04-24,113,Market,Cold Brew,0,4,31
+2026-04-25,114,Central,Espresso,1,3,45
+2026-04-25,114,Central,Latte,1,5,74
+2026-04-25,114,Central,Tea,1,3,46
+2026-04-25,114,Central,Cold Brew,1,4,58
+2026-04-25,114,Riverside,Espresso,1,3,51
+2026-04-25,114,Riverside,Latte,1,5,66
+2026-04-25,114,Riverside,Tea,1,3,45
+2026-04-25,114,Riverside,Cold Brew,1,4,49
+2026-04-25,114,Market,Espresso,1,3,50
+2026-04-25,114,Market,Latte,1,5,78
+2026-04-25,114,Market,Tea,1,3,36
+2026-04-25,114,Market,Cold Brew,1,4,45
+2026-04-26,115,Central,Espresso,1,3,65
+2026-04-26,115,Central,Latte,1,5,66
+2026-04-26,115,Central,Tea,1,3,39
+2026-04-26,115,Central,Cold Brew,1,4,45
+2026-04-26,115,Riverside,Espresso,1,3,54
+2026-04-26,115,Riverside,Latte,1,5,68
+2026-04-26,115,Riverside,Tea,1,3,43
+2026-04-26,115,Riverside,Cold Brew,1,4,41
+2026-04-26,115,Market,Espresso,1,3,54
+2026-04-26,115,Market,Latte,1,5,68
+2026-04-26,115,Market,Tea,1,3,36
+2026-04-26,115,Market,Cold Brew,1,4,45
+2026-04-27,116,Central,Espresso,0,3,48
+2026-04-27,116,Central,Latte,0,5,59
+2026-04-27,116,Central,Tea,0,3,36
+2026-04-27,116,Central,Cold Brew,0,4,35
+2026-04-27,116,Riverside,Espresso,0,3,39
+2026-04-27,116,Riverside,Latte,0,5,47
+2026-04-27,116,Riverside,Tea,0,3,31
+2026-04-27,116,Riverside,Cold Brew,0,4,38
+2026-04-27,116,Market,Espresso,0,3,36
+2026-04-27,116,Market,Latte,0,5,51
+2026-04-27,116,Market,Tea,0,3,17
+2026-04-27,116,Market,Cold Brew,0,4,37
+2026-04-28,117,Central,Espresso,0,3,42
+2026-04-28,117,Central,Latte,0,5,58
+2026-04-28,117,Central,Tea,0,3,38
+2026-04-28,117,Central,Cold Brew,0,4,37
+2026-04-28,117,Riverside,Espresso,0,3,46
+2026-04-28,117,Riverside,Latte,0,5,53
+2026-04-28,117,Riverside,Tea,0,3,28
+2026-04-28,117,Riverside,Cold Brew,0,4,38
+2026-04-28,117,Market,Espresso,0,3,30
+2026-04-28,117,Market,Latte,0,5,53
+2026-04-28,117,Market,Tea,0,3,25
+2026-04-28,117,Market,Cold Brew,0,4,38
+2026-04-29,118,Central,Espresso,0,3,44
+2026-04-29,118,Central,Latte,0,5,56
+2026-04-29,118,Central,Tea,0,3,35
+2026-04-29,118,Central,Cold Brew,0,4,40
+2026-04-29,118,Riverside,Espresso,0,3,34
+2026-04-29,118,Riverside,Latte,0,5,52
+2026-04-29,118,Riverside,Tea,0,3,34
+2026-04-29,118,Riverside,Cold Brew,0,4,35
+2026-04-29,118,Market,Espresso,0,3,32
+2026-04-29,118,Market,Latte,0,5,53
+2026-04-29,118,Market,Tea,0,3,15
+2026-04-29,118,Market,Cold Brew,0,4,22
+2026-04-30,119,Central,Espresso,0,3,45
+2026-04-30,119,Central,Latte,0,5,59
+2026-04-30,119,Central,Tea,0,3,34
+2026-04-30,119,Central,Cold Brew,0,4,36
+2026-04-30,119,Riverside,Espresso,0,3,39
+2026-04-30,119,Riverside,Latte,0,5,46
+2026-04-30,119,Riverside,Tea,0,3,29
+2026-04-30,119,Riverside,Cold Brew,0,4,28
+2026-04-30,119,Market,Espresso,0,3,36
+2026-04-30,119,Market,Latte,0,5,51
+2026-04-30,119,Market,Tea,0,3,16
+2026-04-30,119,Market,Cold Brew,0,4,30
+2026-05-01,120,Central,Espresso,0,3,49
+2026-05-01,120,Central,Latte,0,5,66
+2026-05-01,120,Central,Tea,0,3,25
+2026-05-01,120,Central,Cold Brew,0,4,42
+2026-05-01,120,Riverside,Espresso,0,3,34
+2026-05-01,120,Riverside,Latte,0,5,46
+2026-05-01,120,Riverside,Tea,0,3,36
+2026-05-01,120,Riverside,Cold Brew,0,4,39
+2026-05-01,120,Market,Espresso,0,3,33
+2026-05-01,120,Market,Latte,0,5,51
+2026-05-01,120,Market,Tea,0,3,28
+2026-05-01,120,Market,Cold Brew,0,4,34
+2026-05-02,121,Central,Espresso,1,3,68
+2026-05-02,121,Central,Latte,1,5,73
+2026-05-02,121,Central,Tea,1,3,30
+2026-05-02,121,Central,Cold Brew,1,4,51
+2026-05-02,121,Riverside,Espresso,1,3,48
+2026-05-02,121,Riverside,Latte,1,5,64
+2026-05-02,121,Riverside,Tea,1,3,40
+2026-05-02,121,Riverside,Cold Brew,1,4,45
+2026-05-02,121,Market,Espresso,1,3,43
+2026-05-02,121,Market,Latte,1,5,69
+2026-05-02,121,Market,Tea,1,3,40
+2026-05-02,121,Market,Cold Brew,1,4,41
+2026-05-03,122,Central,Espresso,1,3,60
+2026-05-03,122,Central,Latte,1,5,73
+2026-05-03,122,Central,Tea,1,3,51
+2026-05-03,122,Central,Cold Brew,1,4,48
+2026-05-03,122,Riverside,Espresso,1,3,56
+2026-05-03,122,Riverside,Latte,1,5,62
+2026-05-03,122,Riverside,Tea,1,3,46
+2026-05-03,122,Riverside,Cold Brew,1,4,47
+2026-05-03,122,Market,Espresso,1,3,38
+2026-05-03,122,Market,Latte,1,5,62
+2026-05-03,122,Market,Tea,1,3,28
+2026-05-03,122,Market,Cold Brew,1,4,44
+2026-05-04,123,Central,Espresso,0,3,45
+2026-05-04,123,Central,Latte,0,5,56
+2026-05-04,123,Central,Tea,0,3,25
+2026-05-04,123,Central,Cold Brew,0,4,35
+2026-05-04,123,Riverside,Espresso,0,3,36
+2026-05-04,123,Riverside,Latte,0,5,52
+2026-05-04,123,Riverside,Tea,0,3,34
+2026-05-04,123,Riverside,Cold Brew,0,4,39
+2026-05-04,123,Market,Espresso,0,3,35
+2026-05-04,123,Market,Latte,0,5,56
+2026-05-04,123,Market,Tea,0,3,18
+2026-05-04,123,Market,Cold Brew,0,4,36
+2026-05-05,124,Central,Espresso,0,3,44
+2026-05-05,124,Central,Latte,0,5,59
+2026-05-05,124,Central,Tea,0,3,36
+2026-05-05,124,Central,Cold Brew,0,4,38
+2026-05-05,124,Riverside,Espresso,0,3,44
+2026-05-05,124,Riverside,Latte,0,5,53
+2026-05-05,124,Riverside,Tea,0,3,40
+2026-05-05,124,Riverside,Cold Brew,0,4,34
+2026-05-05,124,Market,Espresso,0,3,43
+2026-05-05,124,Market,Latte,0,5,53
+2026-05-05,124,Market,Tea,0,3,19
+2026-05-05,124,Market,Cold Brew,0,4,40
+2026-05-06,125,Central,Espresso,0,3,40
+2026-05-06,125,Central,Latte,0,5,47
+2026-05-06,125,Central,Tea,0,3,37
+2026-05-06,125,Central,Cold Brew,0,4,46
+2026-05-06,125,Riverside,Espresso,0,3,40
+2026-05-06,125,Riverside,Latte,0,5,52
+2026-05-06,125,Riverside,Tea,0,3,36
+2026-05-06,125,Riverside,Cold Brew,0,4,40
+2026-05-06,125,Market,Espresso,0,3,34
+2026-05-06,125,Market,Latte,0,5,54
+2026-05-06,125,Market,Tea,0,3,19
+2026-05-06,125,Market,Cold Brew,0,4,30
+2026-05-07,126,Central,Espresso,0,3,40
+2026-05-07,126,Central,Latte,0,5,47
+2026-05-07,126,Central,Tea,0,3,27
+2026-05-07,126,Central,Cold Brew,0,4,47
+2026-05-07,126,Riverside,Espresso,0,3,35
+2026-05-07,126,Riverside,Latte,0,5,50
+2026-05-07,126,Riverside,Tea,0,3,22
+2026-05-07,126,Riverside,Cold Brew,0,4,40
+2026-05-07,126,Market,Espresso,0,3,37
+2026-05-07,126,Market,Latte,0,5,52
+2026-05-07,126,Market,Tea,0,3,25
+2026-05-07,126,Market,Cold Brew,0,4,27
+2026-05-08,127,Central,Espresso,0,3,40
+2026-05-08,127,Central,Latte,0,5,62
+2026-05-08,127,Central,Tea,0,3,33
+2026-05-08,127,Central,Cold Brew,0,4,45
+2026-05-08,127,Riverside,Espresso,0,3,24
+2026-05-08,127,Riverside,Latte,0,5,59
+2026-05-08,127,Riverside,Tea,0,3,26
+2026-05-08,127,Riverside,Cold Brew,0,4,47
+2026-05-08,127,Market,Espresso,0,3,35
+2026-05-08,127,Market,Latte,0,5,50
+2026-05-08,127,Market,Tea,0,3,28
+2026-05-08,127,Market,Cold Brew,0,4,29
+2026-05-09,128,Central,Espresso,1,3,61
+2026-05-09,128,Central,Latte,1,5,67
+2026-05-09,128,Central,Tea,1,3,52
+2026-05-09,128,Central,Cold Brew,1,4,57
+2026-05-09,128,Riverside,Espresso,1,3,55
+2026-05-09,128,Riverside,Latte,1,5,61
+2026-05-09,128,Riverside,Tea,1,3,39
+2026-05-09,128,Riverside,Cold Brew,1,4,50
+2026-05-09,128,Market,Espresso,1,3,39
+2026-05-09,128,Market,Latte,1,5,59
+2026-05-09,128,Market,Tea,1,3,42
+2026-05-09,128,Market,Cold Brew,1,4,39
+2026-05-10,129,Central,Espresso,1,3,64
+2026-05-10,129,Central,Latte,1,5,67
+2026-05-10,129,Central,Tea,1,3,47
+2026-05-10,129,Central,Cold Brew,1,4,47
+2026-05-10,129,Riverside,Espresso,1,3,55
+2026-05-10,129,Riverside,Latte,1,5,67
+2026-05-10,129,Riverside,Tea,1,3,46
+2026-05-10,129,Riverside,Cold Brew,1,4,55
+2026-05-10,129,Market,Espresso,1,3,55
+2026-05-10,129,Market,Latte,1,5,63
+2026-05-10,129,Market,Tea,1,3,31
+2026-05-10,129,Market,Cold Brew,1,4,52
+2026-05-11,130,Central,Espresso,0,3,39
+2026-05-11,130,Central,Latte,0,5,56
+2026-05-11,130,Central,Tea,0,3,37
+2026-05-11,130,Central,Cold Brew,0,4,43
+2026-05-11,130,Riverside,Espresso,0,3,48
+2026-05-11,130,Riverside,Latte,0,5,53
+2026-05-11,130,Riverside,Tea,0,3,20
+2026-05-11,130,Riverside,Cold Brew,0,4,35
+2026-05-11,130,Market,Espresso,0,3,38
+2026-05-11,130,Market,Latte,0,5,48
+2026-05-11,130,Market,Tea,0,3,32
+2026-05-11,130,Market,Cold Brew,0,4,32
+2026-05-12,131,Central,Espresso,0,3,38
+2026-05-12,131,Central,Latte,0,5,61
+2026-05-12,131,Central,Tea,0,3,28
+2026-05-12,131,Central,Cold Brew,0,4,50
+2026-05-12,131,Riverside,Espresso,0,3,42
+2026-05-12,131,Riverside,Latte,0,5,46
+2026-05-12,131,Riverside,Tea,0,3,34
+2026-05-12,131,Riverside,Cold Brew,0,4,48
+2026-05-12,131,Market,Espresso,0,3,27
+2026-05-12,131,Market,Latte,0,5,55
+2026-05-12,131,Market,Tea,0,3,28
+2026-05-12,131,Market,Cold Brew,0,4,34
+2026-05-13,132,Central,Espresso,0,3,47
+2026-05-13,132,Central,Latte,0,5,61
+2026-05-13,132,Central,Tea,0,3,30
+2026-05-13,132,Central,Cold Brew,0,4,48
+2026-05-13,132,Riverside,Espresso,0,3,34
+2026-05-13,132,Riverside,Latte,0,5,63
+2026-05-13,132,Riverside,Tea,0,3,36
+2026-05-13,132,Riverside,Cold Brew,0,4,30
+2026-05-13,132,Market,Espresso,0,3,37
+2026-05-13,132,Market,Latte,0,5,57
+2026-05-13,132,Market,Tea,0,3,23
+2026-05-13,132,Market,Cold Brew,0,4,32
+2026-05-14,133,Central,Espresso,0,3,43
+2026-05-14,133,Central,Latte,0,5,64
+2026-05-14,133,Central,Tea,0,3,30
+2026-05-14,133,Central,Cold Brew,0,4,41
+2026-05-14,133,Riverside,Espresso,0,3,43
+2026-05-14,133,Riverside,Latte,0,5,52
+2026-05-14,133,Riverside,Tea,0,3,24
+2026-05-14,133,Riverside,Cold Brew,0,4,30
+2026-05-14,133,Market,Espresso,0,3,30
+2026-05-14,133,Market,Latte,0,5,44
+2026-05-14,133,Market,Tea,0,3,17
+2026-05-14,133,Market,Cold Brew,0,4,30
+2026-05-15,134,Central,Espresso,0,3,47
+2026-05-15,134,Central,Latte,0,5,59
+2026-05-15,134,Central,Tea,0,3,29
+2026-05-15,134,Central,Cold Brew,0,4,36
+2026-05-15,134,Riverside,Espresso,0,3,35
+2026-05-15,134,Riverside,Latte,0,5,46
+2026-05-15,134,Riverside,Tea,0,3,22
+2026-05-15,134,Riverside,Cold Brew,0,4,40
+2026-05-15,134,Market,Espresso,0,3,30
+2026-05-15,134,Market,Latte,0,5,50
+2026-05-15,134,Market,Tea,0,3,22
+2026-05-15,134,Market,Cold Brew,0,4,45
+2026-05-16,135,Central,Espresso,1,3,48
+2026-05-16,135,Central,Latte,1,5,71
+2026-05-16,135,Central,Tea,1,3,44
+2026-05-16,135,Central,Cold Brew,1,4,50
+2026-05-16,135,Riverside,Espresso,1,3,54
+2026-05-16,135,Riverside,Latte,1,5,66
+2026-05-16,135,Riverside,Tea,1,3,35
+2026-05-16,135,Riverside,Cold Brew,1,4,51
+2026-05-16,135,Market,Espresso,1,3,51
+2026-05-16,135,Market,Latte,1,5,69
+2026-05-16,135,Market,Tea,1,3,34
+2026-05-16,135,Market,Cold Brew,1,4,53
+2026-05-17,136,Central,Espresso,1,3,56
+2026-05-17,136,Central,Latte,1,5,61
+2026-05-17,136,Central,Tea,1,3,48
+2026-05-17,136,Central,Cold Brew,1,4,53
+2026-05-17,136,Riverside,Espresso,1,3,48
+2026-05-17,136,Riverside,Latte,1,5,70
+2026-05-17,136,Riverside,Tea,1,3,38
+2026-05-17,136,Riverside,Cold Brew,1,4,54
+2026-05-17,136,Market,Espresso,1,3,49
+2026-05-17,136,Market,Latte,1,5,66
+2026-05-17,136,Market,Tea,1,3,41
+2026-05-17,136,Market,Cold Brew,1,4,48
+2026-05-18,137,Central,Espresso,0,3,40
+2026-05-18,137,Central,Latte,0,5,63
+2026-05-18,137,Central,Tea,0,3,34
+2026-05-18,137,Central,Cold Brew,0,4,51
+2026-05-18,137,Riverside,Espresso,0,3,43
+2026-05-18,137,Riverside,Latte,0,5,57
+2026-05-18,137,Riverside,Tea,0,3,25
+2026-05-18,137,Riverside,Cold Brew,0,4,34
+2026-05-18,137,Market,Espresso,0,3,38
+2026-05-18,137,Market,Latte,0,5,45
+2026-05-18,137,Market,Tea,0,3,20
+2026-05-18,137,Market,Cold Brew,0,4,33
+2026-05-19,138,Central,Espresso,0,3,45
+2026-05-19,138,Central,Latte,0,5,60
+2026-05-19,138,Central,Tea,0,3,39
+2026-05-19,138,Central,Cold Brew,0,4,40
+2026-05-19,138,Riverside,Espresso,0,3,44
+2026-05-19,138,Riverside,Latte,0,5,53
+2026-05-19,138,Riverside,Tea,0,3,28
+2026-05-19,138,Riverside,Cold Brew,0,4,38
+2026-05-19,138,Market,Espresso,0,3,27
+2026-05-19,138,Market,Latte,0,5,51
+2026-05-19,138,Market,Tea,0,3,22
+2026-05-19,138,Market,Cold Brew,0,4,29
+2026-05-20,139,Central,Espresso,0,3,36
+2026-05-20,139,Central,Latte,0,5,56
+2026-05-20,139,Central,Tea,0,3,24
+2026-05-20,139,Central,Cold Brew,0,4,46
+2026-05-20,139,Riverside,Espresso,0,3,39
+2026-05-20,139,Riverside,Latte,0,5,45
+2026-05-20,139,Riverside,Tea,0,3,25
+2026-05-20,139,Riverside,Cold Brew,0,4,40
+2026-05-20,139,Market,Espresso,0,3,35
+2026-05-20,139,Market,Latte,0,5,49
+2026-05-20,139,Market,Tea,0,3,24
+2026-05-20,139,Market,Cold Brew,0,4,33
+2026-05-21,140,Central,Espresso,0,3,37
+2026-05-21,140,Central,Latte,0,5,58
+2026-05-21,140,Central,Tea,0,3,31
+2026-05-21,140,Central,Cold Brew,0,4,56
+2026-05-21,140,Riverside,Espresso,0,3,40
+2026-05-21,140,Riverside,Latte,0,5,51
+2026-05-21,140,Riverside,Tea,0,3,34
+2026-05-21,140,Riverside,Cold Brew,0,4,36
+2026-05-21,140,Market,Espresso,0,3,39
+2026-05-21,140,Market,Latte,0,5,46
+2026-05-21,140,Market,Tea,0,3,33
+2026-05-21,140,Market,Cold Brew,0,4,30
+2026-05-22,141,Central,Espresso,0,3,48
+2026-05-22,141,Central,Latte,0,5,64
+2026-05-22,141,Central,Tea,0,3,32
+2026-05-22,141,Central,Cold Brew,0,4,42
+2026-05-22,141,Riverside,Espresso,0,3,44
+2026-05-22,141,Riverside,Latte,0,5,57
+2026-05-22,141,Riverside,Tea,0,3,23
+2026-05-22,141,Riverside,Cold Brew,0,4,38
+2026-05-22,141,Market,Espresso,0,3,33
+2026-05-22,141,Market,Latte,0,5,47
+2026-05-22,141,Market,Tea,0,3,22
+2026-05-22,141,Market,Cold Brew,0,4,40
+2026-05-23,142,Central,Espresso,1,3,66
+2026-05-23,142,Central,Latte,1,5,84
+2026-05-23,142,Central,Tea,1,3,45
+2026-05-23,142,Central,Cold Brew,1,4,49
+2026-05-23,142,Riverside,Espresso,1,3,48
+2026-05-23,142,Riverside,Latte,1,5,74
+2026-05-23,142,Riverside,Tea,1,3,33
+2026-05-23,142,Riverside,Cold Brew,1,4,47
+2026-05-23,142,Market,Espresso,1,3,47
+2026-05-23,142,Market,Latte,1,5,71
+2026-05-23,142,Market,Tea,1,3,33
+2026-05-23,142,Market,Cold Brew,1,4,51
+2026-05-24,143,Central,Espresso,1,3,64
+2026-05-24,143,Central,Latte,1,5,70
+2026-05-24,143,Central,Tea,1,3,48
+2026-05-24,143,Central,Cold Brew,1,4,46
+2026-05-24,143,Riverside,Espresso,1,3,52
+2026-05-24,143,Riverside,Latte,1,5,65
+2026-05-24,143,Riverside,Tea,1,3,28
+2026-05-24,143,Riverside,Cold Brew,1,4,51
+2026-05-24,143,Market,Espresso,1,3,51
+2026-05-24,143,Market,Latte,1,5,54
+2026-05-24,143,Market,Tea,1,3,31
+2026-05-24,143,Market,Cold Brew,1,4,42
+2026-05-25,144,Central,Espresso,0,3,43
+2026-05-25,144,Central,Latte,0,5,57
+2026-05-25,144,Central,Tea,0,3,29
+2026-05-25,144,Central,Cold Brew,0,4,37
+2026-05-25,144,Riverside,Espresso,0,3,42
+2026-05-25,144,Riverside,Latte,0,5,51
+2026-05-25,144,Riverside,Tea,0,3,28
+2026-05-25,144,Riverside,Cold Brew,0,4,36
+2026-05-25,144,Market,Espresso,0,3,40
+2026-05-25,144,Market,Latte,0,5,50
+2026-05-25,144,Market,Tea,0,3,30
+2026-05-25,144,Market,Cold Brew,0,4,34
+2026-05-26,145,Central,Espresso,0,3,50
+2026-05-26,145,Central,Latte,0,5,65
+2026-05-26,145,Central,Tea,0,3,26
+2026-05-26,145,Central,Cold Brew,0,4,46
+2026-05-26,145,Riverside,Espresso,0,3,50
+2026-05-26,145,Riverside,Latte,0,5,49
+2026-05-26,145,Riverside,Tea,0,3,29
+2026-05-26,145,Riverside,Cold Brew,0,4,35
+2026-05-26,145,Market,Espresso,0,3,40
+2026-05-26,145,Market,Latte,0,5,53
+2026-05-26,145,Market,Tea,0,3,22
+2026-05-26,145,Market,Cold Brew,0,4,40
+2026-05-27,146,Central,Espresso,0,3,42
+2026-05-27,146,Central,Latte,0,5,58
+2026-05-27,146,Central,Tea,0,3,39
+2026-05-27,146,Central,Cold Brew,0,4,52
+2026-05-27,146,Riverside,Espresso,0,3,38
+2026-05-27,146,Riverside,Latte,0,5,58
+2026-05-27,146,Riverside,Tea,0,3,30
+2026-05-27,146,Riverside,Cold Brew,0,4,29
+2026-05-27,146,Market,Espresso,0,3,33
+2026-05-27,146,Market,Latte,0,5,45
+2026-05-27,146,Market,Tea,0,3,23
+2026-05-27,146,Market,Cold Brew,0,4,32
+2026-05-28,147,Central,Espresso,0,3,46
+2026-05-28,147,Central,Latte,0,5,65
+2026-05-28,147,Central,Tea,0,3,36
+2026-05-28,147,Central,Cold Brew,0,4,55
+2026-05-28,147,Riverside,Espresso,0,3,40
+2026-05-28,147,Riverside,Latte,0,5,58
+2026-05-28,147,Riverside,Tea,0,3,31
+2026-05-28,147,Riverside,Cold Brew,0,4,44
+2026-05-28,147,Market,Espresso,0,3,36
+2026-05-28,147,Market,Latte,0,5,55
+2026-05-28,147,Market,Tea,0,3,34
+2026-05-28,147,Market,Cold Brew,0,4,30
+2026-05-29,148,Central,Espresso,0,3,46
+2026-05-29,148,Central,Latte,0,5,61
+2026-05-29,148,Central,Tea,0,3,32
+2026-05-29,148,Central,Cold Brew,0,4,38
+2026-05-29,148,Riverside,Espresso,0,3,50
+2026-05-29,148,Riverside,Latte,0,5,53
+2026-05-29,148,Riverside,Tea,0,3,38
+2026-05-29,148,Riverside,Cold Brew,0,4,34
+2026-05-29,148,Market,Espresso,0,3,37
+2026-05-29,148,Market,Latte,0,5,55
+2026-05-29,148,Market,Tea,0,3,25
+2026-05-29,148,Market,Cold Brew,0,4,29
+2026-05-30,149,Central,Espresso,1,3,54
+2026-05-30,149,Central,Latte,1,5,72
+2026-05-30,149,Central,Tea,1,3,43
+2026-05-30,149,Central,Cold Brew,1,4,54
+2026-05-30,149,Riverside,Espresso,1,3,42
+2026-05-30,149,Riverside,Latte,1,5,63
+2026-05-30,149,Riverside,Tea,1,3,40
+2026-05-30,149,Riverside,Cold Brew,1,4,46
+2026-05-30,149,Market,Espresso,1,3,45
+2026-05-30,149,Market,Latte,1,5,59
+2026-05-30,149,Market,Tea,1,3,38
+2026-05-30,149,Market,Cold Brew,1,4,53
+2026-05-31,150,Central,Espresso,1,3,51
+2026-05-31,150,Central,Latte,1,5,70
+2026-05-31,150,Central,Tea,1,3,51
+2026-05-31,150,Central,Cold Brew,1,4,56
+2026-05-31,150,Riverside,Espresso,1,3,53
+2026-05-31,150,Riverside,Latte,1,5,64
+2026-05-31,150,Riverside,Tea,1,3,41
+2026-05-31,150,Riverside,Cold Brew,1,4,48
+2026-05-31,150,Market,Espresso,1,3,39
+2026-05-31,150,Market,Latte,1,5,59
+2026-05-31,150,Market,Tea,1,3,28
+2026-05-31,150,Market,Cold Brew,1,4,52
+2026-06-01,151,Central,Espresso,0,3,50
+2026-06-01,151,Central,Latte,0,5,55
+2026-06-01,151,Central,Tea,0,3,38
+2026-06-01,151,Central,Cold Brew,0,4,54
+2026-06-01,151,Riverside,Espresso,0,3,38
+2026-06-01,151,Riverside,Latte,0,5,61
+2026-06-01,151,Riverside,Tea,0,3,31
+2026-06-01,151,Riverside,Cold Brew,0,4,36
+2026-06-01,151,Market,Espresso,0,3,33
+2026-06-01,151,Market,Latte,0,5,48
+2026-06-01,151,Market,Tea,0,3,24
+2026-06-01,151,Market,Cold Brew,0,4,22
+2026-06-02,152,Central,Espresso,0,3,49
+2026-06-02,152,Central,Latte,0,5,57
+2026-06-02,152,Central,Tea,0,3,36
+2026-06-02,152,Central,Cold Brew,0,4,40
+2026-06-02,152,Riverside,Espresso,0,3,56
+2026-06-02,152,Riverside,Latte,0,5,46
+2026-06-02,152,Riverside,Tea,0,3,24
+2026-06-02,152,Riverside,Cold Brew,0,4,41
+2026-06-02,152,Market,Espresso,0,3,50
+2026-06-02,152,Market,Latte,0,5,46
+2026-06-02,152,Market,Tea,0,3,35
+2026-06-02,152,Market,Cold Brew,0,4,29
+2026-06-03,153,Central,Espresso,0,3,53
+2026-06-03,153,Central,Latte,0,5,59
+2026-06-03,153,Central,Tea,0,3,45
+2026-06-03,153,Central,Cold Brew,0,4,51
+2026-06-03,153,Riverside,Espresso,0,3,38
+2026-06-03,153,Riverside,Latte,0,5,69
+2026-06-03,153,Riverside,Tea,0,3,23
+2026-06-03,153,Riverside,Cold Brew,0,4,36
+2026-06-03,153,Market,Espresso,0,3,47
+2026-06-03,153,Market,Latte,0,5,47
+2026-06-03,153,Market,Tea,0,3,23
+2026-06-03,153,Market,Cold Brew,0,4,35
+2026-06-04,154,Central,Espresso,0,3,48
+2026-06-04,154,Central,Latte,0,5,61
+2026-06-04,154,Central,Tea,0,3,30
+2026-06-04,154,Central,Cold Brew,0,4,43
+2026-06-04,154,Riverside,Espresso,0,3,44
+2026-06-04,154,Riverside,Latte,0,5,62
+2026-06-04,154,Riverside,Tea,0,3,31
+2026-06-04,154,Riverside,Cold Brew,0,4,31
+2026-06-04,154,Market,Espresso,0,3,38
+2026-06-04,154,Market,Latte,0,5,48
+2026-06-04,154,Market,Tea,0,3,33
+2026-06-04,154,Market,Cold Brew,0,4,26
+2026-06-05,155,Central,Espresso,0,3,49
+2026-06-05,155,Central,Latte,0,5,54
+2026-06-05,155,Central,Tea,0,3,41
+2026-06-05,155,Central,Cold Brew,0,4,46
+2026-06-05,155,Riverside,Espresso,0,3,42
+2026-06-05,155,Riverside,Latte,0,5,57
+2026-06-05,155,Riverside,Tea,0,3,28
+2026-06-05,155,Riverside,Cold Brew,0,4,41
+2026-06-05,155,Market,Espresso,0,3,38
+2026-06-05,155,Market,Latte,0,5,55
+2026-06-05,155,Market,Tea,0,3,26
+2026-06-05,155,Market,Cold Brew,0,4,22
+2026-06-06,156,Central,Espresso,1,3,56
+2026-06-06,156,Central,Latte,1,5,79
+2026-06-06,156,Central,Tea,1,3,54
+2026-06-06,156,Central,Cold Brew,1,4,55
+2026-06-06,156,Riverside,Espresso,1,3,53
+2026-06-06,156,Riverside,Latte,1,5,65
+2026-06-06,156,Riverside,Tea,1,3,44
+2026-06-06,156,Riverside,Cold Brew,1,4,52
+2026-06-06,156,Market,Espresso,1,3,45
+2026-06-06,156,Market,Latte,1,5,67
+2026-06-06,156,Market,Tea,1,3,44
+2026-06-06,156,Market,Cold Brew,1,4,41
+2026-06-07,157,Central,Espresso,1,3,57
+2026-06-07,157,Central,Latte,1,5,74
+2026-06-07,157,Central,Tea,1,3,50
+2026-06-07,157,Central,Cold Brew,1,4,52
+2026-06-07,157,Riverside,Espresso,1,3,51
+2026-06-07,157,Riverside,Latte,1,5,64
+2026-06-07,157,Riverside,Tea,1,3,43
+2026-06-07,157,Riverside,Cold Brew,1,4,51
+2026-06-07,157,Market,Espresso,1,3,50
+2026-06-07,157,Market,Latte,1,5,56
+2026-06-07,157,Market,Tea,1,3,33
+2026-06-07,157,Market,Cold Brew,1,4,49
+2026-06-08,158,Central,Espresso,0,3,40
+2026-06-08,158,Central,Latte,0,5,60
+2026-06-08,158,Central,Tea,0,3,33
+2026-06-08,158,Central,Cold Brew,0,4,39
+2026-06-08,158,Riverside,Espresso,0,3,41
+2026-06-08,158,Riverside,Latte,0,5,63
+2026-06-08,158,Riverside,Tea,0,3,31
+2026-06-08,158,Riverside,Cold Brew,0,4,36
+2026-06-08,158,Market,Espresso,0,3,31
+2026-06-08,158,Market,Latte,0,5,54
+2026-06-08,158,Market,Tea,0,3,32
+2026-06-08,158,Market,Cold Brew,0,4,37
+2026-06-09,159,Central,Espresso,0,3,52
+2026-06-09,159,Central,Latte,0,5,62
+2026-06-09,159,Central,Tea,0,3,28
+2026-06-09,159,Central,Cold Brew,0,4,42
+2026-06-09,159,Riverside,Espresso,0,3,44
+2026-06-09,159,Riverside,Latte,0,5,58
+2026-06-09,159,Riverside,Tea,0,3,27
+2026-06-09,159,Riverside,Cold Brew,0,4,37
+2026-06-09,159,Market,Espresso,0,3,40
+2026-06-09,159,Market,Latte,0,5,58
+2026-06-09,159,Market,Tea,0,3,31
+2026-06-09,159,Market,Cold Brew,0,4,38
+2026-06-10,160,Central,Espresso,0,3,48
+2026-06-10,160,Central,Latte,0,5,54
+2026-06-10,160,Central,Tea,0,3,29
+2026-06-10,160,Central,Cold Brew,0,4,42
+2026-06-10,160,Riverside,Espresso,0,3,47
+2026-06-10,160,Riverside,Latte,0,5,56
+2026-06-10,160,Riverside,Tea,0,3,32
+2026-06-10,160,Riverside,Cold Brew,0,4,30
+2026-06-10,160,Market,Espresso,0,3,31
+2026-06-10,160,Market,Latte,0,5,57
+2026-06-10,160,Market,Tea,0,3,26
+2026-06-10,160,Market,Cold Brew,0,4,28
+2026-06-11,161,Central,Espresso,0,3,51
+2026-06-11,161,Central,Latte,0,5,61
+2026-06-11,161,Central,Tea,0,3,49
+2026-06-11,161,Central,Cold Brew,0,4,49
+2026-06-11,161,Riverside,Espresso,0,3,43
+2026-06-11,161,Riverside,Latte,0,5,54
+2026-06-11,161,Riverside,Tea,0,3,31
+2026-06-11,161,Riverside,Cold Brew,0,4,37
+2026-06-11,161,Market,Espresso,0,3,31
+2026-06-11,161,Market,Latte,0,5,56
+2026-06-11,161,Market,Tea,0,3,28
+2026-06-11,161,Market,Cold Brew,0,4,21
+2026-06-12,162,Central,Espresso,0,3,43
+2026-06-12,162,Central,Latte,0,5,55
+2026-06-12,162,Central,Tea,0,3,39
+2026-06-12,162,Central,Cold Brew,0,4,42
+2026-06-12,162,Riverside,Espresso,0,3,49
+2026-06-12,162,Riverside,Latte,0,5,47
+2026-06-12,162,Riverside,Tea,0,3,24
+2026-06-12,162,Riverside,Cold Brew,0,4,43
+2026-06-12,162,Market,Espresso,0,3,35
+2026-06-12,162,Market,Latte,0,5,46
+2026-06-12,162,Market,Tea,0,3,24
+2026-06-12,162,Market,Cold Brew,0,4,31
+2026-06-13,163,Central,Espresso,1,3,61
+2026-06-13,163,Central,Latte,1,5,77
+2026-06-13,163,Central,Tea,1,3,39
+2026-06-13,163,Central,Cold Brew,1,4,53
+2026-06-13,163,Riverside,Espresso,1,3,54
+2026-06-13,163,Riverside,Latte,1,5,67
+2026-06-13,163,Riverside,Tea,1,3,46
+2026-06-13,163,Riverside,Cold Brew,1,4,50
+2026-06-13,163,Market,Espresso,1,3,48
+2026-06-13,163,Market,Latte,1,5,58
+2026-06-13,163,Market,Tea,1,3,29
+2026-06-13,163,Market,Cold Brew,1,4,45
+2026-06-14,164,Central,Espresso,1,3,59
+2026-06-14,164,Central,Latte,1,5,76
+2026-06-14,164,Central,Tea,1,3,45
+2026-06-14,164,Central,Cold Brew,1,4,66
+2026-06-14,164,Riverside,Espresso,1,3,53
+2026-06-14,164,Riverside,Latte,1,5,64
+2026-06-14,164,Riverside,Tea,1,3,43
+2026-06-14,164,Riverside,Cold Brew,1,4,45
+2026-06-14,164,Market,Espresso,1,3,52
+2026-06-14,164,Market,Latte,1,5,53
+2026-06-14,164,Market,Tea,1,3,42
+2026-06-14,164,Market,Cold Brew,1,4,47
+2026-06-15,165,Central,Espresso,0,3,48
+2026-06-15,165,Central,Latte,0,5,60
+2026-06-15,165,Central,Tea,0,3,28
+2026-06-15,165,Central,Cold Brew,0,4,38
+2026-06-15,165,Riverside,Espresso,0,3,49
+2026-06-15,165,Riverside,Latte,0,5,57
+2026-06-15,165,Riverside,Tea,0,3,27
+2026-06-15,165,Riverside,Cold Brew,0,4,40
+2026-06-15,165,Market,Espresso,0,3,41
+2026-06-15,165,Market,Latte,0,5,61
+2026-06-15,165,Market,Tea,0,3,32
+2026-06-15,165,Market,Cold Brew,0,4,37
+2026-06-16,166,Central,Espresso,0,3,44
+2026-06-16,166,Central,Latte,0,5,69
+2026-06-16,166,Central,Tea,0,3,34
+2026-06-16,166,Central,Cold Brew,0,4,38
+2026-06-16,166,Riverside,Espresso,0,3,36
+2026-06-16,166,Riverside,Latte,0,5,50
+2026-06-16,166,Riverside,Tea,0,3,28
+2026-06-16,166,Riverside,Cold Brew,0,4,41
+2026-06-16,166,Market,Espresso,0,3,43
+2026-06-16,166,Market,Latte,0,5,57
+2026-06-16,166,Market,Tea,0,3,27
+2026-06-16,166,Market,Cold Brew,0,4,39
+2026-06-17,167,Central,Espresso,0,3,58
+2026-06-17,167,Central,Latte,0,5,64
+2026-06-17,167,Central,Tea,0,3,43
+2026-06-17,167,Central,Cold Brew,0,4,35
+2026-06-17,167,Riverside,Espresso,0,3,38
+2026-06-17,167,Riverside,Latte,0,5,51
+2026-06-17,167,Riverside,Tea,0,3,16
+2026-06-17,167,Riverside,Cold Brew,0,4,38
+2026-06-17,167,Market,Espresso,0,3,46
+2026-06-17,167,Market,Latte,0,5,49
+2026-06-17,167,Market,Tea,0,3,28
+2026-06-17,167,Market,Cold Brew,0,4,30
+2026-06-18,168,Central,Espresso,0,3,44
+2026-06-18,168,Central,Latte,0,5,61
+2026-06-18,168,Central,Tea,0,3,29
+2026-06-18,168,Central,Cold Brew,0,4,49
+2026-06-18,168,Riverside,Espresso,0,3,32
+2026-06-18,168,Riverside,Latte,0,5,56
+2026-06-18,168,Riverside,Tea,0,3,27
+2026-06-18,168,Riverside,Cold Brew,0,4,45
+2026-06-18,168,Market,Espresso,0,3,43
+2026-06-18,168,Market,Latte,0,5,41
+2026-06-18,168,Market,Tea,0,3,15
+2026-06-18,168,Market,Cold Brew,0,4,30
+2026-06-19,169,Central,Espresso,0,3,44
+2026-06-19,169,Central,Latte,0,5,59
+2026-06-19,169,Central,Tea,0,3,35
+2026-06-19,169,Central,Cold Brew,0,4,46
+2026-06-19,169,Riverside,Espresso,0,3,35
+2026-06-19,169,Riverside,Latte,0,5,46
+2026-06-19,169,Riverside,Tea,0,3,31
+2026-06-19,169,Riverside,Cold Brew,0,4,36
+2026-06-19,169,Market,Espresso,0,3,38
+2026-06-19,169,Market,Latte,0,5,49
+2026-06-19,169,Market,Tea,0,3,26
+2026-06-19,169,Market,Cold Brew,0,4,42
+2026-06-20,170,Central,Espresso,1,3,51
+2026-06-20,170,Central,Latte,1,5,66
+2026-06-20,170,Central,Tea,1,3,50
+2026-06-20,170,Central,Cold Brew,1,4,63
+2026-06-20,170,Riverside,Espresso,1,3,53
+2026-06-20,170,Riverside,Latte,1,5,60
+2026-06-20,170,Riverside,Tea,1,3,32
+2026-06-20,170,Riverside,Cold Brew,1,4,51
+2026-06-20,170,Market,Espresso,1,3,45
+2026-06-20,170,Market,Latte,1,5,75
+2026-06-20,170,Market,Tea,1,3,51
+2026-06-20,170,Market,Cold Brew,1,4,48
+2026-06-21,171,Central,Espresso,1,3,61
+2026-06-21,171,Central,Latte,1,5,71
+2026-06-21,171,Central,Tea,1,3,53
+2026-06-21,171,Central,Cold Brew,1,4,55
+2026-06-21,171,Riverside,Espresso,1,3,54
+2026-06-21,171,Riverside,Latte,1,5,74
+2026-06-21,171,Riverside,Tea,1,3,45
+2026-06-21,171,Riverside,Cold Brew,1,4,60
+2026-06-21,171,Market,Espresso,1,3,43
+2026-06-21,171,Market,Latte,1,5,61
+2026-06-21,171,Market,Tea,1,3,34
+2026-06-21,171,Market,Cold Brew,1,4,51
+2026-06-22,172,Central,Espresso,0,3,44
+2026-06-22,172,Central,Latte,0,5,63
+2026-06-22,172,Central,Tea,0,3,29
+2026-06-22,172,Central,Cold Brew,0,4,42
+2026-06-22,172,Riverside,Espresso,0,3,53
+2026-06-22,172,Riverside,Latte,0,5,63
+2026-06-22,172,Riverside,Tea,0,3,20
+2026-06-22,172,Riverside,Cold Brew,0,4,40
+2026-06-22,172,Market,Espresso,0,3,43
+2026-06-22,172,Market,Latte,0,5,49
+2026-06-22,172,Market,Tea,0,3,21
+2026-06-22,172,Market,Cold Brew,0,4,38
+2026-06-23,173,Central,Espresso,0,3,47
+2026-06-23,173,Central,Latte,0,5,63
+2026-06-23,173,Central,Tea,0,3,34
+2026-06-23,173,Central,Cold Brew,0,4,55
+2026-06-23,173,Riverside,Espresso,0,3,37
+2026-06-23,173,Riverside,Latte,0,5,52
+2026-06-23,173,Riverside,Tea,0,3,32
+2026-06-23,173,Riverside,Cold Brew,0,4,42
+2026-06-23,173,Market,Espresso,0,3,32
+2026-06-23,173,Market,Latte,0,5,58
+2026-06-23,173,Market,Tea,0,3,20
+2026-06-23,173,Market,Cold Brew,0,4,35
+2026-06-24,174,Central,Espresso,0,3,45
+2026-06-24,174,Central,Latte,0,5,56
+2026-06-24,174,Central,Tea,0,3,41
+2026-06-24,174,Central,Cold Brew,0,4,31
+2026-06-24,174,Riverside,Espresso,0,3,38
+2026-06-24,174,Riverside,Latte,0,5,50
+2026-06-24,174,Riverside,Tea,0,3,34
+2026-06-24,174,Riverside,Cold Brew,0,4,46
+2026-06-24,174,Market,Espresso,0,3,43
+2026-06-24,174,Market,Latte,0,5,59
+2026-06-24,174,Market,Tea,0,3,16
+2026-06-24,174,Market,Cold Brew,0,4,36
+2026-06-25,175,Central,Espresso,0,3,40
+2026-06-25,175,Central,Latte,0,5,58
+2026-06-25,175,Central,Tea,0,3,36
+2026-06-25,175,Central,Cold Brew,0,4,43
+2026-06-25,175,Riverside,Espresso,0,3,49
+2026-06-25,175,Riverside,Latte,0,5,45
+2026-06-25,175,Riverside,Tea,0,3,26
+2026-06-25,175,Riverside,Cold Brew,0,4,31
+2026-06-25,175,Market,Espresso,0,3,31
+2026-06-25,175,Market,Latte,0,5,57
+2026-06-25,175,Market,Tea,0,3,28
+2026-06-25,175,Market,Cold Brew,0,4,43
+2026-06-26,176,Central,Espresso,0,3,53
+2026-06-26,176,Central,Latte,0,5,60
+2026-06-26,176,Central,Tea,0,3,30
+2026-06-26,176,Central,Cold Brew,0,4,48
+2026-06-26,176,Riverside,Espresso,0,3,39
+2026-06-26,176,Riverside,Latte,0,5,49
+2026-06-26,176,Riverside,Tea,0,3,24
+2026-06-26,176,Riverside,Cold Brew,0,4,39
+2026-06-26,176,Market,Espresso,0,3,45
+2026-06-26,176,Market,Latte,0,5,52
+2026-06-26,176,Market,Tea,0,3,33
+2026-06-26,176,Market,Cold Brew,0,4,35
+2026-06-27,177,Central,Espresso,1,3,57
+2026-06-27,177,Central,Latte,1,5,86
+2026-06-27,177,Central,Tea,1,3,56
+2026-06-27,177,Central,Cold Brew,1,4,56
+2026-06-27,177,Riverside,Espresso,1,3,50
+2026-06-27,177,Riverside,Latte,1,5,59
+2026-06-27,177,Riverside,Tea,1,3,44
+2026-06-27,177,Riverside,Cold Brew,1,4,49
+2026-06-27,177,Market,Espresso,1,3,53
+2026-06-27,177,Market,Latte,1,5,66
+2026-06-27,177,Market,Tea,1,3,41
+2026-06-27,177,Market,Cold Brew,1,4,53
+2026-06-28,178,Central,Espresso,1,3,61
+2026-06-28,178,Central,Latte,1,5,69
+2026-06-28,178,Central,Tea,1,3,43
+2026-06-28,178,Central,Cold Brew,1,4,58
+2026-06-28,178,Riverside,Espresso,1,3,49
+2026-06-28,178,Riverside,Latte,1,5,71
+2026-06-28,178,Riverside,Tea,1,3,46
+2026-06-28,178,Riverside,Cold Brew,1,4,50
+2026-06-28,178,Market,Espresso,1,3,47
+2026-06-28,178,Market,Latte,1,5,55
+2026-06-28,178,Market,Tea,1,3,34
+2026-06-28,178,Market,Cold Brew,1,4,39
+2026-06-29,179,Central,Espresso,0,3,47
+2026-06-29,179,Central,Latte,0,5,58
+2026-06-29,179,Central,Tea,0,3,31
+2026-06-29,179,Central,Cold Brew,0,4,48
+2026-06-29,179,Riverside,Espresso,0,3,43
+2026-06-29,179,Riverside,Latte,0,5,55
+2026-06-29,179,Riverside,Tea,0,3,33
+2026-06-29,179,Riverside,Cold Brew,0,4,43
+2026-06-29,179,Market,Espresso,0,3,31
+2026-06-29,179,Market,Latte,0,5,56
+2026-06-29,179,Market,Tea,0,3,18
+2026-06-29,179,Market,Cold Brew,0,4,31

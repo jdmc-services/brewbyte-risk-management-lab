@@ -1,0 +1,50 @@
+name: AI Academy checks
+on:
+  pull_request:
+    paths: ['ai-academy/**', '.github/workflows/ai-academy-checks.yml', 'index.html', 'README.md']
+  push:
+    branches: [main]
+    paths: ['ai-academy/**', '.github/workflows/ai-academy-checks.yml', 'index.html', 'README.md']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  core:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6 (verified 2026-10-22)
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6 (verified 2026-10-22)
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python ai-academy/tools/build_course.py --check
+      - run: python ai-academy/tools/validate_course.py
+      - run: python -m unittest discover -s ai-academy/tests -v
+  classical-ml:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6 (verified 2026-10-22)
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6 (verified 2026-10-22)
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r ai-academy/requirements-ml.txt
+      - run: python -m unittest discover -s ai-academy/tests -v
+        env:
+          RUN_ML: '1'
+  local-api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6 (verified 2026-10-22)
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6 (verified 2026-10-22)
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r ai-academy/requirements-api.txt
+      - run: python -m unittest discover -s ai-academy/tests -p test_api.py -v
