@@ -130,7 +130,7 @@ window.BrewByteContent = (() => {
     }
   ];
 
-  // All service offers and business constraints below are synthetic classroom data.
+  // All service offers and business constraints below are synthetic practice data.
   const plans = [
     {id:'cable',name:'CopperCup Cable',type:'Cable',down:500,up:20,cost:85,days:3,latency:28,note:'Asymmetrical; shared access capacity. No uptime guarantee in this fictional offer.'},
     {id:'fiber',name:'BeanLight Fiber',type:'Fiber',down:300,up:300,cost:110,days:21,latency:12,note:'Symmetrical; installation reaches the opening deadline with no schedule margin.'},
