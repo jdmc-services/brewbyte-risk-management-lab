@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="BrewByte AI Academy: practical AI, data and security learning."><title>Separate retrieval from answer quality | BrewByte AI Academy</title><link rel="stylesheet" href="../../assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="../../index.html">BrewByte AI Academy</a><a href="../../../index.html">Learning Portal</a><a href="../../docs/start-here.html">Start here</a><a href="../../docs/curriculum-blueprint.html">Curriculum</a></header><main id="main"><h1>Module 08 · Week 3: Separate retrieval from answer quality</h1>
+<p><strong>BrewByte assignment:</strong> Index 20–50 instructor-authored BrewByte policies in local Chroma using a small SentenceTransformers model. Give two mock roles different document permissions. Return cited answers or abstain when evidence is insufficient. Pinecone is an optional comparison, not a required account.</p>
+<h2>Learn the concept</h2>
+<p>Retrieval Recall@k measures whether expected sources appear among retrieved items. Answer evaluation asks whether claims are supported and citations are correct. A good retrieval score does not guarantee a grounded answer. When evidence is absent or conflicting, the assistant should abstain or request clarification.</p>
+<h2>Worked business example</h2>
+<p>If the source says a manager reviews refunds, an answer promising every refund is unsupported even when it cites the right document.</p>
+<h2>Guided practice</h2>
+<p>Read this week&#x27;s assigned resource sections about <strong>Retrieval, context assembly, citations, unknown-answer handling</strong>. Spend about three hours on reading, small examples, and explaining the vocabulary in your own words. You are not expected to complete every linked course this week.</p>
+<p>Open <a href="lab.ipynb">the guided notebook</a> or <a href="starter.py">starter script</a>. The notebook names the dependency and execution requirements. Run the relevant worked example and inspect its inputs and outputs. For Module 1, begin with a manual prompt comparison; coding is introduced in Module 2.</p>
+<p>Create thirty labeled questions spanning answerable, unknown, stale, and restricted topics. Score retrieval separately from answers and record citation errors and abstention failures.</p>
+<p>Change one input or condition, predict the result, then run or observe it. Preserve a failing case before repairing it. Complete the task in your own learning repository rather than modifying the public teaching source.</p>
+<h2>Security boundary</h2>
+<p>Retrieved content is untrusted; defend against indirect prompt injection, cross-role leakage, unauthorized ingestion, and embedding/index exposure. Use approved sources, source metadata, role filters, controlled ingestion, and deletion/reindex tests. Similarity scores do not establish permission or answer certainty.</p>
+<h2>Submit evidence</h2>
+<p>Assistant and labeled retrieval/answer test set. Include commands or procedure, relevant outputs, one failed case, your interpretation, and AI-assistance disclosure. Use synthetic data only. Clearly distinguish personally executed work, observed instructor demonstrations, and pending exercises.</p>
+<h2>Check your understanding</h2>
+<ul>
+<li>Which assumption in separate retrieval from answer quality could make your BrewByte result misleading?</li>
+<li>What fails if the input is malformed, unauthorized, or missing?</li>
+<li>What evidence would convince a reviewer that your change works on an unseen case?</li>
+</ul>
+<p>These public questions are formative. Explain your reasoning; they are not hidden certification questions.</p>
+<h2>Free assigned resources</h2>
+<ul>
+<li><a href="https://sbert.net/">SentenceTransformers semantic search</a></li>
+<li><a href="https://docs.trychroma.com/">Chroma local documentation</a></li>
+<li><a href="https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/">OWASP 2026 publication</a></li>
+</ul>
+<h2>Continue</h2>
+<p><a href="index.html">Module assignment and rubric</a> · <a href="../../index.html">Academy home</a> · <a href="../../docs/model-and-deployment-labs.html">Execution guide</a></p><nav class="lesson-nav" aria-label="Lesson navigation"><a href="week-2.html">Previous</a><a href="week-4.html">Next</a></nav></main><footer>Fictional business and synthetic data. Pilot curriculum; no certification endorsement or employment guarantee. No learner telemetry. Python/model exercises execute separately from this website.</footer></body></html>

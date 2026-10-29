@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="BrewByte AI Academy: practical AI, data and security learning."><title>Frame a prediction and baseline | BrewByte AI Academy</title><link rel="stylesheet" href="../../assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="../../index.html">BrewByte AI Academy</a><a href="../../../index.html">Learning Portal</a><a href="../../docs/start-here.html">Start here</a><a href="../../docs/curriculum-blueprint.html">Curriculum</a></header><main id="main"><h1>Module 04 · Week 1: Frame a prediction and baseline</h1>
+<p><strong>BrewByte assignment:</strong> On reproducible synthetic business data, predict a numeric outcome, classify a ticket category, and explore customer/ticket clusters. Provide clear feature availability times, baselines, preprocessing pipelines, model comparisons, and a model card.</p>
+<h2>Learn the concept</h2>
+<p>Supervised learning uses known labels; unsupervised learning searches for structure without them. Features must be available at prediction time. A dummy baseline exposes whether a sophisticated model adds useful signal. Split data before fitting transformations. For future demand, chronological separation is more realistic than randomly mixing future and past.</p>
+<h2>Worked business example</h2>
+<p>Forecast next-day coffee demand from calendar and product information. The final revenue for that day is not a valid input because it is only known after the event.</p>
+<h2>Guided practice</h2>
+<p>Read this week&#x27;s assigned resource sections about <strong>Problem framing, features/targets, vectors and weighted sums, splits, dummy models</strong>. Spend about three hours on reading, small examples, and explaining the vocabulary in your own words. You are not expected to complete every linked course this week.</p>
+<p>Open <a href="lab.ipynb">the guided notebook</a> or <a href="starter.py">starter script</a>. The notebook names the dependency and execution requirements. Run the relevant worked example and inspect its inputs and outputs. For Module 1, begin with a manual prompt comparison; coding is introduced in Module 2.</p>
+<p>Define a numeric prediction, a category prediction, and a clustering question. State when each feature becomes available. Run dummy baselines and choose a split appropriate to each task.</p>
+<p>Change one input or condition, predict the result, then run or observe it. Preserve a failing case before repairing it. Complete the task in your own learning repository rather than modifying the public teaching source.</p>
+<h2>Security boundary</h2>
+<p>Identify label leakage, sensitive features, proxy attributes, and untrusted model downloads. Introduce train/test separation immediately; preprocessing learns only from training data. Use locally trained artifacts and explain unsafe deserialization risk.</p>
+<h2>Submit evidence</h2>
+<p>Written task/metric choice and baseline notebook. Include commands or procedure, relevant outputs, one failed case, your interpretation, and AI-assistance disclosure. Use synthetic data only. Clearly distinguish personally executed work, observed instructor demonstrations, and pending exercises.</p>
+<h2>Check your understanding</h2>
+<ul>
+<li>Which assumption in frame a prediction and baseline could make your BrewByte result misleading?</li>
+<li>What fails if the input is malformed, unauthorized, or missing?</li>
+<li>What evidence would convince a reviewer that your change works on an unseen case?</li>
+</ul>
+<p>These public questions are formative. Explain your reasoning; they are not hidden certification questions.</p>
+<h2>Free assigned resources</h2>
+<ul>
+<li><a href="https://inria.github.io/scikit-learn-mooc/">Inria scikit-learn course: predictive pipelines and models</a></li>
+<li><a href="https://scikit-learn.org/stable/user_guide.html">scikit-learn User Guide</a></li>
+</ul>
+<h2>Continue</h2>
+<p><a href="index.html">Module assignment and rubric</a> · <a href="../../index.html">Academy home</a> · <a href="../../docs/model-and-deployment-labs.html">Execution guide</a></p><nav class="lesson-nav" aria-label="Lesson navigation"><a href="index.html">Previous</a><a href="week-2.html">Next</a></nav></main><footer>Fictional business and synthetic data. Pilot curriculum; no certification endorsement or employment guarantee. No learner telemetry. Python/model exercises execute separately from this website.</footer></body></html>
