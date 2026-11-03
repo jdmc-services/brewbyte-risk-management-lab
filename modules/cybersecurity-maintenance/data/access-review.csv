@@ -1,0 +1,7 @@
+account_id,account_type,purpose,employment_or_contract_state,enabled,privilege_scope,mfa,access_expiry,last_review_date,review_owner_role
+AC-01,Staff,Former shift manager,Ended 2026-10-28,yes,Store manager functions,yes,Not set,2026-10-01,Store Operations Lead
+AC-02,Vendor,Named technician support,Active session,yes,Gateway administration,no,Not set,2026-11-02,Vendor Coordinator
+AC-03,Service,Ordering database connection,Active application,yes,Order records read/write,not-applicable,Managed by application,2026-10-20,Application Owner
+AC-04,Staff,New shift manager,Active since 2026-10-29,yes,Store manager functions,yes,Not set,2026-10-29,Store Operations Lead
+AC-05,Partner,QuickCup delivery integration,Pilot contract,yes,All customer profiles and all orders,no,Not set,2026-10-27,Vendor Coordinator
+AC-06,Staff,Cashier,Active employee,yes,Create sales and view own shift,yes,Not set,2026-10-20,Store Operations Lead

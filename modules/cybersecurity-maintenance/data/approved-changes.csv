@@ -1,0 +1,6 @@
+change_id,approved_date,asset_id,change_type,setting_or_field,approved_value,implementation_state,approver_role,record_note
+CHG-101,2026-10-23,BB-001,Inventory,version,5.3,Completed,IT Lead,Pilot register update approved
+CHG-102,2026-10-26,BB-002,Inventory,lifecycle_state,Retired,Completed,Store Operations Lead,Device retired; disposal evidence due separately
+CHG-103,2026-10-28,BB-011,Inventory,asset_addition,Active,Completed,Business Owner,Eastside checkout device approved
+CHG-104,2026-10-29,BB-010,Inventory,version,11.3,Completed,IT Lead,Office maintenance update
+CHG-105,2026-11-02,BB-005,Configuration,remote_support,enabled,Completed,IT Lead,Conditional approval: MFA yes; named vendor account; expires 2026-11-03T18:00:00-05:00

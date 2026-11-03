@@ -1,0 +1,10 @@
+asset_id,setting,value
+BB-003,audit_logging,enabled
+BB-003,admin_access,management-zone-only
+BB-004,database_access,ordering-service-only
+BB-005,remote_support,disabled
+BB-005,mfa_required,yes
+BB-006,guest_to_pos,blocked
+BB-007,disk_encryption,enabled
+BB-008,backup_schedule,nightly-0200
+BB-010,local_admin,IT-only

@@ -1,0 +1,13 @@
+asset_id,hostname,business_role,location,product,version,owner_role,criticality,network_zone,private_ip,lifecycle_state
+BB-001,POS-01,Checkout terminal,Downtown,RegisterOS,5.3,Store Systems Owner,High,POS,10.40.10.11,Active
+BB-002,POS-02,Checkout terminal,Downtown,RegisterOS,5.2,Store Systems Owner,High,POS,10.40.10.12,Retired
+BB-003,ORDER-01,Online ordering server,Hosted,OrderStack,3.4,Application Owner,High,APP,10.40.20.10,Active
+BB-004,DB-01,Customer order database,Hosted,DataBrew,8.1,Application Owner,High,DATA,10.40.30.10,Active
+BB-005,GW-01,Remote support gateway,Downtown,BrewGate,2.0,IT Lead,High,MGMT,10.40.40.10,Active
+BB-006,AP-01,Wireless access point,Downtown,BeanWave,4.0,IT Lead,Medium,MGMT,10.40.40.21,Active
+BB-007,LAP-01,Manager laptop,Downtown,OfficeBean,11.2,Store Operations Lead,Medium,OFFICE,10.40.50.10,Active
+BB-008,BKP-01,Backup repository,Hosted,VaultBean,6.0,IT Lead,High,BACKUP,10.40.60.10,Active
+BB-009,PRINT-01,Receipt printer,Downtown,ReceiptBean,1.0,Store Systems Owner,Medium,POS,10.40.10.30,Active
+BB-010,OFFICE-01,Office workstation,Downtown,OfficeBean,11.3,IT Lead,Medium,OFFICE,10.40.50.11,Active
+BB-011,POS-03,Checkout terminal,Eastside,RegisterOS,5.2,Store Systems Owner,High,POS,10.41.10.11,Active
+BB-012,AP-02,Wireless access point,Eastside,BeanWave,4.0,Unassigned,Medium,MGMT,10.41.40.21,Active

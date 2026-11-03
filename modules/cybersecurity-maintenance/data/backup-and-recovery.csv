@@ -1,0 +1,6 @@
+record_id,date,asset_id,activity,result,duration_minutes,data_age_minutes,evidence_note
+BK-01,2026-11-01,BB-004,Nightly backup,Success,22,0,Backup completed; restoration not tested
+BK-02,2026-11-02,BB-004,Nightly backup,Success,24,0,Backup completed; restoration not tested
+BK-03,2026-11-03,BB-004,Nightly backup,Success,21,0,Backup completed; restoration not tested
+RT-01,2026-10-10,BB-004,Restore test before application change,Success,38,45,Used previous application version
+RT-02,2026-11-03,BB-004,Tabletop recovery estimate,Estimate only,120,1440,Assumes last nightly backup; no current restore test executed

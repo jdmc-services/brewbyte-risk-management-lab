@@ -1,0 +1,9 @@
+event_id,time_et,source,related_assets,observation
+INC-01,2026-11-03T09:00:00-05:00,Store operations,BB-003,Online ordering unavailable in classroom scenario
+INC-02,2026-11-03T09:04:00-05:00,Help desk,BB-003,Six users report checkout handoff errors
+INC-03,2026-11-03T09:08:00-05:00,Duty contact list,BB-003,Primary application contact listed is unavailable; no deputy recorded
+INC-04,2026-11-03T09:12:00-05:00,IT Lead,BB-008;BB-004,Backup dashboard reports latest job successful; restore sequence not documented
+INC-05,2026-11-03T09:18:00-05:00,Application Owner,BB-003;BB-004,Database dependency absent from outage checklist
+INC-06,2026-11-03T09:25:00-05:00,Store Operations Lead,BB-003,Manual order process exists but staff have not rehearsed it
+INC-07,2026-11-03T09:35:00-05:00,Exercise facilitator,BB-003,Vendor advisory raised as a hypothesis; incident cause remains unknown
+INC-08,2026-11-03T09:45:00-05:00,Business Owner,BB-003,Requests impact update and recovery options; exercise pauses

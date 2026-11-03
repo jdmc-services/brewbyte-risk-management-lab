@@ -1,0 +1,7 @@
+event_id,date,change_description,related_assets,responsible_role
+EV-01,2026-10-26,Second store Eastside opens on 2026-11-02,BB-011;BB-012,Store Operations Lead
+EV-02,2026-10-27,Delivery partner QuickCup begins a pilot information exchange,BB-003;BB-004,Vendor Coordinator
+EV-03,2026-10-28,Former shift manager leaves BrewByte,BB-007,Store Operations Lead
+EV-04,2026-10-29,New shift manager joins before completing account training,BB-007,Store Operations Lead
+EV-05,2026-11-02,Checkout terminal POS-02 retired from daily use,BB-002,Store Systems Owner
+EV-06,2026-11-02,Vendor support session temporarily enabled,BB-005,IT Lead
