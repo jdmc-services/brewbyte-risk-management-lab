@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="BrewByte AI Academy: practical AI, data and security learning."><title>RAG &amp; Vector Databases | BrewByte AI Academy</title><link rel="stylesheet" href="../../assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="../../index.html">BrewByte AI Academy</a><a href="../../../index.html">Learning Portal</a><a href="../../docs/start-here.html">Start here</a><a href="../../docs/curriculum-blueprint.html">Curriculum</a></header><main id="main"><h1>Module 08: RAG &amp; Vector Databases</h1>
+<p>Quarter 3 · Four weeks · 12–15 hours per week · Pilot learning material</p>
+<h2>Learning objectives</h2>
+<p>Students will explain embeddings and cosine similarity; create a local vector index; compare chunking/retrieval approaches; evaluate retrieval separately from generated answers; enforce document authorization before model context construction; and handle deletion and stale content.</p>
+<h2>Certification alignment</h2>
+<p>S1.2, S2.3–2.4; AWS 2.1, 3.1, 3.4, 5.1. This is supporting application practice for AI-901, not a separately named RAG objective.</p>
+<p>These are partial curriculum mappings, not complete exam coverage or endorsement. See the <a href="../../docs/curriculum-blueprint.html">blueprint</a> for versions and platform gaps.</p>
+<h2>Weekly lessons</h2>
+<ul>
+<li><a href="week-1.html">Week 1: Understand retrieval representations</a></li>
+<li><a href="week-2.html">Week 2: Build an index with provenance</a></li>
+<li><a href="week-3.html">Week 3: Separate retrieval from answer quality</a></li>
+<li><a href="week-4.html">Week 4: Enforce permissions before context</a></li>
+</ul>
+<h2>Proof-of-work project: 08-permission-aware-policy-assistant</h2>
+<p>Index 20–50 instructor-authored BrewByte policies in local Chroma using a small SentenceTransformers model. Give two mock roles different document permissions. Return cited answers or abstain when evidence is insufficient. Pinecone is an optional comparison, not a required account.</p>
+<h2>Acceptance evidence</h2>
+<p>Use 30 labeled questions covering answerable, unanswerable, stale, and unauthorized requests. Report Recall@k, citation correctness, supported-answer rate, abstention quality, and latency. All seeded unauthorized retrieval cases must return no forbidden content. Test authorization at retrieval and context assembly; authorization data comes from verified server-side identity, not user prompt text.</p>
+<h2>Security integration</h2>
+<p>Retrieved content is untrusted; defend against indirect prompt injection, cross-role leakage, unauthorized ingestion, and embedding/index exposure. Use approved sources, source metadata, role filters, controlled ingestion, and deletion/reindex tests. Similarity scores do not establish permission or answer certainty.</p>
+<h2>Lab access</h2>
+<ul>
+<li><a href="lab.ipynb">Guided notebook</a></li>
+<li><a href="starter.py">Starter Python script</a></li>
+<li><a href="https://colab.research.google.com/github/jdmc-services/brewbyte-risk-management-lab/blob/main/ai-academy/modules/08/lab.ipynb">Open notebook in Colab</a> — available after the reviewed branch is merged</li>
+<li><a href="../../docs/model-and-deployment-labs.html">Live-model and deployment instructions</a></li>
+<li><a href="../../data/README.md">Shared synthetic dataset guide</a></li>
+<li><a href="../../data/sales.csv">Raw sales CSV</a> · <a href="../../data/tickets.csv">Synthetic tickets CSV</a></li>
+</ul>
+<p>Run from the repository root: <code>python ai-academy/modules/08/starter.py</code>. Module 4 needs the optional classical-ML environment. The default examples for generative modules are explicitly labeled fixtures/baselines.</p>
+<h2>Assessment rubric</h2>
+<table>
+<tr><th>Criterion</th><th>Weight</th><th>Evidence</th></tr>
+<tr><td>Functional behavior</td><td>35%</td><td>Meets the stated task and handles meaningful failures</td></tr>
+<tr><td>Evaluation</td><td>25%</td><td>Held-out cases, denominators, observed errors, limitations</td></tr>
+<tr><td>Security/privacy</td><td>20%</td><td>Appropriate boundaries and tested controls</td></tr>
+<tr><td>Reproducibility</td><td>10%</td><td>Clear setup, versions, provenance, commands</td></tr>
+<tr><td>Explanation</td><td>10%</td><td>Own reasoning and an unseen independent modification</td></tr>
+</table>
+<p>Target at least 80/100 plus mandatory controls. Repair credential exposures, seeded access bypasses, or fabricated results before progression. This threshold is an instructional rule, not an exam passing score. Public worked examples do not replace independent work.</p>
+<h2>Free assigned resources</h2>
+<ul>
+<li><a href="https://sbert.net/">SentenceTransformers semantic search</a></li>
+<li><a href="https://docs.trychroma.com/">Chroma local documentation</a></li>
+<li><a href="https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/">OWASP 2026 publication</a></li>
+</ul>
+<p><a href="../../index.html">Academy home</a> · <a href="../../docs/start-here.html">Course guide</a></p></main><footer>Fictional business and synthetic data. Pilot curriculum; no certification endorsement or employment guarantee. No learner telemetry. Python/model exercises execute separately from this website.</footer></body></html>

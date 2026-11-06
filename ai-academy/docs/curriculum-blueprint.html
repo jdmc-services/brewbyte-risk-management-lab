@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="BrewByte AI Academy: practical AI, data and security learning."><title>Curriculum Blueprint | BrewByte AI Academy</title><link rel="stylesheet" href="../assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="../index.html">BrewByte AI Academy</a><a href="../../index.html">Learning Portal</a><a href="../docs/start-here.html">Start here</a><a href="../docs/curriculum-blueprint.html">Curriculum</a></header><main id="main"><h1>AI Application Development, Data Literacy &amp; Security: 12-Month Curriculum</h1>
+<p><strong>Design baseline: October 22, 2026. Audience: absolute beginners.</strong></p>
+<p>This is a proposed instructional blueprint, with instructor-set assessment targets. It is not an endorsed certification course, a claim of complete exam coverage, or a job-placement guarantee. The primary employment pathway is junior Python/AI application development or technical AI support. AI evaluation, data operations, and junior governance support are alternative portfolio pathways. Independent AI security engineering and advanced ML research require additional experience.</p>
+<h2>Program operating model</h2>
+<ul>
+<li><strong>Schedule:</strong> 48 instructional weeks, four weeks per module, plus four flexible weeks distributed after the quarters for remediation, portfolio review, and interviews. Twelve four-week modules alone are not a full 52-week year.</li>
+<li><strong>Workload:</strong> plan 12–15 hours per week: approximately 3 hours of instruction/readings, 6–8 hours of guided and independent lab work, 2 hours of assessment/debugging, and 1–2 hours of documentation and career practice. Adjust after the first cohort; this is a planning assumption.</li>
+<li><strong>Entry support:</strong> begin Module 1 with file/folder navigation, browser safety, account setup, plain-text editing, and a numeracy diagnostic. Provide worked examples, captions/transcripts, starter files, and an optional slower remediation track.</li>
+<li><strong>Teaching sequence:</strong> retrieve prior knowledge; demonstrate a worked example; complete a guided variation; attempt an independent change; explain the result; revisit it in the next module. Fade scaffolding across each quarter.</li>
+<li><strong>Common business case:</strong> BrewByte, a fictional small business, needs trustworthy ticket analytics, a policy assistant, and a secure operations dashboard. Use synthetic records and instructor-authored policies throughout. No employer, student, customer, patient, or live security data belongs in these labs.</li>
+<li><strong>Portfolio:</strong> use one repository with module folders while learning; curate three or four standalone showcase projects by graduation. Students should explain business value, evidence, security decisions, limitations, and their own contribution.</li>
+<li><strong>AI-use policy:</strong> AI assistance is allowed with disclosure. Students must explain submitted code, trace a failing case, and complete a small unseen modification without generated answers. A polished artifact alone does not establish mastery.</li>
+</ul>
+<h2>Cost and access design</h2>
+<p>The required route has <strong>no required software subscription or paid model API</strong>. Existing hardware and internet access are assumed. Use Python, VS Code, Git, SQLite, pandas, NumPy, scikit-learn, small local models, local Chroma, FastAPI, and Docker Engine where suitable. Select compatible stable package versions, test a cohort environment, and record a lockfile; do not automatically choose every newest release.</p>
+<p>Keep tabular datasets small (roughly 1,000–10,000 rows) and RAG corpora small (20–50 short documents). Aim for CPU execution on an ordinary laptop; an 8 GB machine can handle the tabular labs, while generative-model suitability must be checked against the selected model. Offer interactive Colab notebooks when local setup fails. Free Colab resources are variable and not guaranteed; do not use Colab as persistent API hosting or bypass resource restrictions.</p>
+<p>For model-based assignments, distinguish three evidence levels:</p>
+<ul>
+<li><strong>Deterministic fixture:</strong> tests application plumbing, timeouts, policy checks, and output schemas at zero inference cost. It does not establish generative behavior or attack resistance.</li>
+<li><strong>Small local or interactive notebook model:</strong> required for genuine generation and model-behavior evaluation; record model identifier, revision, license, inference settings, hardware, and observed limitations.</li>
+<li><strong>Optional hosted API/cloud:</strong> strengthens vendor-specific experience but is not required for core completion. OpenAI, Anthropic, managed vector stores, and Azure/AWS services are not assumed free. Publish an instructor-approved spending cap, limited privileges, cleanup instructions, and use a hard service quota where supported. Budget alerts alone do not stop charges.</li>
+</ul>
+<p>If a student cannot run a live model, provide a supervised shared session using synthetic content. Recorded results may support analysis, but the student must label that limitation and cannot claim they personally executed a model evaluation. Certification exams, paid certificates, and permanent public hosting are outside the zero-cost promise.</p>
+<h2>Certification alignment and scope</h2>
+<p>These are curriculum-design mappings to specific official objectives, not claims made by the exam providers. AWS tasks below use <strong>AIF-C01</strong>. Microsoft mappings use <strong>AI-901</strong>, skills measured April 15, 2026; AI-900 retired June 30, 2026. SecAI+ mappings use the <strong>CompTIA-authored CY0-001 V1 objectives, document version 2.0</strong>, accessible through an ONLC-hosted copy. That PDF includes some unfinished administrative fields, so validate the objectives against CompTIA&#x27;s current download before advertising exam preparation. Its recommended experience is substantially above a beginner&#x27;s starting point.</p>
+<h3>Objective key: paraphrased labels</h3>
+<table>
+<tr><th>Key</th><th>Objective or skill addressed</th></tr>
+<tr><td>S1.1</td><td>AI approaches and techniques</td></tr>
+<tr><td>S1.2</td><td>Data security and processing</td></tr>
+<tr><td>S1.3</td><td>Security across the lifecycle</td></tr>
+<tr><td>S2.1</td><td>Threat-modeling resources</td></tr>
+<tr><td>S2.2</td><td>AI security controls</td></tr>
+<tr><td>S2.3</td><td>Access controls</td></tr>
+<tr><td>S2.4</td><td>Data protection controls</td></tr>
+<tr><td>S2.5</td><td>Monitoring and audits</td></tr>
+<tr><td>S2.6</td><td>Attack evidence and mitigations</td></tr>
+<tr><td>S3.1</td><td>AI-enabled security tooling</td></tr>
+<tr><td>S3.2</td><td>AI-enhanced attack vectors</td></tr>
+<tr><td>S3.3</td><td>Security task automation</td></tr>
+<tr><td>S4.1</td><td>Governance structures and roles</td></tr>
+<tr><td>S4.2</td><td>AI risks</td></tr>
+<tr><td>S4.3</td><td>Compliance implications</td></tr>
+</table>
+<table>
+<tr><th>Module</th><th>SecAI+ objectives</th><th>AWS AIF-C01 tasks</th><th>AI-901 skills; platform gaps are explicit</th></tr>
+<tr><td>1</td><td>S1.1, S1.3, S4.2</td><td>1.1–1.2, 2.1–2.2, 3.2</td><td>AI model concepts, workloads, responsible AI; prompt design within the Foundry apps/agents skill</td></tr>
+<tr><td>2</td><td>Enabling skill for S3.3; no standalone Python objective</td><td>Enabling only; coding is beyond this foundational exam&#x27;s target tasks</td><td>Python prerequisite; client-building skills practiced later</td></tr>
+<tr><td>3</td><td>S1.2</td><td>1.1, 1.3, 5.1</td><td>Data preparation is supporting knowledge, not a separately numbered skill</td></tr>
+<tr><td>4</td><td>S1.1, S1.3</td><td>1.1–1.3</td><td>AI workload/model selection concepts; classical model coding is enrichment</td></tr>
+<tr><td>5</td><td>S1.3, S2.5</td><td>1.3, 3.4, 4.1–4.2</td><td>Responsible AI and model selection; evaluation implementation goes beyond baseline</td></tr>
+<tr><td>6</td><td>S1.2–1.3, S2.4, S4.3</td><td>5.1–5.2</td><td>Privacy/security within responsible AI</td></tr>
+<tr><td>7</td><td>S1.1, S2.2–2.3</td><td>2.3, 3.1–3.4, 5.1</td><td>Foundry model deployment and SDK chat client; single-agent/client work in optional Azure bridge</td></tr>
+<tr><td>8</td><td>S1.2, S2.3–2.4</td><td>2.1, 3.1, 3.4, 5.1</td><td>Supporting application knowledge; RAG is not a standalone named skill in the retrieved blueprint</td></tr>
+<tr><td>9</td><td>S2.1–2.6</td><td>3.2, 5.1</td><td>Responsible AI; security testing enriches app/agent implementation</td></tr>
+<tr><td>10</td><td>S2.5, S3.1–3.3</td><td>1.2–1.3, 3.4, 5.1</td><td>App/agent and text-analysis skills; local work is not evidence of Foundry use</td></tr>
+<tr><td>11</td><td>S4.1–4.3, S2.2, S2.5</td><td>4.1–4.2, 5.2</td><td>Responsible AI principles</td></tr>
+<tr><td>12</td><td>S1.3, S2.2–2.5, S3.3</td><td>1.3, 2.3, 3.1, 5.1</td><td>Model deployment and SDK client skills only when Azure bridge is executed</td></tr>
+</table>
+<p><strong>Exam-coverage boundary:</strong> this program builds more coding skill than AIF-C01 requires, but local applications do not teach every AWS service-selection question or prove cloud experience. Add a vendor bridge for service capabilities, identity, shared responsibility, pricing, managed model services, and governance tools. AI-901 also requires platform-specific text/speech, vision/image generation, information extraction, and single-agent implementation; these need dedicated Azure exercises and may require provisioned services. Do not label this course complete AI-901 exam preparation without them. Similarly, the SecAI+ mappings do not replace the broader security background its blueprint recommends.</p>
+<h2>Quarter 1 — Foundations &amp; Data Literacy</h2>
+<h3>Module 1 — Introduction to AI, Automation &amp; Prompt Engineering</h3>
+<p><strong>Learning objectives.</strong> Students will distinguish deterministic automation, predictive ML, and generative AI using workplace examples; explain tokens, context windows, probabilistic generation, and hallucination in plain language; design a prompt with task, context, constraints, examples, and output format; compare prompt versions against a rubric; and decide when a human or conventional software should perform the task.</p>
+<p><strong>Alignment.</strong> S1.1, S1.3, S4.2; AWS 1.1–1.2, 2.1–2.2, 3.2; AI-901 model/workload concepts, responsible AI, and prompt design. Coding is not required yet.</p>
+<p><strong>Proof of work: <code>01-prompt-evaluation-playbook</code>.</strong> Create a synthetic service-request summarization and routing playbook. Supply 20 labeled requests, two prompt versions, a scoring rubric, actual model outputs, and a one-page adoption recommendation. Use a free accessible interface or instructor-led/local model session; hand-record results before automating evaluation later.</p>
+<p><strong>Acceptance evidence.</strong> On a separate set of ten previously unseen requests, achieve at least 8/10 correct routes and schema-conforming outputs; make no unsupported factual additions; document failures and required review. Record the model/date/settings available to the student. Report these as small-sample classroom results, not business performance guarantees.</p>
+<p><strong>Security integration.</strong> Threat: a request contains instructions to reveal private content or bypass its assigned task. Treat request text as untrusted data, minimize information supplied, verify factual claims, and retain human approval for actions. Demonstrate that instructions and delimiters reduce some errors but do not create an authorization boundary. Never put secrets in system prompts.</p>
+<p><strong>Assigned free resources.</strong> Hugging Face LLM Course, introductory concepts only; Microsoft AI-901 study guide and its linked introductory learning paths; OWASP 2026 prompt-injection and information-disclosure entries. Use the Python-heavy Hugging Face sections later.</p>
+<table>
+<tr><th>Week</th><th>Lessons and practice</th><th>Checkable output</th></tr>
+<tr><td>1</td><td>File/account orientation; AI vs rules; training vs inference; suitable and unsuitable business cases</td><td>Classify ten scenarios and justify two decisions</td></tr>
+<tr><td>2</td><td>Tokens, context, capabilities, uncertainty, basic multimodal examples; verify a fabricated claim</td><td>Annotated examples and a limitations checklist</td></tr>
+<tr><td>3</td><td>Prompt architecture, zero/few-shot examples, output contracts, manual version control</td><td>Two prompt versions scored against the same development cases</td></tr>
+<tr><td>4</td><td>Synthetic malicious requests, data classification, human review; blinded evaluation and demonstration</td><td>GitHub web-uploaded playbook, held-out scores, and three-minute explanation</td></tr>
+</table>
+<h3>Module 2 — Python Programming Essentials</h3>
+<p><strong>Learning objectives.</strong> Students will run Python in VS Code and Colab; use types, collections, branches, loops, and functions; read/write CSV and JSON; debug exceptions; write behavioral tests; create a virtual environment; and use a basic Git branch/commit/review workflow.</p>
+<p><strong>Alignment.</strong> Enables S3.3 and the Python prerequisite for AI-901. Python implementation is an employability extension rather than a direct AIF-C01 objective.</p>
+<p><strong>Proof of work: <code>02-ticket-intake-cli</code>.</strong> Build a command-line program that reads synthetic requests, validates required fields, assigns a rule-based queue, and writes JSON summaries. Include a deliberately malformed input file and a repair exercise.</p>
+<p><strong>Acceptance evidence.</strong> At least ten meaningful tests covering normal, empty, malformed, and oversized input; predictable exit/error behavior; a reproducible setup guide; and a live, unseen function change the student can explain.</p>
+<p><strong>Security integration.</strong> Introduce confidentiality/integrity/availability, authentication vs authorization, least privilege, and basic client/server concepts. Validate data rather than executing it; prohibit <code>eval</code> on input and unsafe shell interpolation. Store no credentials in notebooks or commits; inspect dependencies and keep generated outputs free of sensitive content.</p>
+<p><strong>Assigned free resources.</strong> CS50P selections: variables/functions, conditionals, loops, exceptions, unit tests, and file I/O; VS Code Python tutorial; Python tutorial as a reference; GitHub Learn introductory Git/GitHub exercises. Completing the entire CS50P course is optional.</p>
+<table>
+<tr><th>Week</th><th>Lessons and practice</th><th>Checkable output</th></tr>
+<tr><td>1</td><td>Interpreter/notebook/editor, variables, types, strings, lists/dictionaries, terminal basics</td><td>Small scripts, working environment, and first Git commits</td></tr>
+<tr><td>2</td><td>Branches, loops, Boolean conditions, functions, tracing and debugging</td><td>Rule-based router and function diagram</td></tr>
+<tr><td>3</td><td>CSV/JSON, file paths, exceptions, package environments, dependency records</td><td>Working import/export path with readable error messages</td></tr>
+<tr><td>4</td><td>Tests, refactoring, Git branches/reviews, safe input handling</td><td>Tested CLI, README, reviewed change, and independent modification</td></tr>
+</table>
+<h3>Module 3 — Data Processing &amp; Statistics for AI</h3>
+<p><strong>Learning objectives.</strong> Students will clean and join tabular data with pandas; manipulate arrays and shapes with NumPy; interpret mean/median, variance, standard deviation, percentiles, and outliers; explain sampling bias and correlation vs causation; and verify a pandas summary using SQL.</p>
+<p><strong>Alignment.</strong> S1.2; AWS 1.1, 1.3, 5.1. Data skills support AI-901 without representing a separate named objective.</p>
+<p><strong>Proof of work: <code>03-data-quality-workbench</code>.</strong> Process an instructor-provided, seeded dataset of 2,000 fictional tickets with duplicates, missing fields, inconsistent dates, invalid categories, and synthetic identifiers. Produce a reusable cleaning script, data dictionary, lineage record, SQLite queries, and a concise exploratory report.</p>
+<p><strong>Acceptance evidence.</strong> Detect all intentionally seeded schema violations; account for every removed/changed row; reconcile pre/post counts; match three SQL summaries to pandas; and explain why a chosen missing-value treatment is appropriate. Statistical plots must include units, sample sizes, and relevant limitations.</p>
+<p><strong>Security integration.</strong> Threats include accidental identifier disclosure, silent data corruption, and contaminated sources. Preserve an immutable source copy, validate schema and ranges, document provenance and transformation decisions, and limit exports. A hash establishes consistency relative to a trusted reference, not source trustworthiness or privacy. Explain why identifier removal alone may leave re-identification risk.</p>
+<p><strong>Assigned free resources.</strong> pandas Getting Started tutorials on reading, filtering, derived columns, statistics, and joins; NumPy Absolute Basics; selected OpenStax Introductory Statistics 2e sections; SQLite SELECT, JOIN, and aggregate documentation.</p>
+<table>
+<tr><th>Week</th><th>Lessons and practice</th><th>Checkable output</th></tr>
+<tr><td>1</td><td>Percentages, elementary algebra, arrays/shapes, vectors, basic tables; load CSV/JSON</td><td>Data dictionary and source profile</td></tr>
+<tr><td>2</td><td>Distributions, summary statistics, sampling, conditional probability intuition, correlation</td><td>Annotated exploratory notebook with defensible conclusions</td></tr>
+<tr><td>3</td><td>Missingness, duplicates, dates, joins, validation, provenance</td><td>Deterministic cleaning pipeline and row-level reconciliation</td></tr>
+<tr><td>4</td><td>SQLite SELECT/WHERE/GROUP BY/JOIN; parameterized queries; reporting</td><td>SQL/pandas checks, data-quality report, and reproducibility instructions</td></tr>
+</table>
+<p><strong>Quarter 1 gate:</strong> a student can run and explain a script, clean unseen data, distinguish AI from automation, and identify inappropriate data sharing. Remediate these skills before advancing.</p>
+<h2>Quarter 2 — Core Machine Learning &amp; Model Security</h2>
+<h3>Module 4 — Supervised &amp; Unsupervised Machine Learning</h3>
+<p><strong>Learning objectives.</strong> Students will identify features/labels; distinguish regression, classification, and clustering; train linear/logistic regression, decision trees, random forests, and a clustering model with scikit-learn; compare against a simple baseline; and explain predictions without treating clusters as verified categories.</p>
+<p><strong>Alignment.</strong> S1.1, S1.3; AWS 1.1–1.3; AI-901 workload/model-selection concepts. Model implementation exceeds foundational certification expectations.</p>
+<p><strong>Proof of work: <code>04-ml-baseline-comparison</code>.</strong> On reproducible synthetic business data, predict a numeric outcome, classify a ticket category, and explore customer/ticket clusters. Provide clear feature availability times, baselines, preprocessing pipelines, model comparisons, and a model card.</p>
+<p><strong>Acceptance evidence.</strong> Execute all five model families, use splits fixed before training, and compare primary models with appropriate dummy baselines. Explain an observed error and the business cost of choosing the wrong model. There is no arbitrary universal accuracy threshold.</p>
+<p><strong>Security integration.</strong> Identify label leakage, sensitive features, proxy attributes, and untrusted model downloads. Introduce train/test separation immediately; preprocessing learns only from training data. Use locally trained artifacts and explain unsafe deserialization risk.</p>
+<p><strong>Assigned free resources.</strong> Inria scikit-learn MOOC, predictive modeling and linear/tree selections; scikit-learn User Guide for linear models, trees, ensembles, and clustering.</p>
+<table>
+<tr><th>Week</th><th>Lessons and practice</th><th>Checkable output</th></tr>
+<tr><td>1</td><td>Problem framing, features/targets, vectors and weighted sums, splits, dummy models</td><td>Written task/metric choice and baseline notebook</td></tr>
+<tr><td>2</td><td>Linear and logistic regression, scaling, coefficients, classification vs regression</td><td>Two fitted pipelines and plain-language interpretation</td></tr>
+<tr><td>3</td><td>Trees and random forests, complexity, feature effects</td><td>Comparative results and an error analysis</td></tr>
+<tr><td>4</td><td>K-means, scaling and cluster inspection; limits of unsupervised results</td><td>Reproducible comparison package and model card</td></tr>
+</table>
+<h3>Module 5 — Model Training, Evaluation &amp; Validation</h3>
+<p><strong>Learning objectives.</strong> Students will design train/validation/test partitions; prevent group/time leakage; use cross-validation within training data; calculate and interpret precision, recall, F1, MAE/RMSE, and confusion matrices; choose a threshold using business costs; and describe drift and uncertainty.</p>
+<p><strong>Alignment.</strong> S1.3, S2.5; AWS 1.3, 3.4, 4.1–4.2; AI-901 responsible AI/model choice. Foundation-model evaluation is introduced here and applied in Modules 7–9.</p>
+<p><strong>Proof of work: <code>05-evaluation-and-leakage-audit</code>.</strong> Extend Module 4 into an imbalanced escalation classifier. Deliberately add a post-outcome leakage feature, expose misleading performance, remove it, and rebuild the evaluation. Compare rule-based, dummy, and trained approaches.</p>
+<p><strong>Acceptance evidence.</strong> Freeze the test partition; select preprocessing, hyperparameters, and thresholds using training/validation only; evaluate the selected approach once on test data. Report class counts, confusion matrix, per-class metrics, and a simple bootstrap interval where appropriate. Document limitations of synthetic labels and small subgroup sizes.</p>
+<p><strong>Security integration.</strong> Treat evaluation data and metric reports as integrity assets. Restrict edits, record dataset/model hashes and versions, and distinguish honest mistakes from deliberate metric manipulation. Never equate a language model&#x27;s stated confidence with calibrated probability.</p>
+<p><strong>Assigned free resources.</strong> Inria MOOC on validation/learning curves; scikit-learn Common Pitfalls, cross-validation, and model-evaluation documentation.</p>
+<table>
+<tr><th>Week</th><th>Lessons and practice</th><th>Checkable output</th></tr>
+<tr><td>1</td><td>Under/overfitting; random, stratified, grouped, and time-based splitting</td><td>Partition plan and an intentionally leaky counterexample</td></tr>
+<tr><td>2</td><td>Confusion matrices, precision/recall/F1, PR tradeoffs, MAE/RMSE</td><td>Hand-verified metric examples and automated report</td></tr>
+<tr><td>3</td><td>Pipelines, cross-validation, modest tuning, threshold costs, uncertainty</td><td>Validation-only selection record</td></tr>
+<tr><td>4</td><td>Final held-out assessment, subgroup errors, drift scenarios, release criteria</td><td>Auditable evaluation card and go/no-go recommendation</td></tr>
+</table>
+<h3>Module 6 — Security in the AI Lifecycle &amp; Data Protection</h3>
+<p><strong>Learning objectives.</strong> Students will map a data/model lifecycle and its trust boundaries; classify data; detect selected PII types; implement minimization and controlled data release; detect seeded integrity problems; and distinguish laws, voluntary frameworks, and organizational policies.</p>
+<p><strong>Alignment.</strong> S1.2–1.3, S2.4, S4.3; AWS 5.1–5.2; AI-901 privacy/security principles.</p>
+<p><strong>Proof of work: <code>06-protected-data-pipeline</code>.</strong> Ingest synthetic tickets, validate schema and source manifests, identify and redact supported PII types, quarantine suspicious records, and write a release report. Keep raw files and sanitized outputs separate. Include a deletion/retention demonstration and mock access roles.</p>
+<p><strong>Acceptance evidence.</strong> Evaluate at least 100 labeled synthetic PII examples and report entity-level precision/recall by type. Test that known synthetic identifiers do not appear in released logs/exports. Detect a seeded file alteration and record quarantined cases. State which poisoning scenarios remain undetected; hashes cannot identify semantically poisoned but correctly hashed data.</p>
+<p><strong>Security integration.</strong> Model unauthorized access, accidental logging, malicious training rows, and excessive retention. Introduce TLS and at-rest encryption concepts, identity-bound permissions, access logs, provenance, and human quarantine review. Redaction is imperfect, pseudonymization is not necessarily anonymization, and sanitized output is not automatically safe for publication.</p>
+<p><strong>Compliance scope.</strong> Teach GDPR applicability, lawful basis, purpose limitation, minimization, retention, and rights as an introductory scenario analysis. Separate these from the voluntary NIST AI RMF. The lab demonstrates selected controls; it does not certify GDPR compliance.</p>
+<p><strong>Assigned free resources.</strong> Presidio quickstart/recognizers/evaluation guidance; NIST AI RMF and Generative AI Profile; official GDPR text and European Commission explanatory guidance. Use official sources for legal concepts and recheck applicability for each cohort.</p>
+<table>
+<tr><th>Week</th><th>Lessons and practice</th><th>Checkable output</th></tr>
+<tr><td>1</td><td>Security primitives review, data classification, lifecycle, trust boundaries, retention</td><td>Data-flow/threat diagram and classification policy</td></tr>
+<tr><td>2</td><td>PII labels, detection, masking/redaction, minimization, test design</td><td>Redaction pipeline and labeled evaluation cases</td></tr>
+<tr><td>3</td><td>Poisoning scenarios, provenance, trusted manifests, quarantine, role permissions</td><td>Alteration/quarantine demonstrations and access tests</td></tr>
+<tr><td>4</td><td>GDPR scenario, NIST distinction, deletion/retention evidence, control review</td><td>Release report, limitations, and privacy/security briefing</td></tr>
+</table>
+<p><strong>Quarter 2 gate:</strong> justify an evaluation without leakage; reproduce a pipeline; identify data release risks; and defend a limited model recommendation using evidence. For a transfer challenge, repeat one cleaning/evaluation task on an instructor-vetted public dataset with documented license and provenance. This exposes students to naturally occurring messiness and reduces dependence on synthetic patterns.</p>
+<h2>Quarter 3 — Generative AI, Systems &amp; Threat Defense</h2>
+<h3>Module 7 — Applied Generative AI &amp; API Integration</h3>
+<p><strong>Learning objectives.</strong> Students will describe HTTP, JSON, REST, SDKs, and status codes; build a small Python model client and FastAPI endpoint; validate structured outputs; handle timeout/retry/rate errors; compare prompting, RAG, and fine-tuning; and measure quality, latency, and estimated cost.</p>
+<p><strong>Alignment.</strong> S1.1, S2.2–2.3; AWS 2.3, 3.1–3.4, 5.1; AI-901 Foundry SDK/client/deployment skills only when the optional platform bridge is executed.</p>
+<p><strong>Proof of work: <code>07-model-gateway</code>.</strong> Build a ticket-summary API with a provider-neutral adapter, a deterministic fixture, and one real small-model backend. Add adapters from official OpenAI/Anthropic examples without requiring paid calls. Record any unexecuted adapter as untested.</p>
+<p><strong>Acceptance evidence.</strong> Evaluate at least 30 held-out requests; report schema success, factual correctness against inputs, rejection behavior, and latency. Test 429/5xx errors, unavailable backends, timeout, malformed responses, and retry limits. Use a representative small pretrained model for genuine inference; fixture success cannot substitute for model quality.</p>
+<p><strong>Security integration.</strong> Environment-based secrets, restricted credentials, authenticated routes, payload/token limits, bounded retries, dependency review, sanitized logs, and explicit output validation. Never execute model-generated code or allow arbitrary outbound URLs. Use an instructor-provided simple authentication scaffold until students understand it.</p>
+<p><strong>Fine-tuning scope.</strong> Required: a decision memo and a small curated train/validation example set. Optional: tune a tiny model in an approved notebook session and compare it with a baseline. Full LLM fine-tuning is not a beginner hardware requirement.</p>
+<p><strong>Assigned free resources.</strong> Hugging Face LLM Course inference/Transformers sections; FastAPI tutorial; official OpenAI and Anthropic API documentation. Documentation is free; hosted inference is not promised free.</p>
+<table>
+<tr><th>Week</th><th>Lessons and practice</th><th>Checkable output</th></tr>
+<tr><td>1</td><td>HTTP/JSON, REST/SDKs, environment configuration, fixture and first inference</td><td>Working client with request/response explanation</td></tr>
+<tr><td>2</td><td>FastAPI request/response models, validation, authentication scaffold</td><td>Documented endpoint and integration tests</td></tr>
+<tr><td>3</td><td>Provider adapters, timeouts/backoff, limits, structured-output failures</td><td>Bounded failure handling and execution-status matrix</td></tr>
+<tr><td>4</td><td>Model evaluation, customization decision, optional tiny tuning</td><td>Evaluation report, model gateway, and decision memo</td></tr>
+</table>
+<h3>Module 8 — RAG &amp; Vector Databases</h3>
+<p><strong>Learning objectives.</strong> Students will explain embeddings and cosine similarity; create a local vector index; compare chunking/retrieval approaches; evaluate retrieval separately from generated answers; enforce document authorization before model context construction; and handle deletion and stale content.</p>
+<p><strong>Alignment.</strong> S1.2, S2.3–2.4; AWS 2.1, 3.1, 3.4, 5.1. This is supporting application practice for AI-901, not a separately named RAG objective.</p>
+<p><strong>Proof of work: <code>08-permission-aware-policy-assistant</code>.</strong> Index 20–50 instructor-authored BrewByte policies in local Chroma using a small SentenceTransformers model. Give two mock roles different document permissions. Return cited answers or abstain when evidence is insufficient. Pinecone is an optional comparison, not a required account.</p>
+<p><strong>Acceptance evidence.</strong> Use 30 labeled questions covering answerable, unanswerable, stale, and unauthorized requests. Report Recall@k, citation correctness, supported-answer rate, abstention quality, and latency. All seeded unauthorized retrieval cases must return no forbidden content. Test authorization at retrieval and context assembly; authorization data comes from verified server-side identity, not user prompt text.</p>
+<p><strong>Security integration.</strong> Retrieved content is untrusted; defend against indirect prompt injection, cross-role leakage, unauthorized ingestion, and embedding/index exposure. Use approved sources, source metadata, role filters, controlled ingestion, and deletion/reindex tests. Similarity scores do not establish permission or answer certainty.</p>
+<p><strong>Assigned free resources.</strong> SentenceTransformers semantic-search documentation; Chroma local/getting-started documentation; OWASP 2026 vector/embedding and injection entries; Hugging Face embedding examples.</p>
+<table>
+<tr><th>Week</th><th>Lessons and practice</th><th>Checkable output</th></tr>
+<tr><td>1</td><td>Vectors, dot product/cosine intuition, embeddings, lexical baseline</td><td>Small semantic-search notebook and baseline comparison</td></tr>
+<tr><td>2</td><td>Chunk size/overlap, metadata, local storage, document versions</td><td>Repeatable ingestion/index build</td></tr>
+<tr><td>3</td><td>Retrieval, context assembly, citations, unknown-answer handling</td><td>Assistant and labeled retrieval/answer test set</td></tr>
+<tr><td>4</td><td>Role enforcement, malicious documents, stale data, deletion</td><td>Security tests, evaluation report, and data-flow diagram</td></tr>
+</table>
+<h3>Module 9 — Securing AI Systems &amp; Adversarial Defense</h3>
+<p><strong>Learning objectives.</strong> Students will build an asset/trust-boundary threat model; connect threats to OWASP and MITRE ATLAS; reproduce safe attacks in their own isolated lab; implement layered controls; and measure attack success and benign-request rejection before and after a change.</p>
+<p><strong>Alignment.</strong> S2.1–2.6; AWS 3.2, 5.1; AI-901 responsible AI with additional secure-development practice.</p>
+<p><strong>Proof of work: <code>09-ai-security-assurance-lab</code>.</strong> Harden Module 8 with an OWASP 2026 traceability matrix, a documented attack set, access checks, safe rendering, tool restrictions, request limits, and security regression tests. For model extraction, inversion, and membership inference, perform a bounded conceptual or toy-model demonstration and discuss limits; do not claim to prevent all variants.</p>
+<p><strong>Acceptance evidence.</strong> At least 40 cases across the relevant threat categories plus 20 benign cases. Give each case an expected result and severity. Demonstrate zero bypasses in seeded authorization/tool-permission tests and no secret exposure in the defined test suite; report residual injection failures honestly. Test results do not prove universal security. A scanner run without reviewed findings is insufficient.</p>
+<p><strong>Security integration.</strong> Apply deny-by-default server-side permissions, read-only/allowlisted tools, human approval for consequential actions, output escaping, safe deserialization, dependency/model provenance, quotas/timeouts, and log minimization. Prompts, safety classifiers, and model refusals supplement these boundaries rather than enforce them alone.</p>
+<p><strong>Assigned free resources.</strong> OWASP 2026 canonical publication/source; MITRE ATLAS; NVIDIA garak; OWASP prompt-injection prevention guidance. Run attack exercises only against student-owned or explicitly authorized targets.</p>
+<table>
+<tr><th>Week</th><th>Lessons and practice</th><th>Checkable output</th></tr>
+<tr><td>1</td><td>Assets, attacker goals, entry points, STRIDE-style boundaries, OWASP/ATLAS mapping</td><td>Prioritized threat model and attack-case plan</td></tr>
+<tr><td>2</td><td>Direct/indirect injection, information exposure, unsafe output, tool abuse</td><td>Reproducible isolated attack results</td></tr>
+<tr><td>3</td><td>Layered mitigations, access enforcement, model/supply-chain controls, budgets</td><td>Hardened application and control tests</td></tr>
+<tr><td>4</td><td>Regression, limited garak probes, benign-case tradeoffs, evidence review</td><td>Before/after report and residual-risk register</td></tr>
+</table>
+<h3>OWASP 2026 threat-to-control reference</h3>
+<p>The 2026 publication is the baseline. Some older OWASP landing pages still display 2025 identifiers; always attach the edition to an identifier rather than mixing years.</p>
+<table>
+<tr><th>2026 identifier</th><th>Risk</th><th>Required curriculum control or exercise</th></tr>
+<tr><td>LLM01</td><td>Prompt Injection</td><td>Untrusted-content handling, tool isolation, adversarial regression</td></tr>
+<tr><td>LLM02</td><td>Sensitive Information Disclosure</td><td>Data minimization, access checks, redaction evaluation</td></tr>
+<tr><td>LLM03</td><td>Excessive Agency</td><td>Read-only scoped tools, action approval, allowlists</td></tr>
+<tr><td>LLM04</td><td>Supply Chain</td><td>Trusted sources, reviewed versions, dependency/model provenance</td></tr>
+<tr><td>LLM05</td><td>Data and Model Poisoning</td><td>Controlled ingestion, lineage, quarantine, integrity checks</td></tr>
+<tr><td>LLM06</td><td>Unbounded Consumption</td><td>Payload/token caps, bounded retries, rate/time limits</td></tr>
+<tr><td>LLM07</td><td>Misinformation</td><td>Evidence-based answers, citations, abstention, human review</td></tr>
+<tr><td>LLM08</td><td>Hidden Context Exposure</td><td>No secrets in hidden context, isolate access-controlled content</td></tr>
+<tr><td>LLM09</td><td>Vector and Embedding Weaknesses</td><td>Permission-aware retrieval, protected indexes, deletion tests</td></tr>
+<tr><td>LLM10</td><td>Improper Output Handling</td><td>Schema checks, escaping, no arbitrary execution</td></tr>
+</table>
+<p><strong>Quarter 3 gate:</strong> demonstrate one real generative application, a measured retrieval pipeline, and working server-side authorization. Students must explain at least one successful attack and its mitigation.</p>
+<h2>Quarter 4 — AI-Assisted Operations, Governance &amp; Career Launch</h2>
+<h3>Module 10 — AI-Assisted Security &amp; Operations</h3>
+<p><strong>Learning objectives.</strong> Students will parse and normalize synthetic security events; correlate alerts with rules; compare rule-based and ML anomaly detection; generate evidence-linked incident summaries; implement a human-reviewed automation workflow; and identify AI-enabled impersonation or misinformation risks.</p>
+<p><strong>Alignment.</strong> S2.5, S3.1–3.3; AWS 1.2–1.3, 3.4, 5.1; AI-901 app/agent and text-analysis skills when practiced on the named platform.</p>
+<p><strong>Proof of work: <code>10-security-triage-assistant</code>.</strong> Process 1,000 synthetic login/endpoint events containing ten known incident storylines. Correlate events, compare rules with IsolationForest or a similar small baseline, and draft incident tickets with event IDs, severity rationale, uncertainty, and next investigative steps. All response actions are dry-run proposals.</p>
+<p><strong>Acceptance evidence.</strong> Report storyline-level precision/recall, duplicate-alert reduction, unsupported-claim rate, and measured review time on a defined sample. Compare against a deterministic baseline. Reject attempts to trigger real account changes, network blocks, or arbitrary tools. Evaluate an incident-summary model separately from event-detection rules.</p>
+<p><strong>Security integration.</strong> Treat logs as attacker-controlled text, preserve evidence identifiers/timestamps, redact sensitive data, scope agent tools, and require approval outside the model. Use synthetic impersonation/deepfake scenarios for defensive analysis; no impersonation of real people is needed.</p>
+<p><strong>Assigned free resources.</strong> MITRE ATT&amp;CK/ATLAS; scikit-learn anomaly-detection guide; Python logging documentation; official CI/testing guidance; NIST incident-response resources. A full SIEM installation is optional, not a prerequisite.</p>
+<table>
+<tr><th>Week</th><th>Lessons and practice</th><th>Checkable output</th></tr>
+<tr><td>1</td><td>Incident-response fundamentals, event fields, timestamps, baselines, parsing</td><td>Normalized synthetic event store and schema tests</td></tr>
+<tr><td>2</td><td>Correlation rules, anomaly detection, false positives, ground truth</td><td>Comparative detection report</td></tr>
+<tr><td>3</td><td>Evidence-linked summaries, read-only agent/tool scaffold, approval queues</td><td>Dry-run incident ticket workflow</td></tr>
+<tr><td>4</td><td>Adversarial log text, impersonation tabletop, automation failure/recovery</td><td>Triage evaluation, runbook, and five-minute demonstration</td></tr>
+</table>
+<h3>Module 11 — AI Governance, Risk &amp; Compliance</h3>
+<p><strong>Learning objectives.</strong> Students will inventory an AI use case and assign owners; organize risks using NIST Govern/Map/Measure/Manage; assess impacts and evidence; write proportionate AI-use and data policies; implement a testable guardrail; and communicate a release decision to an executive audience.</p>
+<p><strong>Alignment.</strong> S4.1–4.3, S2.2, S2.5; AWS 4.1–4.2, 5.2; AI-901 responsible AI principles.</p>
+<p><strong>Proof of work: <code>11-ai-governance-release-pack</code>.</strong> Produce a short application/system card, an AI inventory entry, data-flow map, RACI, ten-risk register, control/evidence matrix, supplier questionnaire, monitoring/incident plan, and a two-page release memo. Apply the pack to the actual student application, including known weaknesses.</p>
+<p><strong>Acceptance evidence.</strong> Every material risk has an owner, mitigation, evidence pointer, residual rating, and review trigger. Each governance claim must link to a test or clearly identify missing evidence. Test at least 20 prohibited and 20 permitted cases against one implemented policy, reporting bypasses and false rejections. An independent reviewer should reproduce the decision from the supplied record.</p>
+<p><strong>Security integration.</strong> Integrate privacy, fairness, transparency, data residency, retention, model/supplier change control, shadow AI, and human oversight. Use deterministic policy enforcement as the required low-compute path; optionally compare NeMo Guardrails or a suitable Llama Guard model. Evaluate their model/backend requirements and license. Guardrails are fallible and do not confer legal compliance.</p>
+<p><strong>Assigned free resources.</strong> NIST AI RMF Playbook and Generative AI Profile; OECD AI Principles; official European Commission/EUR-Lex AI Act guidance; NeMo Guardrails documentation. Discuss ISO AI management/risk standards at a high level using official summaries; paid standards texts are not required course purchases.</p>
+<table>
+<tr><th>Week</th><th>Lessons and practice</th><th>Checkable output</th></tr>
+<tr><td>1</td><td>AI inventory, stakeholders, intended/prohibited uses, accountable owners</td><td>Inventory, RACI, system card, and scope statement</td></tr>
+<tr><td>2</td><td>NIST functions, impact assessment, threat/business risk, fairness limitations</td><td>Ten-risk register with evidence gaps</td></tr>
+<tr><td>3</td><td>Testable policy, deterministic/optional model guardrails, retention and supplier review</td><td>Implemented guardrail and evaluation report</td></tr>
+<tr><td>4</td><td>Legal applicability scenario, exceptions, residual risk, governance board simulation</td><td>Release memo and defensible approve/defer/reject decision</td></tr>
+</table>
+<h3>Module 12 — Capstone, Deployment &amp; Career Launch</h3>
+<p><strong>Learning objectives.</strong> Students will package a tested AI application with FastAPI and containers; deploy/run it reproducibly; apply basic identity, secret, dependency, and logging controls; demonstrate rollback and failure recovery; document a portfolio honestly; and complete an interview explanation and unseen repair task.</p>
+<p><strong>Alignment.</strong> S1.3, S2.2–2.5, S3.3; AWS 1.3, 2.3, 3.1, 5.1; AI-901 platform deployment/client skills only for executed Azure exercises. Docker and FastAPI implementation are broader employment skills.</p>
+<p><strong>Proof of work: <code>12-secure-ai-operations-capstone</code>.</strong> Integrate the protected dataset pipeline, ticket analytics, permission-aware policy assistant, measured model behavior, triage workflow, and governance release record. Narrow scope to a reliable vertical slice instead of integrating every experiment. Required deployment is reproducible local container execution; hosted cloud deployment is optional and clearly labeled.</p>
+<p><strong>Acceptance evidence.</strong> A reviewer can follow a clean setup, run tests, start the container, issue an authenticated request, demonstrate a denied request, trigger a controlled failure, and roll back a release. Provide health checks, a monitoring sample, dependency versions, model/data provenance, an architecture diagram, known limitations, and a five-minute demo. Record actual measurements rather than declaring the app production-ready solely because it runs.</p>
+<p><strong>Security integration.</strong> Non-root containers where feasible, minimal dependencies, secret injection rather than image-baked secrets, safe artifact loading, request/time limits, sanitized logs, least-privilege deployment, and dependency scans with reviewed findings. Public code can be showcased without exposing an unauthenticated model endpoint.</p>
+<p><strong>Assigned free resources.</strong> FastAPI tutorial/deployment guidance; Docker getting-started and build guidance; GitHub Learn/Actions documentation; free Microsoft Learn/AWS documentation for the chosen optional bridge. Verify current hosting allowances before any cloud exercise.</p>
+<table>
+<tr><th>Week</th><th>Lessons and practice</th><th>Checkable output</th></tr>
+<tr><td>1</td><td>Scope freeze, API review, container image/build, environments</td><td>Reproducible container and integrated test plan</td></tr>
+<tr><td>2</td><td>CI checks, deployment, health/observability, failure/recovery</td><td>Local release, clean-run evidence, rollback record; optional cloud lab</td></tr>
+<tr><td>3</td><td>Final evaluation, security review, peer acceptance, documentation</td><td>Release candidate, security report, and system/governance cards</td></tr>
+<tr><td>4</td><td>Portfolio curation, résumé evidence, targeted applications, mock interview</td><td>Three curated showcases, demo, role-specific résumé, and unseen repair</td></tr>
+</table>
+<h2>Assessment, progression &amp; employment evidence</h2>
+<p>Use the same rubric each month: <strong>35% functional behavior, 25% evidence/evaluation, 20% security/privacy, 10% reproducibility/documentation, 10% explanation and independent modification</strong>. Proposed progression threshold: at least 80/100 plus all mandatory controls. This threshold is an instructional rule, unrelated to vendor exam scoring.</p>
+<p>An unresolved credential exposure, seeded authorization bypass, fabricated result, or inability to explain the central code requires correction and reassessment. Keep other feedback proportionate and specific. Offer a new but equivalent task after remediation; repeat-until-pass with the identical answers does not demonstrate transfer.</p>
+<p>Every module submission includes a README, source/notebooks as appropriate, a small synthetic fixture or licensed source reference, environment/dependency record, results with denominators, threat/control notes, limitations, and AI-assistance disclosure. Add behavioral tests as soon as code begins. Do not publish private originals merely to prove a redaction pipeline.</p>
+<p><strong>Career work starts before Month 12.</strong> In Quarter 1, read job descriptions and practice explaining scripts. In Quarter 2, create a skills-to-evidence matrix and describe a data/model decision. In Quarter 3, practice demos, code review, and informational interviews using synthetic work. In Quarter 4, tailor applications to current requirements and rehearse debugging/technical explanations.</p>
+<table>
+<tr><th>Portfolio emphasis</th><th>Roles to investigate, subject to local requirements</th><th>Evidence a hiring reviewer can inspect</th></tr>
+<tr><td>Python + data + deployment</td><td>Junior Python developer, AI application support, technical AI implementation</td><td>Tested code, API handling, SQL, clean deployment and troubleshooting</td></tr>
+<tr><td>Data + evaluations</td><td>Junior data operations or AI evaluation/support roles</td><td>Data-quality pipeline, labels, evaluation design and error analysis</td></tr>
+<tr><td>Governance + technical literacy</td><td>AI governance coordinator or junior technology-risk support</td><td>Risk register, evidence-linked controls, data map and release memo</td></tr>
+<tr><td>Security operations + AI</td><td>Entry security operations/support roles with additional security preparation</td><td>Event correlation, triage validation, access controls and incident runbook</td></tr>
+</table>
+<p>These are pathway examples, not verified vacancies or a promise that a particular job accepts beginners. Students pursuing AI/ML engineering should add software design, stronger mathematics, databases, cloud operations, and real collaborative experience after this foundation.</p>
+<h2>Official sources and assigned-resource directory</h2>
+<p>Certification and framework claims were checked against the sources below. Links and free-service conditions can change; revalidate the blueprint and cohort environment before launch. Named exam providers do not endorse this curriculum.</p>
+<h3>Certification sources</h3>
+<ul>
+<li><a href="https://www.onlc.com/graphics/Publications/CompTIA/comptia-secai-cy0-001-exam-objectives.pdf">CompTIA-authored SecAI+ CY0-001 objectives, document v2.0, hosted by ONLC</a>. Mapping source, not a promise that this mirrored file is the latest revision.</li>
+<li><a href="https://docs.aws.amazon.com/aws-certification/latest/ai-practitioner-01/ai-practitioner-01.html">AWS AIF-C01 official exam guide</a>.</li>
+<li><a href="https://docs.aws.amazon.com/aws-certification/latest/ai-practitioner-01/ai-practitioner-01-domain1.html">AWS domain 1 tasks</a>, <a href="https://docs.aws.amazon.com/aws-certification/latest/ai-practitioner-01/ai-practitioner-01-domain2.html">domain 2</a>, <a href="https://docs.aws.amazon.com/aws-certification/latest/ai-practitioner-01/ai-practitioner-01-domain3.html">domain 3</a>, <a href="https://docs.aws.amazon.com/aws-certification/latest/ai-practitioner-01/ai-practitioner-01-domain4.html">domain 4</a>, <a href="https://docs.aws.amazon.com/aws-certification/latest/ai-practitioner-01/ai-practitioner-01-domain5.html">domain 5</a>.</li>
+<li><a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901">AI-901 official study guide</a>.</li>
+<li><a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-900">AI-900 retirement notice</a>.</li>
+</ul>
+<h3>Quarter 1 resources</h3>
+<ul>
+<li>M1: <a href="https://huggingface.co/learn/llm-course/chapter1/1">Hugging Face LLM Course introduction</a>; <a href="https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-901/">AI-901 learning links</a>; <a href="https://github.com/GenAI-Security-Project/GenAI-LLM-Top10">OWASP 2026 source</a>.</li>
+<li>M2: <a href="https://cs50.harvard.edu/python/">CS50P OpenCourseWare</a>; <a href="https://code.visualstudio.com/docs/python/python-tutorial">VS Code Python tutorial</a>; <a href="https://docs.python.org/3/tutorial/">Python tutorial</a>; <a href="https://learn.github.com/">GitHub Learn</a>; <a href="https://research.google.com/colaboratory/faq.html">Colab FAQ and limits</a>.</li>
+<li>M3: <a href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/">pandas introductory tutorials</a>; <a href="https://numpy.org/doc/stable/user/absolute_beginners.html">NumPy absolute basics</a>; <a href="https://openstax.org/details/books/introductory-statistics-2e">OpenStax statistics</a>; <a href="https://www.sqlite.org/lang.html">SQLite language reference</a>.</li>
+</ul>
+<h3>Quarter 2 resources</h3>
+<ul>
+<li>M4: <a href="https://inria.github.io/scikit-learn-mooc/">Inria scikit-learn MOOC</a>; <a href="https://scikit-learn.org/stable/user_guide.html">scikit-learn User Guide</a>.</li>
+<li>M5: <a href="https://scikit-learn.org/stable/common_pitfalls.html">Common Pitfalls</a>; <a href="https://scikit-learn.org/stable/modules/cross_validation.html">cross-validation</a>; <a href="https://scikit-learn.org/stable/modules/model_evaluation.html">model evaluation</a>.</li>
+<li>M6: <a href="https://presidio.dataprivacystack.org/">Presidio</a>; <a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI RMF</a>; <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf">NIST Generative AI Profile</a>; <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng">GDPR official text</a>; <a href="https://commission.europa.eu/law/law-topic/data-protection_en">European Commission data protection</a>.</li>
+</ul>
+<h3>Quarter 3 resources</h3>
+<ul>
+<li>M7: <a href="https://huggingface.co/learn/llm-course/chapter1/1">Hugging Face course</a>; <a href="https://fastapi.tiangolo.com/tutorial/">FastAPI tutorial</a>; <a href="https://platform.openai.com/docs/overview">OpenAI API documentation</a>; <a href="https://docs.anthropic.com/en/docs/overview">Anthropic API documentation</a>.</li>
+<li>M8: <a href="https://sbert.net/">SentenceTransformers</a>; <a href="https://docs.trychroma.com/">Chroma documentation</a>; <a href="https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/">OWASP 2026 publication</a>.</li>
+<li>M9: <a href="https://github.com/GenAI-Security-Project/GenAI-LLM-Top10">OWASP canonical repository</a>; <a href="https://atlas.mitre.org/">MITRE ATLAS</a>; <a href="https://github.com/NVIDIA/garak">NVIDIA garak</a>; <a href="https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html">OWASP prompt-injection prevention cheat sheet</a>.</li>
+</ul>
+<h3>Quarter 4 resources</h3>
+<ul>
+<li>M10: <a href="https://attack.mitre.org/">MITRE ATT&amp;CK</a>; <a href="https://scikit-learn.org/stable/modules/outlier_detection.html">scikit-learn outlier detection</a>; <a href="https://docs.python.org/3/library/logging.html">Python logging</a>; <a href="https://csrc.nist.gov/projects/incident-response">NIST incident response</a>.</li>
+<li>M11: <a href="https://airc.nist.gov/airmf-resources/playbook/">NIST AI RMF Playbook</a>; <a href="https://oecd.ai/en/ai-principles">OECD AI Principles</a>; <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai">European Commission AI Act information</a>; <a href="https://github.com/NVIDIA-NeMo/Guardrails">NeMo Guardrails</a>.</li>
+<li>M12: <a href="https://fastapi.tiangolo.com/deployment/">FastAPI deployment</a>; <a href="https://docs.docker.com/get-started/">Docker getting started</a>; <a href="https://docs.github.com/en/actions">GitHub Actions documentation</a>; the selected vendor&#x27;s official deployment/identity documentation.</li>
+</ul>
+<h2>Optional vendor bridge: evidence required before claiming cloud skills</h2>
+<p>Schedule these within flexible weeks or as clearly labeled additional study; completing both vendor tracks may require more time. Free documentation can be studied without provisioning services. Real platform execution depends on current access, quotas, region, and funding; it is not included in the zero-cost completion requirement.</p>
+<table>
+<tr><th>Track</th><th>Concrete exercise</th><th>Evidence and boundary</th></tr>
+<tr><td>AWS baseline</td><td>Map the application to S3, IAM, Bedrock/SageMaker AI, CloudTrail, and appropriate encryption/network controls; compare two service choices and estimate a small workload</td><td>Architecture, shared-responsibility matrix, cost assumptions, and service-selection explanations support AIF-C01 study but do not establish deployment experience</td></tr>
+<tr><td>AWS execution, optional</td><td>In an approved sandbox, provision the minimum permitted model access, make an authenticated synthetic-data request, inspect available audit evidence, revoke access, and remove provisioned resources</td><td>Sanitized configuration/execution/cleanup evidence; record any logging coverage gaps and actual spend</td></tr>
+<tr><td>Azure concepts and client</td><td>Study AI-901&#x27;s current two skill areas; in an approved subscription, deploy an allowed model and build a minimal Foundry SDK chat client</td><td>Executed deployment and client demonstration; a local compatible endpoint is not a replacement for this evidence</td></tr>
+<tr><td>Azure agent</td><td>Create/test a single agent and a lightweight client using a narrowly scoped read-only tool</td><td>Agent transcript, access restrictions, failure case, and cleanup record</td></tr>
+<tr><td>Azure modalities and extraction</td><td>Complete distinct lightweight exercises for text analysis, speech, vision/image generation, and Content Understanding information extraction using the official learning path</td><td>Explicit objective checklist and executed outputs for each skill; document unsupported/region-restricted features and remaining gaps</td></tr>
+</table>
+<h2>Instructor launch checklist</h2>
+<p>Before enrollment, supply synthetic data generators/fixtures and labels; model license/revision and CPU benchmark; starter code that gradually removes scaffolding; role/authorization fixtures; held-out evaluations; scoring exemplars and remediation tasks; a tested package lockfile; optional cloud budgets/cleanup; accessibility alternatives; and an updated certification crosswalk. This document specifies the course and projects; those runnable lab assets and lesson scripts still need authoring and pilot testing.</p></main><footer>Fictional business and synthetic data. Pilot curriculum; no certification endorsement or employment guarantee. No learner telemetry. Python/model exercises execute separately from this website.</footer></body></html>

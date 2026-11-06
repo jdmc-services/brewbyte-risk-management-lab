@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="BrewByte AI Academy: practical AI, data and security learning."><title>Capstone, Deployment &amp; Career Launch | BrewByte AI Academy</title><link rel="stylesheet" href="../../assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="../../index.html">BrewByte AI Academy</a><a href="../../../index.html">Learning Portal</a><a href="../../docs/start-here.html">Start here</a><a href="../../docs/curriculum-blueprint.html">Curriculum</a></header><main id="main"><h1>Module 12: Capstone, Deployment &amp; Career Launch</h1>
+<p>Quarter 4 · Four weeks · 12–15 hours per week · Pilot learning material</p>
+<h2>Learning objectives</h2>
+<p>Students will package a tested AI application with FastAPI and containers; deploy/run it reproducibly; apply basic identity, secret, dependency, and logging controls; demonstrate rollback and failure recovery; document a portfolio honestly; and complete an interview explanation and unseen repair task.</p>
+<h2>Certification alignment</h2>
+<p>S1.3, S2.2–2.5, S3.3; AWS 1.3, 2.3, 3.1, 5.1; AI-901 platform deployment/client skills only for executed Azure exercises. Docker and FastAPI implementation are broader employment skills.</p>
+<p>These are partial curriculum mappings, not complete exam coverage or endorsement. See the <a href="../../docs/curriculum-blueprint.html">blueprint</a> for versions and platform gaps.</p>
+<h2>Weekly lessons</h2>
+<ul>
+<li><a href="week-1.html">Week 1: Freeze a reliable vertical slice</a></li>
+<li><a href="week-2.html">Week 2: Operate and recover a release</a></li>
+<li><a href="week-3.html">Week 3: Review the release as a peer</a></li>
+<li><a href="week-4.html">Week 4: Translate evidence into employment</a></li>
+</ul>
+<h2>Proof-of-work project: 12-secure-ai-operations-capstone</h2>
+<p>Integrate the protected dataset pipeline, ticket analytics, permission-aware policy assistant, measured model behavior, triage workflow, and governance release record. Narrow scope to a reliable vertical slice instead of integrating every experiment. Required deployment is reproducible local container execution; hosted cloud deployment is optional and clearly labeled.</p>
+<h2>Acceptance evidence</h2>
+<p>A reviewer can follow a clean setup, run tests, start the container, issue an authenticated request, demonstrate a denied request, trigger a controlled failure, and roll back a release. Provide health checks, a monitoring sample, dependency versions, model/data provenance, an architecture diagram, known limitations, and a five-minute demo. Record actual measurements rather than declaring the app production-ready solely because it runs.</p>
+<h2>Security integration</h2>
+<p>Non-root containers where feasible, minimal dependencies, secret injection rather than image-baked secrets, safe artifact loading, request/time limits, sanitized logs, least-privilege deployment, and dependency scans with reviewed findings. Public code can be showcased without exposing an unauthenticated model endpoint.</p>
+<h2>Lab access</h2>
+<ul>
+<li><a href="lab.ipynb">Guided notebook</a></li>
+<li><a href="starter.py">Starter Python script</a></li>
+<li><a href="https://colab.research.google.com/github/jdmc-services/brewbyte-risk-management-lab/blob/main/ai-academy/modules/12/lab.ipynb">Open notebook in Colab</a> — available after the reviewed branch is merged</li>
+<li><a href="../../docs/model-and-deployment-labs.html">Live-model and deployment instructions</a></li>
+<li><a href="../../data/README.md">Shared synthetic dataset guide</a></li>
+<li><a href="../../data/sales.csv">Raw sales CSV</a> · <a href="../../data/tickets.csv">Synthetic tickets CSV</a></li>
+</ul>
+<p>Run from the repository root: <code>python ai-academy/modules/12/starter.py</code>. Module 4 needs the optional classical-ML environment. The default examples for generative modules are explicitly labeled fixtures/baselines.</p>
+<h2>Assessment rubric</h2>
+<table>
+<tr><th>Criterion</th><th>Weight</th><th>Evidence</th></tr>
+<tr><td>Functional behavior</td><td>35%</td><td>Meets the stated task and handles meaningful failures</td></tr>
+<tr><td>Evaluation</td><td>25%</td><td>Held-out cases, denominators, observed errors, limitations</td></tr>
+<tr><td>Security/privacy</td><td>20%</td><td>Appropriate boundaries and tested controls</td></tr>
+<tr><td>Reproducibility</td><td>10%</td><td>Clear setup, versions, provenance, commands</td></tr>
+<tr><td>Explanation</td><td>10%</td><td>Own reasoning and an unseen independent modification</td></tr>
+</table>
+<p>Target at least 80/100 plus mandatory controls. Repair credential exposures, seeded access bypasses, or fabricated results before progression. This threshold is an instructional rule, not an exam passing score. Public worked examples do not replace independent work.</p>
+<h2>Free assigned resources</h2>
+<ul>
+<li><a href="https://fastapi.tiangolo.com/deployment/">FastAPI deployment</a></li>
+<li><a href="https://docs.docker.com/get-started/">Docker getting started</a></li>
+<li><a href="https://docs.github.com/en/actions">GitHub Actions</a></li>
+</ul>
+<p><a href="../../index.html">Academy home</a> · <a href="../../docs/start-here.html">Course guide</a></p></main><footer>Fictional business and synthetic data. Pilot curriculum; no certification endorsement or employment guarantee. No learner telemetry. Python/model exercises execute separately from this website.</footer></body></html>
