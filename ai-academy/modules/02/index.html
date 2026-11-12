@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="BrewByte AI Academy: practical AI, data and security learning."><title>Python Programming Essentials | BrewByte AI Academy</title><link rel="stylesheet" href="../../assets/style.css"></head><body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="../../index.html">BrewByte AI Academy</a><a href="../../../index.html">Learning Portal</a><a href="../../docs/start-here.html">Start here</a><a href="../../docs/curriculum-blueprint.html">Curriculum</a></header><main id="main"><h1>Module 02: Python Programming Essentials</h1>
+<p>Quarter 1 · Four weeks · 12–15 hours per week · Pilot learning material</p>
+<h2>Learning objectives</h2>
+<p>Students will run Python in VS Code and Colab; use types, collections, branches, loops, and functions; read/write CSV and JSON; debug exceptions; write behavioral tests; create a virtual environment; and use a basic Git branch/commit/review workflow.</p>
+<h2>Certification alignment</h2>
+<p>Enables S3.3 and the Python prerequisite for AI-901. Python implementation is an employability extension rather than a direct AIF-C01 objective.</p>
+<p>These are partial curriculum mappings, not complete exam coverage or endorsement. See the <a href="../../docs/curriculum-blueprint.html">blueprint</a> for versions and platform gaps.</p>
+<h2>Weekly lessons</h2>
+<ul>
+<li><a href="week-1.html">Week 1: Run Python and inspect values</a></li>
+<li><a href="week-2.html">Week 2: Use control flow and functions</a></li>
+<li><a href="week-3.html">Week 3: Read files and handle failure</a></li>
+<li><a href="week-4.html">Week 4: Test and explain a program</a></li>
+</ul>
+<h2>Proof-of-work project: 02-ticket-intake-cli</h2>
+<p>Build a command-line program that reads synthetic requests, validates required fields, assigns a rule-based queue, and writes JSON summaries. Include a deliberately malformed input file and a repair exercise.</p>
+<h2>Acceptance evidence</h2>
+<p>At least ten meaningful tests covering normal, empty, malformed, and oversized input; predictable exit/error behavior; a reproducible setup guide; and a live, unseen function change the student can explain.</p>
+<h2>Security integration</h2>
+<p>Introduce confidentiality/integrity/availability, authentication vs authorization, least privilege, and basic client/server concepts. Validate data rather than executing it; prohibit <code>eval</code> on input and unsafe shell interpolation. Store no credentials in notebooks or commits; inspect dependencies and keep generated outputs free of sensitive content.</p>
+<h2>Lab access</h2>
+<ul>
+<li><a href="lab.ipynb">Guided notebook</a></li>
+<li><a href="starter.py">Starter Python script</a></li>
+<li><a href="https://colab.research.google.com/github/jdmc-services/brewbyte-risk-management-lab/blob/main/ai-academy/modules/02/lab.ipynb">Open notebook in Colab</a> — available after the reviewed branch is merged</li>
+<li><a href="../../docs/model-and-deployment-labs.html">Live-model and deployment instructions</a></li>
+<li><a href="../../data/README.md">Shared synthetic dataset guide</a></li>
+<li><a href="../../data/sales.csv">Raw sales CSV</a> · <a href="../../data/tickets.csv">Synthetic tickets CSV</a></li>
+</ul>
+<p>Run from the repository root: <code>python ai-academy/modules/02/starter.py</code>. Module 4 needs the optional classical-ML environment. The default examples for generative modules are explicitly labeled fixtures/baselines.</p>
+<h2>Assessment rubric</h2>
+<table>
+<tr><th>Criterion</th><th>Weight</th><th>Evidence</th></tr>
+<tr><td>Functional behavior</td><td>35%</td><td>Meets the stated task and handles meaningful failures</td></tr>
+<tr><td>Evaluation</td><td>25%</td><td>Held-out cases, denominators, observed errors, limitations</td></tr>
+<tr><td>Security/privacy</td><td>20%</td><td>Appropriate boundaries and tested controls</td></tr>
+<tr><td>Reproducibility</td><td>10%</td><td>Clear setup, versions, provenance, commands</td></tr>
+<tr><td>Explanation</td><td>10%</td><td>Own reasoning and an unseen independent modification</td></tr>
+</table>
+<p>Target at least 80/100 plus mandatory controls. Repair credential exposures, seeded access bypasses, or fabricated results before progression. This threshold is an instructional rule, not an exam passing score. Public worked examples do not replace independent work.</p>
+<h2>Free assigned resources</h2>
+<ul>
+<li><a href="https://cs50.harvard.edu/python/">CS50P: variables, conditions, loops, exceptions, tests, files</a></li>
+<li><a href="https://code.visualstudio.com/docs/python/python-tutorial">VS Code Python setup</a></li>
+<li><a href="https://learn.github.com/">GitHub Learn</a></li>
+</ul>
+<p><a href="../../index.html">Academy home</a> · <a href="../../docs/start-here.html">Course guide</a></p></main><footer>Fictional business and synthetic data. Pilot curriculum; no certification endorsement or employment guarantee. No learner telemetry. Python/model exercises execute separately from this website.</footer></body></html>

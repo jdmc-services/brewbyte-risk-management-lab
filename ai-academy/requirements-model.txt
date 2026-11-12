@@ -1,0 +1,7 @@
+# Optional live-model lab environment; download models only after license/revision review.
+transformers>=4.45,<5
+torch>=2.6,<3
+sentence-transformers>=3.2,<4
+chromadb>=0.6,<2
+fastapi>=0.115,<1
+uvicorn>=0.30,<1
